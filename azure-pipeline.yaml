@@ -1,0 +1,18 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- ${{ if eq(variables['Build.Reason'], 'IndividualCI') }}:
+  - task: CopyFilesOverSSH@0
+    displayName: Upload files to OVH server
+    inputs:
+      sshEndpoint: 'OVH SFTP'
+      sourceFolder: 'monti-it.io.app'
+      contents: '**'
+      targetFolder: 'www/monti-it.io'
+      cleanTargetFolder: true
+      readyTimeout: '20000'
