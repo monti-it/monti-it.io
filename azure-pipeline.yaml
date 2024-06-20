@@ -14,5 +14,5 @@ steps:
       sourceFolder: 'monti-it.io.app'
       contents: '**'
       targetFolder: 'www/monti-it.io'
-      cleanTargetFolder: true
+      cleanTargetFolder: false
       readyTimeout: '20000'
