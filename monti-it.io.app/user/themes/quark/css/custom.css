@@ -1,0 +1,30 @@
+.cgs .view-document object {
+    width: 100%;
+    height: 93vh;
+}
+
+#footer section.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+    #footer section.container ul li {
+        text-align: justify;
+    }
+
+    #footer section.container p {
+        margin-top: 16px;
+    }
+
+.modular-features.small .feature-icon img {
+    max-height: 70px;
+    position: relative;
+    top: auto;
+    left: auto;
+    display: inherit;
+    margin: 0 auto 1rem;
+    transform: none;
+    color: #acb3c2;
+}

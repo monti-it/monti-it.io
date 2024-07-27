@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1722017634
+count: 1
+index:
+  admin:
+    storage_key: admin
+    storage_timestamp: 1722017633
+    key: admin
+    email: christophe@monti-it.io

@@ -3,11 +3,6 @@
     font-style: italic;
     text-align: center;
 }
-/*.view-document {
-    overflow: hidden;
-    height: 100%;
-}
-*/
 .view-document object {
     width: 100%;
     height: 93vh;

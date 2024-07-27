@@ -1,0 +1,11 @@
+state: enabled
+email: christophe@monti-it.io
+fullname: 'Christophe MONTI'
+title: Administrator
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$8n0fRissKGnBGK/WiJ3boO0gXWiwny3F5dOLPEQK3/3tATYqcxqj2
