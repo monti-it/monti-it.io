@@ -11,8 +11,8 @@ steps:
     displayName: Upload files to OVH server
     inputs:
       sshEndpoint: 'OVH SFTP'
-      sourceFolder: 'monti-it.io.app'
+      sourceFolder: 'monti-it.io.app/user/pages'
       contents: '**'
-      targetFolder: 'www/monti-it.io'
+      targetFolder: 'www/monti-it.io/user/pages'
       cleanTargetFolder: false
       readyTimeout: '20000'
