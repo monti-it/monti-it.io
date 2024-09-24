@@ -10,11 +10,17 @@
     justify-content: space-evenly;
 }
 
-    #footer section.container ul li {
-        text-align: justify;
+    #footer section.container ul {
+        list-style: none;
+        margin-left: 0;
     }
 
+        #footer section.container ul li {
+            text-align: justify;
+        }
+
     #footer section.container p {
+        align-content: center;
         margin-top: 16px;
     }
 
@@ -27,4 +33,17 @@
     margin: 0 auto 1rem;
     transform: none;
     color: #acb3c2;
+}
+
+.bg-primary {
+    background: #1b244f !important;
+    color: #ffcc57;
+}
+
+    .bg-primary h2 {
+        color: #ffcc57;
+    }
+
+#header {
+    background: #1b244f;
 }

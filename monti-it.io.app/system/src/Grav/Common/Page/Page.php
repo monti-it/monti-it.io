@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Page
  *
- * @copyright  Copyright (c) 2015 - 2023 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2024 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -415,15 +415,17 @@ class Page implements PageInterface
                     if (!Utils::isAdminPlugin()) {
                         // If there's a `frontmatter.yaml` file merge that in with the page header
                         // note page's own frontmatter has precedence and will overwrite any defaults
-                        $frontmatterFile = CompiledYamlFile::instance($this->path . '/' . $this->folder . '/frontmatter.yaml');
-                        if ($frontmatterFile->exists()) {
-                            $frontmatter_data = (array)$frontmatterFile->content();
+                        $frontmatter_filename = $this->path . '/' . $this->folder . '/frontmatter.yaml';
+                        if (file_exists($frontmatter_filename)) {
+                            $frontmatter_file = CompiledYamlFile::instance($frontmatter_filename);
+                            $frontmatter_data = $frontmatter_file->content();
                             $this->header = (object)array_replace_recursive(
                                 $frontmatter_data,
                                 (array)$this->header
                             );
-                            $frontmatterFile->free();
+                            $frontmatter_file->free();
                         }
+
                         // Process frontmatter with Twig if enabled
                         if (Grav::instance()['config']->get('system.pages.frontmatter.process_twig') === true) {
                             $this->processFrontmatter();
@@ -446,6 +448,9 @@ class Page implements PageInterface
         }
 
         if ($var) {
+            if (isset($this->header->modified)) {
+                $this->modified($this->header->modified);
+            }
             if (isset($this->header->slug)) {
                 $this->slug($this->header->slug);
             }

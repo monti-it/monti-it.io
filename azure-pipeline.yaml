@@ -8,11 +8,21 @@ steps:
 
 - ${{ if eq(variables['Build.Reason'], 'IndividualCI') }}:
   - task: CopyFilesOverSSH@0
-    displayName: Upload files to OVH server
+    displayName: Upload user pages to OVH server
     inputs:
       sshEndpoint: 'OVH SFTP'
       sourceFolder: 'monti-it.io.app/user/pages'
       contents: '**'
       targetFolder: 'www/monti-it.io/user/pages'
+      cleanTargetFolder: false
+      readyTimeout: '20000'
+
+  - task: CopyFilesOverSSH@0
+    displayName: Upload user theme to OVH server
+    inputs:
+      sshEndpoint: 'OVH SFTP'
+      sourceFolder: 'monti-it.io.app/user/themes/quark/templates'
+      contents: '**'
+      targetFolder: 'www/monti-it.io/user/themes/quark/templates'
       cleanTargetFolder: false
       readyTimeout: '20000'

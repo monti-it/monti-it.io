@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Twig
  *
- * @copyright  Copyright (c) 2015 - 2023 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2024 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -916,10 +916,11 @@ class GravExtension extends AbstractExtension implements GlobalsInterface
         $translation = $this->grav['language']->translate($args);
 
         if ($this->config->get('system.languages.debug', false)) {
-            return new Markup("<span class=\"translate-debug\" data-toggle=\"tooltip\" title=\"" . $args[0] . "\">$translation</span>", 'UTF-8');
-        } else {
-            return $translation;
+            $debugger = $this->grav['debugger'];
+            $debugger->addMessage("$args[0] -> $translation", 'debug');
         }
+
+        return $translation;
     }
 
     /**
