@@ -10,7 +10,7 @@ steps:
   - task: CopyFilesOverSSH@0
     displayName: Upload user pages to OVH server
     inputs:
-      sshEndpoint: 'OVH SFTP'
+      sshEndpoint: 'OVH SFTP @ monti-it.io'
       sourceFolder: 'monti-it.io.app/user/pages'
       contents: '**'
       targetFolder: 'www/monti-it.io/user/pages'
@@ -20,7 +20,7 @@ steps:
   - task: CopyFilesOverSSH@0
     displayName: Upload user theme to OVH server
     inputs:
-      sshEndpoint: 'OVH SFTP'
+      sshEndpoint: 'OVH SFTP @ monti-it.io'
       sourceFolder: 'monti-it.io.app/user/themes/quark/templates'
       contents: '**'
       targetFolder: 'www/monti-it.io/user/themes/quark/templates'
