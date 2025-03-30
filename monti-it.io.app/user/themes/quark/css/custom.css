@@ -36,14 +36,14 @@
 }
 
 .bg-primary {
-    background: #1b244f !important;
-    color: #ffcc57;
+    background: #1a202c !important;
+    color: #3d5aa8;
 }
 
     .bg-primary h2 {
-        color: #ffcc57;
+        color: #3d5aa8;
     }
 
 #header {
-    background: #1b244f;
+    background: #1a202c;
 }

@@ -28,6 +28,8 @@ features:
       image: images/kiss.png
     - header: Tests unitaires
       icon: fa fa-check
+    - header: OWASP
+      image: images/owasp.png
 ---
 
 # Un ensemble de comp&eacute;tences

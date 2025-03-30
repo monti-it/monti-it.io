@@ -11,6 +11,9 @@ features:
     - header: Adaptabilite
       text: "Utiliser des outils dont la collaboration est internationale"
       icon: fa fa-puzzle-piece
+    - header: Intégration et Déploiement continus
+      text: "Automatiser et fiabiliser les processus de livraison"
+      icon: fa-regular fa-cogs
     - header: Analyse
       text: "Comprendre le besoin pour mieux y repondre"
       icon: fa-regular fa-eyedropper
