@@ -4,25 +4,27 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
+stages:
 
-- ${{ if eq(variables['Build.Reason'], 'IndividualCI') }}:
-  - task: CopyFilesOverSSH@0
-    displayName: Upload user pages to OVH server
-    inputs:
-      sshEndpoint: 'OVH SFTP @ monti-it.io'
-      sourceFolder: 'monti-it.io.app/user/pages'
-      contents: '**'
-      targetFolder: 'www/monti-it.io/user/pages'
-      cleanTargetFolder: false
-      readyTimeout: '20000'
+- stage: Deploy
+  jobs:
+  - job: Deploy
+    displayName: 'Deploy changed section to OVH files server'
+    condition: eq(variables['Build.Reason'], 'IndividualCI')
+    steps:
 
-  - task: CopyFilesOverSSH@0
-    displayName: Upload user theme to OVH server
-    inputs:
-      sshEndpoint: 'OVH SFTP @ monti-it.io'
-      sourceFolder: 'monti-it.io.app/user/themes/quark/templates'
-      contents: '**'
-      targetFolder: 'www/monti-it.io/user/themes/quark/templates'
-      cleanTargetFolder: false
-      readyTimeout: '20000'
+    - template: copy-files-to-ovh.yaml
+      parameters:
+        folder: 'images'
+
+    - template: copy-files-to-ovh.yaml
+      parameters:
+        folder: 'user/pages'
+
+    - template: copy-files-to-ovh.yaml
+      parameters:
+        folder: 'user/themes/quark/css'
+
+    - template: copy-files-to-ovh.yaml
+      parameters:
+        folder: 'user/themes/quark/templates'
