@@ -28,6 +28,8 @@ features:
       image: images/kiss.png
     - header: Tests unitaires
       icon: fa fa-check
+    - header: SonarCloud
+      image: images/sonar.png
     - header: OWASP
       image: images/owasp.png
 ---
