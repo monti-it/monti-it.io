@@ -4,7 +4,7 @@ visible: false
 slug: resume
 ---
 
-! Si la page ne s'affiche pas correctement, vous pouvez t&eacute;l&eacute;charger les <a href="/resume/resume.pdf">Conditions G&eacute;n&eacute;rales de Services ici</a>.
+! Si la page ne s'affiche pas correctement, vous pouvez t&eacute;l&eacute;charger mon <a href="/resume/resume.pdf">CCV ici</a>.
 
 <div class="resume">
     <div class="view-document">
@@ -13,4 +13,4 @@ slug: resume
 </div>
 
 
-! Si la page ne s'affiche pas correctement, vous pouvez t&eacute;l&eacute;charger les <a href="/resume/resume.pdf">Conditions G&eacute;n&eacute;rales de Services ici</a>.
+! Si la page ne s'affiche pas correctement, vous pouvez t&eacute;l&eacute;charger mon <a href="/resume/resume.pdf">CCV ici</a>.

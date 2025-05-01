@@ -32,6 +32,8 @@ features:
       image: images/sonar.png
     - header: OWASP
       image: images/owasp.png
+    - header: Kubernetes
+      image: images/kubernetes.png
 ---
 
 # Un ensemble de comp&eacute;tences
