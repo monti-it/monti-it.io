@@ -11,6 +11,17 @@
   justify-content: space-evenly;
 }
 
+@media (max-width: 768px) {
+  #footer section.container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  #footer section.container ul li {
+    text-align: center;
+  }
+}
+
 #footer section.container ul {
   list-style: none;
   margin-left: 0;

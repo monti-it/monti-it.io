@@ -28,7 +28,7 @@ features:
       image: images/visual-studio.svg
       url: https://visualstudio.microsoft.com/fr/
     - header: Visual Studio Code
-      image: images/vscode.svg
+      image: images/vscode.png
       url: https://code.visualstudio.com/
     - header: Asure Dev Ops
       image: images/azure-devops.jpg
