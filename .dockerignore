@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules
+
+# Build output
+/dist
+
+# Editor and OS artifacts
+.vscode
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package manager caches
+.pnpm-store
+
+# Tests output
+coverage
+
+# Local env files
+.env*

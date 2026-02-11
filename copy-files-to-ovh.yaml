@@ -1,15 +1,17 @@
 parameters:
-- name: folder
+- name: sourceFolder
+  type: string
+- name: targetFolder
   type: string
 
 steps:
         
 - task: CopyFilesOverSSH@0
-  displayName: Upload ${{ parameters.folder }} to OVH server
+  displayName: Upload ${{ parameters.sourceFolder }} to OVH server
   inputs:
     sshEndpoint: 'OVH SFTP @ monti-it.io'
-    sourceFolder: 'monti-it.io.app/${{ parameters.folder }}'
+    sourceFolder: ${{ parameters.sourceFolder }}
     contents: '**'
-    targetFolder: 'www/monti-it.io/${{ parameters.folder }}'
+    targetFolder: ${{ parameters.targetFolder }}
     cleanTargetFolder: false
     readyTimeout: '20000'
