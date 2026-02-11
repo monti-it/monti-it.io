@@ -23,26 +23,17 @@ function Languages() {
           Communication efficace en français et anglais technique
         </p>
       </div>
-      <div className="grid" style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <div className="grid centered-grid">
         {languages.map((language) => (
           <article key={language.name} className="card">
             <div className="card-icon" style={{ fontSize: '3rem' }}>{language.flag}</div>
             <h3>{language.name}</h3>
             <p>{language.level}</p>
-            <div style={{ 
-              width: '100%', 
-              height: '8px', 
-              backgroundColor: '#e0e0e0', 
-              borderRadius: '4px',
-              marginTop: '1rem',
-              overflow: 'hidden'
-            }}>
-              <div style={{ 
-                width: `${language.proficiency}%`, 
-                height: '100%', 
-                backgroundColor: '#007acc',
-                transition: 'width 0.3s ease'
-              }} />
+            <div className="progress-bar-container">
+              <div 
+                className="progress-bar-fill" 
+                style={{ width: `${language.proficiency}%` }} 
+              />
             </div>
           </article>
         ))}

@@ -61,37 +61,16 @@ function ComputerMaintenance() {
             <h3>{service.name}</h3>
             <p style={{ marginBottom: '1rem' }}>{service.description}</p>
             {service.details && (
-              <ul style={{ 
-                marginTop: '0.5rem', 
-                paddingLeft: '1.5rem',
-                color: '#475569',
-                fontSize: '0.9rem',
-                lineHeight: '1.8'
-              }}>
+              <ul className="detail-list">
                 {service.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
             )}
             {service.highlights && (
-              <div style={{ 
-                marginTop: '1.25rem', 
-                display: 'flex', 
-                gap: '0.5rem',
-                flexWrap: 'wrap'
-              }}>
+              <div className="highlight-tags">
                 {service.highlights.map((highlight, index) => (
-                  <span 
-                    key={index} 
-                    style={{
-                      background: '#e0f2fe',
-                      color: '#0369a1',
-                      padding: '0.35rem 0.75rem',
-                      borderRadius: '6px',
-                      fontSize: '0.8rem',
-                      fontWeight: '600'
-                    }}
-                  >
+                  <span key={index} className="highlight-tag">
                     {highlight}
                   </span>
                 ))}

@@ -28,12 +28,7 @@ function NetworkSkills() {
             <h3>{skill.name}</h3>
             <p>{skill.description}</p>
             {skill.details && (
-              <ul style={{ 
-                marginTop: '1rem', 
-                paddingLeft: '1.5rem',
-                color: '#64748b',
-                fontSize: '0.9rem'
-              }}>
+              <ul className="detail-list" style={{ marginTop: '1rem' }}>
                 {skill.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}

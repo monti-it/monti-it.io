@@ -2,12 +2,61 @@
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #1A202C;
-  background-color: #f8fafc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Light theme (default) - Using favicon colors */
+  --brand-navy: #1b244f;
+  --brand-gold: #fecb57;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-contrast: #1b244f;
+  --text-primary: #1A202C;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #f1f5f9;
+  --accent-primary: #fecb57;
+  --accent-secondary: #fdb022;
+  --accent-blue: #38bdf8;
+  --accent-green: #10b981;
+  --accent-dark: #1b244f;
+  --border: #e2e8f0;
+  --shadow-sm: rgba(27, 36, 79, 0.06);
+  --shadow-md: rgba(27, 36, 79, 0.08);
+  --shadow-lg: rgba(27, 36, 79, 0.12);
+  --shadow-xl: rgba(27, 36, 79, 0.2);
+  --gradient-start: #ffffff;
+  --gradient-end: #f8fafc;
+  --hover-gradient-end: #fef3d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0f1829;
+    --bg-secondary: #1b244f;
+    --bg-card: #1b244f;
+    --bg-contrast: #2a3563;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-light: #f1f5f9;
+    --accent-primary: #fecb57;
+    --accent-secondary: #fdb022;
+    --accent-blue: #60a5fa;
+    --accent-green: #34d399;
+    --accent-dark: #fecb57;
+    --border: #2a3563;
+    --shadow-sm: rgba(0, 0, 0, 0.2);
+    --shadow-md: rgba(0, 0, 0, 0.3);
+    --shadow-lg: rgba(0, 0, 0, 0.4);
+    --shadow-xl: rgba(0, 0, 0, 0.5);
+    --gradient-start: #1b244f;
+    --gradient-end: #0f1829;
+    --hover-gradient-end: #2a3563;
+  }
 }
 
 * {
@@ -17,7 +66,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f8fafc;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 a {
