@@ -60,32 +60,19 @@ const experiences = [
     tech: ['.Net 4.5', 'ASP.Net MVC', 'Oracle 11g', 'Git', 'WPF']
   },
   {
-    period: '2010 - 2011',
+    period: '2007 - 2011',
     company: 'SNCF',
     location: 'Lyon (69)',
     sector: 'Trafic ferroviaire',
     role: 'Chef d\'équipe / Architecte - SOGETI',
     project: 'SIERRA',
-    description: 'Gestion d\'une équipe de 5 développeurs pour l\'application gérant les différentes lignes ouvertes et la maintenance des trains.',
+    description: 'Développement et gestion d\'équipe pour l\'application gérant les différentes lignes ouvertes et la maintenance des trains TER et CORAIL. Évolution de développeur à chef d\'équipe et architecte.',
     achievements: [
       'Gestion d\'équipe de 5 développeurs',
-      'Architecture n-tiers',
-      'Amélioration de la planification ferroviaire'
-    ],
-    tech: ['.Net 3.0', 'C#', 'WCF', 'SQL Server', 'TFS']
-  },
-  {
-    period: '2007 - 2010',
-    company: 'SNCF',
-    location: 'Villeurbanne (69)',
-    sector: 'Trafic ferroviaire',
-    role: 'Concepteur / Développeur - SOGETI',
-    project: 'SIERRA',
-    description: 'Développement de l\'application gérant les différentes lignes et la maintenance des trains TER et CORAIL.',
-    achievements: [
       'Développement architecture n-tiers',
       'Intégration de flux complexes',
-      'Optimisation des calculs de trajet'
+      'Optimisation des calculs de trajet',
+      'Amélioration de la planification ferroviaire'
     ],
     tech: ['.Net 3.0', 'C#', 'WCF', 'SQL Server', 'TFS']
   }
