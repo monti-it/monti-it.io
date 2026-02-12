@@ -25,7 +25,7 @@ function Header() {
             Diagnostic rapide, livraison fiable et code maintenable. J’aide les
             équipes à accélérer sans sacrifier la qualité.
           </p>
-          <p className="panel-author">Disponibilité sur mission courte ou longue</p>
+          <p className="panel-author">Disponibilité sur mission courte ou longue • Travail en remote privilégié</p>
         </div>
       </div>
     </header>
