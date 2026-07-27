@@ -4,6 +4,7 @@ import Skills from './Skills'
 import Improvements from './Improvements'
 import NetworkSkills from './NetworkSkills'
 import ComputerMaintenance from './ComputerMaintenance'
+import HomeAssistant from './HomeAssistant'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Quote />
       <Skills />
       <NetworkSkills />
+      <HomeAssistant />
       <ComputerMaintenance />
     </div>
   )
