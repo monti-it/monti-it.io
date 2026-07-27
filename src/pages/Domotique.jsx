@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import HomeAssistant from './HomeAssistant'
-import Seo from './Seo'
+import HomeAssistant from '../components/HomeAssistant'
+import Seo from '../components/Seo'
 
 function Domotique() {
   return (

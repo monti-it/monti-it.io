@@ -1,7 +1,7 @@
-import Header from './Header'
-import Quote from './Quote'
-import Themes from './Themes'
-import Seo from './Seo'
+import Header from '../components/Header'
+import Quote from '../components/Quote'
+import Themes from '../components/Themes'
+import Seo from '../components/Seo'
 
 function Home() {
   return (

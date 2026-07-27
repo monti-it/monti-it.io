@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import Improvements from './Improvements'
-import Seo from './Seo'
+import Improvements from '../components/Improvements'
+import Seo from '../components/Seo'
 
 function Expertise() {
   return (

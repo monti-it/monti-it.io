@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import Experience from './Experience'
-import Languages from './Languages'
-import Seo from './Seo'
+import Experience from '../components/Experience'
+import Languages from '../components/Languages'
+import Seo from '../components/Seo'
 
 function Resume() {
     return (

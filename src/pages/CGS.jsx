@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Seo from './Seo'
+import Seo from '../components/Seo'
 
 function CGS() {
     return (

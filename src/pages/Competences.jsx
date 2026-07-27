@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import Skills from './Skills'
-import Seo from './Seo'
+import Skills from '../components/Skills'
+import Seo from '../components/Seo'
 
 function Competences() {
   return (

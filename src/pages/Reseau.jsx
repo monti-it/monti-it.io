@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import NetworkSkills from './NetworkSkills'
-import Seo from './Seo'
+import NetworkSkills from '../components/NetworkSkills'
+import Seo from '../components/Seo'
 
 function Reseau() {
   return (

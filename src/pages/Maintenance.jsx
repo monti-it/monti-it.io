@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import ComputerMaintenance from './ComputerMaintenance'
-import Seo from './Seo'
+import ComputerMaintenance from '../components/ComputerMaintenance'
+import Seo from '../components/Seo'
 
 function Maintenance() {
   return (
