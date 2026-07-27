@@ -1,3 +1,79 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 6vw;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.navbar-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--accent-primary);
+}
+
+.navbar-link-icon {
+  display: inline-block;
+}
+
+.navbar-link:hover .navbar-link-icon {
+  animation: navbar-wiggle 0.4s ease;
+}
+
+@keyframes navbar-wiggle {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-12deg) translateY(-2px); }
+  50% { transform: rotate(10deg) translateY(-3px); }
+  75% { transform: rotate(-6deg) translateY(-1px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+.navbar-cta {
+  padding: 0.6rem 1.3rem;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -115,6 +191,18 @@
 
 .card-icon {
   font-size: 1.6rem;
+}
+
+.card-link {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--accent-primary);
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.card-link:hover {
+  transform: translateX(4px);
 }
 
 .contrast {

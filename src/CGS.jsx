@@ -23,7 +23,7 @@ function CGS() {
                         Télécharger le PDF
                     </a>
                     <Link className="btn ghost" to="/">
-                        Retour à l'accueil
+                        ← Retour à l'accueil
                     </Link>
                 </div>
             </section>

@@ -1,21 +1,13 @@
 import Header from './Header'
 import Quote from './Quote'
-import Skills from './Skills'
-import Improvements from './Improvements'
-import NetworkSkills from './NetworkSkills'
-import ComputerMaintenance from './ComputerMaintenance'
-import HomeAssistant from './HomeAssistant'
+import Themes from './Themes'
 
 function Home() {
   return (
     <div className="page">
       <Header />
-      <Improvements />
+      <Themes />
       <Quote />
-      <Skills />
-      <NetworkSkills />
-      <HomeAssistant />
-      <ComputerMaintenance />
     </div>
   )
 }

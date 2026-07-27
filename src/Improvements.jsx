@@ -53,7 +53,7 @@ const improvementItems = [
 
 function Improvements() {
   return (
-    <section id="services" className="section">
+    <section className="section">
       <div className="section-header">
         <p className="eyebrow">Que puis-je vous apporter ?</p>
         <h2>De l&apos;amélioration continue</h2>

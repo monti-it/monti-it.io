@@ -14,7 +14,7 @@ function Header() {
           <a className="btn primary" href="mailto:hello@monti-it.io">
             Contactez moi
           </a>
-          <a className="btn ghost" href="#services">
+          <a className="btn ghost" href="#themes">
             En savoir plus
           </a>
         </div>
@@ -26,7 +26,7 @@ function Header() {
             Diagnostic rapide, livraison fiable et code maintenable. J’aide les
             équipes à accélérer sans sacrifier la qualité.
           </p>
-          <p className="panel-author">Disponibilité sur mission courte ou longue • Travail en remote privilégié</p>
+          <p className="panel-author">Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié</p>
         </div>
       </div>
     </header>
