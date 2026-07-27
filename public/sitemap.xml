@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://monti-it.io/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://monti-it.io/" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://monti-it.io/" />
   </url>
   <url>
     <loc>https://monti-it.io/expertise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/expertise" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/expertise" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/expertise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/expertise" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/expertise" />
   </url>
   <url>
     <loc>https://monti-it.io/competences</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/competences" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/competences" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/competences</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/competences" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/competences" />
   </url>
   <url>
     <loc>https://monti-it.io/reseau</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/reseau" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/reseau" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/reseau</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/reseau" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/reseau" />
   </url>
   <url>
     <loc>https://monti-it.io/domotique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/domotique" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/domotique" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/domotique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/domotique" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/domotique" />
   </url>
   <url>
     <loc>https://monti-it.io/maintenance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/maintenance" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/maintenance" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/maintenance</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/maintenance" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/maintenance" />
   </url>
 </urlset>

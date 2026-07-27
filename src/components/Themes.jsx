@@ -1,56 +1,32 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../i18n/useLanguage'
 
-const themes = [
-  {
-    title: 'Expertise & Leadership technique',
-    description: 'Pilotage d\'équipe, software craftsmanship, DevOps, sécurité et méthodes Agile',
-    icon: '🧭',
-    to: '/expertise'
-  },
-  {
-    title: 'Stack technique complète',
-    description: '.NET, Angular, React, bases de données, cloud et outils DevOps',
-    icon: '🧰',
-    to: '/competences'
-  },
-  {
-    title: 'Réseau & Infrastructure',
-    description: 'Câblage structuré et configuration réseau pour petites structures',
-    icon: '🔌',
-    to: '/reseau'
-  },
-  {
-    title: 'Domotique — Home Assistant',
-    description: 'Installation, automatisations et maintenance de votre solution domotique',
-    icon: '🏡',
-    to: '/domotique'
-  },
-  {
-    title: 'Maintenance & Support informatique',
-    description: 'Entreprises, particuliers et interventions spécialisées',
-    icon: '🔧',
-    to: '/maintenance'
-  }
+const themeMeta = [
+  { key: 'expertise', icon: '🧭', to: '/expertise' },
+  { key: 'competences', icon: '🧰', to: '/competences' },
+  { key: 'reseau', icon: '🔌', to: '/reseau' },
+  { key: 'domotique', icon: '🏡', to: '/domotique' },
+  { key: 'maintenance', icon: '🔧', to: '/maintenance' }
 ]
 
 function Themes() {
+  const { t, localizePath } = useLanguage()
+
   return (
     <section id="themes" className="section">
       <div className="section-header">
-        <p className="eyebrow">Que puis-je vous apporter ?</p>
-        <h2>Un accompagnement par thématique</h2>
-        <p className="muted">
-          Chaque domaine d&apos;intervention est détaillé sur sa propre page
-        </p>
+        <p className="eyebrow">{t('themes.eyebrow')}</p>
+        <h2>{t('themes.title')}</h2>
+        <p className="muted">{t('themes.subtitle')}</p>
       </div>
       <div className="grid">
-        {themes.map((theme) => (
-          <article key={theme.title} className="card">
+        {themeMeta.map((theme) => (
+          <article key={theme.key} className="card">
             <div className="card-icon">{theme.icon}</div>
-            <h3>{theme.title}</h3>
-            <p>{theme.description}</p>
-            <Link className="card-link" to={theme.to}>
-              Découvrir →
+            <h3>{t(`themes.items.${theme.key}.title`)}</h3>
+            <p>{t(`themes.items.${theme.key}.description`)}</p>
+            <Link className="card-link" to={localizePath(theme.to)}>
+              {t('common.discover')}
             </Link>
           </article>
         ))}

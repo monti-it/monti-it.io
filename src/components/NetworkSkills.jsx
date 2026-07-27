@@ -1,30 +1,24 @@
-const networkSkills = [
-  {
-    name: 'Network Bay Setup',
-    description: 'Installation et configuration de baies de brassage réseau',
-    icon: '🔌',
-    details: [
-      'Câblage structuré',
-      'Configuration switch',
-      'Organisation des équipements'
-    ]
-  }
-]
+import { useLanguage } from '../i18n/useLanguage'
+
+const itemIcons = {
+  networkBay: '🔌'
+}
 
 function NetworkSkills() {
+  const { t } = useLanguage()
+  const items = t('reseau.items')
+
   return (
     <section className="section">
       <div className="section-header">
-        <p className="eyebrow">Infrastructure & Réseau</p>
-        <h2>Compétences réseau</h2>
-        <p className="muted">
-          Installation et configuration d&apos;infrastructures réseau pour petites structures
-        </p>
+        <p className="eyebrow">{t('reseau.eyebrow')}</p>
+        <h2>{t('reseau.title')}</h2>
+        <p className="muted">{t('reseau.subtitle')}</p>
       </div>
       <div className="grid">
-        {networkSkills.map((skill) => (
-          <article key={skill.name} className="card">
-            <div className="card-icon" style={{ fontSize: '2.5rem' }}>{skill.icon}</div>
+        {Object.entries(items).map(([key, skill]) => (
+          <article key={key} className="card">
+            <div className="card-icon" style={{ fontSize: '2.5rem' }}>{itemIcons[key]}</div>
             <h3>{skill.name}</h3>
             <p>{skill.description}</p>
             {skill.details && (

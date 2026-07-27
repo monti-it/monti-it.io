@@ -6,11 +6,7 @@ import Seo from '../components/Seo'
 function Home() {
   return (
     <div className="page">
-      <Seo
-        title="Développeur .NET FullStack Senior Freelance"
-        description="Développeur .NET FullStack senior avec 18+ ans d'expérience : architecture logicielle, software craftsmanship, DevOps et accompagnement Agile. Missions ou forfait, remote privilégié."
-        path="/"
-      />
+      <Seo seoKey="home" />
       <Header />
       <Themes />
       <Quote />

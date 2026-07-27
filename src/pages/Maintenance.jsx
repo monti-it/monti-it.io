@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom'
 import ComputerMaintenance from '../components/ComputerMaintenance'
 import Seo from '../components/Seo'
+import { useLanguage } from '../i18n/useLanguage'
 
 function Maintenance() {
+  const { t, localizePath } = useLanguage()
+
   return (
     <div className="page">
-      <Seo
-        title="Maintenance & Support informatique"
-        description="Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé."
-        path="/maintenance"
-      />
+      <Seo seoKey="maintenance" />
       <ComputerMaintenance />
       <div className="hero-actions">
-        <Link className="btn ghost" to="/">
-          ← Retour à l&apos;accueil
+        <Link className="btn ghost" to={localizePath('/')}>
+          {t('common.backHome')}
         </Link>
       </div>
     </div>

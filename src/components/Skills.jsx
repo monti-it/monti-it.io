@@ -1,6 +1,8 @@
+import { useLanguage } from '../i18n/useLanguage'
+
 const skillCategories = [
   {
-    category: 'Langages & Frameworks Backend',
+    categoryKey: 'backend',
     skills: [
       {
         name: 'C#',
@@ -35,7 +37,7 @@ const skillCategories = [
     ]
   },
   {
-    category: 'Frontend & UI',
+    categoryKey: 'frontend',
     skills: [
       {
         name: 'Angular',
@@ -70,7 +72,7 @@ const skillCategories = [
     ]
   },
   {
-    category: 'Bases de données',
+    categoryKey: 'database',
     skills: [
       {
         name: 'SQL Server',
@@ -85,7 +87,7 @@ const skillCategories = [
     ]
   },
   {
-    category: 'DevOps & Cloud',
+    categoryKey: 'devops',
     skills: [
       {
         name: 'Azure DevOps',
@@ -115,7 +117,7 @@ const skillCategories = [
     ]
   },
   {
-    category: 'Outils & IDE',
+    categoryKey: 'tools',
     skills: [
       {
         name: 'Git',
@@ -145,7 +147,7 @@ const skillCategories = [
     ]
   },
   {
-    category: 'Architecture & Sécurité',
+    categoryKey: 'architecture',
     skills: [
       {
         name: 'REST API',
@@ -177,24 +179,24 @@ const skillCategories = [
 ]
 
 function Skills() {
+    const { t } = useLanguage()
+
     return (
         <section className="section">
             <div className="section-header">
-                <p className="eyebrow">Compétences techniques</p>
-                <h2>Stack technique complète</h2>
-                <p className="muted">
-                    Technologies et pratiques professionnelles pour des solutions robustes et évolutives
-                </p>
+                <p className="eyebrow">{t('competences.eyebrow')}</p>
+                <h2>{t('competences.title')}</h2>
+                <p className="muted">{t('competences.subtitle')}</p>
             </div>
             {skillCategories.map((category) => (
-                <div key={category.category} className="skill-category">
-                    <h3 className="skill-category-title">{category.category}</h3>
+                <div key={category.categoryKey} className="skill-category">
+                    <h3 className="skill-category-title">{t(`competences.categories.${category.categoryKey}`)}</h3>
                     <div className="skills">
                         {category.skills.map((skill) => (
-                            <a 
-                                key={skill.name} 
-                                href={skill.url} 
-                                target="_blank" 
+                            <a
+                                key={skill.name}
+                                href={skill.url}
+                                target="_blank"
                                 rel="noreferrer"
                                 className="skill-item"
                             >

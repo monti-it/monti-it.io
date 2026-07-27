@@ -1,34 +1,57 @@
 import { Link, NavLink } from 'react-router-dom'
+import { useLanguage } from '../i18n/useLanguage'
+import { withLangPrefix } from '../i18n/localePaths'
+import { FlagFR, FlagGB } from './FlagIcon'
 
-const navLinks = [
-  { label: 'Expertise', to: '/expertise', icon: '🧭' },
-  { label: 'Compétences', to: '/competences', icon: '🧰' },
-  { label: 'Réseau', to: '/reseau', icon: '🔌' },
-  { label: 'Domotique', to: '/domotique', icon: '🏡' },
-  { label: 'Maintenance', to: '/maintenance', icon: '🔧' }
+const navItems = [
+  { key: 'expertise', to: '/expertise', icon: '🧭' },
+  { key: 'competences', to: '/competences', icon: '🧰' },
+  { key: 'reseau', to: '/reseau', icon: '🔌' },
+  { key: 'domotique', to: '/domotique', icon: '🏡' },
+  { key: 'maintenance', to: '/maintenance', icon: '🔧' }
 ]
 
 function Navbar() {
+  const { lang, path, t, localizePath } = useLanguage()
+
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-brand">
+      <Link to={localizePath('/')} className="navbar-brand">
         <img src="/favicon.png" alt="" className="navbar-logo" />
-        Monti IT
+        {t('nav.brand')}
       </Link>
       <div className="navbar-links">
-        {navLinks.map((link) => (
+        {navItems.map((item) => (
           <NavLink
-            key={link.to}
-            to={link.to}
+            key={item.to}
+            to={localizePath(item.to)}
             className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`}
           >
-            <span className="navbar-link-icon">{link.icon}</span>
-            {link.label}
+            <span className="navbar-link-icon">{item.icon}</span>
+            {t(`nav.${item.key}`)}
           </NavLink>
         ))}
       </div>
+      <div className="navbar-lang">
+        <Link
+          to={withLangPrefix(path, 'fr')}
+          className={`navbar-lang-link${lang === 'fr' ? ' active' : ''}`}
+          aria-label="Français"
+          title="Français"
+        >
+          <FlagFR />
+        </Link>
+        <Link
+          to={withLangPrefix(path, 'en')}
+          className={`navbar-lang-link${lang === 'en' ? ' active' : ''}`}
+          aria-label="English"
+          title="English"
+        >
+          <FlagGB />
+        </Link>
+      </div>
       <a className="btn primary navbar-cta" href="mailto:hello@monti-it.io">
-        Contactez moi
+        {t('common.contactCta')}
       </a>
     </nav>
   )

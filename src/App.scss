@@ -68,6 +68,37 @@
   padding: 0.6rem 1.3rem;
 }
 
+.navbar-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-lang-link {
+  display: flex;
+  opacity: 0.45;
+  filter: grayscale(60%);
+  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.navbar-lang-link svg {
+  display: block;
+  width: 22px;
+  height: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.navbar-lang-link:hover,
+.navbar-lang-link.active {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.navbar-lang-link:hover {
+  transform: scale(1.15);
+}
+
 @media (max-width: 720px) {
   .navbar {
     padding: 1rem 1.5rem;
@@ -191,6 +222,14 @@
 
 .card-icon {
   font-size: 1.6rem;
+}
+
+.card-flag {
+  display: block;
+  width: 64px;
+  height: 46px;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px var(--border);
 }
 
 .card-link {

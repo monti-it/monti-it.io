@@ -1,38 +1,34 @@
-const languages = [
-  {
-    name: 'Français',
-    level: 'Langue maternelle',
-    proficiency: 100,
-    flag: '🇫🇷'
-  },
-  {
-    name: 'Anglais',
-    level: 'Professionnel / Technique',
-    proficiency: 75,
-    flag: '🇬🇧'
-  }
+import { useLanguage } from '../i18n/useLanguage'
+import { FlagFR, FlagGB } from './FlagIcon'
+
+const languageMeta = [
+  { key: 'french', proficiency: 100, Flag: FlagFR },
+  { key: 'english', proficiency: 75, Flag: FlagGB }
 ]
 
 function Languages() {
+  const { t } = useLanguage()
+  const items = t('languages.items')
+
   return (
     <section className="section">
       <div className="section-header">
-        <p className="eyebrow">Compétences linguistiques</p>
-        <h2>Langues</h2>
-        <p className="muted">
-          Communication efficace en français et anglais technique
-        </p>
+        <p className="eyebrow">{t('languages.eyebrow')}</p>
+        <h2>{t('languages.title')}</h2>
+        <p className="muted">{t('languages.subtitle')}</p>
       </div>
       <div className="grid centered-grid">
-        {languages.map((language) => (
-          <article key={language.name} className="card">
-            <div className="card-icon" style={{ fontSize: '3rem' }}>{language.flag}</div>
-            <h3>{language.name}</h3>
-            <p>{language.level}</p>
+        {languageMeta.map((meta) => (
+          <article key={meta.key} className="card">
+            <div className="card-icon">
+              <meta.Flag className="card-flag" />
+            </div>
+            <h3>{items[meta.key].name}</h3>
+            <p>{items[meta.key].level}</p>
             <div className="progress-bar-container">
-              <div 
-                className="progress-bar-fill" 
-                style={{ width: `${language.proficiency}%` }} 
+              <div
+                className="progress-bar-fill"
+                style={{ width: `${meta.proficiency}%` }}
               />
             </div>
           </article>

@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import { FaGithub, FaLinkedin, FaStackOverflow, FaEnvelope, FaCode, FaHeart } from 'react-icons/fa'
+import { useLanguage } from '../i18n/useLanguage'
 
 function Footer() {
+    const { t, localizePath } = useLanguage()
     const currentYear = new Date().getFullYear()
 
     const legalLinks = [
-        { label: 'Conditions Générales de Services', href: '/cgs', internal: true },
-        { label: 'Résumé de carrière', href: '/resume', internal: true }
+        { label: t('footer.cgs'), href: localizePath('/cgs'), internal: true },
+        { label: t('footer.resume'), href: localizePath('/resume'), internal: true }
     ]
 
     const socialLinks = [
@@ -21,11 +23,11 @@ function Footer() {
             <div className="footer-content">
                 <div className="footer-brand">
                     <p className="footer-title">Monti IT</p>
-                    <p className="muted">Développement logiciel sur-mesure depuis 2005</p>
+                    <p className="muted">{t('footer.tagline')}</p>
                 </div>
 
                 <div className="footer-section">
-                    <p className="footer-section-title">Contact & Réseaux</p>
+                    <p className="footer-section-title">{t('footer.contactTitle')}</p>
                     <div className="footer-links">
                         <a href="mailto:hello@monti-it.io">
                             <FaEnvelope style={{ marginRight: '8px', verticalAlign: 'middle' }} />
@@ -44,7 +46,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-section">
-                    <p className="footer-section-title">Légal</p>
+                    <p className="footer-section-title">{t('footer.legalTitle')}</p>
                     <div className="footer-links">
                         {legalLinks.map(({ label, href, internal }) =>
                             internal ? (
@@ -62,7 +64,7 @@ function Footer() {
             <div className="footer-bottom">
                 © {currentYear} Monti IT.
                 This site was <FaCode style={{ verticalAlign: 'middle' }} /> with <FaHeart style={{ verticalAlign: 'middle' }} /> by <a href="https://monti-it.io">monti-it.io</a>.
-                All rights reserved.
+                {' '}{t('footer.rights')}
             </div>
         </footer>
     )

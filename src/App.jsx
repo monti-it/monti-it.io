@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { LanguageProvider } from './i18n/LanguageContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -12,22 +13,37 @@ import CGS from './pages/CGS'
 import Resume from './pages/Resume'
 import './App.scss'
 
+const pageRoutes = [
+  { path: '/', Component: Home },
+  { path: '/expertise', Component: Expertise },
+  { path: '/competences', Component: Competences },
+  { path: '/reseau', Component: Reseau },
+  { path: '/domotique', Component: Domotique },
+  { path: '/maintenance', Component: Maintenance },
+  { path: '/cgs', Component: CGS },
+  { path: '/resume', Component: Resume }
+]
+
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/expertise" element={<Expertise />} />
-        <Route path="/competences" element={<Competences />} />
-        <Route path="/reseau" element={<Reseau />} />
-        <Route path="/domotique" element={<Domotique />} />
-        <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/cgs" element={<CGS />} />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
-      <Footer />
+      <LanguageProvider>
+        <Navbar />
+        <Routes>
+          {pageRoutes.map((route) => (
+            <Route key={`fr-${route.path}`} path={route.path} element={<route.Component />} />
+          ))}
+          {pageRoutes.map((route) => (
+            <Route
+              key={`en-${route.path}`}
+              path={route.path === '/' ? '/en' : `/en${route.path}`}
+              element={<route.Component />}
+            />
+          ))}
+        </Routes>
+        <Footer />
+      </LanguageProvider>
     </BrowserRouter>
   )
 }

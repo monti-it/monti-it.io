@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useLanguage } from '../i18n/useLanguage'
+import { withLangPrefix } from '../i18n/localePaths'
 
 const SITE_URL = 'https://monti-it.io'
 const DEFAULT_IMAGE = `${SITE_URL}/favicon.png`
@@ -23,25 +25,48 @@ function setLinkTag(rel, href) {
   element.setAttribute('href', href)
 }
 
-function Seo({ title, description, path = '/' }) {
-  useEffect(() => {
-    const fullTitle = `${title} | Monti IT`
-    const url = `${SITE_URL}${path}`
+function setAlternateLink(hreflang, href) {
+  let element = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`)
+  if (!element) {
+    element = document.createElement('link')
+    element.setAttribute('rel', 'alternate')
+    element.setAttribute('hreflang', hreflang)
+    document.head.appendChild(element)
+  }
+  element.setAttribute('href', href)
+}
 
+function Seo({ seoKey }) {
+  const { t, lang, path } = useLanguage()
+
+  useEffect(() => {
+    const title = t(`seo.${seoKey}.title`)
+    const description = t(`seo.${seoKey}.description`)
+    const fullTitle = `${title} | Monti IT`
+    const frUrl = `${SITE_URL}${path}`
+    const enUrl = `${SITE_URL}${withLangPrefix(path, 'en')}`
+    const currentUrl = lang === 'en' ? enUrl : frUrl
+
+    document.documentElement.lang = lang
     document.title = fullTitle
     setMetaTag('name', 'description', description)
-    setLinkTag('canonical', url)
+    setLinkTag('canonical', currentUrl)
+
+    setAlternateLink('fr', frUrl)
+    setAlternateLink('en', enUrl)
+    setAlternateLink('x-default', frUrl)
 
     setMetaTag('property', 'og:type', 'website')
     setMetaTag('property', 'og:title', fullTitle)
     setMetaTag('property', 'og:description', description)
-    setMetaTag('property', 'og:url', url)
+    setMetaTag('property', 'og:url', currentUrl)
     setMetaTag('property', 'og:image', DEFAULT_IMAGE)
+    setMetaTag('property', 'og:locale', lang === 'en' ? 'en_US' : 'fr_FR')
 
     setMetaTag('name', 'twitter:card', 'summary')
     setMetaTag('name', 'twitter:title', fullTitle)
     setMetaTag('name', 'twitter:description', description)
-  }, [title, description, path])
+  }, [seoKey, t, lang, path])
 
   return null
 }
