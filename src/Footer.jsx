@@ -10,7 +10,7 @@ function Footer() {
     ]
 
     const socialLinks = [
-        { label: 'GitHub', href: 'https://github.com/fw508', icon: FaGithub },
+        { label: 'GitHub', href: 'https://github.com/monti-it', icon: FaGithub },
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/christophe-monti-22b97736/', icon: FaLinkedin },
         { label: 'Stack Overflow', href: 'https://stackoverflow.com/users/1560667/christophe', icon: FaStackOverflow }
     ]
