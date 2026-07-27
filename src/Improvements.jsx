@@ -20,8 +20,8 @@ const improvementItems = [
     icon: '⚙️'
   },
   {
-    title: 'CLEAN CODE',
-    description: 'Principes SOLID, KISS et architecture maintenable',
+    title: 'SOFTWARE CRAFTSMANSHIP',
+    description: 'Code propre, testé et évolutif : principes SOLID, KISS, TDD et refactoring continu',
     icon: '✨'
   },
   {

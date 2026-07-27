@@ -5,9 +5,10 @@ function Header() {
         <p className="eyebrow">Besoin de compléter vos outils web</p>
         <h1>.Net Core, Angular, React, SQL, YAML...</h1>
         <p className="lead">
-          Développeur .Net FullStack senior avec plus de 18 ans d&apos;expérience, spécialisé dans 
-          la conception et la modernisation d&apos;architectures logicielles robustes dans des secteurs 
-          variés (froid industriel, télémédecine, transport, logistique) avec des méthodologies Agile.
+          Développeur .Net FullStack senior avec plus de 18 ans d&apos;expérience, spécialisé dans
+          la conception et la modernisation d&apos;architectures logicielles robustes dans des secteurs
+          variés (froid industriel, télémédecine, transport, logistique), avec une approche software
+          craftsmanship (code propre, testé, maintenable) et des méthodologies Agile.
         </p>
         <div className="hero-actions">
           <a className="btn primary" href="mailto:hello@monti-it.io">
