@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
+import Seo from './Seo'
 
 function CGS() {
     return (
         <div className="page">
+            <Seo
+                title="Conditions Générales de Services"
+                description="Conditions générales de services de Monti IT."
+                path="/cgs"
+            />
             <section className="section">
                 <div className="section-header">
                     <p className="eyebrow">Informations légales</p>

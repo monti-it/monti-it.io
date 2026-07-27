@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
 import NetworkSkills from './NetworkSkills'
+import Seo from './Seo'
 
 function Reseau() {
   return (
     <div className="page">
+      <Seo
+        title="Réseau & Infrastructure"
+        description="Installation et configuration de baies de brassage, câblage structuré et réseaux pour petites structures."
+        path="/reseau"
+      />
       <NetworkSkills />
       <div className="hero-actions">
         <Link className="btn ghost" to="/">

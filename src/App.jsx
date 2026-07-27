@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useEffect } from 'react'
 import Navbar from './Navbar'
 import Home from './Home'
 import Expertise from './Expertise'
@@ -14,11 +13,6 @@ import ScrollToTop from './ScrollToTop'
 import './App.scss'
 
 function App() {
-  useEffect(() => {
-    // Titre par défaut
-    document.title = 'monti-it.io'
-  }, [])
-
   return (
     <BrowserRouter>
       <ScrollToTop />

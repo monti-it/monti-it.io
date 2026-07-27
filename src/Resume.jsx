@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom'
 import Experience from './Experience'
 import Languages from './Languages'
+import Seo from './Seo'
 
 function Resume() {
     return (
         <div className="page">
+            <Seo
+                title="Résumé de carrière"
+                description="Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior."
+                path="/resume"
+            />
             <Experience />
             <Languages />
             <section className="section">
