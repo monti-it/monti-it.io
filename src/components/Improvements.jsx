@@ -10,7 +10,8 @@ const itemIcons = {
   agile: '🔄',
   coaching: '🎓',
   modernisation: '🚀',
-  securite: '🔒'
+  securite: '🔒',
+  agentic: '🤖'
 }
 
 function Improvements() {

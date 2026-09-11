@@ -108,6 +108,10 @@ export const translations = {
         securite: {
           title: 'SÉCURITÉ',
           description: 'Intégration OWASP et bonnes pratiques de sécurité'
+        },
+        agentic: {
+          title: 'IA AGENTIQUE',
+          description: "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
         }
       }
     },
@@ -453,6 +457,10 @@ export const translations = {
         securite: {
           title: 'SECURITY',
           description: 'OWASP integration and security best practices'
+        },
+        agentic: {
+          title: 'AGENTIC AI',
+          description: 'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
         }
       }
     },
