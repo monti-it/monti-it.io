@@ -25,9 +25,13 @@ function Navbar() {
           <NavLink
             key={item.to}
             to={localizePath(item.to)}
-            className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`}
+            className={({ isActive }) =>
+              `navbar-link${isActive ? ' active' : ''}`
+            }
           >
-            <span className="navbar-link-icon" aria-hidden="true">{item.icon}</span>
+            <span className="navbar-link-icon" aria-hidden="true">
+              {item.icon}
+            </span>
             {t(`nav.${item.key}`)}
           </NavLink>
         ))}

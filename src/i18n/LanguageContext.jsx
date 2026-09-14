@@ -20,5 +20,9 @@ export function LanguageProvider({ children }) {
     }
   }, [lang, pathname])
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }

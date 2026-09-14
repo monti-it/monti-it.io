@@ -200,36 +200,38 @@ const skillCategories = [
 ]
 
 function Skills() {
-    const { t } = useLanguage()
+  const { t } = useLanguage()
 
-    return (
-        <section className="section">
-            <div className="section-header">
-                <p className="eyebrow">{t('competences.eyebrow')}</p>
-                <h2>{t('competences.title')}</h2>
-                <p className="muted">{t('competences.subtitle')}</p>
-            </div>
-            {skillCategories.map((category) => (
-                <div key={category.categoryKey} className="skill-category">
-                    <h3 className="skill-category-title">{t(`competences.categories.${category.categoryKey}`)}</h3>
-                    <div className="skills">
-                        {category.skills.map((skill) => (
-                            <a
-                                key={skill.name}
-                                href={skill.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="skill-item"
-                            >
-                                <img src={skill.logo} alt={skill.name} className="skill-logo" />
-                                <span>{skill.name}</span>
-                            </a>
-                        ))}
-                    </div>
-                </div>
+  return (
+    <section className="section">
+      <div className="section-header">
+        <p className="eyebrow">{t('competences.eyebrow')}</p>
+        <h2>{t('competences.title')}</h2>
+        <p className="muted">{t('competences.subtitle')}</p>
+      </div>
+      {skillCategories.map((category) => (
+        <div key={category.categoryKey} className="skill-category">
+          <h3 className="skill-category-title">
+            {t(`competences.categories.${category.categoryKey}`)}
+          </h3>
+          <div className="skills">
+            {category.skills.map((skill) => (
+              <a
+                key={skill.name}
+                href={skill.url}
+                target="_blank"
+                rel="noreferrer"
+                className="skill-item"
+              >
+                <img src={skill.logo} alt={skill.name} className="skill-logo" />
+                <span>{skill.name}</span>
+              </a>
             ))}
-        </section>
-    )
+          </div>
+        </div>
+      ))}
+    </section>
+  )
 }
 
 export default Skills

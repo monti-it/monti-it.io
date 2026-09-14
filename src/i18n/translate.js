@@ -1,5 +1,10 @@
 function resolveKey(dict, key) {
-  return key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), dict)
+  return key
+    .split('.')
+    .reduce(
+      (acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined),
+      dict
+    )
 }
 
 export function translate(dict, key, lang) {

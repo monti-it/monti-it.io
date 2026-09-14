@@ -23,7 +23,9 @@ describe('translate', () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
 
     expect(translate(dict, 'header.missing', 'en')).toBe('header.missing')
-    expect(warnSpy).toHaveBeenCalledWith('Missing translation for "header.missing" (en)')
+    expect(warnSpy).toHaveBeenCalledWith(
+      'Missing translation for "header.missing" (en)'
+    )
   })
 
   it('falls back to the key itself when an intermediate path segment does not exist', () => {

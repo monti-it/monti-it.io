@@ -16,7 +16,9 @@ function HomeAssistant() {
       <div className="section-header">
         <p className="eyebrow">{t('domotique.eyebrow')}</p>
         <h2>
-          <SiHomeassistant style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} />
+          <SiHomeassistant
+            style={{ verticalAlign: 'middle', marginRight: '0.5rem' }}
+          />
           {t('domotique.title')}
         </h2>
         <p className="muted">{t('domotique.subtitle')}</p>
@@ -24,7 +26,9 @@ function HomeAssistant() {
       <div className="grid">
         {Object.entries(items).map(([key, service]) => (
           <article key={key} className="card">
-            <div className="card-icon" style={{ fontSize: '2.5rem' }}>{itemIcons[key]}</div>
+            <div className="card-icon" style={{ fontSize: '2.5rem' }}>
+              {itemIcons[key]}
+            </div>
             <h3>{service.name}</h3>
             <p style={{ marginBottom: '1rem' }}>{service.description}</p>
             {service.details && (
