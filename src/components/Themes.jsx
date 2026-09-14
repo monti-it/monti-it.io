@@ -22,7 +22,7 @@ function Themes() {
       <div className="grid">
         {themeMeta.map((theme) => (
           <article key={theme.key} className="card">
-            <div className="card-icon">{theme.icon}</div>
+            <div className="card-icon" aria-hidden="true">{theme.icon}</div>
             <h3>{t(`themes.items.${theme.key}.title`)}</h3>
             <p>{t(`themes.items.${theme.key}.description`)}</p>
             <Link className="card-link" to={localizePath(theme.to)}>
