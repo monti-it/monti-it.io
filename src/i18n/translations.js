@@ -252,6 +252,47 @@ export const translations = {
         }
       }
     },
+    securite: {
+      eyebrow: 'Étude de cas',
+      title: 'RBAC & kubeconfig : un droit d’accès bien scopé, mal protégé',
+      subtitle:
+        'Une anecdote concrète de sécurisation d’un cluster k3s personnel (io.m3i.ledgy, io.m3i.auth), où tester ses propres permissions a suffi à repérer une faille silencieuse.',
+      intro:
+        'En déployant mes projets io.m3i.ledgy et io.m3i.auth sur un cluster k3s, j’applique la même rigueur qu’en mission cliente : ne jamais supposer qu’une permission est correcte, la tester. Voici un exemple concret de ce que ça donne.',
+      items: {
+        contexte: {
+          title: 'Contexte',
+          description:
+            'Le déploiement de io.m3i.ledgy et io.m3i.auth repose sur un compte de service `deploy` scopé, plutôt qu’un accès administrateur au cluster k3s — principe de moindre privilège appliqué au pipeline CI/CD.'
+        },
+        test: {
+          title: 'Le test',
+          description:
+            'Plutôt que de faire confiance au scope défini sur le papier, j’ai délibérément testé ce que ce credential `deploy` pouvait et ne pouvait pas faire une fois en place, pour vérifier que la frontière RBAC tenait réellement.'
+        },
+        decouverte: {
+          title: 'La découverte',
+          description:
+            'En inspectant le kubeconfig généré sur le nœud, ses permissions fichier étaient à 644 (lisible par tous) au lieu de 600 : k3s n’avait pas reçu de `--write-kubeconfig-mode` explicite et était resté sur ce défaut trop permissif.'
+        },
+        risque: {
+          title: 'Le risque',
+          description:
+            'Un credential parfaitement scopé ne vaut que par la protection du fichier qui le contient : à 644, n’importe quel compte local du nœud pouvait lire le token embarqué, contournant le travail de scoping RBAC.'
+        },
+        correction: {
+          title: 'La correction',
+          description:
+            'Le mode d’écriture du kubeconfig a été fixé explicitement à 600 dans la configuration du serveur k3s, et les autres fichiers de credentials générés sur le nœud ont été audités pour la même classe de problème.'
+        },
+        enseignement: {
+          title: 'L’enseignement',
+          description:
+            'Bien scoper des permissions RBAC ne suffit pas si leur support de stockage n’est pas vérifié : c’est ce réflexe de vérification systématique que j’applique aussi sur les infrastructures de mes clients.',
+          highlights: ['RBAC', 'Durcissement Kubernetes', 'Moindre privilège']
+        }
+      }
+    },
     cgs: {
       eyebrow: 'Informations légales',
       title: 'Conditions Générales de Services',
@@ -371,6 +412,11 @@ export const translations = {
         title: 'Maintenance & Support informatique',
         description:
           'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
+      },
+      securite: {
+        title: 'Étude de cas sécurité — RBAC & kubeconfig k3s',
+        description:
+          'Étude de cas concrète : le test d’un credential RBAC scopé sur un cluster k3s a révélé un kubeconfig trop permissif (644 au lieu de 600).'
       },
       cgs: {
         title: 'Conditions Générales de Services',
@@ -631,6 +677,47 @@ export const translations = {
         }
       }
     },
+    securite: {
+      eyebrow: 'Case study',
+      title: 'RBAC & kubeconfig: a well-scoped credential, poorly protected',
+      subtitle:
+        'A concrete example from hardening a personal k3s cluster (io.m3i.ledgy, io.m3i.auth), where testing my own permissions was enough to catch a silent gap.',
+      intro:
+        'Deploying my own projects, io.m3i.ledgy and io.m3i.auth, on a k3s cluster, I apply the same rigor as on client engagements: never assume a permission is correct — test it. Here’s a concrete example of what that looks like.',
+      items: {
+        contexte: {
+          title: 'Context',
+          description:
+            'Deployment of io.m3i.ledgy and io.m3i.auth relies on a scoped `deploy` service account rather than cluster-admin access to the k3s cluster — least privilege applied to the CI/CD pipeline.'
+        },
+        test: {
+          title: 'The test',
+          description:
+            'Rather than trusting the scope defined on paper, I deliberately tested what that `deploy` credential could and couldn’t do once in place, to verify the RBAC boundary actually held.'
+        },
+        decouverte: {
+          title: 'The discovery',
+          description:
+            'Inspecting the kubeconfig generated on the node, its file permissions were 644 (world-readable) instead of 600: k3s hadn’t been given an explicit `--write-kubeconfig-mode` and had fallen back to that overly permissive default.'
+        },
+        risque: {
+          title: 'The risk',
+          description:
+            'A perfectly scoped credential is only as safe as the file protecting it: at 644, any local account on the node could read the embedded token, undermining the RBAC scoping work.'
+        },
+        correction: {
+          title: 'The fix',
+          description:
+            'The kubeconfig write mode was set explicitly to 600 in the k3s server configuration, and other credential files generated on the node were audited for the same class of issue.'
+        },
+        enseignement: {
+          title: 'The takeaway',
+          description:
+            'Scoping RBAC permissions well isn’t enough if their storage isn’t verified too — that habit of systematic verification is the same one I apply on client infrastructure.',
+          highlights: ['RBAC', 'Kubernetes hardening', 'Least privilege']
+        }
+      }
+    },
     cgs: {
       eyebrow: 'Legal information',
       title: 'Terms of Service',
@@ -749,6 +836,11 @@ export const translations = {
         title: 'IT Maintenance & Support',
         description:
           'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
+      },
+      securite: {
+        title: 'Security case study — k3s RBAC & kubeconfig',
+        description:
+          'A concrete case study: testing a scoped RBAC credential on a k3s cluster uncovered an overly permissive kubeconfig (644 instead of 600).'
       },
       cgs: {
         title: 'Terms of Service',

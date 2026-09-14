@@ -9,6 +9,7 @@ import Competences from './pages/Competences'
 import Reseau from './pages/Reseau'
 import Domotique from './pages/Domotique'
 import Maintenance from './pages/Maintenance'
+import Securite from './pages/Securite'
 import CGS from './pages/CGS'
 import Resume from './pages/Resume'
 import './App.scss'
@@ -20,6 +21,7 @@ const pageRoutes = [
   { path: '/reseau', Component: Reseau },
   { path: '/domotique', Component: Domotique },
   { path: '/maintenance', Component: Maintenance },
+  { path: '/securite', Component: Securite },
   { path: '/cgs', Component: CGS },
   { path: '/resume', Component: Resume }
 ]

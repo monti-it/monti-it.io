@@ -62,4 +62,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/maintenance" />
     <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/maintenance" />
   </url>
+  <url>
+    <loc>https://monti-it.io/securite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/securite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/securite" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/securite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/securite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/securite" />
+  </url>
 </urlset>
