@@ -41,7 +41,7 @@ RUN npm run build
 ############################
 # Production image (Nginx for static serving)
 ############################
-FROM nginx:1.27-alpine AS prod
+FROM nginx:1.31-alpine AS prod
 # Set env variables if needed (example placeholder)
 # ENV APP_ENV=production
 
