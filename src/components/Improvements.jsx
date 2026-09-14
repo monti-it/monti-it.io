@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/useLanguage'
 
 const itemIcons = {
@@ -15,7 +16,7 @@ const itemIcons = {
 }
 
 function Improvements() {
-  const { t } = useLanguage()
+  const { t, localizePath } = useLanguage()
   const items = t('expertise.items')
 
   return (
@@ -31,6 +32,11 @@ function Improvements() {
             <div className="card-icon">{itemIcons[key]}</div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
+            {key === 'securite' && (
+              <Link className="card-link" to={localizePath('/securite')}>
+                {t('common.discover')}
+              </Link>
+            )}
           </article>
         ))}
       </div>
