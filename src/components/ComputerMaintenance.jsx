@@ -20,7 +20,11 @@ function ComputerMaintenance() {
       <div className="grid">
         {Object.entries(items).map(([key, service]) => (
           <article key={key} className="card">
-            <div className="card-icon" style={{ fontSize: '2.5rem' }}>
+            <div
+              className="card-icon"
+              style={{ fontSize: '2.5rem' }}
+              aria-hidden="true"
+            >
               {itemIcons[key]}
             </div>
             <h3>{service.name}</h3>

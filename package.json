@@ -1,5 +1,5 @@
 {
-  "name": "try-react",
+  "name": "monti-it-io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint . && npm run format:check",
     "preview": "vite preview",
+    "test": "vitest run",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -29,6 +30,7 @@
     "globals": "^16.5.0",
     "prettier": "3.9.6",
     "sass": "^1.97.3",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vitest": "^5.0.0"
   }
 }
