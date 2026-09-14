@@ -34,12 +34,12 @@ jobs:
         with:
           name: dist
           path: dist
-      - uses: burnett01/rsync-deployments@155b6d6c1219ab2224c20c58d423a3f1b850395f # v9.0.1
+      - uses: wlixcc/SFTP-Deploy-Action@a5ccb9c6211a94cc59404f0fdb2a9936a6dfee64 # v1.2.6
         with:
-          switches: -avzr
-          path: dist/
+          username: ${{ secrets.OVH_SFTP_USER }}
+          server: ${{ secrets.OVH_SFTP_HOST }}
+          port: ${{ secrets.OVH_SFTP_PORT || 22 }}
+          password: ${{ secrets.OVH_SFTP_PASSWORD }}
+          local_path: dist/*
           remote_path: www/monti-it.io
-          remote_host: ${{ secrets.OVH_SSH_HOST }}
-          remote_port: ${{ secrets.OVH_SSH_PORT || 22 }}
-          remote_user: ${{ secrets.OVH_SSH_USER }}
-          remote_key: ${{ secrets.OVH_SSH_KEY }}
+          sftp_only: true

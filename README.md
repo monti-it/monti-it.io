@@ -42,14 +42,14 @@ This repo includes `.github/workflows/deploy.yml` to build the Vite + React app 
 
 ### What it does
 - **`build` job** (runs on every push and PR against `main`): Node `20`, `npm ci`, `npm run lint`, `npm run build`, uploads `dist/` as a workflow artifact.
-- **`deploy` job** (runs only on a push to `main`, never on PRs): downloads the `dist` artifact and rsyncs it over SSH to the OVH server's `www/monti-it.io` folder, using [`burnett01/rsync-deployments`](https://github.com/burnett01/rsync-deployments) pinned to an exact commit SHA.
+- **`deploy` job** (runs only on a push to `main`, never on PRs): downloads the `dist` artifact and uploads it over SFTP to the OVH server's `www/monti-it.io` folder, using [`wlixcc/SFTP-Deploy-Action`](https://github.com/wlixcc/SFTP-Deploy-Action) pinned to an exact commit SHA, with `sftp_only: true`. The OVH hosting account is SFTP-only (no shell/SSH exec access), so this uses the SFTP file-transfer protocol directly rather than rsync-over-SSH — the same account FileZilla already uses to manage the served files.
 
 ### Required repository secrets
 Set these under **Settings → Secrets and variables → Actions** (or `gh secret set <NAME>`):
-- `OVH_SSH_HOST` — the OVH server's hostname or IP
-- `OVH_SSH_USER` — the SSH user to deploy as
-- `OVH_SSH_KEY` — the private key for that user (never committed; add via secret only)
-- `OVH_SSH_PORT` — optional, defaults to `22` if unset
+- `OVH_SFTP_HOST` — the OVH server's hostname or IP
+- `OVH_SFTP_USER` — the SFTP account username
+- `OVH_SFTP_PASSWORD` — the SFTP account password (same credentials used in FileZilla; never committed, add via secret only)
+- `OVH_SFTP_PORT` — optional, defaults to `22` if unset
 
 ### Triggers
 `build` runs on every push and pull request targeting `main`. `deploy` only runs on a direct push to `main` (i.e. after a PR merges), so PR builds never touch the production server.
