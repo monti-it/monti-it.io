@@ -137,7 +137,8 @@ export const translations = {
         database: 'Bases de données',
         devops: 'DevOps & Cloud',
         tools: 'Outils & IDE',
-        architecture: 'Architecture & Sécurité'
+        architecture: 'Architecture',
+        securite: 'Sécurité applicative'
       }
     },
     reseau: {
@@ -521,7 +522,8 @@ export const translations = {
         database: 'Databases',
         devops: 'DevOps & Cloud',
         tools: 'Tools & IDE',
-        architecture: 'Architecture & Security'
+        architecture: 'Architecture',
+        securite: 'Application Security'
       }
     },
     reseau: {

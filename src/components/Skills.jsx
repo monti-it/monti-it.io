@@ -20,6 +20,9 @@ import nunitLogo from '../assets/logos/nunit.png'
 import swaggerLogo from '../assets/logos/swagger.svg'
 import oauthLogo from '../assets/logos/oauth.svg'
 import owaspLogo from '../assets/logos/owasp.svg'
+import traefikproxyLogo from '../assets/logos/traefikproxy.svg'
+import vaultLogo from '../assets/logos/vault.svg'
+import certManagerLogo from '../assets/logos/cert-manager.svg'
 
 const skillCategories = [
   {
@@ -184,16 +187,46 @@ const skillCategories = [
         name: 'SOLID',
         logo: csharpLogo,
         url: 'https://en.wikipedia.org/wiki/SOLID'
+      }
+    ]
+  },
+  {
+    categoryKey: 'securite',
+    skills: [
+      {
+        name: 'OWASP Top 10',
+        logo: owaspLogo,
+        url: 'https://owasp.org/www-project-top-ten/'
       },
       {
-        name: 'OpenID Connect',
+        name: 'OpenID Connect / OAuth2',
         logo: oauthLogo,
         url: 'https://openid.net/connect/'
       },
       {
-        name: 'OWASP',
-        logo: owaspLogo,
-        url: 'https://owasp.org/'
+        name: 'SSO & Forward Auth',
+        logo: traefikproxyLogo,
+        url: 'https://doc.traefik.io/traefik/middlewares/http/forwardauth/'
+      },
+      {
+        name: 'RBAC Design',
+        logo: oauthLogo,
+        url: 'https://en.wikipedia.org/wiki/Role-based_access_control'
+      },
+      {
+        name: 'Secrets Management',
+        logo: vaultLogo,
+        url: 'https://www.vaultproject.io/'
+      },
+      {
+        name: 'Container & Kubernetes Hardening',
+        logo: kubernetesLogo,
+        url: 'https://kubernetes.io/docs/concepts/security/'
+      },
+      {
+        name: 'TLS & cert-manager',
+        logo: certManagerLogo,
+        url: 'https://cert-manager.io/'
       }
     ]
   }
