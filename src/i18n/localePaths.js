@@ -1,12 +1,15 @@
 const EN_PREFIX = '/en'
 
 export function getLangFromPath(pathname) {
-  return pathname === EN_PREFIX || pathname.startsWith(`${EN_PREFIX}/`) ? 'en' : 'fr'
+  return pathname === EN_PREFIX || pathname.startsWith(`${EN_PREFIX}/`)
+    ? 'en'
+    : 'fr'
 }
 
 export function stripLangPrefix(pathname) {
   if (pathname === EN_PREFIX) return '/'
-  if (pathname.startsWith(`${EN_PREFIX}/`)) return pathname.slice(EN_PREFIX.length)
+  if (pathname.startsWith(`${EN_PREFIX}/`))
+    return pathname.slice(EN_PREFIX.length)
   return pathname
 }
 

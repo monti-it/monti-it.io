@@ -57,11 +57,21 @@
 }
 
 @keyframes navbar-wiggle {
-  0% { transform: rotate(0deg) translateY(0); }
-  25% { transform: rotate(-12deg) translateY(-2px); }
-  50% { transform: rotate(10deg) translateY(-3px); }
-  75% { transform: rotate(-6deg) translateY(-1px); }
-  100% { transform: rotate(0deg) translateY(0); }
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-12deg) translateY(-2px);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-3px);
+  }
+  75% {
+    transform: rotate(-6deg) translateY(-1px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
 }
 
 .navbar-cta {
@@ -78,7 +88,10 @@
   display: flex;
   opacity: 0.45;
   filter: grayscale(60%);
-  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 .navbar-lang-link svg {
@@ -296,7 +309,11 @@
   gap: 0.75rem;
   padding: 1.5rem 1rem;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
   color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 500;
@@ -312,7 +329,11 @@
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 24px var(--shadow-lg);
   border-color: var(--accent-primary);
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--hover-gradient-end) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--hover-gradient-end) 100%
+  );
 }
 
 .skill-logo {
@@ -443,7 +464,9 @@
   font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn.primary {
@@ -487,7 +510,11 @@
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(
+    to bottom,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
 }
 
 .timeline-item {
@@ -536,7 +563,9 @@
   padding: 2rem;
   box-shadow: 0 10px 30px var(--shadow-md);
   border: 1px solid var(--border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .timeline-content:hover {
@@ -683,7 +712,11 @@
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  background: linear-gradient(
+    90deg,
+    var(--accent-secondary),
+    var(--accent-primary)
+  );
   transition: width 0.3s ease;
 }
 

@@ -28,8 +28,10 @@ export const translations = {
       lead: "Développeur .Net FullStack senior avec plus de 18 ans d'expérience, spécialisé dans la conception et la modernisation d'architectures logicielles robustes dans des secteurs variés (froid industriel, télémédecine, transport, logistique), avec une approche software craftsmanship (code propre, testé, maintenable) et des méthodologies Agile.",
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
-      panelQuote: 'Diagnostic rapide, livraison fiable et code maintenable. J’aide les équipes à accélérer sans sacrifier la qualité.',
-      panelAuthor: 'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
+      panelQuote:
+        'Diagnostic rapide, livraison fiable et code maintenable. J’aide les équipes à accélérer sans sacrifier la qualité.',
+      panelAuthor:
+        'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
     },
     themes: {
       eyebrow: 'Que puis-je vous apporter ?',
@@ -38,19 +40,23 @@ export const translations = {
       items: {
         expertise: {
           title: 'Expertise & Leadership technique',
-          description: "Pilotage d'équipe, software craftsmanship, DevOps, sécurité et méthodes Agile"
+          description:
+            "Pilotage d'équipe, software craftsmanship, DevOps, sécurité et méthodes Agile"
         },
         competences: {
           title: 'Stack technique complète',
-          description: '.NET, Angular, React, bases de données, cloud et outils DevOps'
+          description:
+            '.NET, Angular, React, bases de données, cloud et outils DevOps'
         },
         reseau: {
           title: 'Réseau & Infrastructure',
-          description: 'Câblage structuré et configuration réseau pour petites structures'
+          description:
+            'Câblage structuré et configuration réseau pour petites structures'
         },
         domotique: {
           title: 'Domotique — Home Assistant',
-          description: "Installation, automatisations et maintenance de votre solution domotique"
+          description:
+            'Installation, automatisations et maintenance de votre solution domotique'
         },
         maintenance: {
           title: 'Maintenance & Support informatique',
@@ -61,13 +67,14 @@ export const translations = {
     quote: {
       eyebrow: 'Pourquoi travailler avec moi ?',
       title: 'Accélérez vos projets avec un expert terrain',
-      text: "Un développeur senior ne se contente pas de coder : il conçoit des architectures robustes, automatise les déploiements et transmet son savoir pour que vos équipes gagnent en autonomie.",
+      text: 'Un développeur senior ne se contente pas de coder : il conçoit des architectures robustes, automatise les déploiements et transmet son savoir pour que vos équipes gagnent en autonomie.',
       author: "- L'expertise au service de votre roadmap"
     },
     expertise: {
       eyebrow: 'Que puis-je vous apporter ?',
       title: "De l'amélioration continue",
-      subtitle: 'Accompagnement technique complet pour transformer vos défis en solutions robustes et pérennes',
+      subtitle:
+        'Accompagnement technique complet pour transformer vos défis en solutions robustes et pérennes',
       items: {
         leadership: {
           title: 'LEADERSHIP TECHNIQUE',
@@ -75,7 +82,8 @@ export const translations = {
         },
         analyse: {
           title: 'ANALYSE & RÉSOLUTION',
-          description: 'Analyse approfondie et résolution de problèmes complexes'
+          description:
+            'Analyse approfondie et résolution de problèmes complexes'
         },
         communication: {
           title: 'COMMUNICATION',
@@ -87,11 +95,13 @@ export const translations = {
         },
         craftsmanship: {
           title: 'SOFTWARE CRAFTSMANSHIP',
-          description: 'Code propre, testé et évolutif : principes SOLID, KISS, TDD et refactoring continu'
+          description:
+            'Code propre, testé et évolutif : principes SOLID, KISS, TDD et refactoring continu'
         },
         expression: {
           title: 'EXPRESSION DU BESOIN',
-          description: "Formaliser le besoin afin de structurer l'organisation de l'équipe"
+          description:
+            "Formaliser le besoin afin de structurer l'organisation de l'équipe"
         },
         agile: {
           title: 'MÉTHODES AGILE',
@@ -111,14 +121,16 @@ export const translations = {
         },
         agentic: {
           title: 'IA AGENTIQUE',
-          description: "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
+          description:
+            "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
         }
       }
     },
     competences: {
       eyebrow: 'Compétences techniques',
       title: 'Stack technique complète',
-      subtitle: 'Technologies et pratiques professionnelles pour des solutions robustes et évolutives',
+      subtitle:
+        'Technologies et pratiques professionnelles pour des solutions robustes et évolutives',
       categories: {
         backend: 'Langages & Frameworks Backend',
         frontend: 'Frontend & UI',
@@ -131,11 +143,13 @@ export const translations = {
     reseau: {
       eyebrow: 'Infrastructure & Réseau',
       title: 'Compétences réseau',
-      subtitle: "Installation et configuration d'infrastructures réseau pour petites structures",
+      subtitle:
+        "Installation et configuration d'infrastructures réseau pour petites structures",
       items: {
         networkBay: {
           name: 'Network Bay Setup',
-          description: 'Installation et configuration de baies de brassage réseau',
+          description:
+            'Installation et configuration de baies de brassage réseau',
           details: [
             'Câblage structuré',
             'Configuration switch',
@@ -147,11 +161,13 @@ export const translations = {
     domotique: {
       eyebrow: 'Domotique',
       title: 'Intégration Home Assistant',
-      subtitle: "Je vous accompagne dans la mise en place d'une solution domotique open source, fiable et respectueuse de vos données",
+      subtitle:
+        "Je vous accompagne dans la mise en place d'une solution domotique open source, fiable et respectueuse de vos données",
       items: {
         installation: {
           name: 'Installation & Configuration',
-          description: 'Mise en place de Home Assistant adaptée à votre logement',
+          description:
+            'Mise en place de Home Assistant adaptée à votre logement',
           details: [
             'Installation sur serveur dédié (Raspberry Pi)',
             'Intégration de vos objets connectés existants',
@@ -162,7 +178,8 @@ export const translations = {
         },
         automation: {
           name: 'Domotique & Automatisations',
-          description: 'Des scénarios pensés pour votre confort et vos économies',
+          description:
+            'Des scénarios pensés pour votre confort et vos économies',
           details: [
             'Gestion du chauffage et de l’éclairage',
             'Scénarios de présence et de sécurité',
@@ -173,7 +190,8 @@ export const translations = {
         },
         maintenance: {
           name: 'Maintenance & Évolution',
-          description: 'Un accompagnement dans la durée pour votre installation',
+          description:
+            'Un accompagnement dans la durée pour votre installation',
           details: [
             'Mises à jour et sauvegardes régulières',
             'Ajout de nouveaux équipements',
@@ -187,11 +205,13 @@ export const translations = {
     maintenance: {
       eyebrow: 'Services complémentaires',
       title: 'Maintenance & Support Informatique',
-      subtitle: "De l'intervention ponctuelle à l'accompagnement régulier, je mets mon expertise technique au service de votre infrastructure",
+      subtitle:
+        "De l'intervention ponctuelle à l'accompagnement régulier, je mets mon expertise technique au service de votre infrastructure",
       items: {
         entreprises: {
           name: 'Entreprises & PME',
-          description: 'Je vous accompagne dans la gestion de votre infrastructure',
+          description:
+            'Je vous accompagne dans la gestion de votre infrastructure',
           details: [
             'Gestion et suivi de votre parc informatique',
             'Installation et configuration de postes de travail',
@@ -204,7 +224,8 @@ export const translations = {
         },
         particuliers: {
           name: 'Particuliers',
-          description: 'Assistance personnalisée à votre domicile ou en atelier',
+          description:
+            'Assistance personnalisée à votre domicile ou en atelier',
           details: [
             'Dépannage de votre matériel et logiciels',
             'Récupération de vos données importantes',
@@ -242,14 +263,16 @@ export const translations = {
     experience: {
       eyebrow: 'Parcours professionnel',
       title: 'Expériences notables',
-      subtitle: "Plus de 18 ans d'expérience dans des projets complexes et variés",
+      subtitle:
+        "Plus de 18 ans d'expérience dans des projets complexes et variés",
       projectLabel: 'Projet:',
       items: {
         clauger: {
           period: 'Depuis 2022',
           sector: 'Froid industriel',
           role: "Ingénieur d'études - Indépendant",
-          description: "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
+          description:
+            "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
           achievements: [
             'Augmentation du volet DataViz',
             'Déploiements automatisés',
@@ -260,7 +283,8 @@ export const translations = {
           period: '2020 - 2022',
           sector: 'Télémédecine',
           role: "Ingénieur d'études - ECONOCOM",
-          description: "Maintenance évolutive des applications et amélioration de l'architecture. Référent technique avec intégration de 5 modules de la suite Easily.",
+          description:
+            "Maintenance évolutive des applications et amélioration de l'architecture. Référent technique avec intégration de 5 modules de la suite Easily.",
           achievements: [
             "Mise en place de l'intégration continue",
             'Harmonisation des process',
@@ -271,7 +295,8 @@ export const translations = {
           period: '2016 - 2019',
           sector: 'Télémédecine',
           role: "Ingénieur d'études",
-          description: "Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit.",
+          description:
+            'Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit.',
           achievements: [
             "Mise en place d'outils transverses (DMS, Audit trail, i18n)",
             'Optimisation des performances',
@@ -282,7 +307,8 @@ export const translations = {
           period: '2013 - 2016',
           sector: 'Transport public',
           role: "Chef d'équipe / Ingénieur d'études - OBJECT DIRECT",
-          description: "Gestion d'une équipe de 4 développeurs en méthode Agile pour un site web de vente à distance en télébilletique.",
+          description:
+            "Gestion d'une équipe de 4 développeurs en méthode Agile pour un site web de vente à distance en télébilletique.",
           achievements: [
             "Gestion d'équipe de 4 développeurs",
             'Architecture évolutive multi-clients',
@@ -293,7 +319,8 @@ export const translations = {
           period: '2007 - 2011',
           sector: 'Trafic ferroviaire',
           role: "Chef d'équipe / Architecte - SOGETI",
-          description: "Développement et gestion d'équipe pour l'application gérant les différentes lignes ouvertes et la maintenance des trains TER et CORAIL. Évolution de développeur à chef d'équipe et architecte.",
+          description:
+            "Développement et gestion d'équipe pour l'application gérant les différentes lignes ouvertes et la maintenance des trains TER et CORAIL. Évolution de développeur à chef d'équipe et architecte.",
           achievements: [
             "Gestion d'équipe de 5 développeurs",
             'Développement architecture n-tiers',
@@ -316,27 +343,33 @@ export const translations = {
     seo: {
       home: {
         title: 'Développeur .NET FullStack Senior Freelance',
-        description: "Développeur .NET FullStack senior avec 18+ ans d'expérience : architecture logicielle, software craftsmanship, DevOps et accompagnement Agile. Missions ou forfait, remote privilégié."
+        description:
+          "Développeur .NET FullStack senior avec 18+ ans d'expérience : architecture logicielle, software craftsmanship, DevOps et accompagnement Agile. Missions ou forfait, remote privilégié."
       },
       expertise: {
         title: 'Expertise & Leadership technique',
-        description: "Pilotage d'équipe, software craftsmanship, CI/CD, sécurité et méthodes Agile : l'accompagnement technique complet d'un développeur senior freelance."
+        description:
+          "Pilotage d'équipe, software craftsmanship, CI/CD, sécurité et méthodes Agile : l'accompagnement technique complet d'un développeur senior freelance."
       },
       competences: {
         title: 'Compétences techniques — .NET, Angular, React, Azure DevOps',
-        description: 'Stack technique complète : C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes et bonnes pratiques de sécurité.'
+        description:
+          'Stack technique complète : C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes et bonnes pratiques de sécurité.'
       },
       reseau: {
         title: 'Réseau & Infrastructure',
-        description: 'Installation et configuration de baies de brassage, câblage structuré et réseaux pour petites structures.'
+        description:
+          'Installation et configuration de baies de brassage, câblage structuré et réseaux pour petites structures.'
       },
       domotique: {
         title: 'Intégration Home Assistant — Domotique',
-        description: "Installation, automatisations et maintenance d'une solution domotique open source Home Assistant, sur-mesure et respectueuse de vos données."
+        description:
+          "Installation, automatisations et maintenance d'une solution domotique open source Home Assistant, sur-mesure et respectueuse de vos données."
       },
       maintenance: {
         title: 'Maintenance & Support informatique',
-        description: 'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
+        description:
+          'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
       },
       cgs: {
         title: 'Conditions Générales de Services',
@@ -344,7 +377,8 @@ export const translations = {
       },
       resume: {
         title: 'Résumé de carrière',
-        description: 'Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior.'
+        description:
+          'Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior.'
       }
     }
   },
@@ -377,8 +411,10 @@ export const translations = {
       lead: 'Senior FullStack .Net developer with over 18 years of experience, specialized in designing and modernizing robust software architectures across varied industries (industrial refrigeration, telemedicine, transport, logistics), with a software craftsmanship approach (clean, tested, maintainable code) and Agile methodologies.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
-      panelQuote: 'Fast diagnosis, reliable delivery and maintainable code. I help teams move faster without sacrificing quality.',
-      panelAuthor: 'Short or long-term engagements, or fixed-price projects • Remote-first'
+      panelQuote:
+        'Fast diagnosis, reliable delivery and maintainable code. I help teams move faster without sacrificing quality.',
+      panelAuthor:
+        'Short or long-term engagements, or fixed-price projects • Remote-first'
     },
     themes: {
       eyebrow: 'What can I bring to your project?',
@@ -387,19 +423,23 @@ export const translations = {
       items: {
         expertise: {
           title: 'Expertise & Technical Leadership',
-          description: 'Team leadership, software craftsmanship, DevOps, security and Agile methods'
+          description:
+            'Team leadership, software craftsmanship, DevOps, security and Agile methods'
         },
         competences: {
           title: 'Full technical stack',
-          description: '.NET, Angular, React, databases, cloud and DevOps tooling'
+          description:
+            '.NET, Angular, React, databases, cloud and DevOps tooling'
         },
         reseau: {
           title: 'Network & Infrastructure',
-          description: 'Structured cabling and network configuration for small organizations'
+          description:
+            'Structured cabling and network configuration for small organizations'
         },
         domotique: {
           title: 'Smart Home — Home Assistant',
-          description: 'Installation, automation and maintenance of your smart home solution'
+          description:
+            'Installation, automation and maintenance of your smart home solution'
         },
         maintenance: {
           title: 'IT Maintenance & Support',
@@ -416,11 +456,13 @@ export const translations = {
     expertise: {
       eyebrow: 'What can I bring to your project?',
       title: 'Continuous improvement',
-      subtitle: 'End-to-end technical support to turn your challenges into robust, lasting solutions',
+      subtitle:
+        'End-to-end technical support to turn your challenges into robust, lasting solutions',
       items: {
         leadership: {
           title: 'TECHNICAL LEADERSHIP',
-          description: 'Team leadership, architecture and technical reference point'
+          description:
+            'Team leadership, architecture and technical reference point'
         },
         analyse: {
           title: 'ANALYSIS & RESOLUTION',
@@ -428,7 +470,8 @@ export const translations = {
         },
         communication: {
           title: 'COMMUNICATION',
-          description: 'Making technical topics accessible and collaborating effectively'
+          description:
+            'Making technical topics accessible and collaborating effectively'
         },
         cicd: {
           title: 'CI/CD & DEVOPS',
@@ -436,11 +479,13 @@ export const translations = {
         },
         craftsmanship: {
           title: 'SOFTWARE CRAFTSMANSHIP',
-          description: 'Clean, tested, evolvable code: SOLID, KISS, TDD and continuous refactoring'
+          description:
+            'Clean, tested, evolvable code: SOLID, KISS, TDD and continuous refactoring'
         },
         expression: {
           title: 'REQUIREMENTS DEFINITION',
-          description: 'Formalizing needs to structure how the team is organized'
+          description:
+            'Formalizing needs to structure how the team is organized'
         },
         agile: {
           title: 'AGILE METHODS',
@@ -460,14 +505,16 @@ export const translations = {
         },
         agentic: {
           title: 'AGENTIC AI',
-          description: 'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
+          description:
+            'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
         }
       }
     },
     competences: {
       eyebrow: 'Technical skills',
       title: 'Full technical stack',
-      subtitle: 'Technologies and professional practices for robust, scalable solutions',
+      subtitle:
+        'Technologies and professional practices for robust, scalable solutions',
       categories: {
         backend: 'Backend Languages & Frameworks',
         frontend: 'Frontend & UI',
@@ -480,7 +527,8 @@ export const translations = {
     reseau: {
       eyebrow: 'Infrastructure & Network',
       title: 'Network skills',
-      subtitle: 'Installation and configuration of network infrastructure for small organizations',
+      subtitle:
+        'Installation and configuration of network infrastructure for small organizations',
       items: {
         networkBay: {
           name: 'Network Bay Setup',
@@ -496,7 +544,8 @@ export const translations = {
     domotique: {
       eyebrow: 'Smart Home',
       title: 'Home Assistant Integration',
-      subtitle: 'I help you set up an open-source smart home solution that is reliable and respectful of your data',
+      subtitle:
+        'I help you set up an open-source smart home solution that is reliable and respectful of your data',
       items: {
         installation: {
           name: 'Installation & Configuration',
@@ -536,7 +585,8 @@ export const translations = {
     maintenance: {
       eyebrow: 'Complementary services',
       title: 'IT Maintenance & Support',
-      subtitle: 'From one-off interventions to ongoing support, I put my technical expertise at the service of your infrastructure',
+      subtitle:
+        'From one-off interventions to ongoing support, I put my technical expertise at the service of your infrastructure',
       items: {
         entreprises: {
           name: 'Businesses & SMBs',
@@ -598,7 +648,8 @@ export const translations = {
           period: 'Since 2022',
           sector: 'Industrial refrigeration',
           role: 'Software Engineer - Freelance',
-          description: 'Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improving software quality and security.',
+          description:
+            'Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improving software quality and security.',
           achievements: [
             'Expanded the DataViz capabilities',
             'Automated deployments',
@@ -609,7 +660,8 @@ export const translations = {
           period: '2020 - 2022',
           sector: 'Telemedicine',
           role: 'Software Engineer - ECONOCOM',
-          description: 'Evolutive maintenance of applications and architecture improvements. Technical reference point, integrating 5 modules of the Easily suite.',
+          description:
+            'Evolutive maintenance of applications and architecture improvements. Technical reference point, integrating 5 modules of the Easily suite.',
           achievements: [
             'Set up continuous integration',
             'Harmonized processes',
@@ -620,7 +672,8 @@ export const translations = {
           period: '2016 - 2019',
           sector: 'Telemedicine',
           role: 'Software Engineer',
-          description: 'Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology.',
+          description:
+            'Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology.',
           achievements: [
             'Set up cross-cutting tools (DMS, audit trail, i18n)',
             'Performance optimization',
@@ -631,7 +684,8 @@ export const translations = {
           period: '2013 - 2016',
           sector: 'Public transport',
           role: 'Team Lead / Software Engineer - OBJECT DIRECT',
-          description: 'Managed a team of 4 developers using Agile methodology for a remote ticketing e-commerce website.',
+          description:
+            'Managed a team of 4 developers using Agile methodology for a remote ticketing e-commerce website.',
           achievements: [
             'Led a team of 4 developers',
             'Evolutive multi-tenant architecture',
@@ -642,7 +696,8 @@ export const translations = {
           period: '2007 - 2011',
           sector: 'Rail traffic',
           role: 'Team Lead / Architect - SOGETI',
-          description: 'Development and team management for the application handling open lines and maintenance of TER and CORAIL trains. Progressed from developer to team lead and architect.',
+          description:
+            'Development and team management for the application handling open lines and maintenance of TER and CORAIL trains. Progressed from developer to team lead and architect.',
           achievements: [
             'Led a team of 5 developers',
             'Developed an n-tier architecture',
@@ -665,27 +720,33 @@ export const translations = {
     seo: {
       home: {
         title: 'Senior FullStack .NET Freelance Developer',
-        description: 'Senior FullStack .NET developer with 18+ years of experience: software architecture, software craftsmanship, DevOps and Agile support. Missions or fixed-price, remote-first.'
+        description:
+          'Senior FullStack .NET developer with 18+ years of experience: software architecture, software craftsmanship, DevOps and Agile support. Missions or fixed-price, remote-first.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
-        description: "Team leadership, software craftsmanship, CI/CD, security and Agile methods: the complete technical support of a senior freelance developer."
+        description:
+          'Team leadership, software craftsmanship, CI/CD, security and Agile methods: the complete technical support of a senior freelance developer.'
       },
       competences: {
         title: 'Technical Skills — .NET, Angular, React, Azure DevOps',
-        description: 'Full technical stack: C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes and security best practices.'
+        description:
+          'Full technical stack: C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes and security best practices.'
       },
       reseau: {
         title: 'Network & Infrastructure',
-        description: 'Installation and configuration of patch panels, structured cabling and networks for small organizations.'
+        description:
+          'Installation and configuration of patch panels, structured cabling and networks for small organizations.'
       },
       domotique: {
         title: 'Home Assistant Integration — Smart Home',
-        description: 'Installation, automation and maintenance of a custom, open-source Home Assistant solution that respects your data.'
+        description:
+          'Installation, automation and maintenance of a custom, open-source Home Assistant solution that respects your data.'
       },
       maintenance: {
         title: 'IT Maintenance & Support',
-        description: 'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
+        description:
+          'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
       },
       cgs: {
         title: 'Terms of Service',
@@ -693,7 +754,8 @@ export const translations = {
       },
       resume: {
         title: 'Career résumé',
-        description: "Professional background and experience of Christophe Monti, senior FullStack .NET developer."
+        description:
+          'Professional background and experience of Christophe Monti, senior FullStack .NET developer.'
       }
     }
   }

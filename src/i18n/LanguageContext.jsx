@@ -5,7 +5,12 @@ import { LanguageContext } from './useLanguage'
 import { getLangFromPath, stripLangPrefix, withLangPrefix } from './localePaths'
 
 function resolveKey(dict, key) {
-  return key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), dict)
+  return key
+    .split('.')
+    .reduce(
+      (acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined),
+      dict
+    )
 }
 
 export function LanguageProvider({ children }) {
@@ -30,5 +35,9 @@ export function LanguageProvider({ children }) {
     }
   }, [lang, pathname])
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }

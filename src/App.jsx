@@ -32,7 +32,11 @@ function App() {
         <Navbar />
         <Routes>
           {pageRoutes.map((route) => (
-            <Route key={`fr-${route.path}`} path={route.path} element={<route.Component />} />
+            <Route
+              key={`fr-${route.path}`}
+              path={route.path}
+              element={<route.Component />}
+            />
           ))}
           {pageRoutes.map((route) => (
             <Route

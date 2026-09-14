@@ -26,7 +26,9 @@ function setLinkTag(rel, href) {
 }
 
 function setAlternateLink(hreflang, href) {
-  let element = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`)
+  let element = document.querySelector(
+    `link[rel="alternate"][hreflang="${hreflang}"]`
+  )
   if (!element) {
     element = document.createElement('link')
     element.setAttribute('rel', 'alternate')

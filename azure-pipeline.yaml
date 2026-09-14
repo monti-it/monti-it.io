@@ -97,19 +97,19 @@ stages:
   - stage: Deploy
     dependsOn: Build
     jobs:
-    - job: Deploy2OVH
-      displayName: 'Copy files to OVH server'
-      condition: eq(variables['Build.Reason'], 'IndividualCI')
-      steps:
-      - checkout: none
-      
-      - task: DownloadPipelineArtifact@2
-        displayName: 'Download artifact'
-        inputs:
-          artifactName: 'dist'
-          targetPath: '$(Pipeline.Workspace)/dist'
+      - job: Deploy2OVH
+        displayName: 'Copy files to OVH server'
+        condition: eq(variables['Build.Reason'], 'IndividualCI')
+        steps:
+          - checkout: none
 
-      - template: copy-files-to-ovh.yaml
-        parameters:
-          sourceFolder: '$(Pipeline.Workspace)/dist'
-          targetFolder: 'www/monti-it.io'
+          - task: DownloadPipelineArtifact@2
+            displayName: 'Download artifact'
+            inputs:
+              artifactName: 'dist'
+              targetPath: '$(Pipeline.Workspace)/dist'
+
+          - template: copy-files-to-ovh.yaml
+            parameters:
+              sourceFolder: '$(Pipeline.Workspace)/dist'
+              targetFolder: 'www/monti-it.io'
