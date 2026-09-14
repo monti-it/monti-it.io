@@ -23,7 +23,7 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Besoin de compléter vos outils web',
+      eyebrow: 'Besoin de renforcer votre équipe technique ?',
       title: '.Net Core, Angular, React, SQL, YAML...',
       lead: "Développeur .Net FullStack senior avec plus de 18 ans d'expérience, spécialisé dans la conception et la modernisation d'architectures logicielles robustes dans des secteurs variés (froid industriel, télémédecine, transport, logistique), avec une approche software craftsmanship (code propre, testé, maintenable) et des méthodologies Agile.",
       ctaMore: 'En savoir plus',
@@ -372,7 +372,7 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Need to strengthen your web toolkit',
+      eyebrow: 'Need to strengthen your technical team?',
       title: '.Net Core, Angular, React, SQL, YAML...',
       lead: 'Senior FullStack .Net developer with over 18 years of experience, specialized in designing and modernizing robust software architectures across varied industries (industrial refrigeration, telemedicine, transport, logistics), with a software craftsmanship approach (clean, tested, maintainable code) and Agile methodologies.',
       ctaMore: 'Learn more',
