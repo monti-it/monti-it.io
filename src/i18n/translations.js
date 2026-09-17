@@ -25,7 +25,7 @@ export const translations = {
     header: {
       eyebrow: 'Besoin de renforcer votre équipe technique ?',
       title: '.Net Core, Angular, React, SQL, YAML...',
-      lead: "Développeur .Net FullStack senior avec plus de 18 ans d'expérience, spécialisé dans la conception et la modernisation d'architectures logicielles robustes dans des secteurs variés (froid industriel, télémédecine, transport, logistique), avec une approche software craftsmanship (code propre, testé, maintenable) et des méthodologies Agile.",
+      lead: "Artisan du logiciel augmenté par l'IA, en développement .NET FullStack depuis 2005 : architectures robustes, code propre et testé, flux de développement outillés par l'IA, au service de secteurs variés (froid industriel, télémédecine, transport, logistique).",
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
       panelQuote:
@@ -445,7 +445,7 @@ export const translations = {
       eyebrow: 'Parcours professionnel',
       title: 'Expériences notables',
       subtitle:
-        "Plus de 18 ans d'expérience dans des projets complexes et variés",
+        'Des projets complexes et variés depuis 2005',
       projectLabel: 'Projet:',
       items: {
         clauger: {
@@ -523,9 +523,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Développeur .NET FullStack Senior Freelance',
+        title: "Artisan du logiciel augmenté par l'IA — .NET Freelance Senior",
         description:
-          "Développeur .NET FullStack senior avec 18+ ans d'expérience : architecture logicielle, software craftsmanship, DevOps et accompagnement Agile. Missions ou forfait, remote privilégié."
+          "Artisan du logiciel augmenté par l'IA, développeur .NET FullStack depuis 2005 : architecture logicielle, software craftsmanship, flux de développement outillés par l'IA, DevOps. Missions ou forfait, remote privilégié."
       },
       expertise: {
         title: 'Expertise & Leadership technique',
@@ -637,7 +637,7 @@ export const translations = {
     header: {
       eyebrow: 'Need to strengthen your technical team?',
       title: '.Net Core, Angular, React, SQL, YAML...',
-      lead: 'Senior FullStack .Net developer with over 18 years of experience, specialized in designing and modernizing robust software architectures across varied industries (industrial refrigeration, telemedicine, transport, logistics), with a software craftsmanship approach (clean, tested, maintainable code) and Agile methodologies.',
+      lead: 'AI-augmented software craftsman, building FullStack .NET software since 2005: robust architectures, clean tested code, and AI-powered development workflows, serving varied industries (industrial refrigeration, telemedicine, transport, logistics).',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
       panelQuote:
@@ -1051,7 +1051,7 @@ export const translations = {
     experience: {
       eyebrow: 'Professional background',
       title: 'Notable experience',
-      subtitle: 'Over 18 years of experience on complex, varied projects',
+      subtitle: 'Complex, varied projects since 2005',
       projectLabel: 'Project:',
       items: {
         clauger: {
@@ -1129,9 +1129,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Senior FullStack .NET Freelance Developer',
+        title: 'AI-Augmented Software Craftsman — Senior .NET Freelance',
         description:
-          'Senior FullStack .NET developer with 18+ years of experience: software architecture, software craftsmanship, DevOps and Agile support. Missions or fixed-price, remote-first.'
+          'AI-augmented software craftsman, building FullStack .NET software since 2005: software architecture, software craftsmanship, AI-powered development workflows, DevOps. Missions or fixed-price, remote-first.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
