@@ -257,6 +257,130 @@
   transform: translateX(4px);
 }
 
+.expertise-grid .expertise-card {
+  --card-accent: var(--accent-primary);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: expertise-card-in 0.5s ease forwards;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.expertise-grid .expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent);
+}
+
+.expertise-grid .expertise-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px var(--shadow-lg);
+}
+
+.expertise-grid .expertise-card:nth-child(4n + 1) {
+  --card-accent: var(--accent-primary);
+}
+
+.expertise-grid .expertise-card:nth-child(4n + 2) {
+  --card-accent: var(--accent-blue);
+}
+
+.expertise-grid .expertise-card:nth-child(4n + 3) {
+  --card-accent: var(--accent-green);
+}
+
+.expertise-grid .expertise-card:nth-child(4n) {
+  --card-accent: var(--accent-secondary);
+}
+
+.expertise-grid .expertise-card:nth-child(1) {
+  animation-delay: 0.03s;
+}
+
+.expertise-grid .expertise-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.expertise-grid .expertise-card:nth-child(3) {
+  animation-delay: 0.13s;
+}
+
+.expertise-grid .expertise-card:nth-child(4) {
+  animation-delay: 0.18s;
+}
+
+.expertise-grid .expertise-card:nth-child(5) {
+  animation-delay: 0.23s;
+}
+
+.expertise-grid .expertise-card:nth-child(6) {
+  animation-delay: 0.28s;
+}
+
+.expertise-grid .expertise-card:nth-child(7) {
+  animation-delay: 0.33s;
+}
+
+.expertise-grid .expertise-card:nth-child(8) {
+  animation-delay: 0.38s;
+}
+
+.expertise-grid .expertise-card:nth-child(9) {
+  animation-delay: 0.43s;
+}
+
+.expertise-grid .expertise-card:nth-child(10) {
+  animation-delay: 0.48s;
+}
+
+.expertise-grid .expertise-card:nth-child(11) {
+  animation-delay: 0.53s;
+}
+
+.expertise-grid .expertise-card:nth-child(12) {
+  animation-delay: 0.58s;
+}
+
+@keyframes expertise-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expertise-grid .expertise-card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.expertise-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  background: color-mix(in srgb, var(--card-accent) 22%, var(--bg-card));
+  transition: transform 0.25s ease;
+}
+
+.expertise-grid .expertise-card:hover .expertise-card-icon {
+  transform: scale(1.15) rotate(-8deg);
+}
+
 .contrast {
   background: var(--bg-contrast);
   color: var(--text-light);
