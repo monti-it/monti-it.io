@@ -23,6 +23,7 @@ import owaspLogo from '../assets/logos/owasp.svg'
 import traefikproxyLogo from '../assets/logos/traefikproxy.svg'
 import vaultLogo from '../assets/logos/vault.svg'
 import certManagerLogo from '../assets/logos/cert-manager.svg'
+import anthropicLogo from '../assets/logos/anthropic.svg'
 
 const skillCategories = [
   {
@@ -167,6 +168,11 @@ const skillCategories = [
         name: 'NUnit',
         logo: nunitLogo,
         url: 'https://nunit.org/'
+      },
+      {
+        name: 'Claude Code',
+        logo: anthropicLogo,
+        url: 'https://claude.com/claude-code'
       }
     ]
   },

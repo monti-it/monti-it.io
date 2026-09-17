@@ -12,6 +12,7 @@ const itemIcons = {
   coaching: '🎓',
   modernisation: '🚀',
   securite: '🔒',
+  devsecops: '🛡️',
   agentic: '🤖'
 }
 
