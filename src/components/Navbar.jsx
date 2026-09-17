@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link to={localizePath('/')} className="navbar-brand">
-        <img src="/favicon.png" alt="" className="navbar-logo" />
+        <img src="/mark.svg" alt="" className="navbar-logo" />
         {t('nav.brand')}
       </Link>
       <div className="navbar-links">
