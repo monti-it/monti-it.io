@@ -27,17 +27,15 @@ function Improvements() {
         <h2>{t('expertise.title')}</h2>
         <p className="muted">{t('expertise.subtitle')}</p>
       </div>
-      <div className="grid">
+      <div className="grid expertise-grid">
         {Object.entries(items).map(([key, item]) => (
-          <article key={key} className="card">
-            <div className="card-icon">{itemIcons[key]}</div>
+          <article key={key} className="card expertise-card">
+            <div className="expertise-card-icon">{itemIcons[key]}</div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            {key === 'securite' && (
-              <Link className="card-link" to={localizePath('/securite')}>
-                {t('common.discover')}
-              </Link>
-            )}
+            <Link className="card-link" to={localizePath(`/${key}`)}>
+              {t('common.discover')}
+            </Link>
           </article>
         ))}
       </div>

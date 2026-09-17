@@ -121,8 +121,7 @@ export const translations = {
         },
         devsecops: {
           title: 'DEVSECOPS',
-          description:
-            'Sécurité intégrée au pipeline CI/CD : scans automatisés, gestion des secrets et durcissement des déploiements'
+          description: 'Sécurité intégrée aux pipelines CI/CD, pas en bout de chaîne'
         },
         agentic: {
           title: 'IA AGENTIQUE',
@@ -130,6 +129,141 @@ export const translations = {
             "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
         }
       }
+    },
+    expertiseDetail: {
+      eyebrow: 'Zoom sur cette expertise'
+    },
+    leadership: {
+      title: 'Leadership technique',
+      subtitle: 'Piloter une équipe technique au quotidien',
+      intro: "Le leadership technique, c'est accompagner une équipe de développement sans se couper du code : arbitrer les choix d'architecture, lever les blocages et garder le cap sur la qualité tout en respectant les délais.",
+      practices: [
+        "Pilotage d'équipes de 4 à 5 développeurs sur des projets Agile",
+        "Arbitrage des choix techniques et revues d'architecture",
+        'Référent technique pour les décisions structurantes',
+        "Montée en compétence progressive de l'équipe"
+      ],
+      highlights: ["Pilotage d'équipe", 'Architecture', 'Référent technique']
+    },
+    analyse: {
+      title: 'Analyse & résolution de problèmes',
+      subtitle: 'Remonter à la cause racine avant de corriger',
+      intro: "Corriger un symptôme sans comprendre sa cause ne fait que déplacer le problème. Mon approche consiste à instrumenter, mesurer et remonter systématiquement à l'origine d'un dysfonctionnement avant de proposer un correctif durable.",
+      practices: [
+        'Diagnostic méthodique par élimination des hypothèses',
+        'Analyse de logs, métriques et traces pour isoler la cause racine',
+        'Documentation des post-mortems pour capitaliser sur les incidents',
+        'Priorisation des correctifs selon impact et risque de récidive'
+      ],
+      highlights: ['Root cause analysis', 'Résolution de problèmes', 'Diagnostic']
+    },
+    communication: {
+      title: 'Communication technique',
+      subtitle: 'Rendre le travail technique compréhensible pour tous',
+      intro: "Un projet technique n'avance que si les décisions sont comprises par l'ensemble des parties prenantes, techniques ou non. Je m'attache à vulgariser les enjeux, documenter les choix et fluidifier les échanges entre équipes.",
+      practices: [
+        'Vulgarisation des sujets techniques pour un public non-développeur',
+        "Documentation claire des décisions d'architecture (ADR)",
+        'Animation d’ateliers de restitution avec les métiers',
+        'Collaboration continue entre équipes produit, technique et support'
+      ],
+      highlights: ['Vulgarisation', 'Documentation', 'Collaboration']
+    },
+    cicd: {
+      title: 'CI/CD & DevOps',
+      subtitle: 'Automatiser la livraison, pas la confiance',
+      intro: "Un pipeline de livraison automatisé accélère les déploiements, mais ne remplace pas la rigueur : tests, revues et contrôles qualité restent au cœur du processus. J'automatise les étapes répétitives sans jamais sacrifier la fiabilité.",
+      practices: [
+        'Mise en place de pipelines CI/CD complets (build, test, déploiement)',
+        'Conteneurisation des applications avec Docker',
+        'Orchestration et déploiement sur Kubernetes',
+        'Intégration de contrôles qualité automatisés à chaque étape'
+      ],
+      highlights: ['CI/CD', 'Docker', 'Kubernetes']
+    },
+    craftsmanship: {
+      title: 'Software craftsmanship',
+      subtitle: 'Du code que quelqu’un d’autre pourra reprendre dans six mois',
+      intro: "Un code qui fonctionne aujourd'hui ne suffit pas s'il devient illisible demain. J'applique les principes du software craftsmanship pour livrer du code propre, testé et facile à faire évoluer, y compris par une équipe qui ne l'a pas écrit.",
+      practices: [
+        'Application des principes SOLID et KISS',
+        'Développement piloté par les tests (TDD)',
+        'Refactoring continu pour limiter la dette technique',
+        'Revues de code systématiques et partage des bonnes pratiques'
+      ],
+      highlights: ['SOLID', 'TDD', 'Refactoring']
+    },
+    expression: {
+      title: 'Expression du besoin',
+      subtitle: "Cadrer le problème avant d'écrire la moindre ligne de code",
+      intro: "Un besoin mal formalisé se traduit tôt ou tard par du développement à refaire. Je travaille avec les parties prenantes pour clarifier les objectifs, formaliser les besoins et structurer l'organisation de l'équipe en amont du développement.",
+      practices: [
+        'Rédaction et priorisation de user stories',
+        'Ateliers de cadrage avec les parties prenantes métier',
+        'Collaboration rapprochée avec le Product Owner',
+        "Définition de critères d'acceptation clairs et testables"
+      ],
+      highlights: ['User stories', 'Cadrage', 'Product Owner']
+    },
+    agile: {
+      title: 'Méthodes Agile',
+      subtitle: 'Scrum au service de la livraison, pas du rituel',
+      intro: "Les cérémonies Agile n'ont de valeur que si elles servent la livraison de valeur. Je pratique Scrum et Kanban comme des outils au service de l'équipe, pas comme des rituels à cocher, avec un principe d'amélioration continue à chaque itération.",
+      practices: [
+        'Facilitation de cérémonies Scrum orientées valeur',
+        'Gestion de flux avec Kanban selon le contexte projet',
+        "Rétrospectives régulières et plans d'action suivis",
+        "Adaptation du cadre méthodologique aux contraintes réelles de l'équipe"
+      ],
+      highlights: ['Scrum', 'Kanban', 'Amélioration continue']
+    },
+    coaching: {
+      title: 'Coaching technique',
+      subtitle: "Faire monter l'équipe en compétences",
+      intro: "Transmettre est aussi important que produire. J'accompagne les développeurs au quotidien pour renforcer leurs compétences techniques et diffuser une culture de code propre au sein de l'équipe.",
+      practices: [
+        'Sessions de pair programming régulières',
+        'Mentorat individualisé des développeurs juniors',
+        "Diffusion des principes de clean code au sein de l'équipe",
+        'Accompagnement à la montée en compétence sur de nouvelles technologies'
+      ],
+      highlights: ['Pair programming', 'Mentorat', 'Clean code']
+    },
+    modernisation: {
+      title: 'Modernisation',
+      subtitle: 'Faire évoluer le legacy sans le casser',
+      intro: "Moderniser une architecture legacy est un exercice d'équilibriste : il faut faire évoluer le système sans interrompre le service. Je pilote ces migrations par étapes maîtrisées, avec des filets de sécurité à chaque niveau.",
+      practices: [
+        'Audit d’architectures existantes et identification des risques',
+        'Migrations progressives par paliers, sans interruption de service',
+        'Refactoring d’architectures legacy vers des standards actuels',
+        'Mise en place de tests de non-régression avant toute migration'
+      ],
+      highlights: ['Migration', 'Legacy', 'Architecture']
+    },
+    devsecops: {
+      title: 'DevSecOps',
+      subtitle: 'La sécurité comme étape de pipeline, pas comme audit annuel',
+      intro: "Traiter la sécurité comme un contrôle ponctuel en fin de projet ne fonctionne plus. J'intègre les contrôles de sécurité directement dans les pipelines CI/CD, en complément d'une approche de sécurité applicative détaillée sur sa propre page.",
+      practices: [
+        'Intégration de scans de sécurité automatisés dans les pipelines CI/CD',
+        'Gestion centralisée des secrets (vault, variables chiffrées)',
+        "Mise en place de contrôles d'accès basés sur les rôles (RBAC)",
+        'Analyse continue des vulnérabilités des dépendances et images'
+      ],
+      highlights: ['Scans automatisés', 'Secrets Management', 'RBAC']
+    },
+    agentic: {
+      title: 'IA agentique',
+      subtitle: 'Un collègue outillé, pas une boîte noire',
+      intro: "Les agents IA de développement ne remplacent pas l'expertise, ils l'accélèrent quand ils sont bien cadrés. J'audite les conventions existantes d'une codebase et mets en place un flux de développement assisté par agents IA adapté au contexte de l'équipe.",
+      practices: [
+        'Audit de codebase pour définir des conventions exploitables par un agent IA',
+        'Mise en place de flux de développement assistés par Claude Code',
+        'Revue de code systématique des contributions générées par IA',
+        "Formation de l'équipe aux bonnes pratiques d'utilisation des agents IA"
+      ],
+      highlights: ['Claude Code', 'Agents IA', 'Revue de code']
     },
     competences: {
       eyebrow: 'Compétences techniques',
@@ -429,8 +563,51 @@ export const translations = {
       },
       resume: {
         title: 'Résumé de carrière',
-        description:
-          'Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior.'
+        description: 'Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior.'
+      },
+      leadership: {
+        title: 'Leadership technique',
+        description: "Pilotage d'équipe, arbitrage des choix d'architecture et référent technique : l'accompagnement d'un développeur senior freelance."
+      },
+      analyse: {
+        title: 'Analyse & résolution de problèmes',
+        description: 'Diagnostic méthodique, analyse de logs et résolution de problèmes complexes en remontant à la cause racine.'
+      },
+      communication: {
+        title: 'Communication technique',
+        description: 'Vulgarisation technique, documentation des décisions et collaboration entre équipes produit et technique.'
+      },
+      cicd: {
+        title: 'CI/CD & DevOps',
+        description: 'Pipelines CI/CD, conteneurisation Docker et orchestration Kubernetes pour automatiser la livraison en toute fiabilité.'
+      },
+      craftsmanship: {
+        title: 'Software craftsmanship',
+        description: 'Code propre, testé et évolutif : principes SOLID, TDD et refactoring continu.'
+      },
+      expression: {
+        title: 'Expression du besoin',
+        description: "Cadrage du besoin, user stories et collaboration avec le Product Owner pour structurer l'organisation de l'équipe."
+      },
+      agile: {
+        title: 'Méthodes Agile',
+        description: "Scrum, Kanban et amélioration continue au service de la livraison, pas du rituel."
+      },
+      coaching: {
+        title: 'Coaching technique',
+        description: "Pair programming, mentorat et diffusion des bonnes pratiques pour faire monter l'équipe en compétences."
+      },
+      modernisation: {
+        title: 'Modernisation',
+        description: "Migration et refactoring d'architectures legacy par étapes maîtrisées, sans interruption de service."
+      },
+      devsecops: {
+        title: 'DevSecOps',
+        description: 'Scans de sécurité automatisés, gestion des secrets et RBAC intégrés directement dans les pipelines CI/CD.'
+      },
+      agentic: {
+        title: 'IA agentique',
+        description: "Audit de codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions."
       }
     }
   },
@@ -557,8 +734,7 @@ export const translations = {
         },
         devsecops: {
           title: 'DEVSECOPS',
-          description:
-            'Security embedded in the CI/CD pipeline: automated scanning, secrets management and hardened deployments'
+          description: 'Security built into CI/CD pipelines, not bolted on at the end'
         },
         agentic: {
           title: 'AGENTIC AI',
@@ -566,6 +742,141 @@ export const translations = {
             'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
         }
       }
+    },
+    expertiseDetail: {
+      eyebrow: 'A closer look'
+    },
+    leadership: {
+      title: 'Technical leadership',
+      subtitle: 'Leading a technical team day to day',
+      intro: 'Technical leadership means supporting a development team without losing touch with the code: arbitrating architecture choices, unblocking issues and keeping quality on track while meeting deadlines.',
+      practices: [
+        'Leading teams of 4 to 5 developers on Agile projects',
+        'Arbitrating technical choices and architecture reviews',
+        'Acting as technical referent for structuring decisions',
+        'Progressively upskilling the team'
+      ],
+      highlights: ['Team leadership', 'Architecture', 'Technical referent']
+    },
+    analyse: {
+      title: 'Analysis & problem solving',
+      subtitle: 'Tracing the root cause before fixing anything',
+      intro: "Fixing a symptom without understanding its cause just moves the problem elsewhere. My approach is to instrument, measure and systematically trace an issue back to its root cause before proposing a lasting fix.",
+      practices: [
+        'Methodical diagnosis through hypothesis elimination',
+        'Log, metric and trace analysis to isolate root causes',
+        'Post-mortem documentation to capitalize on past incidents',
+        'Prioritizing fixes by impact and recurrence risk'
+      ],
+      highlights: ['Root cause analysis', 'Problem solving', 'Diagnostics']
+    },
+    communication: {
+      title: 'Technical communication',
+      subtitle: 'Making technical work understandable for everyone',
+      intro: 'A technical project only moves forward if its decisions are understood by every stakeholder, technical or not. I focus on simplifying complex topics, documenting choices and keeping communication flowing between teams.',
+      practices: [
+        'Simplifying technical topics for non-developer audiences',
+        'Clear documentation of architecture decisions (ADRs)',
+        'Facilitating restitution workshops with business stakeholders',
+        'Ongoing collaboration between product, engineering and support teams'
+      ],
+      highlights: ['Simplification', 'Documentation', 'Collaboration']
+    },
+    cicd: {
+      title: 'CI/CD & DevOps',
+      subtitle: 'Automating delivery, not trust',
+      intro: "An automated delivery pipeline speeds up deployments, but it doesn't replace rigor: tests, reviews and quality gates remain at the heart of the process. I automate repetitive steps without ever sacrificing reliability.",
+      practices: [
+        'Setting up complete CI/CD pipelines (build, test, deploy)',
+        'Containerizing applications with Docker',
+        'Orchestrating and deploying on Kubernetes',
+        'Embedding automated quality gates at every stage'
+      ],
+      highlights: ['CI/CD', 'Docker', 'Kubernetes']
+    },
+    craftsmanship: {
+      title: 'Software craftsmanship',
+      subtitle: "Code someone else can pick up in six months",
+      intro: "Code that works today isn't enough if it becomes unreadable tomorrow. I apply software craftsmanship principles to deliver clean, tested code that's easy to evolve, even by a team that didn't write it.",
+      practices: [
+        'Applying SOLID and KISS principles',
+        'Test-driven development (TDD)',
+        'Continuous refactoring to keep technical debt in check',
+        'Systematic code reviews and best-practice sharing'
+      ],
+      highlights: ['SOLID', 'TDD', 'Refactoring']
+    },
+    expression: {
+      title: 'Requirements framing',
+      subtitle: 'Framing the problem before writing a line of code',
+      intro: "A poorly formalized requirement eventually turns into rework. I work with stakeholders to clarify objectives, formalize requirements and structure the team's organization upstream of development.",
+      practices: [
+        'Writing and prioritizing user stories',
+        'Framing workshops with business stakeholders',
+        'Close collaboration with the Product Owner',
+        'Defining clear, testable acceptance criteria'
+      ],
+      highlights: ['User stories', 'Framing', 'Product Owner']
+    },
+    agile: {
+      title: 'Agile methods',
+      subtitle: 'Scrum in service of delivery, not ritual',
+      intro: 'Agile ceremonies only have value if they serve the delivery of value. I practice Scrum and Kanban as tools that serve the team, not rituals to check off, with continuous improvement built into every iteration.',
+      practices: [
+        'Facilitating value-oriented Scrum ceremonies',
+        'Flow management with Kanban depending on project context',
+        'Regular retrospectives with tracked action items',
+        "Adapting the methodological framework to the team's real constraints"
+      ],
+      highlights: ['Scrum', 'Kanban', 'Continuous improvement']
+    },
+    coaching: {
+      title: 'Technical coaching',
+      subtitle: 'Leveling up the team',
+      intro: 'Passing on knowledge matters as much as shipping. I work alongside developers day to day to strengthen their technical skills and spread a clean-code culture within the team.',
+      practices: [
+        'Regular pair programming sessions',
+        'One-on-one mentoring for junior developers',
+        'Spreading clean code principles across the team',
+        'Supporting the team as it picks up new technologies'
+      ],
+      highlights: ['Pair programming', 'Mentoring', 'Clean code']
+    },
+    modernisation: {
+      title: 'Modernization',
+      subtitle: 'Evolving legacy systems without breaking them',
+      intro: 'Modernizing a legacy architecture is a balancing act: the system has to evolve without interrupting service. I run these migrations through controlled steps, with safety nets at every level.',
+      practices: [
+        'Auditing existing architectures and identifying risks',
+        'Progressive, staged migrations with no service interruption',
+        'Refactoring legacy architectures toward current standards',
+        'Setting up regression tests before any migration'
+      ],
+      highlights: ['Migration', 'Legacy', 'Architecture']
+    },
+    devsecops: {
+      title: 'DevSecOps',
+      subtitle: 'Security as a pipeline step, not a yearly audit',
+      intro: 'Treating security as a one-off check at the end of a project no longer works. I build security controls directly into CI/CD pipelines, complementing the application security approach detailed on its own page.',
+      practices: [
+        'Integrating automated security scans into CI/CD pipelines',
+        'Centralized secrets management (vault, encrypted variables)',
+        'Setting up role-based access control (RBAC)',
+        'Continuous vulnerability analysis of dependencies and images'
+      ],
+      highlights: ['Automated scans', 'Secrets management', 'RBAC']
+    },
+    agentic: {
+      title: 'Agentic AI',
+      subtitle: 'A tooled colleague, not a black box',
+      intro: "AI development agents don't replace expertise, they accelerate it when properly framed. I audit an existing codebase's conventions and set up an AI-agent-assisted development workflow adapted to the team's context.",
+      practices: [
+        'Auditing a codebase to define conventions an AI agent can work with',
+        'Setting up Claude Code-assisted development workflows',
+        'Systematic review of AI-generated contributions',
+        'Training teams in best practices for using AI agents'
+      ],
+      highlights: ['Claude Code', 'AI agents', 'Code review']
     },
     competences: {
       eyebrow: 'Technical skills',
@@ -858,8 +1169,51 @@ export const translations = {
       },
       resume: {
         title: 'Career résumé',
-        description:
-          'Professional background and experience of Christophe Monti, senior FullStack .NET developer.'
+        description: "Professional background and experience of Christophe Monti, senior FullStack .NET developer."
+      },
+      leadership: {
+        title: 'Technical leadership',
+        description: "Team leadership, architecture arbitration and technical referent work: the support of a senior freelance developer."
+      },
+      analyse: {
+        title: 'Analysis & problem solving',
+        description: 'Methodical diagnosis, log analysis and resolution of complex problems by tracing back to the root cause.'
+      },
+      communication: {
+        title: 'Technical communication',
+        description: 'Simplifying technical topics, documenting decisions and driving collaboration between product and engineering teams.'
+      },
+      cicd: {
+        title: 'CI/CD & DevOps',
+        description: 'CI/CD pipelines, Docker containerization and Kubernetes orchestration to automate delivery reliably.'
+      },
+      craftsmanship: {
+        title: 'Software craftsmanship',
+        description: 'Clean, tested, evolvable code: SOLID principles, TDD and continuous refactoring.'
+      },
+      expression: {
+        title: 'Requirements framing',
+        description: 'Requirements framing, user stories and Product Owner collaboration to structure how the team is organized.'
+      },
+      agile: {
+        title: 'Agile methods',
+        description: 'Scrum, Kanban and continuous improvement in service of delivery, not ritual.'
+      },
+      coaching: {
+        title: 'Technical coaching',
+        description: 'Pair programming, mentoring and best-practice sharing to level up the team.'
+      },
+      modernisation: {
+        title: 'Modernization',
+        description: 'Migration and refactoring of legacy architectures through controlled steps, with no service interruption.'
+      },
+      devsecops: {
+        title: 'DevSecOps',
+        description: 'Automated security scans, secrets management and RBAC built directly into CI/CD pipelines.'
+      },
+      agentic: {
+        title: 'Agentic AI',
+        description: 'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions.'
       }
     }
   }
