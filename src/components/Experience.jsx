@@ -6,7 +6,14 @@ const experienceMeta = [
     company: 'CLAUGER',
     location: 'Brignais (69)',
     project: 'MyClauger3E',
-    tech: ['.Net Core 10', 'Angular 16', 'Kubernetes', 'Azure DevOps', 'OWASP', 'OpenID Connect']
+    tech: [
+      '.Net Core 10',
+      'Angular 16',
+      'Kubernetes',
+      'Azure DevOps',
+      'OWASP',
+      'OpenID Connect'
+    ]
   },
   {
     key: 'hcl',
@@ -65,7 +72,10 @@ function Experience() {
                 </div>
                 <div className="timeline-body">
                   <h4>{exp.role}</h4>
-                  <p className="timeline-project"><strong>{t('experience.projectLabel')}</strong> {meta.project}</p>
+                  <p className="timeline-project">
+                    <strong>{t('experience.projectLabel')}</strong>{' '}
+                    {meta.project}
+                  </p>
                   <p>{exp.description}</p>
                   {exp.achievements && exp.achievements.length > 0 && (
                     <ul className="timeline-achievements">
@@ -76,7 +86,9 @@ function Experience() {
                   )}
                   <div className="timeline-tech">
                     {meta.tech.map((tech, i) => (
-                      <span key={i} className="tech-tag">{tech}</span>
+                      <span key={i} className="tech-tag">
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>

@@ -23,13 +23,15 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Besoin de compléter vos outils web',
+      eyebrow: 'Besoin de renforcer votre équipe technique ?',
       title: '.Net Core, Angular, React, SQL, YAML...',
       lead: "Développeur .Net FullStack senior avec plus de 18 ans d'expérience, spécialisé dans la conception et la modernisation d'architectures logicielles robustes dans des secteurs variés (froid industriel, télémédecine, transport, logistique), avec une approche software craftsmanship (code propre, testé, maintenable) et des méthodologies Agile.",
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
-      panelQuote: 'Diagnostic rapide, livraison fiable et code maintenable. J’aide les équipes à accélérer sans sacrifier la qualité.',
-      panelAuthor: 'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
+      panelQuote:
+        'Diagnostic rapide, livraison fiable et code maintenable. J’aide les équipes à accélérer sans sacrifier la qualité.',
+      panelAuthor:
+        'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
     },
     themes: {
       eyebrow: 'Que puis-je vous apporter ?',
@@ -38,19 +40,23 @@ export const translations = {
       items: {
         expertise: {
           title: 'Expertise & Leadership technique',
-          description: "Pilotage d'équipe, software craftsmanship, DevOps, sécurité et méthodes Agile"
+          description:
+            "Pilotage d'équipe, software craftsmanship, DevOps, sécurité et méthodes Agile"
         },
         competences: {
           title: 'Stack technique complète',
-          description: '.NET, Angular, React, bases de données, cloud et outils DevOps'
+          description:
+            '.NET, Angular, React, bases de données, cloud et outils DevOps'
         },
         reseau: {
           title: 'Réseau & Infrastructure',
-          description: 'Câblage structuré et configuration réseau pour petites structures'
+          description:
+            'Câblage structuré et configuration réseau pour petites structures'
         },
         domotique: {
           title: 'Domotique — Home Assistant',
-          description: "Installation, automatisations et maintenance de votre solution domotique"
+          description:
+            'Installation, automatisations et maintenance de votre solution domotique'
         },
         maintenance: {
           title: 'Maintenance & Support informatique',
@@ -61,13 +67,14 @@ export const translations = {
     quote: {
       eyebrow: 'Pourquoi travailler avec moi ?',
       title: 'Accélérez vos projets avec un expert terrain',
-      text: "Un développeur senior ne se contente pas de coder : il conçoit des architectures robustes, automatise les déploiements et transmet son savoir pour que vos équipes gagnent en autonomie.",
+      text: 'Un développeur senior ne se contente pas de coder : il conçoit des architectures robustes, automatise les déploiements et transmet son savoir pour que vos équipes gagnent en autonomie.',
       author: "- L'expertise au service de votre roadmap"
     },
     expertise: {
       eyebrow: 'Que puis-je vous apporter ?',
       title: "De l'amélioration continue",
-      subtitle: 'Accompagnement technique complet pour transformer vos défis en solutions robustes et pérennes',
+      subtitle:
+        'Accompagnement technique complet pour transformer vos défis en solutions robustes et pérennes',
       items: {
         leadership: {
           title: 'LEADERSHIP TECHNIQUE',
@@ -75,7 +82,8 @@ export const translations = {
         },
         analyse: {
           title: 'ANALYSE & RÉSOLUTION',
-          description: 'Analyse approfondie et résolution de problèmes complexes'
+          description:
+            'Analyse approfondie et résolution de problèmes complexes'
         },
         communication: {
           title: 'COMMUNICATION',
@@ -87,11 +95,13 @@ export const translations = {
         },
         craftsmanship: {
           title: 'SOFTWARE CRAFTSMANSHIP',
-          description: 'Code propre, testé et évolutif : principes SOLID, KISS, TDD et refactoring continu'
+          description:
+            'Code propre, testé et évolutif : principes SOLID, KISS, TDD et refactoring continu'
         },
         expression: {
           title: 'EXPRESSION DU BESOIN',
-          description: "Formaliser le besoin afin de structurer l'organisation de l'équipe"
+          description:
+            "Formaliser le besoin afin de structurer l'organisation de l'équipe"
         },
         agile: {
           title: 'MÉTHODES AGILE',
@@ -115,7 +125,8 @@ export const translations = {
         },
         agentic: {
           title: 'IA AGENTIQUE',
-          description: "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
+          description:
+            "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
         }
       }
     },
@@ -230,18 +241,6 @@ export const translations = {
       ],
       highlights: ['Migration', 'Legacy', 'Architecture']
     },
-    securite: {
-      title: 'Sécurité applicative',
-      subtitle: 'Intégrer la sécurité dès la conception, pas en bout de chaîne',
-      intro: "La sécurité ne se plaque pas après coup : elle se pense dès la conception. J'intègre les bonnes pratiques OWASP et les réflexes de sécurité applicative tout au long du cycle de développement, du code aux dépendances.",
-      practices: [
-        'Intégration des recommandations OWASP dans la conception',
-        'Revue de code orientée sécurité (injections, authentification, gestion des sessions)',
-        'Audit et mise à jour des dépendances vulnérables',
-        'Sensibilisation de l’équipe aux bonnes pratiques de sécurité'
-      ],
-      highlights: ['OWASP', 'Sécurité applicative', 'Revue de code']
-    },
     devsecops: {
       title: 'DevSecOps',
       subtitle: 'La sécurité comme étape de pipeline, pas comme audit annuel',
@@ -269,24 +268,28 @@ export const translations = {
     competences: {
       eyebrow: 'Compétences techniques',
       title: 'Stack technique complète',
-      subtitle: 'Technologies et pratiques professionnelles pour des solutions robustes et évolutives',
+      subtitle:
+        'Technologies et pratiques professionnelles pour des solutions robustes et évolutives',
       categories: {
         backend: 'Langages & Frameworks Backend',
         frontend: 'Frontend & UI',
         database: 'Bases de données',
         devops: 'DevOps & Cloud',
         tools: 'Outils & IDE',
-        architecture: 'Architecture & Sécurité'
+        architecture: 'Architecture',
+        securite: 'Sécurité applicative'
       }
     },
     reseau: {
       eyebrow: 'Infrastructure & Réseau',
       title: 'Compétences réseau',
-      subtitle: "Installation et configuration d'infrastructures réseau pour petites structures",
+      subtitle:
+        "Installation et configuration d'infrastructures réseau pour petites structures",
       items: {
         networkBay: {
           name: 'Network Bay Setup',
-          description: 'Installation et configuration de baies de brassage réseau',
+          description:
+            'Installation et configuration de baies de brassage réseau',
           details: [
             'Câblage structuré',
             'Configuration switch',
@@ -298,11 +301,13 @@ export const translations = {
     domotique: {
       eyebrow: 'Domotique',
       title: 'Intégration Home Assistant',
-      subtitle: "Je vous accompagne dans la mise en place d'une solution domotique open source, fiable et respectueuse de vos données",
+      subtitle:
+        "Je vous accompagne dans la mise en place d'une solution domotique open source, fiable et respectueuse de vos données",
       items: {
         installation: {
           name: 'Installation & Configuration',
-          description: 'Mise en place de Home Assistant adaptée à votre logement',
+          description:
+            'Mise en place de Home Assistant adaptée à votre logement',
           details: [
             'Installation sur serveur dédié (Raspberry Pi)',
             'Intégration de vos objets connectés existants',
@@ -313,7 +318,8 @@ export const translations = {
         },
         automation: {
           name: 'Domotique & Automatisations',
-          description: 'Des scénarios pensés pour votre confort et vos économies',
+          description:
+            'Des scénarios pensés pour votre confort et vos économies',
           details: [
             'Gestion du chauffage et de l’éclairage',
             'Scénarios de présence et de sécurité',
@@ -324,7 +330,8 @@ export const translations = {
         },
         maintenance: {
           name: 'Maintenance & Évolution',
-          description: 'Un accompagnement dans la durée pour votre installation',
+          description:
+            'Un accompagnement dans la durée pour votre installation',
           details: [
             'Mises à jour et sauvegardes régulières',
             'Ajout de nouveaux équipements',
@@ -338,11 +345,13 @@ export const translations = {
     maintenance: {
       eyebrow: 'Services complémentaires',
       title: 'Maintenance & Support Informatique',
-      subtitle: "De l'intervention ponctuelle à l'accompagnement régulier, je mets mon expertise technique au service de votre infrastructure",
+      subtitle:
+        "De l'intervention ponctuelle à l'accompagnement régulier, je mets mon expertise technique au service de votre infrastructure",
       items: {
         entreprises: {
           name: 'Entreprises & PME',
-          description: 'Je vous accompagne dans la gestion de votre infrastructure',
+          description:
+            'Je vous accompagne dans la gestion de votre infrastructure',
           details: [
             'Gestion et suivi de votre parc informatique',
             'Installation et configuration de postes de travail',
@@ -355,7 +364,8 @@ export const translations = {
         },
         particuliers: {
           name: 'Particuliers',
-          description: 'Assistance personnalisée à votre domicile ou en atelier',
+          description:
+            'Assistance personnalisée à votre domicile ou en atelier',
           details: [
             'Dépannage de votre matériel et logiciels',
             'Récupération de vos données importantes',
@@ -381,6 +391,47 @@ export const translations = {
         }
       }
     },
+    securite: {
+      eyebrow: 'Étude de cas',
+      title: 'RBAC & kubeconfig : un droit d’accès bien scopé, mal protégé',
+      subtitle:
+        'Une anecdote concrète de sécurisation d’un cluster k3s personnel (io.m3i.ledgy, io.m3i.auth), où tester ses propres permissions a suffi à repérer une faille silencieuse.',
+      intro:
+        'En déployant mes projets io.m3i.ledgy et io.m3i.auth sur un cluster k3s, j’applique la même rigueur qu’en mission cliente : ne jamais supposer qu’une permission est correcte, la tester. Voici un exemple concret de ce que ça donne.',
+      items: {
+        contexte: {
+          title: 'Contexte',
+          description:
+            'Le déploiement de io.m3i.ledgy et io.m3i.auth repose sur un compte de service `deploy` scopé, plutôt qu’un accès administrateur au cluster k3s — principe de moindre privilège appliqué au pipeline CI/CD.'
+        },
+        test: {
+          title: 'Le test',
+          description:
+            'Plutôt que de faire confiance au scope défini sur le papier, j’ai délibérément testé ce que ce credential `deploy` pouvait et ne pouvait pas faire une fois en place, pour vérifier que la frontière RBAC tenait réellement.'
+        },
+        decouverte: {
+          title: 'La découverte',
+          description:
+            'En inspectant le kubeconfig généré sur le nœud, ses permissions fichier étaient à 644 (lisible par tous) au lieu de 600 : k3s n’avait pas reçu de `--write-kubeconfig-mode` explicite et était resté sur ce défaut trop permissif.'
+        },
+        risque: {
+          title: 'Le risque',
+          description:
+            'Un credential parfaitement scopé ne vaut que par la protection du fichier qui le contient : à 644, n’importe quel compte local du nœud pouvait lire le token embarqué, contournant le travail de scoping RBAC.'
+        },
+        correction: {
+          title: 'La correction',
+          description:
+            'Le mode d’écriture du kubeconfig a été fixé explicitement à 600 dans la configuration du serveur k3s, et les autres fichiers de credentials générés sur le nœud ont été audités pour la même classe de problème.'
+        },
+        enseignement: {
+          title: 'L’enseignement',
+          description:
+            'Bien scoper des permissions RBAC ne suffit pas si leur support de stockage n’est pas vérifié : c’est ce réflexe de vérification systématique que j’applique aussi sur les infrastructures de mes clients.',
+          highlights: ['RBAC', 'Durcissement Kubernetes', 'Moindre privilège']
+        }
+      }
+    },
     cgs: {
       eyebrow: 'Informations légales',
       title: 'Conditions Générales de Services',
@@ -393,14 +444,16 @@ export const translations = {
     experience: {
       eyebrow: 'Parcours professionnel',
       title: 'Expériences notables',
-      subtitle: "Plus de 18 ans d'expérience dans des projets complexes et variés",
+      subtitle:
+        "Plus de 18 ans d'expérience dans des projets complexes et variés",
       projectLabel: 'Projet:',
       items: {
         clauger: {
           period: 'Depuis 2022',
           sector: 'Froid industriel',
           role: "Ingénieur d'études - Indépendant",
-          description: "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
+          description:
+            "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
           achievements: [
             'Augmentation du volet DataViz',
             'Déploiements automatisés',
@@ -411,7 +464,8 @@ export const translations = {
           period: '2020 - 2022',
           sector: 'Télémédecine',
           role: "Ingénieur d'études - ECONOCOM",
-          description: "Maintenance évolutive des applications et amélioration de l'architecture. Référent technique avec intégration de 5 modules de la suite Easily.",
+          description:
+            "Maintenance évolutive des applications et amélioration de l'architecture. Référent technique avec intégration de 5 modules de la suite Easily.",
           achievements: [
             "Mise en place de l'intégration continue",
             'Harmonisation des process',
@@ -422,7 +476,8 @@ export const translations = {
           period: '2016 - 2019',
           sector: 'Télémédecine',
           role: "Ingénieur d'études",
-          description: "Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit.",
+          description:
+            'Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit.',
           achievements: [
             "Mise en place d'outils transverses (DMS, Audit trail, i18n)",
             'Optimisation des performances',
@@ -433,7 +488,8 @@ export const translations = {
           period: '2013 - 2016',
           sector: 'Transport public',
           role: "Chef d'équipe / Ingénieur d'études - OBJECT DIRECT",
-          description: "Gestion d'une équipe de 4 développeurs en méthode Agile pour un site web de vente à distance en télébilletique.",
+          description:
+            "Gestion d'une équipe de 4 développeurs en méthode Agile pour un site web de vente à distance en télébilletique.",
           achievements: [
             "Gestion d'équipe de 4 développeurs",
             'Architecture évolutive multi-clients',
@@ -444,7 +500,8 @@ export const translations = {
           period: '2007 - 2011',
           sector: 'Trafic ferroviaire',
           role: "Chef d'équipe / Architecte - SOGETI",
-          description: "Développement et gestion d'équipe pour l'application gérant les différentes lignes ouvertes et la maintenance des trains TER et CORAIL. Évolution de développeur à chef d'équipe et architecte.",
+          description:
+            "Développement et gestion d'équipe pour l'application gérant les différentes lignes ouvertes et la maintenance des trains TER et CORAIL. Évolution de développeur à chef d'équipe et architecte.",
           achievements: [
             "Gestion d'équipe de 5 développeurs",
             'Développement architecture n-tiers',
@@ -467,27 +524,38 @@ export const translations = {
     seo: {
       home: {
         title: 'Développeur .NET FullStack Senior Freelance',
-        description: "Développeur .NET FullStack senior avec 18+ ans d'expérience : architecture logicielle, software craftsmanship, DevOps et accompagnement Agile. Missions ou forfait, remote privilégié."
+        description:
+          "Développeur .NET FullStack senior avec 18+ ans d'expérience : architecture logicielle, software craftsmanship, DevOps et accompagnement Agile. Missions ou forfait, remote privilégié."
       },
       expertise: {
         title: 'Expertise & Leadership technique',
-        description: "Pilotage d'équipe, software craftsmanship, CI/CD, sécurité et méthodes Agile : l'accompagnement technique complet d'un développeur senior freelance."
+        description:
+          "Pilotage d'équipe, software craftsmanship, CI/CD, sécurité et méthodes Agile : l'accompagnement technique complet d'un développeur senior freelance."
       },
       competences: {
         title: 'Compétences techniques — .NET, Angular, React, Azure DevOps',
-        description: 'Stack technique complète : C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes et bonnes pratiques de sécurité.'
+        description:
+          'Stack technique complète : C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes et bonnes pratiques de sécurité.'
       },
       reseau: {
         title: 'Réseau & Infrastructure',
-        description: 'Installation et configuration de baies de brassage, câblage structuré et réseaux pour petites structures.'
+        description:
+          'Installation et configuration de baies de brassage, câblage structuré et réseaux pour petites structures.'
       },
       domotique: {
         title: 'Intégration Home Assistant — Domotique',
-        description: "Installation, automatisations et maintenance d'une solution domotique open source Home Assistant, sur-mesure et respectueuse de vos données."
+        description:
+          "Installation, automatisations et maintenance d'une solution domotique open source Home Assistant, sur-mesure et respectueuse de vos données."
       },
       maintenance: {
         title: 'Maintenance & Support informatique',
-        description: 'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
+        description:
+          'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
+      },
+      securite: {
+        title: 'Étude de cas sécurité — RBAC & kubeconfig k3s',
+        description:
+          'Étude de cas concrète : le test d’un credential RBAC scopé sur un cluster k3s a révélé un kubeconfig trop permissif (644 au lieu de 600).'
       },
       cgs: {
         title: 'Conditions Générales de Services',
@@ -533,10 +601,6 @@ export const translations = {
         title: 'Modernisation',
         description: "Migration et refactoring d'architectures legacy par étapes maîtrisées, sans interruption de service."
       },
-      securite: {
-        title: 'Sécurité applicative',
-        description: 'Intégration des recommandations OWASP et revue de code orientée sécurité dès la conception.'
-      },
       devsecops: {
         title: 'DevSecOps',
         description: 'Scans de sécurité automatisés, gestion des secrets et RBAC intégrés directement dans les pipelines CI/CD.'
@@ -571,13 +635,15 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Need to strengthen your web toolkit',
+      eyebrow: 'Need to strengthen your technical team?',
       title: '.Net Core, Angular, React, SQL, YAML...',
       lead: 'Senior FullStack .Net developer with over 18 years of experience, specialized in designing and modernizing robust software architectures across varied industries (industrial refrigeration, telemedicine, transport, logistics), with a software craftsmanship approach (clean, tested, maintainable code) and Agile methodologies.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
-      panelQuote: 'Fast diagnosis, reliable delivery and maintainable code. I help teams move faster without sacrificing quality.',
-      panelAuthor: 'Short or long-term engagements, or fixed-price projects • Remote-first'
+      panelQuote:
+        'Fast diagnosis, reliable delivery and maintainable code. I help teams move faster without sacrificing quality.',
+      panelAuthor:
+        'Short or long-term engagements, or fixed-price projects • Remote-first'
     },
     themes: {
       eyebrow: 'What can I bring to your project?',
@@ -586,19 +652,23 @@ export const translations = {
       items: {
         expertise: {
           title: 'Expertise & Technical Leadership',
-          description: 'Team leadership, software craftsmanship, DevOps, security and Agile methods'
+          description:
+            'Team leadership, software craftsmanship, DevOps, security and Agile methods'
         },
         competences: {
           title: 'Full technical stack',
-          description: '.NET, Angular, React, databases, cloud and DevOps tooling'
+          description:
+            '.NET, Angular, React, databases, cloud and DevOps tooling'
         },
         reseau: {
           title: 'Network & Infrastructure',
-          description: 'Structured cabling and network configuration for small organizations'
+          description:
+            'Structured cabling and network configuration for small organizations'
         },
         domotique: {
           title: 'Smart Home — Home Assistant',
-          description: 'Installation, automation and maintenance of your smart home solution'
+          description:
+            'Installation, automation and maintenance of your smart home solution'
         },
         maintenance: {
           title: 'IT Maintenance & Support',
@@ -615,11 +685,13 @@ export const translations = {
     expertise: {
       eyebrow: 'What can I bring to your project?',
       title: 'Continuous improvement',
-      subtitle: 'End-to-end technical support to turn your challenges into robust, lasting solutions',
+      subtitle:
+        'End-to-end technical support to turn your challenges into robust, lasting solutions',
       items: {
         leadership: {
           title: 'TECHNICAL LEADERSHIP',
-          description: 'Team leadership, architecture and technical reference point'
+          description:
+            'Team leadership, architecture and technical reference point'
         },
         analyse: {
           title: 'ANALYSIS & RESOLUTION',
@@ -627,7 +699,8 @@ export const translations = {
         },
         communication: {
           title: 'COMMUNICATION',
-          description: 'Making technical topics accessible and collaborating effectively'
+          description:
+            'Making technical topics accessible and collaborating effectively'
         },
         cicd: {
           title: 'CI/CD & DEVOPS',
@@ -635,11 +708,13 @@ export const translations = {
         },
         craftsmanship: {
           title: 'SOFTWARE CRAFTSMANSHIP',
-          description: 'Clean, tested, evolvable code: SOLID, KISS, TDD and continuous refactoring'
+          description:
+            'Clean, tested, evolvable code: SOLID, KISS, TDD and continuous refactoring'
         },
         expression: {
           title: 'REQUIREMENTS DEFINITION',
-          description: 'Formalizing needs to structure how the team is organized'
+          description:
+            'Formalizing needs to structure how the team is organized'
         },
         agile: {
           title: 'AGILE METHODS',
@@ -663,7 +738,8 @@ export const translations = {
         },
         agentic: {
           title: 'AGENTIC AI',
-          description: 'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
+          description:
+            'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
         }
       }
     },
@@ -778,18 +854,6 @@ export const translations = {
       ],
       highlights: ['Migration', 'Legacy', 'Architecture']
     },
-    securite: {
-      title: 'Application security',
-      subtitle: 'Building security in from the design stage',
-      intro: "Security isn't bolted on afterwards: it's designed in from the start. I integrate OWASP best practices and application security habits throughout the development cycle, from code to dependencies.",
-      practices: [
-        'Integrating OWASP recommendations into design',
-        'Security-focused code reviews (injection, authentication, session handling)',
-        'Auditing and updating vulnerable dependencies',
-        'Raising team awareness of security best practices'
-      ],
-      highlights: ['OWASP', 'Application security', 'Code review']
-    },
     devsecops: {
       title: 'DevSecOps',
       subtitle: 'Security as a pipeline step, not a yearly audit',
@@ -817,20 +881,23 @@ export const translations = {
     competences: {
       eyebrow: 'Technical skills',
       title: 'Full technical stack',
-      subtitle: 'Technologies and professional practices for robust, scalable solutions',
+      subtitle:
+        'Technologies and professional practices for robust, scalable solutions',
       categories: {
         backend: 'Backend Languages & Frameworks',
         frontend: 'Frontend & UI',
         database: 'Databases',
         devops: 'DevOps & Cloud',
         tools: 'Tools & IDE',
-        architecture: 'Architecture & Security'
+        architecture: 'Architecture',
+        securite: 'Application Security'
       }
     },
     reseau: {
       eyebrow: 'Infrastructure & Network',
       title: 'Network skills',
-      subtitle: 'Installation and configuration of network infrastructure for small organizations',
+      subtitle:
+        'Installation and configuration of network infrastructure for small organizations',
       items: {
         networkBay: {
           name: 'Network Bay Setup',
@@ -846,7 +913,8 @@ export const translations = {
     domotique: {
       eyebrow: 'Smart Home',
       title: 'Home Assistant Integration',
-      subtitle: 'I help you set up an open-source smart home solution that is reliable and respectful of your data',
+      subtitle:
+        'I help you set up an open-source smart home solution that is reliable and respectful of your data',
       items: {
         installation: {
           name: 'Installation & Configuration',
@@ -886,7 +954,8 @@ export const translations = {
     maintenance: {
       eyebrow: 'Complementary services',
       title: 'IT Maintenance & Support',
-      subtitle: 'From one-off interventions to ongoing support, I put my technical expertise at the service of your infrastructure',
+      subtitle:
+        'From one-off interventions to ongoing support, I put my technical expertise at the service of your infrastructure',
       items: {
         entreprises: {
           name: 'Businesses & SMBs',
@@ -929,6 +998,47 @@ export const translations = {
         }
       }
     },
+    securite: {
+      eyebrow: 'Case study',
+      title: 'RBAC & kubeconfig: a well-scoped credential, poorly protected',
+      subtitle:
+        'A concrete example from hardening a personal k3s cluster (io.m3i.ledgy, io.m3i.auth), where testing my own permissions was enough to catch a silent gap.',
+      intro:
+        'Deploying my own projects, io.m3i.ledgy and io.m3i.auth, on a k3s cluster, I apply the same rigor as on client engagements: never assume a permission is correct — test it. Here’s a concrete example of what that looks like.',
+      items: {
+        contexte: {
+          title: 'Context',
+          description:
+            'Deployment of io.m3i.ledgy and io.m3i.auth relies on a scoped `deploy` service account rather than cluster-admin access to the k3s cluster — least privilege applied to the CI/CD pipeline.'
+        },
+        test: {
+          title: 'The test',
+          description:
+            'Rather than trusting the scope defined on paper, I deliberately tested what that `deploy` credential could and couldn’t do once in place, to verify the RBAC boundary actually held.'
+        },
+        decouverte: {
+          title: 'The discovery',
+          description:
+            'Inspecting the kubeconfig generated on the node, its file permissions were 644 (world-readable) instead of 600: k3s hadn’t been given an explicit `--write-kubeconfig-mode` and had fallen back to that overly permissive default.'
+        },
+        risque: {
+          title: 'The risk',
+          description:
+            'A perfectly scoped credential is only as safe as the file protecting it: at 644, any local account on the node could read the embedded token, undermining the RBAC scoping work.'
+        },
+        correction: {
+          title: 'The fix',
+          description:
+            'The kubeconfig write mode was set explicitly to 600 in the k3s server configuration, and other credential files generated on the node were audited for the same class of issue.'
+        },
+        enseignement: {
+          title: 'The takeaway',
+          description:
+            'Scoping RBAC permissions well isn’t enough if their storage isn’t verified too — that habit of systematic verification is the same one I apply on client infrastructure.',
+          highlights: ['RBAC', 'Kubernetes hardening', 'Least privilege']
+        }
+      }
+    },
     cgs: {
       eyebrow: 'Legal information',
       title: 'Terms of Service',
@@ -948,7 +1058,8 @@ export const translations = {
           period: 'Since 2022',
           sector: 'Industrial refrigeration',
           role: 'Software Engineer - Freelance',
-          description: 'Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improving software quality and security.',
+          description:
+            'Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improving software quality and security.',
           achievements: [
             'Expanded the DataViz capabilities',
             'Automated deployments',
@@ -959,7 +1070,8 @@ export const translations = {
           period: '2020 - 2022',
           sector: 'Telemedicine',
           role: 'Software Engineer - ECONOCOM',
-          description: 'Evolutive maintenance of applications and architecture improvements. Technical reference point, integrating 5 modules of the Easily suite.',
+          description:
+            'Evolutive maintenance of applications and architecture improvements. Technical reference point, integrating 5 modules of the Easily suite.',
           achievements: [
             'Set up continuous integration',
             'Harmonized processes',
@@ -970,7 +1082,8 @@ export const translations = {
           period: '2016 - 2019',
           sector: 'Telemedicine',
           role: 'Software Engineer',
-          description: 'Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology.',
+          description:
+            'Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology.',
           achievements: [
             'Set up cross-cutting tools (DMS, audit trail, i18n)',
             'Performance optimization',
@@ -981,7 +1094,8 @@ export const translations = {
           period: '2013 - 2016',
           sector: 'Public transport',
           role: 'Team Lead / Software Engineer - OBJECT DIRECT',
-          description: 'Managed a team of 4 developers using Agile methodology for a remote ticketing e-commerce website.',
+          description:
+            'Managed a team of 4 developers using Agile methodology for a remote ticketing e-commerce website.',
           achievements: [
             'Led a team of 4 developers',
             'Evolutive multi-tenant architecture',
@@ -992,7 +1106,8 @@ export const translations = {
           period: '2007 - 2011',
           sector: 'Rail traffic',
           role: 'Team Lead / Architect - SOGETI',
-          description: 'Development and team management for the application handling open lines and maintenance of TER and CORAIL trains. Progressed from developer to team lead and architect.',
+          description:
+            'Development and team management for the application handling open lines and maintenance of TER and CORAIL trains. Progressed from developer to team lead and architect.',
           achievements: [
             'Led a team of 5 developers',
             'Developed an n-tier architecture',
@@ -1015,27 +1130,38 @@ export const translations = {
     seo: {
       home: {
         title: 'Senior FullStack .NET Freelance Developer',
-        description: 'Senior FullStack .NET developer with 18+ years of experience: software architecture, software craftsmanship, DevOps and Agile support. Missions or fixed-price, remote-first.'
+        description:
+          'Senior FullStack .NET developer with 18+ years of experience: software architecture, software craftsmanship, DevOps and Agile support. Missions or fixed-price, remote-first.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
-        description: "Team leadership, software craftsmanship, CI/CD, security and Agile methods: the complete technical support of a senior freelance developer."
+        description:
+          'Team leadership, software craftsmanship, CI/CD, security and Agile methods: the complete technical support of a senior freelance developer.'
       },
       competences: {
         title: 'Technical Skills — .NET, Angular, React, Azure DevOps',
-        description: 'Full technical stack: C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes and security best practices.'
+        description:
+          'Full technical stack: C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes and security best practices.'
       },
       reseau: {
         title: 'Network & Infrastructure',
-        description: 'Installation and configuration of patch panels, structured cabling and networks for small organizations.'
+        description:
+          'Installation and configuration of patch panels, structured cabling and networks for small organizations.'
       },
       domotique: {
         title: 'Home Assistant Integration — Smart Home',
-        description: 'Installation, automation and maintenance of a custom, open-source Home Assistant solution that respects your data.'
+        description:
+          'Installation, automation and maintenance of a custom, open-source Home Assistant solution that respects your data.'
       },
       maintenance: {
         title: 'IT Maintenance & Support',
-        description: 'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
+        description:
+          'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
+      },
+      securite: {
+        title: 'Security case study — k3s RBAC & kubeconfig',
+        description:
+          'A concrete case study: testing a scoped RBAC credential on a k3s cluster uncovered an overly permissive kubeconfig (644 instead of 600).'
       },
       cgs: {
         title: 'Terms of Service',
@@ -1080,10 +1206,6 @@ export const translations = {
       modernisation: {
         title: 'Modernization',
         description: 'Migration and refactoring of legacy architectures through controlled steps, with no service interruption.'
-      },
-      securite: {
-        title: 'Application security',
-        description: 'Integrating OWASP recommendations and security-focused code review from the design stage.'
       },
       devsecops: {
         title: 'DevSecOps',

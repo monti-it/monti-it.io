@@ -3,10 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { translations } from './translations'
 import { LanguageContext } from './useLanguage'
 import { getLangFromPath, stripLangPrefix, withLangPrefix } from './localePaths'
-
-function resolveKey(dict, key) {
-  return key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), dict)
-}
+import { translate } from './translate'
 
 export function LanguageProvider({ children }) {
   const { pathname } = useLocation()
@@ -14,14 +11,7 @@ export function LanguageProvider({ children }) {
 
   const value = useMemo(() => {
     const dict = translations[lang]
-    const t = (key) => {
-      const result = resolveKey(dict, key)
-      if (result === undefined) {
-        console.warn(`Missing translation for "${key}" (${lang})`)
-        return key
-      }
-      return result
-    }
+    const t = (key) => translate(dict, key, lang)
     return {
       lang,
       path: stripLangPrefix(pathname),
@@ -30,5 +20,9 @@ export function LanguageProvider({ children }) {
     }
   }, [lang, pathname])
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }

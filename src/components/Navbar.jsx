@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link to={localizePath('/')} className="navbar-brand">
-        <img src="/favicon.png" alt="" className="navbar-logo" />
+        <img src="/mark.svg" alt="" className="navbar-logo" />
         {t('nav.brand')}
       </Link>
       <div className="navbar-links">
@@ -25,9 +25,13 @@ function Navbar() {
           <NavLink
             key={item.to}
             to={localizePath(item.to)}
-            className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`}
+            className={({ isActive }) =>
+              `navbar-link${isActive ? ' active' : ''}`
+            }
           >
-            <span className="navbar-link-icon">{item.icon}</span>
+            <span className="navbar-link-icon" aria-hidden="true">
+              {item.icon}
+            </span>
             {t(`nav.${item.key}`)}
           </NavLink>
         ))}

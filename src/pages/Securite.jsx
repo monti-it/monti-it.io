@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import ExpertiseDetail from '../components/ExpertiseDetail'
+import SecurityCaseStudy from '../components/SecurityCaseStudy'
 import Seo from '../components/Seo'
 import { useLanguage } from '../i18n/useLanguage'
 
@@ -9,7 +9,7 @@ function Securite() {
   return (
     <div className="page">
       <Seo seoKey="securite" />
-      <ExpertiseDetail topicKey="securite" />
+      <SecurityCaseStudy />
       <div className="hero-actions">
         <Link className="btn ghost" to={localizePath('/')}>
           {t('common.backHome')}

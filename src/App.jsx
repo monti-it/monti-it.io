@@ -9,6 +9,7 @@ import Competences from './pages/Competences'
 import Reseau from './pages/Reseau'
 import Domotique from './pages/Domotique'
 import Maintenance from './pages/Maintenance'
+import Securite from './pages/Securite'
 import CGS from './pages/CGS'
 import Resume from './pages/Resume'
 import Leadership from './pages/Leadership'
@@ -20,7 +21,6 @@ import Expression from './pages/Expression'
 import Agile from './pages/Agile'
 import Coaching from './pages/Coaching'
 import Modernisation from './pages/Modernisation'
-import Securite from './pages/Securite'
 import Devsecops from './pages/Devsecops'
 import Agentic from './pages/Agentic'
 import './App.scss'
@@ -32,6 +32,7 @@ const pageRoutes = [
   { path: '/reseau', Component: Reseau },
   { path: '/domotique', Component: Domotique },
   { path: '/maintenance', Component: Maintenance },
+  { path: '/securite', Component: Securite },
   { path: '/cgs', Component: CGS },
   { path: '/resume', Component: Resume },
   { path: '/leadership', Component: Leadership },
@@ -43,7 +44,6 @@ const pageRoutes = [
   { path: '/agile', Component: Agile },
   { path: '/coaching', Component: Coaching },
   { path: '/modernisation', Component: Modernisation },
-  { path: '/securite', Component: Securite },
   { path: '/devsecops', Component: Devsecops },
   { path: '/agentic', Component: Agentic }
 ]
@@ -56,7 +56,11 @@ function App() {
         <Navbar />
         <Routes>
           {pageRoutes.map((route) => (
-            <Route key={`fr-${route.path}`} path={route.path} element={<route.Component />} />
+            <Route
+              key={`fr-${route.path}`}
+              path={route.path}
+              element={<route.Component />}
+            />
           ))}
           {pageRoutes.map((route) => (
             <Route
