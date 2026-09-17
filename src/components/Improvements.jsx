@@ -12,6 +12,7 @@ const itemIcons = {
   coaching: '🎓',
   modernisation: '🚀',
   securite: '🔒',
+  devsecops: '🛡️',
   agentic: '🤖'
 }
 
@@ -32,11 +33,9 @@ function Improvements() {
             <div className="card-icon">{itemIcons[key]}</div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            {key === 'securite' && (
-              <Link className="card-link" to={localizePath('/securite')}>
-                {t('common.discover')}
-              </Link>
-            )}
+            <Link className="card-link" to={localizePath(`/${key}`)}>
+              {t('common.discover')}
+            </Link>
           </article>
         ))}
       </div>
