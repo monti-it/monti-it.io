@@ -3,7 +3,7 @@ import { useLanguage } from '../i18n/useLanguage'
 import { withLangPrefix } from '../i18n/localePaths'
 
 const SITE_URL = 'https://monti-it.io'
-const DEFAULT_IMAGE = `${SITE_URL}/favicon.png`
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`
 
 function setMetaTag(attr, key, content) {
   let element = document.querySelector(`meta[${attr}="${key}"]`)
@@ -61,9 +61,13 @@ function Seo({ seoKey }) {
     setMetaTag('property', 'og:description', description)
     setMetaTag('property', 'og:url', currentUrl)
     setMetaTag('property', 'og:image', DEFAULT_IMAGE)
+    setMetaTag('property', 'og:image:width', '1200')
+    setMetaTag('property', 'og:image:height', '630')
+    setMetaTag('property', 'og:image:type', 'image/png')
+    setMetaTag('property', 'og:image:alt', 'Monti IT')
     setMetaTag('property', 'og:locale', lang === 'en' ? 'en_US' : 'fr_FR')
 
-    setMetaTag('name', 'twitter:card', 'summary')
+    setMetaTag('name', 'twitter:card', 'summary_large_image')
     setMetaTag('name', 'twitter:title', fullTitle)
     setMetaTag('name', 'twitter:description', description)
   }, [seoKey, t, lang, path])
