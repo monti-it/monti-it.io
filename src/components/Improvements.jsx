@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/useLanguage'
 
 const itemIcons = {
@@ -11,11 +12,12 @@ const itemIcons = {
   coaching: '🎓',
   modernisation: '🚀',
   securite: '🔒',
+  devsecops: '🛡️',
   agentic: '🤖'
 }
 
 function Improvements() {
-  const { t } = useLanguage()
+  const { t, localizePath } = useLanguage()
   const items = t('expertise.items')
 
   return (
@@ -31,6 +33,9 @@ function Improvements() {
             <div className="card-icon">{itemIcons[key]}</div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
+            <Link className="card-link" to={localizePath(`/${key}`)}>
+              {t('common.discover')}
+            </Link>
           </article>
         ))}
       </div>

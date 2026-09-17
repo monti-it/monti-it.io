@@ -62,4 +62,124 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/maintenance" />
     <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/maintenance" />
   </url>
+  <url>
+    <loc>https://monti-it.io/leadership</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/leadership" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/leadership" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/leadership</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/leadership" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/leadership" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/analyse</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/analyse" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/analyse" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/analyse</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/analyse" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/analyse" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/communication</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/communication" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/communication" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/communication</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/communication" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/communication" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/cicd</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/cicd" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/cicd" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/cicd</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/cicd" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/cicd" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/craftsmanship</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/craftsmanship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/craftsmanship" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/craftsmanship</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/craftsmanship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/craftsmanship" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/expression</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/expression" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/expression" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/expression</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/expression" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/expression" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/agile</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/agile" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/agile" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/agile</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/agile" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/agile" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/coaching</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/coaching" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/coaching" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/coaching</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/coaching" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/coaching" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/modernisation</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/modernisation" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/modernisation" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/modernisation</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/modernisation" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/modernisation" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/securite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/securite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/securite" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/securite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/securite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/securite" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/devsecops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/devsecops" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/devsecops" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/devsecops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/devsecops" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/devsecops" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/agentic</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/agentic" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/agentic" />
+  </url>
+  <url>
+    <loc>https://monti-it.io/en/agentic</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://monti-it.io/agentic" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://monti-it.io/en/agentic" />
+  </url>
 </urlset>
