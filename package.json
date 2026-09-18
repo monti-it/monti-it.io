@@ -9,10 +9,12 @@
     "lint": "eslint . && npm run format:check",
     "preview": "vite preview",
     "test": "vitest run",
+    "resume:pdf": "node scripts/generate-resume-pdf.js",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.9.0",
     "react": "^19.2.0",
     "react-dom": "^19.3.0",
     "react-icons": "^5.5.0",
