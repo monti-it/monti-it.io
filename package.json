@@ -9,6 +9,7 @@
     "lint": "eslint . && npm run format:check",
     "preview": "vite preview",
     "test": "vitest run",
+    "resume:pdf": "node scripts/generate-resume-pdf.js",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
