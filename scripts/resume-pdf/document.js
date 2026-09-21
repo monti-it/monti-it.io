@@ -10,32 +10,57 @@ import {
 
 const e = React.createElement
 
-// Darker than the site's --accent-secondary (#fdb022) since that light amber
-// reads as low-contrast on a white PDF page — this is print, not the dark UI.
-const ACCENT = '#b45309'
-const TEXT = '#1a1a1a'
-const MUTED = '#555555'
-const RULE = '#cccccc'
+// Palette derived from the site tokens in src/index.scss. The site is dark, but
+// this is print: navy is used for the header band and headings, body text stays
+// dark on white. The light amber (--accent-primary #fecb57) is only used on the
+// navy band and as a decorative rule; amber *text* on white uses the darker
+// #b45309 (AA on white), since #fecb57/#fdb022 are unreadable on paper.
+const NAVY = '#0f1829' // --bg-primary
+const NAVY_SOFT = '#1b244f' // --bg-secondary
+const AMBER = '#fecb57' // --accent-primary
+const AMBER_TEXT = '#b45309'
+const HEADER_MUTED = '#c9d1ea' // navy-tinted light text on the header band
+const TEXT = '#161b2e'
+const MUTED = '#4a5578'
+const RULE = '#c7cde0' // --border (#2a3563) lightened for a white page
+
+const PAGE_PADDING_TOP = 40
+const PAGE_PADDING_X = 44
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: 40,
+    paddingTop: PAGE_PADDING_TOP,
     paddingBottom: 46,
-    paddingHorizontal: 44,
+    paddingHorizontal: PAGE_PADDING_X,
     fontSize: 9.5,
     fontFamily: 'Helvetica',
     color: TEXT
   },
-  name: { fontSize: 20, fontFamily: 'Helvetica-Bold' },
-  title: { fontSize: 12, color: ACCENT, marginTop: 2, marginBottom: 5 },
-  contactRow: { flexDirection: 'row', marginBottom: 14 },
-  contactItem: { fontSize: 9, color: MUTED, marginRight: 14 },
+  headerBand: {
+    marginTop: -PAGE_PADDING_TOP,
+    marginHorizontal: -PAGE_PADDING_X,
+    paddingTop: 34,
+    paddingBottom: 17,
+    paddingHorizontal: PAGE_PADDING_X,
+    backgroundColor: NAVY,
+    borderBottomWidth: 3,
+    borderBottomColor: AMBER
+  },
+  name: { fontSize: 20, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
+  title: { fontSize: 12, color: AMBER, marginTop: 2, marginBottom: 5 },
+  contactRow: { flexDirection: 'row' },
+  contactItem: {
+    fontSize: 9,
+    color: HEADER_MUTED,
+    marginRight: 14,
+    textDecoration: 'none'
+  },
   sectionTitle: {
     fontSize: 12,
     fontFamily: 'Helvetica-Bold',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
-    color: ACCENT,
+    color: NAVY_SOFT,
     borderBottomWidth: 1,
     borderBottomColor: RULE,
     paddingBottom: 3,
@@ -48,7 +73,7 @@ const styles = StyleSheet.create({
   columnGap: { width: 24 },
   bold: { fontFamily: 'Helvetica-Bold' },
   bulletRow: { flexDirection: 'row', marginBottom: 2 },
-  bulletMark: { width: 10 },
+  bulletMark: { width: 10, color: AMBER_TEXT },
   bulletText: { flex: 1 },
   notableItem: { marginBottom: 8 },
   notableHeaderRow: { flexDirection: 'row', marginBottom: 2 },
@@ -182,22 +207,29 @@ export function buildResumeDocument(data) {
     e(
       Page,
       { size: 'A4', style: styles.page },
-      e(Text, { style: styles.name }, data.name),
-      e(Text, { style: styles.title }, data.title),
       e(
         View,
-        { style: styles.contactRow },
+        { style: styles.headerBand },
+        e(Text, { style: styles.name }, data.name),
+        e(Text, { style: styles.title }, data.title),
         e(
-          Link,
-          { src: `mailto:${data.contact.email}`, style: styles.contactItem },
-          data.contact.email
-        ),
-        e(
-          Link,
-          { src: `https://${data.contact.website}`, style: styles.contactItem },
-          data.contact.website
-        ),
-        e(Text, { style: styles.contactItem }, data.contact.phone)
+          View,
+          { style: styles.contactRow },
+          e(
+            Link,
+            { src: `mailto:${data.contact.email}`, style: styles.contactItem },
+            data.contact.email
+          ),
+          e(
+            Link,
+            {
+              src: `https://${data.contact.website}`,
+              style: styles.contactItem
+            },
+            data.contact.website
+          ),
+          e(Text, { style: styles.contactItem }, data.contact.phone)
+        )
       ),
 
       SectionTitle('Profil professionnel'),
