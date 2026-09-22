@@ -45,7 +45,7 @@ This repo includes `.github/workflows/deploy.yml` to build the Vite + React app 
 
 ### What it does
 
-- **`build` job** (runs on every push and PR against `main`): Node `20`, `npm ci`, `npm run lint`, `npm run build`, uploads `dist/` as a workflow artifact.
+- **`build` job** (runs on every push and PR against `main`): Node `20`, `npm ci`, `npm audit --audit-level=high`, `npm run lint`, `npm run test`, `npm run build`, uploads `dist/` as a workflow artifact.
 - **`deploy` job** (runs only on a push to `main`, never on PRs): downloads the `dist` artifact and uploads it over SFTP to the OVH server's `www/monti-it.io` folder, using [`wlixcc/SFTP-Deploy-Action`](https://github.com/wlixcc/SFTP-Deploy-Action) pinned to an exact commit SHA, with `sftp_only: true`. The OVH hosting account is SFTP-only (no shell/SSH exec access), so this uses the SFTP file-transfer protocol directly rather than rsync-over-SSH — the same account FileZilla already uses to manage the served files.
 
 ### Required repository secrets
@@ -60,3 +60,19 @@ Set these under **Settings → Secrets and variables → Actions** (or `gh secre
 ### Triggers
 
 `build` runs on every push and pull request targeting `main`. `deploy` only runs on a direct push to `main` (i.e. after a PR merges), so PR builds never touch the production server.
+
+### Dependency vulnerability scanning
+
+- [`.github/dependabot.yml`](.github/dependabot.yml) opens a weekly PR for outdated `npm` and `docker` dependencies.
+- The `build` job also runs `npm audit --audit-level=high` on every push and PR, failing the build if any dependency (direct or transitive) has a known **high** or **critical** severity advisory. Low/moderate findings are reported by `npm audit` but don't fail the build.
+- **Fixing a finding**: run `npm audit fix` locally (non-breaking, stays within the `^`/`~` ranges already in `package.json`) and commit the updated `package-lock.json`. If the fix requires a semver-major bump, use `npm audit fix --force` or bump the dependency by hand, then re-run `npm run lint`, `npm run test`, and `npm run build` before committing.
+- **Accepted-risk exceptions**: if a high/critical advisory has no fix available yet, or doesn't apply to how this app uses the package (e.g. a dev-only tool never run against untrusted input), pin the resolved version via npm's [`overrides`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#overrides) field in `package.json` rather than disabling the CI check. Add a comment above the override with the advisory URL and the reason it's accepted, e.g.:
+
+  ```jsonc
+  "overrides": {
+    // GHSA-xxxx-xxxx-xxxx: dev-only build tool, not exposed to untrusted input; no fix yet.
+    "some-transitive-dep": "1.2.3"
+  }
+  ```
+
+  Re-run `npm audit --audit-level=high` locally to confirm the override clears the finding before pushing.
