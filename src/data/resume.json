@@ -108,7 +108,7 @@
         "en": { "title": "Frontend & UI" }
       },
       "database": {
-        "items": ["SQL Server", "T-SQL"],
+        "items": ["SQL Server", "T-SQL", "PostgreSQL", "ClickHouse"],
         "fr": { "title": "Bases de données" },
         "en": { "title": "Databases" }
       },
