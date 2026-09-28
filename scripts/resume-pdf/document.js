@@ -46,13 +46,23 @@ const styles = StyleSheet.create({
     borderBottomWidth: 3,
     borderBottomColor: AMBER
   },
-  name: { fontSize: 20, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
-  title: { fontSize: 12, color: AMBER, marginTop: 2, marginBottom: 5 },
-  contactRow: { flexDirection: 'row' },
+  name: {
+    fontSize: 20,
+    fontFamily: 'Helvetica-Bold',
+    color: '#ffffff',
+    textAlign: 'center'
+  },
+  title: {
+    fontSize: 12,
+    color: AMBER,
+    marginTop: 2,
+    marginBottom: 5,
+    textAlign: 'center'
+  },
+  contactRow: { flexDirection: 'row', justifyContent: 'center', gap: 14 },
   contactItem: {
     fontSize: 9,
     color: HEADER_MUTED,
-    marginRight: 14,
     textDecoration: 'none'
   },
   sectionTitle: {
