@@ -280,8 +280,12 @@ export function buildResumeDocument(data) {
         )
       ),
 
-      SectionTitle('Résumé de carrière'),
-      CareerHistory(data.additional.careerHistory),
+      e(
+        View,
+        { break: true },
+        SectionTitle('Résumé de carrière'),
+        CareerHistory(data.additional.careerHistory)
+      ),
 
       e(Text, {
         style: styles.footer,
