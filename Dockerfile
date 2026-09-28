@@ -45,8 +45,9 @@ FROM nginx:1.31-alpine AS prod
 # Set env variables if needed (example placeholder)
 # ENV APP_ENV=production
 
-# Remove default nginx static files and copy build output
-RUN rm -rf /usr/share/nginx/html/*
+# Pull patched Alpine packages (the nginx base image can lag behind security fixes)
+# and remove default nginx static files
+RUN apk upgrade --no-cache && rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Copy a minimal nginx config (optional). Using default if not provided.

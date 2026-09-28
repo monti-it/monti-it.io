@@ -20,7 +20,9 @@ function ExpertiseDetail({ topicKey }) {
       </ul>
       <div className="highlight-tags">
         {highlights.map((highlight, index) => (
-          <span key={index} className="highlight-tag">{highlight}</span>
+          <span key={index} className="highlight-tag">
+            {highlight}
+          </span>
         ))}
       </div>
     </section>
