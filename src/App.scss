@@ -265,15 +265,24 @@
 
 .pillar {
   gap: 1.25rem;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--accent-primary) 7%, var(--bg-card)),
+    var(--bg-card) 55%
+  );
+  border-color: color-mix(in srgb, var(--accent-primary) 12%, var(--border));
 }
 
 .pillar-highlighted {
   background: linear-gradient(
     160deg,
-    color-mix(in srgb, var(--accent-primary) 14%, var(--bg-card)),
-    var(--bg-card) 55%
+    color-mix(in srgb, var(--accent-primary) 20%, var(--bg-card)),
+    var(--bg-card) 60%
   );
-  border-color: color-mix(in srgb, var(--accent-primary) 35%, var(--border));
+  border-color: color-mix(in srgb, var(--accent-primary) 60%, var(--border));
+  box-shadow:
+    0 10px 30px var(--shadow-md),
+    0 0 24px color-mix(in srgb, var(--accent-primary) 18%, transparent);
 }
 
 .pillar-header {
