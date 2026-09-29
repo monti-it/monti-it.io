@@ -78,61 +78,81 @@ export const translations = {
       author: '— 21 ans de code, la même exigence'
     },
     expertise: {
-      eyebrow: 'Que puis-je vous apporter ?',
-      title: "De l'amélioration continue",
+      eyebrow: 'Expertise',
+      title: "Ce que j'apporte à une équipe",
       subtitle:
-        'Accompagnement technique complet pour transformer vos défis en solutions robustes et pérennes',
+        'Du code .NET solide et sûr, une équipe qui progresse, un besoin clairement posé.',
+      pillars: {
+        ai: {
+          title: "Construire avec l'IA",
+          pitch:
+            "Les agents IA écrivent, je cadre, je relis et je garde la main sur l'architecture."
+        },
+        security: {
+          title: 'Sécuriser',
+          pitch:
+            'Les failles se ferment dans le pipeline, avant la mise en production.'
+        },
+        lead: {
+          title: 'Piloter',
+          pitch: "Une équipe qui livre à l'heure et qui monte en compétence."
+        },
+        needs: {
+          title: 'Comprendre le besoin',
+          pitch: "Poser le bon problème avant d'écrire la moindre ligne."
+        }
+      },
       items: {
         leadership: {
-          title: 'LEADERSHIP TECHNIQUE',
+          title: 'Leadership technique',
           description: "Pilotage d'équipe, architecture et référent technique"
         },
         analyse: {
-          title: 'ANALYSE & RÉSOLUTION',
+          title: 'Analyse & résolution',
           description:
             'Analyse approfondie et résolution de problèmes complexes'
         },
         communication: {
-          title: 'COMMUNICATION',
+          title: 'Communication',
           description: 'Vulgarisation technique et collaboration efficace'
         },
         cicd: {
-          title: 'CI/CD & DEVOPS',
+          title: 'CI/CD & DevOps',
           description: 'Automatisation complète des processus de livraison'
         },
         craftsmanship: {
-          title: 'SOFTWARE CRAFTSMANSHIP',
+          title: 'Software craftsmanship',
           description:
             'Code propre, testé et évolutif : principes SOLID, KISS, TDD et refactoring continu'
         },
         expression: {
-          title: 'EXPRESSION DU BESOIN',
+          title: 'Expression du besoin',
           description:
             "Formaliser le besoin afin de structurer l'organisation de l'équipe"
         },
         agile: {
-          title: 'MÉTHODES AGILE',
+          title: 'Méthodes Agile',
           description: 'Scrum, facilitation et amélioration continue'
         },
         coaching: {
-          title: 'COACHING TECHNIQUE',
+          title: 'Coaching technique',
           description: 'Montée en compétences et accompagnement des équipes'
         },
         modernisation: {
-          title: 'MODERNISATION',
+          title: 'Modernisation',
           description: "Migration et refactoring d'architectures legacy"
         },
         securite: {
-          title: 'SÉCURITÉ',
+          title: 'Sécurité',
           description: 'Intégration OWASP et bonnes pratiques de sécurité'
         },
         devsecops: {
-          title: 'DEVSECOPS',
+          title: 'DevSecOps',
           description:
             'Sécurité intégrée aux pipelines CI/CD, pas en bout de chaîne'
         },
         agentic: {
-          title: 'IA AGENTIQUE',
+          title: 'IA agentique',
           description:
             "Audit de votre codebase et mise en place d'un flux de développement assisté par agents IA, adapté à vos conventions"
         }
@@ -723,62 +743,82 @@ export const translations = {
       author: '— 21 years of code, the same high standards'
     },
     expertise: {
-      eyebrow: 'What can I bring to your project?',
-      title: 'Continuous improvement',
+      eyebrow: 'Expertise',
+      title: 'What I bring to a team',
       subtitle:
-        'End-to-end technical support to turn your challenges into robust, lasting solutions',
+        'Solid, secure .NET code, a team that keeps growing, and requirements that are clearly defined.',
+      pillars: {
+        ai: {
+          title: 'Building with AI',
+          pitch:
+            'AI agents write the code; I frame it, review it and keep control of the architecture.'
+        },
+        security: {
+          title: 'Securing',
+          pitch:
+            'Vulnerabilities get closed in the pipeline, before production.'
+        },
+        lead: {
+          title: 'Leading',
+          pitch: 'A team that delivers on time and keeps growing its skills.'
+        },
+        needs: {
+          title: 'Understanding the need',
+          pitch: 'Getting the problem right before a single line is written.'
+        }
+      },
       items: {
         leadership: {
-          title: 'TECHNICAL LEADERSHIP',
+          title: 'Technical leadership',
           description:
             'Team leadership, architecture and technical reference point'
         },
         analyse: {
-          title: 'ANALYSIS & RESOLUTION',
+          title: 'Analysis & resolution',
           description: 'In-depth analysis and resolution of complex problems'
         },
         communication: {
-          title: 'COMMUNICATION',
+          title: 'Communication',
           description:
             'Making technical topics accessible and collaborating effectively'
         },
         cicd: {
-          title: 'CI/CD & DEVOPS',
+          title: 'CI/CD & DevOps',
           description: 'Full automation of delivery pipelines'
         },
         craftsmanship: {
-          title: 'SOFTWARE CRAFTSMANSHIP',
+          title: 'Software craftsmanship',
           description:
             'Clean, tested, evolvable code: SOLID, KISS, TDD and continuous refactoring'
         },
         expression: {
-          title: 'REQUIREMENTS DEFINITION',
+          title: 'Requirements definition',
           description:
             'Formalizing needs to structure how the team is organized'
         },
         agile: {
-          title: 'AGILE METHODS',
+          title: 'Agile methods',
           description: 'Scrum, facilitation and continuous improvement'
         },
         coaching: {
-          title: 'TECHNICAL COACHING',
+          title: 'Technical coaching',
           description: 'Upskilling and supporting teams'
         },
         modernisation: {
-          title: 'MODERNIZATION',
+          title: 'Modernization',
           description: 'Migration and refactoring of legacy architectures'
         },
         securite: {
-          title: 'SECURITY',
+          title: 'Security',
           description: 'OWASP integration and security best practices'
         },
         devsecops: {
-          title: 'DEVSECOPS',
+          title: 'DevSecOps',
           description:
             'Security built into CI/CD pipelines, not bolted on at the end'
         },
         agentic: {
-          title: 'AGENTIC AI',
+          title: 'Agentic AI',
           description:
             'Codebase audit and setup of an AI-agent-assisted development workflow, tailored to your conventions'
         }
