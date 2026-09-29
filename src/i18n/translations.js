@@ -37,6 +37,7 @@ export const translations = {
       eyebrow: 'Que puis-je vous apporter ?',
       title: 'Un accompagnement par thématique',
       subtitle: "Chaque domaine d'intervention est détaillé sur sa propre page",
+      secondaryTitle: 'Aussi, sur le terrain',
       items: {
         expertise: {
           title: 'Expertise & Leadership technique',
@@ -47,6 +48,11 @@ export const translations = {
           title: 'Stack technique complète',
           description:
             '.NET, Angular, React, bases de données, cloud et outils DevOps'
+        },
+        securite: {
+          title: 'Sécurité applicative & IA',
+          description:
+            'Contrôles de sécurité intégrés au CI/CD, revue de code orientée sécurité, sécurisation des fonctionnalités IA'
         },
         reseau: {
           title: 'Réseau & Infrastructure',
@@ -676,6 +682,7 @@ export const translations = {
       eyebrow: 'What can I bring to your project?',
       title: 'Support organized by theme',
       subtitle: 'Each area of expertise is detailed on its own page',
+      secondaryTitle: 'Also, hands-on',
       items: {
         expertise: {
           title: 'Expertise & Technical Leadership',
@@ -686,6 +693,11 @@ export const translations = {
           title: 'Full technical stack',
           description:
             '.NET, Angular, React, databases, cloud and DevOps tooling'
+        },
+        securite: {
+          title: 'Application security & AI',
+          description:
+            'Security gates built into CI/CD, security-focused code review, securing AI features'
         },
         reseau: {
           title: 'Network & Infrastructure',
