@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { useLanguage } from '../i18n/useLanguage'
 import { withLangPrefix } from '../i18n/localePaths'
 import { FlagFR, FlagGB } from './FlagIcon'
+import { CONTACT_EMAIL } from '../data/contact'
 
 const navItems = [
   { key: 'expertise', to: '/expertise', icon: '🧭' },
@@ -54,7 +55,7 @@ function Navbar() {
           <FlagGB />
         </Link>
       </div>
-      <a className="btn primary navbar-cta" href="mailto:hello@monti-it.io">
+      <a className="btn primary navbar-cta" href={`mailto:${CONTACT_EMAIL}`}>
         {t('common.contactCta')}
       </a>
     </nav>

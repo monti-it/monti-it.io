@@ -8,6 +8,7 @@ import {
   FaHeart
 } from 'react-icons/fa'
 import { useLanguage } from '../i18n/useLanguage'
+import { CONTACT_EMAIL } from '../data/contact'
 
 function Footer() {
   const { t, localizePath } = useLanguage()
@@ -48,11 +49,11 @@ function Footer() {
         <div className="footer-section">
           <p className="footer-section-title">{t('footer.contactTitle')}</p>
           <div className="footer-links">
-            <a href="mailto:hello@monti-it.io">
+            <a href={`mailto:${CONTACT_EMAIL}`}>
               <FaEnvelope
                 style={{ marginRight: '8px', verticalAlign: 'middle' }}
               />
-              hello@monti-it.io
+              {CONTACT_EMAIL}
             </a>
             {socialLinks.map((link) => {
               const IconComponent = link.icon

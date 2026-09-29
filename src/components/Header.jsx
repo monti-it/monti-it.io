@@ -1,4 +1,5 @@
 import { useLanguage } from '../i18n/useLanguage'
+import { CONTACT_EMAIL } from '../data/contact'
 
 const stack = [
   '.NET',
@@ -28,7 +29,7 @@ function Header() {
           ))}
         </div>
         <div className="hero-actions">
-          <a className="btn primary" href="mailto:hello@monti-it.io">
+          <a className="btn primary" href={`mailto:${CONTACT_EMAIL}`}>
             {t('common.contactCta')}
           </a>
           <a className="btn ghost" href="#themes">
