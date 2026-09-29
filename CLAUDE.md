@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-This is `monti-it.io` — a French-language personal/freelance IT services portfolio site (React 19 + Vite 7, client-side SPA, no SSR).
+This is `monti-it.io` — a French-language personal/freelance IT services portfolio site (React 19 + Vite 8, client-side SPA, no SSR).
 
 ## Commands
 
