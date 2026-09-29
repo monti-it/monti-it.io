@@ -23,13 +23,13 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Besoin de renforcer votre équipe technique ?',
-      title: '.Net Core, Angular, React, SQL, YAML...',
-      lead: "Artisan du logiciel augmenté par l'IA, en développement .NET FullStack depuis 2005 : architectures robustes, code propre et testé, flux de développement outillés par l'IA, au service de secteurs variés (froid industriel, télémédecine, transport, logistique).",
+      eyebrow: 'Développeur .NET senior · IA · Sécurité applicative',
+      title: "Du logiciel .NET solide et sûr, construit avec l'IA",
+      lead: "21 ans de .NET m'ont appris à juger du code. Aujourd'hui, des agents IA l'écrivent sous ma direction, et je le relis avec un œil de sécurité : architecture robuste, code testé, failles fermées avant la prod.",
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
       panelQuote:
-        'Diagnostic rapide, livraison fiable et code maintenable. J’aide les équipes à accélérer sans sacrifier la qualité.',
+        "Diagnostic rapide, livraison fiable, code maintenable et sécurisé. J'aide les équipes à profiter de l'IA sans sacrifier la qualité.",
       panelAuthor:
         'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
     },
@@ -662,13 +662,13 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Need to strengthen your technical team?',
-      title: '.Net Core, Angular, React, SQL, YAML...',
-      lead: 'AI-augmented software craftsman, building FullStack .NET software since 2005: robust architectures, clean tested code, and AI-powered development workflows, serving varied industries (industrial refrigeration, telemedicine, transport, logistics).',
+      eyebrow: 'Senior .NET developer · AI · Application security',
+      title: 'Solid, secure .NET software, built with AI',
+      lead: '21 years of .NET taught me how to judge code. Today, AI agents write it under my direction, and I review it with a security mindset: robust architecture, tested code, vulnerabilities closed before production.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
       panelQuote:
-        'Fast diagnosis, reliable delivery and maintainable code. I help teams move faster without sacrificing quality.',
+        'Fast diagnosis, reliable delivery, maintainable and secure code. I help teams benefit from AI without sacrificing quality.',
       panelAuthor:
         'Short or long-term engagements, or fixed-price projects • Remote-first'
     },
