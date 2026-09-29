@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-This is `monti-it.io` — a French-language personal/freelance IT services portfolio site (React 19 + Vite 7, client-side SPA, no SSR).
+This is `monti-it.io` — a French-language personal/freelance IT services portfolio site (React 19 + Vite 8, client-side SPA, no SSR).
 
 ## Commands
 
@@ -12,12 +12,19 @@ This is `monti-it.io` — a French-language personal/freelance IT services portf
 npm run dev       # start Vite dev server (http://localhost:5173)
 npm run build     # production build to dist/
 npm run preview   # preview the production build locally
-npm run lint      # ESLint (flat config, eslint.config.js)
+npm run lint      # ESLint (flat config, eslint.config.js) + prettier --check
+npm run test      # Vitest, single run (src/**/*.test.js)
+npm run format    # prettier --write . (fixes what lint's format check flags)
+npm run format:check  # prettier --check . only
+npm run resume:pdf    # regenerate public/resume.pdf from src/data/resume.json
 ```
 
-There is no test suite/runner configured in this repo.
+Tests are Vitest with no config file (Vite's defaults): pure-logic tests next to the code they cover — `src/i18n/localePaths.test.js`, `src/i18n/translate.test.js`, and `src/data/resume.test.js` (résumé drift check, see Résumé pipeline below). There are no component/DOM tests.
 
-CI (`azure-pipeline.yaml`) runs on Node 20.x: `npm ci`, `npm run lint`, `npm run build`, then publishes `dist/` and optionally builds/pushes a Docker image (multi-stage `Dockerfile`, served in prod via nginx).
+CI is GitHub Actions, Node 20:
+
+- [.github/workflows/deploy.yml](.github/workflows/deploy.yml) — on PRs and pushes to `main`: `npm ci` → `npm audit --audit-level=high` → `npm run lint` → `npm run test` → `npm run build`. On push to `main` only, it then uploads `dist/` to OVH hosting over SFTP.
+- [.github/workflows/docker-scan.yml](.github/workflows/docker-scan.yml) — builds the `prod` target of the multi-stage `Dockerfile` (nginx) and scans it with Trivy (fails on fixable CRITICAL/HIGH). Runs when `Dockerfile`/`package*.json` change, weekly, and on demand. The image isn't pushed or deployed anywhere.
 
 ## Architecture
 
@@ -38,6 +45,12 @@ CI (`azure-pipeline.yaml`) runs on Node 20.x: `npm ci`, `npm run lint`, `npm run
 - **Content language**: French (default) and English, see i18n above. New copy should match the existing tone in both dictionaries (e.g. "Compétences réseau" / "Network skills", "Infrastructure & Réseau" eyebrow style) — never hardcode new user-facing strings directly in a component.
 - **ESLint**: flat config (`eslint.config.js`) extends `@eslint/js` recommended + `eslint-plugin-react-hooks` + `eslint-plugin-react-refresh` (Vite preset). Custom rule: unused vars are only allowed if they start with an uppercase letter or underscore (`varsIgnorePattern: '^[A-Z_]'`). `react-refresh/only-export-components` is enforced — keep non-component exports (hooks, constants, utils) out of files that also export a component.
 
+## Résumé pipeline
+
+- [src/data/resume.json](src/data/resume.json) is the source of truth for the résumé PDF (profile, 3 curated roles, languages, skills, `fr`/`en` blocks per entry). `npm run resume:pdf` runs [scripts/generate-resume-pdf.js](scripts/generate-resume-pdf.js), which renders it with `@react-pdf/renderer` (layout in [scripts/resume-pdf/document.js](scripts/resume-pdf/document.js)) to `public/resume.pdf`. The generated PDF is committed; `pages/Resume.jsx` just embeds it.
+- The site does **not** read `resume.json`: its Experience/Languages/Skills/contact content lives separately in components + `translations.js`, and the two stores overlap without being generated from one another. Keep it that way — only the PDF script and `resume.test.js` may import `resume.json`, since a site import would bundle it (phone number included) into the public JS. Shared site-side facts that need a constant go in [src/data/contact.js](src/data/contact.js) (e.g. `CONTACT_EMAIL`).
+- [src/data/resume.test.js](src/data/resume.test.js) catches drift on the facts both sides carry (contact email, shared roles' period/sector, languages' name/level, in both languages). Everything else is synced by hand.
+
 ## Claude Code skills
 
-- [.claude/skills/resume-cv/](.claude/skills/resume-cv/SKILL.md): generates a French résumé/CV as a `.docx` from the site's own live content (profile, experience, languages, skills — read fresh from `Footer.jsx`, `Experience.jsx`, `Languages.jsx`, `Skills.jsx` and `translations.js`), meant to be uploaded to Google Drive and opened as a Google Doc. It exists because `public/resume.pdf` is itself exported by hand from a private Google Doc that isn't reachable from here — this skill goes the other direction, building a doc _from_ the site to seed or refresh that source.
+- [.claude/skills/resume/](.claude/skills/resume/SKILL.md): turns a conversational résumé change ("add this certification", "tighten the Clauger description") into edits to `resume.json` (both languages), the matching site components/translations where the same fact lives there too (its sync table maps each `resume.json` section to its site counterpart), and a regenerated `public/resume.pdf`. Leaves changes unstaged for review.
