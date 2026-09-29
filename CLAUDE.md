@@ -12,12 +12,19 @@ This is `monti-it.io` — a French-language personal/freelance IT services portf
 npm run dev       # start Vite dev server (http://localhost:5173)
 npm run build     # production build to dist/
 npm run preview   # preview the production build locally
-npm run lint      # ESLint (flat config, eslint.config.js)
+npm run lint      # ESLint (flat config, eslint.config.js) + prettier --check
+npm run test      # Vitest, single run (src/**/*.test.js)
+npm run format    # prettier --write . (fixes what lint's format check flags)
+npm run format:check  # prettier --check . only
+npm run resume:pdf    # regenerate public/resume.pdf from src/data/resume.json
 ```
 
-There is no test suite/runner configured in this repo.
+Tests are Vitest with no config file (Vite's defaults): pure-logic tests next to the code they cover — `src/i18n/localePaths.test.js`, `src/i18n/translate.test.js`, and `src/data/resume.test.js` (résumé drift check, see Résumé pipeline below). There are no component/DOM tests.
 
-CI (`azure-pipeline.yaml`) runs on Node 20.x: `npm ci`, `npm run lint`, `npm run build`, then publishes `dist/` and optionally builds/pushes a Docker image (multi-stage `Dockerfile`, served in prod via nginx).
+CI is GitHub Actions, Node 20:
+
+- [.github/workflows/deploy.yml](.github/workflows/deploy.yml) — on PRs and pushes to `main`: `npm ci` → `npm audit --audit-level=high` → `npm run lint` → `npm run test` → `npm run build`. On push to `main` only, it then uploads `dist/` to OVH hosting over SFTP.
+- [.github/workflows/docker-scan.yml](.github/workflows/docker-scan.yml) — builds the `prod` target of the multi-stage `Dockerfile` (nginx) and scans it with Trivy (fails on fixable CRITICAL/HIGH). Runs when `Dockerfile`/`package*.json` change, weekly, and on demand. The image isn't pushed or deployed anywhere.
 
 ## Architecture
 
