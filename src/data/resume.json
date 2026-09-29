@@ -1,14 +1,14 @@
 {
   "name": "Christophe MONTI",
-  "title": "Senior FullStack .Net Developer | Freelance",
+  "title": "Senior .NET Developer · AI · Application Security | Freelance",
   "contact": {
     "email": "hello@monti-it.io",
     "phone": "06 65 16 41 36",
     "website": "monti-it.io"
   },
   "profile": {
-    "fr": "Développeur .Net FullStack senior, spécialisé dans la conception, la modernisation et l'industrialisation d'architectures logicielles robustes. Fort de plus de 21 ans d'expérience en développement, j'ai participé à des projets complexes dans des secteurs variés (froid industriel, télémédecine, transport, logistique) en utilisant des méthodologies Agile et des technologies modernes.",
-    "en": "Senior FullStack .NET developer specialized in the design, modernization and industrialization of robust software architectures. With more than 21 years of development experience, I have worked on complex projects across varied industries (industrial refrigeration, telemedicine, transport, logistics) using Agile methodologies and modern technologies."
+    "fr": "Développeur .NET FullStack senior (21 ans d'expérience), je conçois et modernise des architectures logicielles robustes dans des secteurs variés (froid industriel, télémédecine, transport, logistique). Je travaille désormais avec des agents IA qui écrivent le code sous ma direction : je cadre, je relis, je garantis la qualité. J'oriente mon activité vers la sécurité applicative : contrôles de sécurité intégrés au CI/CD, revue de code orientée sécurité, sécurisation des fonctionnalités IA.",
+    "en": "Senior FullStack .NET developer (21 years of experience), I design and modernize robust software architectures across varied industries (industrial refrigeration, telemedicine, transport, logistics). I now work with AI agents that write the code under my direction: I frame the work, review it and guarantee its quality. I am steering my practice toward application security: security gates built into CI/CD, security-focused code review, securing AI features."
   },
   "experience": [
     {
