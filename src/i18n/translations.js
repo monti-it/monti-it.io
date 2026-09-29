@@ -78,10 +78,30 @@ export const translations = {
       author: '— 21 ans de code, la même exigence'
     },
     expertise: {
-      eyebrow: 'Que puis-je vous apporter ?',
-      title: "De l'amélioration continue",
+      eyebrow: 'Expertise',
+      title: "Ce que j'apporte à une équipe",
       subtitle:
-        'Accompagnement technique complet pour transformer vos défis en solutions robustes et pérennes',
+        'Du code .NET solide et sûr, une équipe qui progresse, un besoin clairement posé.',
+      pillars: {
+        ai: {
+          title: "Construire avec l'IA",
+          pitch:
+            "Les agents IA écrivent, je cadre, je relis et je garde la main sur l'architecture."
+        },
+        security: {
+          title: 'Sécuriser',
+          pitch:
+            'Les failles se ferment dans le pipeline, avant la mise en production.'
+        },
+        lead: {
+          title: 'Piloter',
+          pitch: "Une équipe qui livre à l'heure et qui monte en compétence."
+        },
+        needs: {
+          title: 'Comprendre le besoin',
+          pitch: "Poser le bon problème avant d'écrire la moindre ligne."
+        }
+      },
       items: {
         leadership: {
           title: 'Leadership technique',
@@ -723,10 +743,30 @@ export const translations = {
       author: '— 21 years of code, the same high standards'
     },
     expertise: {
-      eyebrow: 'What can I bring to your project?',
-      title: 'Continuous improvement',
+      eyebrow: 'Expertise',
+      title: 'What I bring to a team',
       subtitle:
-        'End-to-end technical support to turn your challenges into robust, lasting solutions',
+        'Solid, secure .NET code, a team that keeps growing, and requirements that are clearly defined.',
+      pillars: {
+        ai: {
+          title: 'Building with AI',
+          pitch:
+            'AI agents write the code; I frame it, review it and keep control of the architecture.'
+        },
+        security: {
+          title: 'Securing',
+          pitch:
+            'Vulnerabilities get closed in the pipeline, before production.'
+        },
+        lead: {
+          title: 'Leading',
+          pitch: 'A team that delivers on time and keeps growing its skills.'
+        },
+        needs: {
+          title: 'Understanding the need',
+          pitch: 'Getting the problem right before a single line is written.'
+        }
+      },
       items: {
         leadership: {
           title: 'Technical leadership',
