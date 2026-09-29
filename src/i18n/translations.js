@@ -15,7 +15,8 @@ export const translations = {
       maintenance: 'Maintenance'
     },
     footer: {
-      tagline: 'Développement logiciel sur-mesure depuis 2005',
+      tagline:
+        "Du logiciel sur-mesure depuis 2005, construit avec l'IA aujourd'hui",
       contactTitle: 'Contact & Réseaux',
       legalTitle: 'Légal',
       cgs: 'Conditions Générales de Services',
@@ -544,9 +545,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: "Artisan du logiciel augmenté par l'IA — .NET Freelance Senior",
+        title: 'Développeur .NET senior freelance · IA & sécurité applicative',
         description:
-          "Artisan du logiciel augmenté par l'IA, développeur .NET FullStack depuis 2005 : architecture logicielle, software craftsmanship, flux de développement outillés par l'IA, DevOps. Missions ou forfait, remote privilégié."
+          '21 ans de .NET : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait, remote privilégié.'
       },
       expertise: {
         title: 'Expertise & Leadership technique',
@@ -660,7 +661,7 @@ export const translations = {
       maintenance: 'Maintenance'
     },
     footer: {
-      tagline: 'Custom software development since 2005',
+      tagline: 'Custom software since 2005, built with AI today',
       contactTitle: 'Contact & Networks',
       legalTitle: 'Legal',
       cgs: 'Terms of Service',
@@ -1180,9 +1181,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'AI-Augmented Software Craftsman — Senior .NET Freelance',
+        title: 'Senior .NET freelance developer · AI & application security',
         description:
-          'AI-augmented software craftsman, building FullStack .NET software since 2005: software architecture, software craftsmanship, AI-powered development workflows, DevOps. Missions or fixed-price, remote-first.'
+          '21 years of .NET: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price, remote-first.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
