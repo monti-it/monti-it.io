@@ -1,5 +1,16 @@
 import { useLanguage } from '../i18n/useLanguage'
 
+const stack = [
+  '.NET',
+  'Angular',
+  'React',
+  'SQL',
+  'Azure DevOps',
+  'Docker',
+  'Kubernetes',
+  'Claude Code'
+]
+
 function Header() {
   const { t } = useLanguage()
 
@@ -9,6 +20,13 @@ function Header() {
         <p className="eyebrow">{t('header.eyebrow')}</p>
         <h1>{t('header.title')}</h1>
         <p className="lead">{t('header.lead')}</p>
+        <div className="highlight-tags">
+          {stack.map((tech) => (
+            <span key={tech} className="highlight-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
         <div className="hero-actions">
           <a className="btn primary" href="mailto:hello@monti-it.io">
             {t('common.contactCta')}

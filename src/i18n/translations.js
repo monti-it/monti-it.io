@@ -15,7 +15,8 @@ export const translations = {
       maintenance: 'Maintenance'
     },
     footer: {
-      tagline: 'Développement logiciel sur-mesure depuis 2005',
+      tagline:
+        "Du logiciel sur-mesure depuis 2005, construit avec l'IA aujourd'hui",
       contactTitle: 'Contact & Réseaux',
       legalTitle: 'Légal',
       cgs: 'Conditions Générales de Services',
@@ -23,13 +24,13 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Besoin de renforcer votre équipe technique ?',
-      title: '.Net Core, Angular, React, SQL, YAML...',
-      lead: "Artisan du logiciel augmenté par l'IA, en développement .NET FullStack depuis 2005 : architectures robustes, code propre et testé, flux de développement outillés par l'IA, au service de secteurs variés (froid industriel, télémédecine, transport, logistique).",
+      eyebrow: 'Développeur .NET senior · IA · Sécurité applicative',
+      title: "Du logiciel .NET solide et sûr, construit avec l'IA",
+      lead: "21 ans de .NET m'ont appris à juger du code. Aujourd'hui, des agents IA l'écrivent sous ma direction, et je le relis avec un œil de sécurité : architecture robuste, code testé, failles fermées avant la prod.",
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
       panelQuote:
-        'Diagnostic rapide, livraison fiable et code maintenable. J’aide les équipes à accélérer sans sacrifier la qualité.',
+        "Diagnostic rapide, livraison fiable, code maintenable et sécurisé. J'aide les équipes à profiter de l'IA sans sacrifier la qualité.",
       panelAuthor:
         'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
     },
@@ -37,6 +38,7 @@ export const translations = {
       eyebrow: 'Que puis-je vous apporter ?',
       title: 'Un accompagnement par thématique',
       subtitle: "Chaque domaine d'intervention est détaillé sur sa propre page",
+      secondaryTitle: 'Aussi, sur le terrain',
       items: {
         expertise: {
           title: 'Expertise & Leadership technique',
@@ -47,6 +49,11 @@ export const translations = {
           title: 'Stack technique complète',
           description:
             '.NET, Angular, React, bases de données, cloud et outils DevOps'
+        },
+        securite: {
+          title: 'Sécurité applicative & IA',
+          description:
+            'Contrôles de sécurité intégrés au CI/CD, revue de code orientée sécurité, sécurisation des fonctionnalités IA'
         },
         reseau: {
           title: 'Réseau & Infrastructure',
@@ -65,10 +72,10 @@ export const translations = {
       }
     },
     quote: {
-      eyebrow: 'Pourquoi travailler avec moi ?',
-      title: 'Accélérez vos projets avec un expert terrain',
-      text: 'Un développeur senior ne se contente pas de coder : il conçoit des architectures robustes, automatise les déploiements et transmet son savoir pour que vos équipes gagnent en autonomie.',
-      author: "- L'expertise au service de votre roadmap"
+      eyebrow: 'Ma façon de travailler',
+      title: "L'IA écrit, je décide",
+      text: "Pendant vingt ans, j'ai écrit le code à la main, et j'ai aimé ça. Aujourd'hui, des agents IA le produisent en quelques minutes. C'est justement là que l'expérience compte : cadrer, relire, refuser ce qui fragilise l'architecture ou ouvre une faille. Vous gagnez la vitesse de l'IA sans en payer la dette.",
+      author: '— 21 ans de code, la même exigence'
     },
     expertise: {
       eyebrow: 'Que puis-je vous apporter ?',
@@ -538,9 +545,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: "Artisan du logiciel augmenté par l'IA — .NET Freelance Senior",
+        title: 'Développeur .NET senior freelance · IA & sécurité applicative',
         description:
-          "Artisan du logiciel augmenté par l'IA, développeur .NET FullStack depuis 2005 : architecture logicielle, software craftsmanship, flux de développement outillés par l'IA, DevOps. Missions ou forfait, remote privilégié."
+          '21 ans de .NET : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait, remote privilégié.'
       },
       expertise: {
         title: 'Expertise & Leadership technique',
@@ -654,7 +661,7 @@ export const translations = {
       maintenance: 'Maintenance'
     },
     footer: {
-      tagline: 'Custom software development since 2005',
+      tagline: 'Custom software since 2005, built with AI today',
       contactTitle: 'Contact & Networks',
       legalTitle: 'Legal',
       cgs: 'Terms of Service',
@@ -662,13 +669,13 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Need to strengthen your technical team?',
-      title: '.Net Core, Angular, React, SQL, YAML...',
-      lead: 'AI-augmented software craftsman, building FullStack .NET software since 2005: robust architectures, clean tested code, and AI-powered development workflows, serving varied industries (industrial refrigeration, telemedicine, transport, logistics).',
+      eyebrow: 'Senior .NET developer · AI · Application security',
+      title: 'Solid, secure .NET software, built with AI',
+      lead: '21 years of .NET taught me how to judge code. Today, AI agents write it under my direction, and I review it with a security mindset: robust architecture, tested code, vulnerabilities closed before production.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
       panelQuote:
-        'Fast diagnosis, reliable delivery and maintainable code. I help teams move faster without sacrificing quality.',
+        'Fast diagnosis, reliable delivery, maintainable and secure code. I help teams benefit from AI without sacrificing quality.',
       panelAuthor:
         'Short or long-term engagements, or fixed-price projects • Remote-first'
     },
@@ -676,6 +683,7 @@ export const translations = {
       eyebrow: 'What can I bring to your project?',
       title: 'Support organized by theme',
       subtitle: 'Each area of expertise is detailed on its own page',
+      secondaryTitle: 'Also, hands-on',
       items: {
         expertise: {
           title: 'Expertise & Technical Leadership',
@@ -686,6 +694,11 @@ export const translations = {
           title: 'Full technical stack',
           description:
             '.NET, Angular, React, databases, cloud and DevOps tooling'
+        },
+        securite: {
+          title: 'Application security & AI',
+          description:
+            'Security gates built into CI/CD, security-focused code review, securing AI features'
         },
         reseau: {
           title: 'Network & Infrastructure',
@@ -704,10 +717,10 @@ export const translations = {
       }
     },
     quote: {
-      eyebrow: 'Why work with me?',
-      title: 'Accelerate your projects with a hands-on expert',
-      text: "A senior developer doesn't just write code: they design robust architectures, automate deployments, and share their knowledge so your teams gain autonomy.",
-      author: '- Expertise in service of your roadmap'
+      eyebrow: 'How I work',
+      title: 'AI writes, I decide',
+      text: "For twenty years I wrote code by hand, and I loved it. Today, AI agents produce it in minutes. That's exactly where experience matters: framing the work, reviewing it, rejecting whatever weakens the architecture or opens a vulnerability. You get the speed of AI without paying for it in technical debt.",
+      author: '— 21 years of code, the same high standards'
     },
     expertise: {
       eyebrow: 'What can I bring to your project?',
@@ -1168,9 +1181,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'AI-Augmented Software Craftsman — Senior .NET Freelance',
+        title: 'Senior .NET freelance developer · AI & application security',
         description:
-          'AI-augmented software craftsman, building FullStack .NET software since 2005: software architecture, software craftsmanship, AI-powered development workflows, DevOps. Missions or fixed-price, remote-first.'
+          '21 years of .NET: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price, remote-first.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
