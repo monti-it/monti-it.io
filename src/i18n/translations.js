@@ -71,10 +71,10 @@ export const translations = {
       }
     },
     quote: {
-      eyebrow: 'Pourquoi travailler avec moi ?',
-      title: 'Accélérez vos projets avec un expert terrain',
-      text: 'Un développeur senior ne se contente pas de coder : il conçoit des architectures robustes, automatise les déploiements et transmet son savoir pour que vos équipes gagnent en autonomie.',
-      author: "- L'expertise au service de votre roadmap"
+      eyebrow: 'Ma façon de travailler',
+      title: "L'IA écrit, je décide",
+      text: "Pendant vingt ans, j'ai écrit le code à la main, et j'ai aimé ça. Aujourd'hui, des agents IA le produisent en quelques minutes. C'est justement là que l'expérience compte : cadrer, relire, refuser ce qui fragilise l'architecture ou ouvre une faille. Vous gagnez la vitesse de l'IA sans en payer la dette.",
+      author: '— 21 ans de code, la même exigence'
     },
     expertise: {
       eyebrow: 'Que puis-je vous apporter ?',
@@ -716,10 +716,10 @@ export const translations = {
       }
     },
     quote: {
-      eyebrow: 'Why work with me?',
-      title: 'Accelerate your projects with a hands-on expert',
-      text: "A senior developer doesn't just write code: they design robust architectures, automate deployments, and share their knowledge so your teams gain autonomy.",
-      author: '- Expertise in service of your roadmap'
+      eyebrow: 'How I work',
+      title: 'AI writes, I decide',
+      text: "For twenty years I wrote code by hand, and I loved it. Today, AI agents produce it in minutes. That's exactly where experience matters: framing the work, reviewing it, rejecting whatever weakens the architecture or opens a vulnerability. You get the speed of AI without paying for it in technical debt.",
+      author: '— 21 years of code, the same high standards'
     },
     expertise: {
       eyebrow: 'What can I bring to your project?',
