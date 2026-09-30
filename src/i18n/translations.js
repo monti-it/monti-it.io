@@ -10,9 +10,8 @@ export const translations = {
       brand: 'Monti IT',
       expertise: 'Expertise',
       competences: 'Compétences',
-      reseau: 'Réseau',
-      domotique: 'Domotique',
-      maintenance: 'Maintenance'
+      securite: 'Sécurité',
+      terrain: 'Terrain'
     },
     footer: {
       tagline:
@@ -66,7 +65,7 @@ export const translations = {
         },
         maintenance: {
           title: 'Maintenance & Support informatique',
-          description: 'Entreprises, particuliers et interventions spécialisées'
+          description: 'Entreprises, indépendants et interventions spécialisées'
         }
       }
     },
@@ -349,9 +348,9 @@ export const translations = {
         installation: {
           name: 'Installation & Configuration',
           description:
-            'Mise en place de Home Assistant adaptée à votre logement',
+            'Mise en place de Home Assistant adaptée à votre logement ou à vos locaux',
           details: [
-            'Installation sur serveur dédié (Raspberry Pi)',
+            'Installation sur un serveur dédié, hébergé sur site',
             'Intégration de vos objets connectés existants',
             'Configuration des automatisations sur-mesure',
             'Mise en place de tableaux de bord personnalisés'
@@ -404,19 +403,19 @@ export const translations = {
           ],
           highlights: ['Sur site ou à distance', 'Réactivité garantie']
         },
-        particuliers: {
-          name: 'Particuliers',
+        independants: {
+          name: 'Indépendants & petits bureaux',
           description:
-            'Assistance personnalisée à votre domicile ou en atelier',
+            'Un interlocuteur unique pour les cabinets et petites équipes sans service informatique',
           details: [
-            'Dépannage de votre matériel et logiciels',
-            'Récupération de vos données importantes',
-            'Installation et configuration',
-            'Nettoyage, désinfection et optimisation',
-            'Montage et upgrade de votre PC',
-            'Conseil et accompagnement adapté à vos besoins'
+            'Mise en service de vos postes et périphériques',
+            'Dépannage matériel et logiciel, sur site ou à distance',
+            'Récupération de données et plan de sauvegarde',
+            'Messagerie, partage de fichiers et accès sécurisés',
+            'Renouvellement et mise à niveau du matériel',
+            'Conseil adapté à la taille de votre structure'
           ],
-          highlights: ['Déplacement à domicile', 'Sans surprise']
+          highlights: ['Un seul interlocuteur', 'Sans surprise']
         },
         specialises: {
           name: 'Services Spécialisés',
@@ -596,7 +595,7 @@ export const translations = {
       maintenance: {
         title: 'Maintenance & Support informatique',
         description:
-          'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
+          'Maintenance et support informatique pour entreprises, PME et indépendants : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
       },
       securite: {
         title: 'Étude de cas sécurité — RBAC & kubeconfig k3s',
@@ -684,9 +683,8 @@ export const translations = {
       brand: 'Monti IT',
       expertise: 'Expertise',
       competences: 'Skills',
-      reseau: 'Network',
-      domotique: 'Smart Home',
-      maintenance: 'Maintenance'
+      securite: 'Security',
+      terrain: 'On-site'
     },
     footer: {
       tagline: 'Custom software since 2005, built with AI today',
@@ -739,7 +737,7 @@ export const translations = {
         },
         maintenance: {
           title: 'IT Maintenance & Support',
-          description: 'Businesses, individuals and specialized interventions'
+          description: 'Businesses, freelancers and specialized interventions'
         }
       }
     },
@@ -1017,9 +1015,10 @@ export const translations = {
       items: {
         installation: {
           name: 'Installation & Configuration',
-          description: 'Setting up Home Assistant tailored to your home',
+          description:
+            'Setting up Home Assistant tailored to your home or premises',
           details: [
-            'Installation on a dedicated server (Raspberry Pi)',
+            'Installation on a dedicated, on-site server',
             'Integration of your existing connected devices',
             'Custom automation configuration',
             'Setup of personalized dashboards'
@@ -1069,18 +1068,19 @@ export const translations = {
           ],
           highlights: ['On-site or remote', 'Guaranteed responsiveness']
         },
-        particuliers: {
-          name: 'Individuals',
-          description: 'Personalized assistance at your home or in-shop',
+        independants: {
+          name: 'Freelancers & small offices',
+          description:
+            'A single point of contact for practices and small teams without an IT department',
           details: [
-            'Hardware and software troubleshooting',
-            'Recovery of your important data',
-            'Installation and configuration',
-            'Cleaning, disinfection and optimization',
-            'PC building and upgrades',
-            'Advice and support tailored to your needs'
+            'Setup of your workstations and peripherals',
+            'Hardware and software troubleshooting, on-site or remote',
+            'Data recovery and backup planning',
+            'Email, file sharing and secure access',
+            'Hardware renewal and upgrades',
+            'Advice scaled to the size of your organization'
           ],
-          highlights: ['On-site visits', 'No surprises']
+          highlights: ['Single point of contact', 'No surprises']
         },
         specialises: {
           name: 'Specialized Services',
@@ -1260,7 +1260,7 @@ export const translations = {
       maintenance: {
         title: 'IT Maintenance & Support',
         description:
-          'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
+          'IT maintenance and support for businesses, SMBs and freelancers: troubleshooting, backup, security and personalized support.'
       },
       securite: {
         title: 'Security case study — k3s RBAC & kubeconfig',
