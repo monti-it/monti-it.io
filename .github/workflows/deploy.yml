@@ -25,6 +25,8 @@ jobs:
         with:
           name: dist
           path: dist
+          # Keep public/.htaccess (SPA fallback); hidden files are dropped by default
+          include-hidden-files: true
 
   deploy:
     name: Deploy to OVH
@@ -42,6 +44,7 @@ jobs:
           server: ${{ secrets.OVH_SFTP_HOST }}
           port: ${{ secrets.OVH_SFTP_PORT || 22 }}
           password: ${{ secrets.OVH_SFTP_PASSWORD }}
-          local_path: dist/*
+          # dist/. rather than dist/*: sftp's glob skips dotfiles like .htaccess
+          local_path: dist/.
           remote_path: www/monti-it.io
           sftp_only: true
