@@ -50,9 +50,8 @@ FROM nginx:1.31-alpine AS prod
 RUN apk upgrade --no-cache && rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy a minimal nginx config (optional). Using default if not provided.
-# You can add a custom config by creating nginx.conf and uncommenting:
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# SPA fallback so deep links (/reseau, /en/domotique...) don't 404
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
