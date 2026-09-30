@@ -1,10 +1,9 @@
-import { LuBriefcase, LuHouse, LuSettings2 } from 'react-icons/lu'
 import { useLanguage } from '../i18n/useLanguage'
 
 const itemIcons = {
-  entreprises: LuBriefcase,
-  particuliers: LuHouse,
-  specialises: LuSettings2
+  entreprises: '💼',
+  particuliers: '🏠',
+  specialises: '🔧'
 }
 
 function ComputerMaintenance() {
@@ -18,39 +17,36 @@ function ComputerMaintenance() {
         <h2>{t('maintenance.title')}</h2>
         <p className="muted">{t('maintenance.subtitle')}</p>
       </div>
-      <div className="pillars">
-        {Object.entries(items).map(([key, service]) => {
-          const Icon = itemIcons[key]
-          return (
-            <article key={key} className="card pillar">
-              <div className="pillar-header">
-                <span className="pillar-badge" aria-hidden="true">
-                  <Icon />
-                </span>
-                <div>
-                  <h3>{service.name}</h3>
-                  <p className="muted">{service.description}</p>
-                </div>
+      <div className="grid">
+        {Object.entries(items).map(([key, service]) => (
+          <article key={key} className="card card-gradient">
+            <div
+              className="card-icon"
+              style={{ fontSize: '2.5rem' }}
+              aria-hidden="true"
+            >
+              {itemIcons[key]}
+            </div>
+            <h3>{service.name}</h3>
+            <p style={{ marginBottom: '1rem' }}>{service.description}</p>
+            {service.details && (
+              <ul className="detail-list">
+                {service.details.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))}
+              </ul>
+            )}
+            {service.highlights && (
+              <div className="highlight-tags">
+                {service.highlights.map((highlight, index) => (
+                  <span key={index} className="highlight-tag">
+                    {highlight}
+                  </span>
+                ))}
               </div>
-              {service.details && (
-                <ul className="pillar-items">
-                  {service.details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-              )}
-              {service.highlights && (
-                <div className="highlight-tags">
-                  {service.highlights.map((highlight, index) => (
-                    <span key={index} className="highlight-tag">
-                      {highlight}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </article>
-          )
-        })}
+            )}
+          </article>
+        ))}
       </div>
     </section>
   )
