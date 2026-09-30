@@ -403,19 +403,19 @@ export const translations = {
           ],
           highlights: ['Sur site ou à distance', 'Réactivité garantie']
         },
-        particuliers: {
-          name: 'Particuliers',
+        independants: {
+          name: 'Indépendants & petits bureaux',
           description:
-            'Assistance personnalisée à votre domicile ou en atelier',
+            'Un interlocuteur unique pour les cabinets et petites équipes sans service informatique',
           details: [
-            'Dépannage de votre matériel et logiciels',
-            'Récupération de vos données importantes',
-            'Installation et configuration',
-            'Nettoyage, désinfection et optimisation',
-            'Montage et upgrade de votre PC',
-            'Conseil et accompagnement adapté à vos besoins'
+            'Mise en service de vos postes et périphériques',
+            'Dépannage matériel et logiciel, sur site ou à distance',
+            'Récupération de données et plan de sauvegarde',
+            'Messagerie, partage de fichiers et accès sécurisés',
+            'Renouvellement et mise à niveau du matériel',
+            'Conseil adapté à la taille de votre structure'
           ],
-          highlights: ['Déplacement à domicile', 'Sans surprise']
+          highlights: ['Un seul interlocuteur', 'Sans surprise']
         },
         specialises: {
           name: 'Services Spécialisés',
@@ -1067,18 +1067,19 @@ export const translations = {
           ],
           highlights: ['On-site or remote', 'Guaranteed responsiveness']
         },
-        particuliers: {
-          name: 'Individuals',
-          description: 'Personalized assistance at your home or in-shop',
+        independants: {
+          name: 'Freelancers & small offices',
+          description:
+            'A single point of contact for practices and small teams without an IT department',
           details: [
-            'Hardware and software troubleshooting',
-            'Recovery of your important data',
-            'Installation and configuration',
-            'Cleaning, disinfection and optimization',
-            'PC building and upgrades',
-            'Advice and support tailored to your needs'
+            'Setup of your workstations and peripherals',
+            'Hardware and software troubleshooting, on-site or remote',
+            'Data recovery and backup planning',
+            'Email, file sharing and secure access',
+            'Hardware renewal and upgrades',
+            'Advice scaled to the size of your organization'
           ],
-          highlights: ['On-site visits', 'No surprises']
+          highlights: ['Single point of contact', 'No surprises']
         },
         specialises: {
           name: 'Specialized Services',

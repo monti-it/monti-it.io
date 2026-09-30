@@ -2,7 +2,7 @@ import { useLanguage } from '../i18n/useLanguage'
 
 const itemIcons = {
   entreprises: '💼',
-  particuliers: '🏠',
+  independants: '🏢',
   specialises: '🔧'
 }
 
