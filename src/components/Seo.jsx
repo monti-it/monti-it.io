@@ -38,7 +38,7 @@ function setAlternateLink(hreflang, href) {
   element.setAttribute('href', href)
 }
 
-function Seo({ seoKey }) {
+function Seo({ seoKey, noindex = false }) {
   const { t, lang, path } = useLanguage()
 
   useEffect(() => {
@@ -72,7 +72,14 @@ function Seo({ seoKey }) {
     setMetaTag('name', 'twitter:card', 'summary_large_image')
     setMetaTag('name', 'twitter:title', fullTitle)
     setMetaTag('name', 'twitter:description', description)
-  }, [seoKey, t, lang, path])
+
+    // Head tags persist across client-side navigations, so clear it on pages that don't set it
+    if (noindex) {
+      setMetaTag('name', 'robots', 'noindex')
+    } else {
+      document.querySelector('meta[name="robots"]')?.remove()
+    }
+  }, [seoKey, noindex, t, lang, path])
 
   return null
 }
