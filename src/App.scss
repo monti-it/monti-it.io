@@ -540,10 +540,18 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 3rem;
+  margin: 4rem 0 3rem;
   border-radius: 18px;
   border: 1px solid var(--border);
   box-shadow: 0 10px 30px var(--shadow-md);
+}
+
+.legal-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.legal-card-wide {
+  grid-column: 1 / -1;
 }
 
 .pdf-container {
