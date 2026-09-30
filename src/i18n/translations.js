@@ -65,7 +65,7 @@ export const translations = {
         },
         maintenance: {
           title: 'Maintenance & Support informatique',
-          description: 'Entreprises, particuliers et interventions spécialisées'
+          description: 'Entreprises, indépendants et interventions spécialisées'
         }
       }
     },
@@ -595,7 +595,7 @@ export const translations = {
       maintenance: {
         title: 'Maintenance & Support informatique',
         description:
-          'Maintenance et support informatique pour entreprises, PME et particuliers : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
+          'Maintenance et support informatique pour entreprises, PME et indépendants : dépannage, sauvegarde, sécurisation et accompagnement personnalisé.'
       },
       securite: {
         title: 'Étude de cas sécurité — RBAC & kubeconfig k3s',
@@ -737,7 +737,7 @@ export const translations = {
         },
         maintenance: {
           title: 'IT Maintenance & Support',
-          description: 'Businesses, individuals and specialized interventions'
+          description: 'Businesses, freelancers and specialized interventions'
         }
       }
     },
@@ -1259,7 +1259,7 @@ export const translations = {
       maintenance: {
         title: 'IT Maintenance & Support',
         description:
-          'IT maintenance and support for businesses, SMBs and individuals: troubleshooting, backup, security and personalized support.'
+          'IT maintenance and support for businesses, SMBs and freelancers: troubleshooting, backup, security and personalized support.'
       },
       securite: {
         title: 'Security case study — k3s RBAC & kubeconfig',
