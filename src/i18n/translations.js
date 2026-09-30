@@ -18,6 +18,7 @@ export const translations = {
         "Du logiciel sur-mesure depuis 2005, construit avec l'IA aujourd'hui",
       contactTitle: 'Contact & Réseaux',
       legalTitle: 'Légal',
+      legalNotice: 'Mentions légales',
       cgs: 'Conditions Générales de Services',
       resume: 'Résumé de carrière',
       rights: 'Tous droits réservés.'
@@ -478,6 +479,68 @@ export const translations = {
       title: 'Conditions Générales de Services',
       note: ''
     },
+    legalNotice: {
+      eyebrow: 'Informations légales',
+      title: 'Mentions légales',
+      bindingNote: '',
+      bannerAlt: 'Monti IT, développeur .NET senior freelance',
+      sections: {
+        publisher: {
+          title: 'Éditeur du site',
+          rows: {
+            company: { label: 'Raison sociale', value: 'Monti IT' },
+            legalForm: {
+              label: 'Forme juridique',
+              value: 'EURL au capital de 500 €'
+            },
+            registration: {
+              label: 'Immatriculation',
+              value: 'RCS Bourg-en-Bresse 983 252 057 (SIREN)'
+            },
+            vat: {
+              label: 'N° de TVA intracommunautaire',
+              value: 'FR54983252057'
+            },
+            email: { label: 'Email' }
+          }
+        },
+        director: {
+          title: 'Directeur de la publication',
+          rows: {
+            name: { label: 'Nom', value: 'Christophe Monti, gérant' }
+          }
+        },
+        host: {
+          title: 'Hébergeur',
+          rows: {
+            company: { label: 'Raison sociale', value: 'OVH SAS' },
+            address: {
+              label: 'Adresse',
+              value: '2 rue Kellermann, 59100 Roubaix, France'
+            },
+            phone: { label: 'Téléphone', value: '+33 9 72 10 10 07' }
+          }
+        },
+        intellectualProperty: {
+          title: 'Propriété intellectuelle',
+          paragraphs: [
+            "L'ensemble du contenu de ce site (textes, visuels, logo) est la propriété de Monti IT, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.",
+            'Les logos de technologies (devicons, react-icons) et les marques citées appartiennent à leurs propriétaires respectifs.'
+          ]
+        },
+        personalData: {
+          title: 'Données personnelles',
+          paragraphs: [
+            "Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience ni de suivi.",
+            "Les seules données personnelles traitées sont celles que vous envoyez par email : elles servent uniquement à vous répondre et ne sont ni cédées ni utilisées à d'autres fins.",
+            "Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Vous pouvez aussi introduire une réclamation auprès de la CNIL (www.cnil.fr)."
+          ],
+          rows: {
+            email: { label: 'Exercer vos droits' }
+          }
+        }
+      }
+    },
     resume: {
       eyebrow: 'Parcours professionnel',
       title: 'Résumé de carrière'
@@ -606,6 +669,11 @@ export const translations = {
         title: 'Conditions Générales de Services',
         description: 'Conditions générales de services de Monti IT.'
       },
+      legalNotice: {
+        title: 'Mentions légales',
+        description:
+          'Mentions légales de Monti IT : éditeur, directeur de la publication, hébergeur et données personnelles.'
+      },
       resume: {
         title: 'Résumé de carrière',
         description:
@@ -690,6 +758,7 @@ export const translations = {
       tagline: 'Custom software since 2005, built with AI today',
       contactTitle: 'Contact & Networks',
       legalTitle: 'Legal',
+      legalNotice: 'Legal notice',
       cgs: 'Terms of Service',
       resume: 'Career résumé',
       rights: 'All rights reserved.'
@@ -1143,6 +1212,71 @@ export const translations = {
       title: 'Terms of Service',
       note: 'This legal document is currently available in French only.'
     },
+    legalNotice: {
+      eyebrow: 'Legal information',
+      title: 'Legal notice',
+      bindingNote:
+        'This English version is provided for convenience. The French version (mentions légales) is the legally binding one.',
+      bannerAlt: 'Monti IT, senior freelance .NET developer',
+      sections: {
+        publisher: {
+          title: 'Publisher',
+          rows: {
+            company: { label: 'Company name', value: 'Monti IT' },
+            legalForm: {
+              label: 'Legal form',
+              value:
+                'EURL (French single-member limited liability company) with a share capital of €500'
+            },
+            registration: {
+              label: 'Registration',
+              value:
+                'Bourg-en-Bresse Trade and Companies Register (RCS), no. 983 252 057 (SIREN)'
+            },
+            vat: { label: 'EU VAT number', value: 'FR54983252057' },
+            email: { label: 'Email' }
+          }
+        },
+        director: {
+          title: 'Publication director',
+          rows: {
+            name: {
+              label: 'Name',
+              value: 'Christophe Monti, managing director'
+            }
+          }
+        },
+        host: {
+          title: 'Hosting provider',
+          rows: {
+            company: { label: 'Company name', value: 'OVH SAS' },
+            address: {
+              label: 'Address',
+              value: '2 rue Kellermann, 59100 Roubaix, France'
+            },
+            phone: { label: 'Phone', value: '+33 9 72 10 10 07' }
+          }
+        },
+        intellectualProperty: {
+          title: 'Intellectual property',
+          paragraphs: [
+            'All content on this site (text, visuals, logo) is the property of Monti IT unless stated otherwise. Any reproduction without prior permission is prohibited.',
+            'Technology logos (devicons, react-icons) and the trademarks mentioned belong to their respective owners.'
+          ]
+        },
+        personalData: {
+          title: 'Personal data',
+          paragraphs: [
+            'This site sets no cookies and uses no analytics or tracking tools.',
+            'The only personal data processed is what you send by email: it is used solely to reply to you and is never shared or used for any other purpose.',
+            'Under the GDPR and the French Data Protection Act, you have the right to access, rectify, erase, restrict and object to the processing of your data. You can also lodge a complaint with the CNIL, the French data protection authority (www.cnil.fr).'
+          ],
+          rows: {
+            email: { label: 'Exercise your rights' }
+          }
+        }
+      }
+    },
     resume: {
       eyebrow: 'Professional background',
       title: 'Career résumé'
@@ -1270,6 +1404,11 @@ export const translations = {
       cgs: {
         title: 'Terms of Service',
         description: "Monti IT's terms of service."
+      },
+      legalNotice: {
+        title: 'Legal notice',
+        description:
+          "Monti IT's legal notice: publisher, publication director, hosting provider and personal data."
       },
       resume: {
         title: 'Career résumé',

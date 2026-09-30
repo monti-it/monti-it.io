@@ -224,6 +224,7 @@
   gap: 0.75rem;
 }
 
+.card h2,
 .card h3 {
   font-size: 0.95rem;
   letter-spacing: 0.08em;
@@ -497,10 +498,8 @@
   gap: 1rem;
 }
 
-.footer-title {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin: 0;
+.footer-logo {
+  display: block;
 }
 
 .footer-section-title {
@@ -533,6 +532,24 @@
   border-top: 1px solid var(--border);
   text-align: center;
   margin-top: auto;
+}
+
+.legal-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 4rem 0 3rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px var(--shadow-md);
+}
+
+.legal-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.legal-card-wide {
+  grid-column: 1 / -1;
 }
 
 .pdf-container {

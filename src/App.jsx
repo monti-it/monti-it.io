@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './i18n/LanguageContext'
+import { withLangPrefix } from './i18n/localePaths'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -11,6 +12,7 @@ import Domotique from './pages/Domotique'
 import Maintenance from './pages/Maintenance'
 import Securite from './pages/Securite'
 import CGS from './pages/CGS'
+import LegalNotice from './pages/LegalNotice'
 import Resume from './pages/Resume'
 import Leadership from './pages/Leadership'
 import Analyse from './pages/Analyse'
@@ -35,6 +37,7 @@ const pageRoutes = [
   { path: '/maintenance', Component: Maintenance },
   { path: '/securite', Component: Securite },
   { path: '/cgs', Component: CGS },
+  { path: '/mentions-legales', Component: LegalNotice },
   { path: '/resume', Component: Resume },
   { path: '/leadership', Component: Leadership },
   { path: '/analyse', Component: Analyse },
@@ -66,7 +69,7 @@ function App() {
           {pageRoutes.map((route) => (
             <Route
               key={`en-${route.path}`}
-              path={route.path === '/' ? '/en' : `/en${route.path}`}
+              path={withLangPrefix(route.path, 'en')}
               element={<route.Component />}
             />
           ))}

@@ -9,12 +9,18 @@ import {
 } from 'react-icons/fa'
 import { useLanguage } from '../i18n/useLanguage'
 import { CONTACT_EMAIL } from '../data/contact'
+import logoLockup from '../../branding/logo-lockup.svg'
 
 function Footer() {
   const { t, localizePath } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   const legalLinks = [
+    {
+      label: t('footer.legalNotice'),
+      href: localizePath('/mentions-legales'),
+      internal: true
+    },
     { label: t('footer.cgs'), href: localizePath('/cgs'), internal: true },
     { label: t('footer.resume'), href: localizePath('/resume'), internal: true }
   ]
@@ -42,7 +48,13 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-brand">
-          <p className="footer-title">Monti IT</p>
+          <img
+            className="footer-logo"
+            src={logoLockup}
+            alt="Monti IT"
+            width="181"
+            height="32"
+          />
           <p className="muted">{t('footer.tagline')}</p>
         </div>
 
