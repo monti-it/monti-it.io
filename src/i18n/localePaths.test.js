@@ -31,6 +31,14 @@ describe('stripLangPrefix', () => {
   it('leaves a French path unchanged', () => {
     expect(stripLangPrefix('/expertise')).toBe('/expertise')
   })
+
+  it('maps a localized English slug back to its French path', () => {
+    expect(stripLangPrefix('/en/legal-notice')).toBe('/mentions-legales')
+  })
+
+  it('leaves a localized French path unchanged', () => {
+    expect(stripLangPrefix('/mentions-legales')).toBe('/mentions-legales')
+  })
 })
 
 describe('withLangPrefix', () => {
@@ -44,5 +52,13 @@ describe('withLangPrefix', () => {
 
   it('maps the root path to the bare /en prefix for English', () => {
     expect(withLangPrefix('/', 'en')).toBe('/en')
+  })
+
+  it('maps a localized French path to its English slug', () => {
+    expect(withLangPrefix('/mentions-legales', 'en')).toBe('/en/legal-notice')
+  })
+
+  it('leaves a localized French path unchanged for French', () => {
+    expect(withLangPrefix('/mentions-legales', 'fr')).toBe('/mentions-legales')
   })
 })
