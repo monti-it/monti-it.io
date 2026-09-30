@@ -348,9 +348,9 @@ export const translations = {
         installation: {
           name: 'Installation & Configuration',
           description:
-            'Mise en place de Home Assistant adaptée à votre logement',
+            'Mise en place de Home Assistant adaptée à votre logement ou à vos locaux',
           details: [
-            'Installation sur serveur dédié (Raspberry Pi)',
+            'Installation sur un serveur dédié, hébergé sur site',
             'Intégration de vos objets connectés existants',
             'Configuration des automatisations sur-mesure',
             'Mise en place de tableaux de bord personnalisés'
@@ -1015,9 +1015,10 @@ export const translations = {
       items: {
         installation: {
           name: 'Installation & Configuration',
-          description: 'Setting up Home Assistant tailored to your home',
+          description:
+            'Setting up Home Assistant tailored to your home or premises',
           details: [
-            'Installation on a dedicated server (Raspberry Pi)',
+            'Installation on a dedicated, on-site server',
             'Integration of your existing connected devices',
             'Custom automation configuration',
             'Setup of personalized dashboards'
