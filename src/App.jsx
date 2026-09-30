@@ -12,6 +12,7 @@ import Domotique from './pages/Domotique'
 import Maintenance from './pages/Maintenance'
 import Securite from './pages/Securite'
 import CGS from './pages/CGS'
+import LegalNotice from './pages/LegalNotice'
 import Resume from './pages/Resume'
 import Leadership from './pages/Leadership'
 import Analyse from './pages/Analyse'
@@ -36,6 +37,7 @@ const pageRoutes = [
   { path: '/maintenance', Component: Maintenance },
   { path: '/securite', Component: Securite },
   { path: '/cgs', Component: CGS },
+  { path: '/mentions-legales', Component: LegalNotice },
   { path: '/resume', Component: Resume },
   { path: '/leadership', Component: Leadership },
   { path: '/analyse', Component: Analyse },
