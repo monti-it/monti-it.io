@@ -9,7 +9,6 @@ import html5Logo from '../assets/logos/html5.svg'
 import css3Logo from '../assets/logos/css3.svg'
 import microsoftsqlserverLogo from '../assets/logos/microsoftsqlserver.svg'
 import postgresqlLogo from '../assets/logos/postgresql.svg'
-import clickhouseLogo from '../assets/logos/clickhouse.svg'
 import azureLogo from '../assets/logos/azure.svg'
 import yamlLogo from '../assets/logos/yaml.svg'
 import dockerLogo from '../assets/logos/docker.svg'
@@ -115,11 +114,6 @@ const skillCategories = [
         name: 'PostgreSQL',
         logo: postgresqlLogo,
         url: 'https://www.postgresql.org/'
-      },
-      {
-        name: 'ClickHouse',
-        logo: clickhouseLogo,
-        url: 'https://clickhouse.com/'
       }
     ]
   },
