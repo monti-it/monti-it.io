@@ -17,6 +17,7 @@ npm run test      # Vitest, single run (src/**/*.test.js)
 npm run format    # prettier --write . (fixes what lint's format check flags)
 npm run format:check  # prettier --check . only
 npm run resume:pdf    # regenerate public/resume.pdf from src/data/resume.json
+npm run banners       # regenerate branding/*.png (GitHub social preview, LinkedIn banner) from the hero copy
 ```
 
 Tests are Vitest with no config file (Vite's defaults): pure-logic tests next to the code they cover — `src/i18n/localePaths.test.js`, `src/i18n/translate.test.js`, and `src/data/resume.test.js` (résumé drift check, see Résumé pipeline below). There are no component/DOM tests.
@@ -50,6 +51,12 @@ CI is GitHub Actions, Node 20:
 - [src/data/resume.json](src/data/resume.json) is the source of truth for the résumé PDF (profile, 3 curated roles, languages, skills, `fr`/`en` blocks per entry). `npm run resume:pdf` runs [scripts/generate-resume-pdf.js](scripts/generate-resume-pdf.js), which renders it with `@react-pdf/renderer` (layout in [scripts/resume-pdf/document.js](scripts/resume-pdf/document.js)) to `public/resume.pdf`. The generated PDF is committed; `pages/Resume.jsx` just embeds it.
 - The site does **not** read `resume.json`: its Experience/Languages/Skills/contact content lives separately in components + `translations.js`, and the two stores overlap without being generated from one another. Keep it that way — only the PDF script and `resume.test.js` may import `resume.json`, since a site import would bundle it (phone number included) into the public JS. Shared site-side facts that need a constant go in [src/data/contact.js](src/data/contact.js) (e.g. `CONTACT_EMAIL`).
 - [src/data/resume.test.js](src/data/resume.test.js) catches drift on the facts both sides carry (contact email, shared roles' period/sector, languages' name/level, in both languages). Everything else is synced by hand.
+
+## Social banners
+
+- `npm run banners` runs [scripts/generate-banners.js](scripts/generate-banners.js), which renders the GitHub repo social preview (1280×640) and the LinkedIn profile banner (1584×396), both at 2×, in `fr` and `en`, to `branding/`. The text comes from `header.eyebrow`/`header.title` in `translations.js`: **re-run it and commit the PNGs whenever the hero copy changes**, then re-upload them to GitHub (repo Settings → Social preview) and LinkedIn by hand.
+- Layouts live in [scripts/banners/layouts.js](scripts/banners/layouts.js) as SVG strings. The wordmark uses a hand-drawn 5×7 pixel font (it only has the glyphs of `MONTI IT`/`MONTI-IT.IO`), the colors mirror the `index.scss` tokens, and the mark mirrors `public/mark.svg`. They're rendered with `@resvg/resvg-js`, with system fonts off and Inter from `@fontsource/inter` so the output doesn't depend on the machine. resvg only reads TTF/OTF, so [scripts/banners/woffToTtf.js](scripts/banners/woffToTtf.js) unwraps the WOFF files first.
+- `branding/` is outside `public/` because the site doesn't serve these files. `public/og-image.png` is a separate hand-made lockup that doesn't use the tagline, and this script doesn't generate it.
 
 ## Claude Code skills
 
