@@ -11,7 +11,11 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { Resvg } from '@resvg/resvg-js'
 import { translations } from '../src/i18n/translations.js'
-import { githubSocialPreview, linkedinBanner } from './banners/layouts.js'
+import {
+  githubSocialPreview,
+  linkedinBanner,
+  logoLockup
+} from './banners/layouts.js'
 import { woffToTtf } from './banners/woffToTtf.js'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
@@ -38,6 +42,11 @@ const banners = {
 }
 
 mkdirSync(outputDir, { recursive: true })
+
+const lockupPath = path.join(outputDir, 'logo-lockup.svg')
+writeFileSync(lockupPath, logoLockup())
+console.log(`Logo written to ${lockupPath}`)
+
 try {
   for (const lang of ['fr', 'en']) {
     const { eyebrow: tagline, title } = translations[lang].header

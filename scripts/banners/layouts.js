@@ -91,3 +91,16 @@ ${pixelText('MONTI IT', wordX, 60, px, GOLD)}
 ${pixelText('MONTI-IT.IO', right - pixelWidth('MONTI-IT.IO', 4), 305, 4, TEXT)}`
   )
 }
+
+// Site logo lockup (mark + wordmark, no tagline) on a transparent background,
+// used as an SVG by the footer so it stays sharp at any size
+export const logoLockup = () => {
+  const px = 6
+  const x = 64 + 16
+  const width = x + pixelWidth('MONTI IT', px)
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="64" viewBox="0 0 ${width} 64">
+${mark(0, 0, 64)}
+${pixelText('MONTI IT', x, (64 - 7 * px) / 2, px, GOLD)}
+</svg>
+`
+}
