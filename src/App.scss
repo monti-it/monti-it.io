@@ -320,21 +320,12 @@
   border-top: 1px solid var(--border);
 }
 
-// Rows are links on the Expertise page, plain text on the theme pages.
-.pillar-items a,
-.pillar-items li:not(:has(a)) {
-  padding: 0.75rem 0;
-}
-
-.pillar-items li:not(:has(a)) {
-  color: var(--text-secondary);
-}
-
 .pillar-items a {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.25rem 0.75rem;
   align-items: center;
+  padding: 0.75rem 0;
   color: inherit;
 }
 
@@ -365,24 +356,6 @@
 @media (max-width: 720px) {
   .pillars {
     grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-// A card left alone on the last row spans the grid and lays its rows out
-// beside the header, rather than leaving an empty half-row next to it.
-@media (min-width: 721px) {
-  .pillar:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto 1fr;
-    gap: 1.25rem 2.5rem;
-    align-items: start;
-  }
-
-  .pillar:last-child:nth-child(odd) > .pillar-items {
-    grid-column: 2;
-    grid-row: 1 / span 2;
   }
 }
 
