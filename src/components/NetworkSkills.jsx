@@ -1,7 +1,8 @@
+import { LuNetwork } from 'react-icons/lu'
 import { useLanguage } from '../i18n/useLanguage'
 
 const itemIcons = {
-  networkBay: '🔌'
+  networkBay: LuNetwork
 }
 
 function NetworkSkills() {
@@ -15,27 +16,30 @@ function NetworkSkills() {
         <h2>{t('reseau.title')}</h2>
         <p className="muted">{t('reseau.subtitle')}</p>
       </div>
-      <div className="grid">
-        {Object.entries(items).map(([key, skill]) => (
-          <article key={key} className="card">
-            <div
-              className="card-icon"
-              style={{ fontSize: '2.5rem' }}
-              aria-hidden="true"
-            >
-              {itemIcons[key]}
-            </div>
-            <h3>{skill.name}</h3>
-            <p>{skill.description}</p>
-            {skill.details && (
-              <ul className="detail-list" style={{ marginTop: '1rem' }}>
-                {skill.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            )}
-          </article>
-        ))}
+      <div className="pillars">
+        {Object.entries(items).map(([key, skill]) => {
+          const Icon = itemIcons[key]
+          return (
+            <article key={key} className="card pillar">
+              <div className="pillar-header">
+                <span className="pillar-badge" aria-hidden="true">
+                  <Icon />
+                </span>
+                <div>
+                  <h3>{skill.name}</h3>
+                  <p className="muted">{skill.description}</p>
+                </div>
+              </div>
+              {skill.details && (
+                <ul className="pillar-items">
+                  {skill.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              )}
+            </article>
+          )
+        })}
       </div>
     </section>
   )
