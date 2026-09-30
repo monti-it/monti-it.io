@@ -10,9 +10,8 @@ export const translations = {
       brand: 'Monti IT',
       expertise: 'Expertise',
       competences: 'Compétences',
-      reseau: 'Réseau',
-      domotique: 'Domotique',
-      maintenance: 'Maintenance'
+      securite: 'Sécurité',
+      terrain: 'Terrain'
     },
     footer: {
       tagline:
@@ -684,9 +683,8 @@ export const translations = {
       brand: 'Monti IT',
       expertise: 'Expertise',
       competences: 'Skills',
-      reseau: 'Network',
-      domotique: 'Smart Home',
-      maintenance: 'Maintenance'
+      securite: 'Security',
+      terrain: 'On-site'
     },
     footer: {
       tagline: 'Custom software since 2005, built with AI today',
