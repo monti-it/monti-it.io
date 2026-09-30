@@ -31,8 +31,7 @@ export const translations = {
       panelTitle: 'Expertise & impact',
       panelQuote:
         "Diagnostic rapide, livraison fiable, code maintenable et sécurisé. J'aide les équipes à profiter de l'IA sans sacrifier la qualité.",
-      panelAuthor:
-        'Missions courtes ou longues, ou projets au forfait • Travail en remote privilégié'
+      panelAuthor: 'Missions courtes ou longues, ou projets au forfait'
     },
     themes: {
       eyebrow: 'Que puis-je vous apporter ?',
@@ -705,8 +704,7 @@ export const translations = {
       panelTitle: 'Expertise & impact',
       panelQuote:
         'Fast diagnosis, reliable delivery, maintainable and secure code. I help teams benefit from AI without sacrificing quality.',
-      panelAuthor:
-        'Short or long-term engagements, or fixed-price projects • Remote-first'
+      panelAuthor: 'Short or long-term engagements, or fixed-price projects'
     },
     themes: {
       eyebrow: 'What can I bring to your project?',
