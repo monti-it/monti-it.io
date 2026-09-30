@@ -7,8 +7,8 @@
     "website": "monti-it.io"
   },
   "profile": {
-    "fr": "Développeur .NET FullStack senior (21 ans d'expérience), je conçois et modernise des architectures logicielles robustes dans des secteurs variés (froid industriel, télémédecine, transport, logistique). Je travaille désormais avec des agents IA qui écrivent le code sous ma direction : je cadre, je relis, je garantis la qualité. J'oriente mon activité vers la sécurité applicative : contrôles de sécurité intégrés au CI/CD, revue de code orientée sécurité, sécurisation des fonctionnalités IA.",
-    "en": "Senior FullStack .NET developer (21 years of experience), I design and modernize robust software architectures across varied industries (industrial refrigeration, telemedicine, transport, logistics). I now work with AI agents that write the code under my direction: I frame the work, review it and guarantee its quality. I am steering my practice toward application security: security gates built into CI/CD, security-focused code review, securing AI features."
+    "fr": "Je modernise des applications .NET critiques et aide les équipes à livrer plus vite sans sacrifier la qualité, en fermant les failles avant la production. Des agents IA écrivent le code sous ma direction : je cadre, je relis et je réponds du résultat, avec une approche de sécurité applicative (contrôles intégrés au CI/CD, revue de code orientée sécurité, fonctionnalités IA sécurisées). Développeur .NET FullStack senior, 21 ans d'expérience en froid industriel, télémédecine, transport et logistique.",
+    "en": "I modernize critical .NET applications and help teams ship faster without sacrificing quality, closing vulnerabilities before production. AI agents write the code under my direction: I frame the work, review it and own the result, with an application security approach (security gates built into CI/CD, security-focused code review, secured AI features). Senior FullStack .NET developer with 21 years of experience in industrial refrigeration, telemedicine, transport and logistics."
   },
   "experience": [
     {

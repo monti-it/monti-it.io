@@ -26,7 +26,7 @@ export const translations = {
     header: {
       eyebrow: 'Développeur .NET senior · IA · Sécurité applicative',
       title: "Du logiciel .NET solide et sûr, construit avec l'IA",
-      lead: "21 ans de .NET m'ont appris à juger du code. Aujourd'hui, des agents IA l'écrivent sous ma direction, et je le relis avec un œil de sécurité : architecture robuste, code testé, failles fermées avant la prod.",
+      lead: 'Votre application .NET modernisée plus vite, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .NET me permettent de le juger avec un œil de sécurité.',
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
       panelQuote:
@@ -611,7 +611,7 @@ export const translations = {
       resume: {
         title: 'Résumé de carrière',
         description:
-          'Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior.'
+          "Christophe Monti, développeur .NET senior : modernisation d'applications .NET critiques avec l'IA, sans céder sur la qualité ni la sécurité applicative. Parcours et expériences."
       },
       notFound: {
         title: 'Page introuvable',
@@ -700,7 +700,7 @@ export const translations = {
     header: {
       eyebrow: 'Senior .NET developer · AI · Application security',
       title: 'Solid, secure .NET software, built with AI',
-      lead: '21 years of .NET taught me how to judge code. Today, AI agents write it under my direction, and I review it with a security mindset: robust architecture, tested code, vulnerabilities closed before production.',
+      lead: 'Your .NET application modernized faster, with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .NET let me judge it with a security mindset.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
       panelQuote:
@@ -1276,7 +1276,7 @@ export const translations = {
       resume: {
         title: 'Career résumé',
         description:
-          'Professional background and experience of Christophe Monti, senior FullStack .NET developer.'
+          'Christophe Monti, senior .NET developer: modernizing critical .NET applications with AI, with no compromise on quality or application security. Background and experience.'
       },
       notFound: {
         title: 'Page not found',
