@@ -571,7 +571,7 @@ export const translations = {
       home: {
         title: 'Développeur .NET senior freelance · IA & sécurité applicative',
         description:
-          '21 ans de .NET : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait, remote privilégié.'
+          '21 ans de .NET : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait.'
       },
       expertise: {
         title: 'Expertise & Leadership technique',
@@ -1235,7 +1235,7 @@ export const translations = {
       home: {
         title: 'Senior .NET freelance developer · AI & application security',
         description:
-          '21 years of .NET: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price, remote-first.'
+          '21 years of .NET: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
