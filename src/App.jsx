@@ -23,6 +23,7 @@ import Coaching from './pages/Coaching'
 import Modernisation from './pages/Modernisation'
 import Devsecops from './pages/Devsecops'
 import Agentic from './pages/Agentic'
+import NotFound from './pages/NotFound'
 import './App.scss'
 
 const pageRoutes = [
@@ -69,6 +70,7 @@ function App() {
               element={<route.Component />}
             />
           ))}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </LanguageProvider>

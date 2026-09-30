@@ -1,0 +1,7 @@
+# SPA fallback: serve real files/directories as-is, route everything else to
+# index.html so React Router can handle deep links (/reseau, /en/domotique...).
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^ /index.html [L]

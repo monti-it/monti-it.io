@@ -484,6 +484,11 @@ export const translations = {
       eyebrow: 'Parcours professionnel',
       title: 'Résumé de carrière'
     },
+    notFound: {
+      eyebrow: 'Erreur 404',
+      title: 'Page introuvable',
+      lead: "La page que vous cherchez n'existe pas ou a été déplacée."
+    },
     experience: {
       eyebrow: 'Parcours professionnel',
       title: 'Expériences notables',
@@ -607,6 +612,10 @@ export const translations = {
         title: 'Résumé de carrière',
         description:
           'Parcours professionnel et expériences de Christophe Monti, développeur .NET FullStack senior.'
+      },
+      notFound: {
+        title: 'Page introuvable',
+        description: "Cette page n'existe pas ou a été déplacée."
       },
       leadership: {
         title: 'Leadership technique',
@@ -1140,6 +1149,11 @@ export const translations = {
       eyebrow: 'Professional background',
       title: 'Career résumé'
     },
+    notFound: {
+      eyebrow: 'Error 404',
+      title: 'Page not found',
+      lead: "The page you're looking for doesn't exist or has been moved."
+    },
     experience: {
       eyebrow: 'Professional background',
       title: 'Notable experience',
@@ -1263,6 +1277,10 @@ export const translations = {
         title: 'Career résumé',
         description:
           'Professional background and experience of Christophe Monti, senior FullStack .NET developer.'
+      },
+      notFound: {
+        title: 'Page not found',
+        description: "This page doesn't exist or has been moved."
       },
       leadership: {
         title: 'Technical leadership',
