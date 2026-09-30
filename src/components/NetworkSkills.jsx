@@ -17,7 +17,7 @@ function NetworkSkills() {
       </div>
       <div className="grid">
         {Object.entries(items).map(([key, skill]) => (
-          <article key={key} className="card">
+          <article key={key} className="card card-gradient">
             <div
               className="card-icon"
               style={{ fontSize: '2.5rem' }}

@@ -263,14 +263,19 @@
   gap: 1.5rem;
 }
 
-.pillar {
-  gap: 1.25rem;
+// Subtle accent gradient shared by the Expertise pillars and the theme pages' cards.
+.pillar,
+.card-gradient {
   background: linear-gradient(
     160deg,
     color-mix(in srgb, var(--accent-primary) 7%, var(--bg-card)),
     var(--bg-card) 55%
   );
   border-color: color-mix(in srgb, var(--accent-primary) 12%, var(--border));
+}
+
+.pillar {
+  gap: 1.25rem;
 }
 
 .pillar-highlighted {
