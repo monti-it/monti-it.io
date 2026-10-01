@@ -585,7 +585,7 @@ export const translations = {
           sector: 'Télémédecine',
           role: "Ingénieur d'études",
           description:
-            'Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit.',
+            'Développement de fonctionnalités dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, sur des applications critiques à fortes contraintes de performance et de réactivité.',
           achievements: [
             "Mise en place d'outils transverses (DMS, Audit trail, i18n)",
             'Optimisation des performances',
@@ -1321,7 +1321,7 @@ export const translations = {
           sector: 'Telemedicine',
           role: 'Software Engineer',
           description:
-            'Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology.',
+            'Feature development in an HDS (health data hosting) environment for overnight emergency teleradiology, on critical applications with strong performance and responsiveness constraints.',
           achievements: [
             'Set up cross-cutting tools (DMS, audit trail, i18n)',
             'Performance optimization',

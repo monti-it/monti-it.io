@@ -52,13 +52,13 @@
       "fr": {
         "period": "2016 – 2019",
         "sector": "Télémédecine",
-        "description": "Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, création de modules transverses (DMS, audit trail, i18n…), optimisation des performances et stabilisation des applications.",
+        "description": "Développement de fonctionnalités dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, sur des applications critiques à fortes contraintes de performance et de réactivité : création de modules transverses (DMS, audit trail, i18n…), optimisation des performances et stabilisation des applications.",
         "results": ["Meilleure réponse médicale apportée"]
       },
       "en": {
         "period": "2016 – 2019",
         "sector": "Telemedicine",
-        "description": "Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology, creation of cross-cutting modules (DMS, audit trail, i18n…), performance optimization and application stabilization.",
+        "description": "Feature development in an HDS (health data hosting) environment for overnight emergency teleradiology, on critical applications with strong performance and responsiveness constraints: creation of cross-cutting modules (DMS, audit trail, i18n…), performance optimization and application stabilization.",
         "results": ["Improved medical response"]
       }
     },
