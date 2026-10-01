@@ -17,7 +17,7 @@ function Themes() {
   const { t, localizePath } = useLanguage()
 
   const renderCard = (theme) => (
-    <article key={theme.key} className="card">
+    <article key={theme.key} className="card card-gradient">
       <div className="card-icon" aria-hidden="true">
         {theme.icon}
       </div>

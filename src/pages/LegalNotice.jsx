@@ -34,7 +34,7 @@ function LegalNotice() {
           {Object.entries(sections).map(([key, section]) => (
             <article
               key={key}
-              className={`card${section.paragraphs ? ' legal-card-wide' : ''}`}
+              className={`card card-gradient${section.paragraphs ? ' legal-card-wide' : ''}`}
             >
               <h2>{section.title}</h2>
               {section.paragraphs?.map((paragraph, index) => (

@@ -23,7 +23,7 @@ function SecurityCaseStudy() {
       <p className="lead">{t('securite.intro')}</p>
       <div className="grid">
         {Object.entries(items).map(([key, item]) => (
-          <article key={key} className="card">
+          <article key={key} className="card card-gradient">
             <div className="card-icon" aria-hidden="true">
               {itemIcons[key]}
             </div>
