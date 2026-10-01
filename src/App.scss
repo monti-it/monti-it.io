@@ -156,7 +156,8 @@
 }
 
 .panel-card {
-  background: var(--bg-contrast);
+  --card-gradient-base: var(--bg-contrast);
+  border: 1px solid var(--border);
   border-radius: 24px;
   padding: 2rem;
   box-shadow: 0 20px 50px var(--shadow-md);
@@ -266,13 +267,20 @@
   gap: 1.5rem;
 }
 
-// Subtle accent gradient shared by the Expertise pillars and the theme pages' cards.
+// Subtle accent gradient shared by the card-like surfaces. It fades into
+// --card-gradient-base, which defaults to --bg-card (the hero panel overrides it).
 .pillar,
-.card-gradient {
+.card-gradient,
+.timeline-content,
+.panel-card {
   background: linear-gradient(
     160deg,
-    color-mix(in srgb, var(--accent-primary) 7%, var(--bg-card)),
-    var(--bg-card) 55%
+    color-mix(
+      in srgb,
+      var(--accent-primary) 7%,
+      var(--card-gradient-base, var(--bg-card))
+    ),
+    var(--card-gradient-base, var(--bg-card)) 55%
   );
   border-color: color-mix(in srgb, var(--accent-primary) 12%, var(--border));
 }
@@ -684,11 +692,12 @@
 }
 
 .timeline-content {
-  background: var(--bg-card);
   border-radius: 18px;
   padding: 2rem;
   box-shadow: 0 10px 30px var(--shadow-md);
-  border: 1px solid var(--border);
+  // Width/style only: the color comes from the shared gradient rule above.
+  border-width: 1px;
+  border-style: solid;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
