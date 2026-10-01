@@ -103,7 +103,7 @@
         "en": { "title": "Backend Languages & Frameworks" }
       },
       "frontend": {
-        "items": ["Angular", "TypeScript", "JavaScript"],
+        "items": ["Angular", "React", "TypeScript", "JavaScript"],
         "fr": { "title": "Frontend & UI" },
         "en": { "title": "Frontend & UI" }
       },
