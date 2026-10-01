@@ -26,7 +26,7 @@
       "fr": {
         "period": "Depuis 2022",
         "sector": "Froid industriel",
-        "description": "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité (auth, logs, cache, DMS, i18n, audit trail…).",
+        "description": "Modernisation d'une plateforme industrielle de valorisation de données capteurs, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité (auth, logs, cache, DMS, i18n, audit trail…).",
         "results": [
           "Augmentation du volet DataViz",
           "Déploiements automatisés",
@@ -36,7 +36,7 @@
       "en": {
         "period": "Since 2022",
         "sector": "Industrial refrigeration",
-        "description": "Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improved software quality and security (auth, logs, cache, DMS, i18n, audit trail…).",
+        "description": "Modernization of an industrial platform that turns sensor data into value, CI/CD setup on Azure DevOps, improved software quality and security (auth, logs, cache, DMS, i18n, audit trail…).",
         "results": [
           "Expanded DataViz capabilities",
           "Automated deployments",

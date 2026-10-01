@@ -561,7 +561,7 @@ export const translations = {
           sector: 'Froid industriel',
           role: "Ingénieur d'études - Indépendant",
           description:
-            "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
+            "Modernisation d'une plateforme industrielle de valorisation de données capteurs, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
           achievements: [
             'Augmentation du volet DataViz',
             'Déploiements automatisés',
@@ -1297,7 +1297,7 @@ export const translations = {
           sector: 'Industrial refrigeration',
           role: 'Software Engineer - Freelance',
           description:
-            'Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improving software quality and security.',
+            'Modernization of an industrial platform that turns sensor data into value, CI/CD setup on Azure DevOps, improving software quality and security.',
           achievements: [
             'Expanded the DataViz capabilities',
             'Automated deployments',
