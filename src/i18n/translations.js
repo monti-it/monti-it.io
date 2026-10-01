@@ -561,7 +561,7 @@ export const translations = {
           sector: 'Froid industriel',
           role: "Ingénieur d'études - Indépendant",
           description:
-            "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
+            "Modernisation d'une plateforme industrielle de valorisation de données capteurs, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité.",
           achievements: [
             'Augmentation du volet DataViz',
             'Déploiements automatisés',
@@ -585,7 +585,7 @@ export const translations = {
           sector: 'Télémédecine',
           role: "Ingénieur d'études",
           description:
-            'Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit.',
+            'Développement de fonctionnalités dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, sur des applications critiques à fortes contraintes de performance et de réactivité.',
           achievements: [
             "Mise en place d'outils transverses (DMS, Audit trail, i18n)",
             'Optimisation des performances',
@@ -1297,7 +1297,7 @@ export const translations = {
           sector: 'Industrial refrigeration',
           role: 'Software Engineer - Freelance',
           description:
-            'Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improving software quality and security.',
+            'Modernization of an industrial platform that turns sensor data into value, CI/CD setup on Azure DevOps, improving software quality and security.',
           achievements: [
             'Expanded the DataViz capabilities',
             'Automated deployments',
@@ -1321,7 +1321,7 @@ export const translations = {
           sector: 'Telemedicine',
           role: 'Software Engineer',
           description:
-            'Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology.',
+            'Feature development in an HDS (health data hosting) environment for overnight emergency teleradiology, on critical applications with strong performance and responsiveness constraints.',
           achievements: [
             'Set up cross-cutting tools (DMS, audit trail, i18n)',
             'Performance optimization',

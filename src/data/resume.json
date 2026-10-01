@@ -26,7 +26,7 @@
       "fr": {
         "period": "Depuis 2022",
         "sector": "Froid industriel",
-        "description": "Modernisation d'une plateforme industrielle stratégique, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité (auth, logs, cache, DMS, i18n, audit trail…).",
+        "description": "Modernisation d'une plateforme industrielle de valorisation de données capteurs, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité (auth, logs, cache, DMS, i18n, audit trail…).",
         "results": [
           "Augmentation du volet DataViz",
           "Déploiements automatisés",
@@ -36,7 +36,7 @@
       "en": {
         "period": "Since 2022",
         "sector": "Industrial refrigeration",
-        "description": "Modernization of a strategic industrial platform, CI/CD setup on Azure DevOps, improved software quality and security (auth, logs, cache, DMS, i18n, audit trail…).",
+        "description": "Modernization of an industrial platform that turns sensor data into value, CI/CD setup on Azure DevOps, improved software quality and security (auth, logs, cache, DMS, i18n, audit trail…).",
         "results": [
           "Expanded DataViz capabilities",
           "Automated deployments",
@@ -52,13 +52,13 @@
       "fr": {
         "period": "2016 – 2019",
         "sector": "Télémédecine",
-        "description": "Développement de fonctionnalités critiques dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, création de modules transverses (DMS, audit trail, i18n…), optimisation des performances et stabilisation des applications.",
+        "description": "Développement de fonctionnalités dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, sur des applications critiques à fortes contraintes de performance et de réactivité : création de modules transverses (DMS, audit trail, i18n…), optimisation des performances et stabilisation des applications.",
         "results": ["Meilleure réponse médicale apportée"]
       },
       "en": {
         "period": "2016 – 2019",
         "sector": "Telemedicine",
-        "description": "Development of critical features in an HDS (health data hosting) environment for overnight emergency teleradiology, creation of cross-cutting modules (DMS, audit trail, i18n…), performance optimization and application stabilization.",
+        "description": "Feature development in an HDS (health data hosting) environment for overnight emergency teleradiology, on critical applications with strong performance and responsiveness constraints: creation of cross-cutting modules (DMS, audit trail, i18n…), performance optimization and application stabilization.",
         "results": ["Improved medical response"]
       }
     },
@@ -103,7 +103,7 @@
         "en": { "title": "Backend Languages & Frameworks" }
       },
       "frontend": {
-        "items": ["Angular", "TypeScript", "JavaScript"],
+        "items": ["Angular", "React", "TypeScript", "JavaScript"],
         "fr": { "title": "Frontend & UI" },
         "en": { "title": "Frontend & UI" }
       },
