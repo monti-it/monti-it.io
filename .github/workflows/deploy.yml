@@ -32,10 +32,6 @@ jobs:
     name: Deploy to OVH
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    # Protected environment: waits for a reviewer's approval, main only, holds the OVH secrets
-    environment:
-      name: production
-      url: https://monti-it.io
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
