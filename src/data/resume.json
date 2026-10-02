@@ -103,7 +103,7 @@
         "en": { "title": "Backend Languages & Frameworks" }
       },
       "frontend": {
-        "items": ["Angular", "React", "TypeScript", "JavaScript"],
+        "items": ["Angular", "React", "TypeScript", "JavaScript", "Bootstrap"],
         "fr": { "title": "Frontend & UI" },
         "en": { "title": "Frontend & UI" }
       },
@@ -181,6 +181,7 @@
           "Angular 16",
           "HTML5",
           "CSS3",
+          "Bootstrap",
           "Linq",
           "Visual Studio 2019",
           "SQL Server 2017",
@@ -196,6 +197,7 @@
           "OWASP",
           "SonarQube",
           "OpenID Connect",
+          "JWT",
           "Application Insights",
           "Microsoft Copilot"
         ]
@@ -226,6 +228,7 @@
           "WPF",
           "HTML5",
           "CSS3",
+          "Bootstrap",
           "jQuery",
           "Linq",
           "Service NT",
@@ -254,6 +257,7 @@
           "ASP.Net",
           "HTML5",
           "CSS3",
+          "Bootstrap",
           "jQuery",
           "Linq",
           "Web Services",
@@ -287,6 +291,7 @@
           "ASP.Net MVC",
           "HTML5",
           "CSS3",
+          "Bootstrap",
           "jQuery",
           "Linq",
           "Web Services",
