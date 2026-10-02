@@ -24,7 +24,7 @@ Tests are Vitest with no config file (Vite's defaults): pure-logic tests next to
 
 CI is GitHub Actions, Node 20:
 
-- [.github/workflows/deploy.yml](.github/workflows/deploy.yml) — on PRs and pushes to `main`: `npm ci` → `npm audit --audit-level=high` → `npm run lint` → `npm run test` → `npm run build`. On push to `main` only, it then uploads `dist/` to OVH hosting over SFTP.
+- [.github/workflows/deploy.yml](.github/workflows/deploy.yml) — on PRs and pushes to `main`: `npm ci` → `npm audit --audit-level=high` → `npm run lint` → `npm run test` → `npm run build`. On push to `main` only, it then uploads `dist/` to OVH hosting over SFTP, in the `production` environment: the deploy waits for a reviewer's approval in the Actions run, only `main` may deploy, and the `OVH_SFTP_*` secrets live on that environment.
 - [.github/workflows/docker-scan.yml](.github/workflows/docker-scan.yml) — builds the `prod` target of the multi-stage `Dockerfile` (nginx) and scans it with Trivy (fails on fixable CRITICAL/HIGH). Runs when `Dockerfile`/`package*.json` change, weekly, and on demand. The image isn't pushed or deployed anywhere.
 
 ## Architecture
