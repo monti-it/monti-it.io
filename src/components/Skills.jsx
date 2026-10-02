@@ -7,6 +7,7 @@ import typescriptLogo from '../assets/logos/typescript.svg'
 import javascriptLogo from '../assets/logos/javascript.svg'
 import html5Logo from '../assets/logos/html5.svg'
 import css3Logo from '../assets/logos/css3.svg'
+import bootstrapLogo from '../assets/logos/bootstrap.svg'
 import microsoftsqlserverLogo from '../assets/logos/microsoftsqlserver.svg'
 import postgresqlLogo from '../assets/logos/postgresql.svg'
 import azureLogo from '../assets/logos/azure.svg'
@@ -94,6 +95,11 @@ const skillCategories = [
         name: 'CSS3',
         logo: css3Logo,
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+      },
+      {
+        name: 'Bootstrap',
+        logo: bootstrapLogo,
+        url: 'https://getbootstrap.com/'
       }
     ]
   },
@@ -214,6 +220,11 @@ const skillCategories = [
         name: 'OpenID Connect / OAuth2',
         logo: oauthLogo,
         url: 'https://openid.net/connect/'
+      },
+      {
+        name: 'JWT',
+        logo: oauthLogo,
+        url: 'https://jwt.io/'
       },
       {
         name: 'SSO & Forward Auth',

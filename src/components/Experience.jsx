@@ -12,7 +12,8 @@ const experienceMeta = [
       'Kubernetes',
       'Azure DevOps',
       'OWASP',
-      'OpenID Connect'
+      'OpenID Connect',
+      'JWT'
     ]
   },
   {
