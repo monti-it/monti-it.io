@@ -74,3 +74,10 @@ describe('resume.json stays in sync with the site', () => {
     ).not.toHaveLength(0)
   })
 })
+
+describe('resume.json contact', () => {
+  it('gives the phone number in international format', () => {
+    // Spaced for reading; the PDF strips the spaces for its tel: link.
+    expect(resume.contact.phone).toMatch(/^\+33 \d( \d{2}){4}$/)
+  })
+})
