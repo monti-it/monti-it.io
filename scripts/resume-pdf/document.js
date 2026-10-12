@@ -238,7 +238,14 @@ export function buildResumeDocument(data) {
             },
             data.contact.website
           ),
-          e(Text, { style: styles.contactItem }, data.contact.phone)
+          e(
+            Link,
+            {
+              src: `tel:${data.contact.phone.replace(/\s/g, '')}`,
+              style: styles.contactItem
+            },
+            data.contact.phone
+          )
         )
       ),
 
