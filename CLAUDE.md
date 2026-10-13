@@ -65,3 +65,4 @@ CI is GitHub Actions, Node 20:
 ## Claude Code skills
 
 - [.claude/skills/resume/](.claude/skills/resume/SKILL.md): turns a conversational résumé change ("add this certification", "tighten the Clauger description") into edits to `resume.json` (both languages), the matching site components/translations where the same fact lives there too (its sync table maps each `resume.json` section to its site counterpart), and a regenerated `public/resume.pdf`. Leaves changes unstaged for review.
+- [.claude/skills/linkedin/](.claude/skills/linkedin/SKILL.md): the read-only counterpart, "update my LinkedIn" → prints Headline, About, one entry per `Experience.jsx` role and 5 Top skills (FR default, EN on request) with `n / limit` counts and a drift report between `resume.json` and the site. Writes nothing.
