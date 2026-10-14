@@ -24,9 +24,9 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Développeur .NET senior · IA · AppSec',
-      title: "Du logiciel .NET solide et sûr, construit avec l'IA",
-      lead: 'Votre application .NET modernisée plus vite, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .NET me permettent de le juger avec un œil de sécurité.',
+      eyebrow: 'Développeur .Net FullStack senior · IA · AppSec',
+      title: "Du logiciel .Net solide et sûr, construit avec l'IA",
+      lead: 'Votre application .Net modernisée plus vite, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .Net me permettent de le juger avec un œil de sécurité.',
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
       panelQuote:
@@ -47,7 +47,7 @@ export const translations = {
         competences: {
           title: 'Stack technique complète',
           description:
-            '.NET, Angular, React, bases de données, cloud et outils DevOps'
+            '.Net, Angular, React, bases de données, cloud et outils DevOps'
         },
         securite: {
           title: 'AppSec & IA',
@@ -80,7 +80,7 @@ export const translations = {
       eyebrow: 'Expertise',
       title: "Ce que j'apporte à une équipe",
       subtitle:
-        'Du code .NET solide et sûr, une équipe qui progresse, un besoin clairement posé.',
+        'Du code .Net solide et sûr, une équipe qui progresse, un besoin clairement posé.',
       pillars: {
         ai: {
           title: "Construire avec l'IA",
@@ -483,7 +483,7 @@ export const translations = {
       eyebrow: 'Informations légales',
       title: 'Mentions légales',
       bindingNote: '',
-      bannerAlt: 'Monti IT, développeur .NET senior freelance',
+      bannerAlt: 'Monti IT, développeur .Net FullStack senior freelance',
       sections: {
         publisher: {
           title: 'Éditeur du site',
@@ -634,9 +634,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Développeur .NET senior freelance · IA & AppSec',
+        title: 'Développeur .Net FullStack senior freelance · IA & AppSec',
         description:
-          '21 ans de .NET : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait.'
+          '21 ans de .Net : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait.'
       },
       expertise: {
         title: 'Expertise & Leadership technique',
@@ -644,9 +644,9 @@ export const translations = {
           "Pilotage d'équipe, software craftsmanship, CI/CD, sécurité et méthodes Agile : l'accompagnement technique complet d'un développeur senior freelance."
       },
       competences: {
-        title: 'Compétences techniques — .NET, Angular, React, Azure DevOps',
+        title: 'Compétences techniques — .Net, Angular, React, Azure DevOps',
         description:
-          'Stack technique complète : C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes et bonnes pratiques de sécurité.'
+          'Stack technique complète : C#, .Net Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes et bonnes pratiques de sécurité.'
       },
       reseau: {
         title: 'Réseau & Infrastructure',
@@ -680,7 +680,7 @@ export const translations = {
       resume: {
         title: 'Résumé de carrière',
         description:
-          "Christophe Monti, développeur .NET senior : modernisation d'applications .NET critiques avec l'IA, sans céder sur la qualité ni la sécurité applicative. Parcours et expériences."
+          "Christophe Monti, développeur .Net FullStack senior : modernisation d'applications .Net critiques avec l'IA, sans céder sur la qualité ni la sécurité applicative. Parcours et expériences."
       },
       notFound: {
         title: 'Page introuvable',
@@ -767,9 +767,9 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Senior .NET developer · AI · AppSec',
-      title: 'Solid, secure .NET software, built with AI',
-      lead: 'Your .NET application modernized faster, with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .NET let me judge it with a security mindset.',
+      eyebrow: 'Senior .Net FullStack developer · AI · AppSec',
+      title: 'Solid, secure .Net software, built with AI',
+      lead: 'Your .Net application modernized faster, with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .Net let me judge it with a security mindset.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
       panelQuote:
@@ -790,7 +790,7 @@ export const translations = {
         competences: {
           title: 'Full technical stack',
           description:
-            '.NET, Angular, React, databases, cloud and DevOps tooling'
+            '.Net, Angular, React, databases, cloud and DevOps tooling'
         },
         securite: {
           title: 'AppSec & AI',
@@ -823,7 +823,7 @@ export const translations = {
       eyebrow: 'Expertise',
       title: 'What I bring to a team',
       subtitle:
-        'Solid, secure .NET code, a team that keeps growing, and requirements that are clearly defined.',
+        'Solid, secure .Net code, a team that keeps growing, and requirements that are clearly defined.',
       pillars: {
         ai: {
           title: 'Building with AI',
@@ -1220,7 +1220,7 @@ export const translations = {
       title: 'Legal notice',
       bindingNote:
         'This English version is provided for convenience. The French version (mentions légales) is the legally binding one.',
-      bannerAlt: 'Monti IT, senior freelance .NET developer',
+      bannerAlt: 'Monti IT, senior freelance .Net FullStack developer',
       sections: {
         publisher: {
           title: 'Publisher',
@@ -1373,9 +1373,9 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Senior .NET freelance developer · AI & AppSec',
+        title: 'Senior .Net FullStack freelance developer · AI & AppSec',
         description:
-          '21 years of .NET: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price.'
+          '21 years of .Net: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price.'
       },
       expertise: {
         title: 'Expertise & Technical Leadership',
@@ -1383,9 +1383,9 @@ export const translations = {
           'Team leadership, software craftsmanship, CI/CD, security and Agile methods: the complete technical support of a senior freelance developer.'
       },
       competences: {
-        title: 'Technical Skills — .NET, Angular, React, Azure DevOps',
+        title: 'Technical Skills — .Net, Angular, React, Azure DevOps',
         description:
-          'Full technical stack: C#, .NET Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes and security best practices.'
+          'Full technical stack: C#, .Net Core, Angular, React, TypeScript, SQL Server, Azure DevOps, Docker, Kubernetes and security best practices.'
       },
       reseau: {
         title: 'Network & Infrastructure',
@@ -1419,7 +1419,7 @@ export const translations = {
       resume: {
         title: 'Career résumé',
         description:
-          'Christophe Monti, senior .NET developer: modernizing critical .NET applications with AI, with no compromise on quality or application security. Background and experience.'
+          'Christophe Monti, senior .Net FullStack developer: modernizing critical .Net applications with AI, with no compromise on quality or application security. Background and experience.'
       },
       notFound: {
         title: 'Page not found',

@@ -1,14 +1,14 @@
 {
   "name": "Christophe MONTI",
-  "title": "Senior .NET Developer · AI · AppSec | Freelance",
+  "title": "Senior .Net FullStack Developer · AI · AppSec | Freelance",
   "contact": {
     "email": "hello@monti-it.io",
     "phone": "+33 6 65 16 41 36",
     "website": "monti-it.io"
   },
   "profile": {
-    "fr": "Je modernise des applications .NET critiques et aide les équipes à livrer plus vite sans sacrifier la qualité, en fermant les failles avant la production. Des agents IA écrivent le code sous ma direction : je cadre, je relis et je réponds du résultat, avec une approche de sécurité applicative (DevSecOps : contrôles intégrés au CI/CD, revue de code orientée sécurité, fonctionnalités IA sécurisées). Développeur .NET FullStack senior, 21 ans d'expérience en froid industriel, télémédecine, transport et logistique.",
-    "en": "I modernize critical .NET applications and help teams ship faster without sacrificing quality, closing vulnerabilities before production. AI agents write the code under my direction: I frame the work, review it and own the result, with an application security approach (DevSecOps: security gates built into CI/CD, security-focused code review, secured AI features). Senior FullStack .NET developer with 21 years of experience in industrial refrigeration, telemedicine, transport and logistics."
+    "fr": "Je modernise des applications .Net critiques et aide les équipes à livrer plus vite sans sacrifier la qualité, en fermant les failles avant la production. Des agents IA écrivent le code sous ma direction : je cadre, je relis et je réponds du résultat, avec une approche de sécurité applicative (DevSecOps : contrôles intégrés au CI/CD, revue de code orientée sécurité, fonctionnalités IA sécurisées). Développeur .Net FullStack senior, 21 ans d'expérience en froid industriel, télémédecine, transport et logistique.",
+    "en": "I modernize critical .Net applications and help teams ship faster without sacrificing quality, closing vulnerabilities before production. AI agents write the code under my direction: I frame the work, review it and own the result, with an application security approach (DevSecOps: security gates built into CI/CD, security-focused code review, secured AI features). Senior .Net FullStack developer with 21 years of experience in industrial refrigeration, telemedicine, transport and logistics."
   },
   "experience": [
     {
@@ -105,7 +105,7 @@
   "skills": {
     "categories": {
       "backend": {
-        "items": ["C#", ".NET Core", "ASP.NET Core", "Web API"],
+        "items": ["C#", ".Net Core", "ASP.NET Core", "Web API"],
         "fr": { "title": "Langages & Frameworks Backend" },
         "en": { "title": "Backend Languages & Frameworks" }
       },
@@ -158,7 +158,7 @@
       },
       {
         "year": "2006",
-        "title": "Formation .NET C#",
+        "title": "Formation .Net C#",
         "institution": "Global Knowledge"
       },
       {
