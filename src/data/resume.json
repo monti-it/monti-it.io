@@ -93,31 +93,55 @@
   "languages": [
     {
       "key": "french",
-      "fr": { "name": "Français", "level": "Langue maternelle" },
-      "en": { "name": "French", "level": "Native language" }
+      "fr": {
+        "name": "Français",
+        "level": "Langue maternelle"
+      },
+      "en": {
+        "name": "French",
+        "level": "Native language"
+      }
     },
     {
       "key": "english",
-      "fr": { "name": "Anglais", "level": "Professionnel / Technique" },
-      "en": { "name": "English", "level": "Professional / Technical" }
+      "fr": {
+        "name": "Anglais",
+        "level": "Professionnel / Technique"
+      },
+      "en": {
+        "name": "English",
+        "level": "Professional / Technical"
+      }
     }
   ],
   "skills": {
     "categories": {
       "backend": {
         "items": ["C#", ".Net Core", "ASP.NET Core", "Web API"],
-        "fr": { "title": "Langages & Frameworks Backend" },
-        "en": { "title": "Backend Languages & Frameworks" }
+        "fr": {
+          "title": "Langages & Frameworks Backend"
+        },
+        "en": {
+          "title": "Backend Languages & Frameworks"
+        }
       },
       "frontend": {
         "items": ["Angular", "React", "TypeScript", "JavaScript", "Bootstrap"],
-        "fr": { "title": "Frontend & UI" },
-        "en": { "title": "Frontend & UI" }
+        "fr": {
+          "title": "Frontend & UI"
+        },
+        "en": {
+          "title": "Frontend & UI"
+        }
       },
       "database": {
         "items": ["SQL Server", "T-SQL", "PostgreSQL"],
-        "fr": { "title": "Bases de données" },
-        "en": { "title": "Databases" }
+        "fr": {
+          "title": "Bases de données"
+        },
+        "en": {
+          "title": "Databases"
+        }
       },
       "devops": {
         "items": [
@@ -130,59 +154,88 @@
           "Trivy",
           "Dependabot"
         ],
-        "fr": { "title": "DevSecOps & Cloud" },
-        "en": { "title": "DevSecOps & Cloud" }
+        "fr": {
+          "title": "DevSecOps & Cloud"
+        },
+        "en": {
+          "title": "DevSecOps & Cloud"
+        }
       },
       "architecture": {
         "items": ["SOLID", "KISS", "Clean Code", "REST", "Microservices"],
-        "fr": { "title": "Architecture" },
-        "en": { "title": "Architecture" }
+        "fr": {
+          "title": "Architecture"
+        },
+        "en": {
+          "title": "Architecture"
+        }
       }
     }
   },
   "additional": {
-    "note": "French-only content present in public/resume.pdf but not yet tracked by the site (matches the CLAUDE.md convention that the résumé PDF is French-only). Not read by any component today.",
-    "softSkills": [
-      "Leadership technique & pilotage d'équipe",
-      "Communication claire & vulgarisation",
-      "Autonomie & collaboration",
-      "Analyse & résolution de problèmes",
-      "Accompagnement et coaching technique"
-    ],
+    "note": "PDF-only content (soft skills, education, career history), in both languages. The site has no counterpart and no component reads it.",
+    "softSkills": {
+      "fr": [
+        "Leadership technique & pilotage d'équipe",
+        "Communication claire & vulgarisation",
+        "Autonomie & collaboration",
+        "Analyse & résolution de problèmes",
+        "Accompagnement et coaching technique"
+      ],
+      "en": [
+        "Technical leadership & team management",
+        "Clear communication & making technical topics accessible",
+        "Autonomy & collaboration",
+        "Analysis & problem solving",
+        "Technical mentoring and coaching"
+      ]
+    },
     "education": [
-      { "year": "2025", "title": "Formation Kubernetes", "institution": "PLB" },
+      {
+        "year": "2025",
+        "institution": "PLB",
+        "fr": {
+          "title": "Formation Kubernetes"
+        },
+        "en": {
+          "title": "Kubernetes training"
+        }
+      },
       {
         "year": "2021",
-        "title": "Formation Angular",
-        "institution": "SkillSoft"
+        "institution": "SkillSoft",
+        "fr": {
+          "title": "Formation Angular"
+        },
+        "en": {
+          "title": "Angular training"
+        }
       },
       {
         "year": "2006",
-        "title": "Formation .Net C#",
-        "institution": "Global Knowledge"
+        "institution": "Global Knowledge",
+        "fr": {
+          "title": "Formation .Net C#"
+        },
+        "en": {
+          "title": ".Net C# training"
+        }
       },
       {
         "year": "2004",
-        "title": "Maîtrise Informatique",
-        "institution": "Université de Nantes"
+        "institution": "Université de Nantes",
+        "fr": {
+          "title": "Maîtrise Informatique"
+        },
+        "en": {
+          "title": "Master's degree in Computer Science"
+        }
       }
     ],
     "careerHistory": [
       {
-        "period": "Depuis 03/2022",
         "company": "Clauger",
-        "sector": "froid industriel",
         "location": "Brignais (69)",
-        "role": "Indépendant",
-        "projects": "MyClauger3E - 20 pers.",
-        "tasks": [
-          "Conception/développement des besoins",
-          "Travaux de maintenance et d'évolution de l'architecture (log, cache, IOC, OpenID Connect,…)",
-          "Mise en place de l'intégration continue ainsi que du déploiement continu",
-          "Harmonisation des process",
-          "Démarche DevSecOps : quality gates SonarQube dans le CI/CD, OWASP, durcissement de l'authentification (OpenID Connect, JWT)",
-          "Pilotage d'une partie de l'équipe"
-        ],
         "environment": [
           ".Net Core 10",
           "C#",
@@ -210,24 +263,39 @@
           "JWT",
           "Application Insights",
           "Microsoft Copilot"
-        ]
+        ],
+        "fr": {
+          "period": "Depuis 03/2022",
+          "sector": "froid industriel",
+          "role": "Indépendant",
+          "projects": "MyClauger3E - 20 pers.",
+          "tasks": [
+            "Conception/développement des besoins",
+            "Travaux de maintenance et d'évolution de l'architecture (log, cache, IOC, OpenID Connect,…)",
+            "Mise en place de l'intégration continue ainsi que du déploiement continu",
+            "Harmonisation des process",
+            "Démarche DevSecOps : quality gates SonarQube dans le CI/CD, OWASP, durcissement de l'authentification (OpenID Connect, JWT)",
+            "Pilotage d'une partie de l'équipe"
+          ]
+        },
+        "en": {
+          "period": "Since 03/2022",
+          "sector": "industrial refrigeration",
+          "role": "Freelance",
+          "projects": "MyClauger3E - 20 people",
+          "tasks": [
+            "Requirements design and development",
+            "Architecture maintenance and evolution (logging, cache, IoC, OpenID Connect,…)",
+            "Continuous integration and continuous deployment setup",
+            "Process harmonization",
+            "DevSecOps approach: SonarQube quality gates in the CI/CD, OWASP, authentication hardening (OpenID Connect, JWT)",
+            "Leading part of the team"
+          ]
+        }
       },
       {
-        "period": "03/2020 - 03/2022",
         "company": "Hospices Civils de Lyon",
-        "sector": "solution de télémédecine",
         "location": "Lyon (69)",
-        "role": "Ingénieur d'études ECONOCOM - 2 ans",
-        "projects": "ViaPatient / Mocas - 14 pers.",
-        "tasks": [
-          "Gestion en AT puis en CDS avec intégration de 5 autres modules de la suite Easily",
-          "Référent technique",
-          "Conception/développement des besoins",
-          "Travaux de maintenance et d'évolution de l'architecture (log, cache, IOC…)",
-          "Mise en place de l'intégration continue ainsi que du déploiement continu",
-          "Démarche DevSecOps : contrôles de sécurité intégrés au CI/CD, contrôles techniques de conformité HDS",
-          "Harmonisation des process"
-        ],
         "environment": [
           ".Net 4.7",
           "C#",
@@ -251,16 +319,41 @@
           "NFluent",
           "Windows 10",
           "Scrum"
-        ]
+        ],
+        "fr": {
+          "period": "03/2020 - 03/2022",
+          "sector": "solution de télémédecine",
+          "role": "Ingénieur d'études ECONOCOM - 2 ans",
+          "projects": "ViaPatient / Mocas - 14 pers.",
+          "tasks": [
+            "Gestion en AT puis en CDS avec intégration de 5 autres modules de la suite Easily",
+            "Référent technique",
+            "Conception/développement des besoins",
+            "Travaux de maintenance et d'évolution de l'architecture (log, cache, IOC…)",
+            "Mise en place de l'intégration continue ainsi que du déploiement continu",
+            "Démarche DevSecOps : contrôles de sécurité intégrés au CI/CD, contrôles techniques de conformité HDS",
+            "Harmonisation des process"
+          ]
+        },
+        "en": {
+          "period": "03/2020 - 03/2022",
+          "sector": "telemedicine solution",
+          "role": "Software engineer, ECONOCOM - 2 years",
+          "projects": "ViaPatient / Mocas - 14 people",
+          "tasks": [
+            "Time-and-materials then service-center delivery, integrating 5 other modules of the Easily suite",
+            "Technical lead",
+            "Requirements design and development",
+            "Architecture maintenance and evolution (logging, cache, IoC…)",
+            "Continuous integration and continuous deployment setup",
+            "DevSecOps approach: security gates built into CI/CD, HDS compliance technical controls",
+            "Process harmonization"
+          ]
+        }
       },
       {
-        "period": "12/2019 - 02/2020",
         "company": "Addactis",
-        "sector": "gestion de risques en assurances",
         "location": "Lyon (69)",
-        "role": "Ingénieur d'études - 3 mois",
-        "projects": "Platform - 13 pers.",
-        "tasks": [],
         "environment": [
           ".Net Core 2.2",
           "C#",
@@ -280,23 +373,25 @@
           "SDK Visual Studio",
           "Windows 10",
           "Scrum"
-        ]
+        ],
+        "fr": {
+          "period": "12/2019 - 02/2020",
+          "sector": "gestion de risques en assurances",
+          "role": "Ingénieur d'études - 3 mois",
+          "projects": "Platform - 13 pers.",
+          "tasks": []
+        },
+        "en": {
+          "period": "12/2019 - 02/2020",
+          "sector": "insurance risk management",
+          "role": "Software engineer - 3 months",
+          "projects": "Platform - 13 people",
+          "tasks": []
+        }
       },
       {
-        "period": "08/2016 - 11/2019",
         "company": "DEEPLINK MEDICAL",
-        "sector": "solution de télémédecine",
         "location": "Lyon (69)",
-        "role": "Ingénieur d'études - ~3 ans",
-        "projects": "ITIS/MIRIO - 37 pers.",
-        "tasks": [
-          "Conception/développement des besoins pour les différents clients",
-          "Travaux de maintenance et d'évolution de l'architecture",
-          "Collaboration avec les équipes sur les points techniques et fonctionnels",
-          "Mise en place d'outils transverses (DMS, Audit trail, i18n…)",
-          "Démarche DevSecOps : contrôles de sécurité intégrés au CI/CD, développement sécurisé selon l'OWASP, contrôles techniques de conformité HDS",
-          "Evolution du PMSI par la structuration des données médicales et leur usage dans notre outil de BI dédié"
-        ],
         "environment": [
           ".Net 4.7",
           "C#",
@@ -317,21 +412,39 @@
           "Windows 10",
           "Scrum",
           "OWASP"
-        ]
+        ],
+        "fr": {
+          "period": "08/2016 - 11/2019",
+          "sector": "solution de télémédecine",
+          "role": "Ingénieur d'études - ~3 ans",
+          "projects": "ITIS/MIRIO - 37 pers.",
+          "tasks": [
+            "Conception/développement des besoins pour les différents clients",
+            "Travaux de maintenance et d'évolution de l'architecture",
+            "Collaboration avec les équipes sur les points techniques et fonctionnels",
+            "Mise en place d'outils transverses (DMS, Audit trail, i18n…)",
+            "Démarche DevSecOps : contrôles de sécurité intégrés au CI/CD, développement sécurisé selon l'OWASP, contrôles techniques de conformité HDS",
+            "Evolution du PMSI par la structuration des données médicales et leur usage dans notre outil de BI dédié"
+          ]
+        },
+        "en": {
+          "period": "08/2016 - 11/2019",
+          "sector": "telemedicine solution",
+          "role": "Software engineer - ~3 years",
+          "projects": "ITIS/MIRIO - 37 people",
+          "tasks": [
+            "Requirements design and development for the various clients",
+            "Architecture maintenance and evolution",
+            "Collaboration with the teams on technical and functional topics",
+            "Cross-cutting tools (DMS, audit trail, i18n…)",
+            "DevSecOps approach: security gates built into CI/CD, OWASP-driven secure coding, HDS compliance technical controls",
+            "PMSI evolution by structuring medical data and using it in our dedicated BI tool"
+          ]
+        }
       },
       {
-        "period": "10/2013 - 07/2016",
         "company": "ACS/Xerox",
-        "sector": "télébilletique en tsprt. pub.",
         "location": "Guilherand (07)",
-        "role": "Chef d'équipe / Ingénieur d'études OBJET DIRECT - ~3 ans",
-        "projects": "Site web de vente à distance ATLAS - 14 pers.",
-        "tasks": [
-          "Gestion d'une équipe de 4 développeurs en méthode Agile",
-          "Conception/développement des besoins pour un client belge",
-          "Travaux de maintenance et d'évolution de l'architecture (tous clients)",
-          "Collaboration avec l'équipe sur les points techniques et fonctionnels"
-        ],
         "environment": [
           ".Net 4.5",
           "C#",
@@ -354,21 +467,35 @@
           "e-commerce",
           "XSLT",
           "WPF"
-        ]
+        ],
+        "fr": {
+          "period": "10/2013 - 07/2016",
+          "sector": "télébilletique en tsprt. pub.",
+          "role": "Chef d'équipe / Ingénieur d'études OBJET DIRECT - ~3 ans",
+          "projects": "Site web de vente à distance ATLAS - 14 pers.",
+          "tasks": [
+            "Gestion d'une équipe de 4 développeurs en méthode Agile",
+            "Conception/développement des besoins pour un client belge",
+            "Travaux de maintenance et d'évolution de l'architecture (tous clients)",
+            "Collaboration avec l'équipe sur les points techniques et fonctionnels"
+          ]
+        },
+        "en": {
+          "period": "10/2013 - 07/2016",
+          "sector": "public transport e-ticketing",
+          "role": "Team lead / Software engineer, OBJET DIRECT - ~3 years",
+          "projects": "ATLAS remote sales website - 14 people",
+          "tasks": [
+            "Managing a team of 4 developers using Agile methods",
+            "Requirements design and development for a Belgian client",
+            "Architecture maintenance and evolution (all clients)",
+            "Collaboration with the team on technical and functional topics"
+          ]
+        }
       },
       {
-        "period": "09/2013 - 09/2013",
         "company": "OBJET DIRECT",
-        "sector": "SSII",
         "location": "Lyon (69)",
-        "role": "Ingénieur d'études - 1 mois",
-        "projects": "Project Customization Tool - 1 pers.",
-        "tasks": [
-          "Référent technique",
-          "Génération d'un plug-in Visual Studio",
-          "Développement de différentes règles de mise en conformité",
-          "Déploiement d'une intégration continue sur la plate-forme TFS Azure"
-        ],
         "environment": [
           ".Net 4.5",
           "C#",
@@ -379,22 +506,35 @@
           "Windows 7",
           "Agile",
           "Entity Framework"
-        ]
+        ],
+        "fr": {
+          "period": "09/2013 - 09/2013",
+          "sector": "SSII",
+          "role": "Ingénieur d'études - 1 mois",
+          "projects": "Project Customization Tool - 1 pers.",
+          "tasks": [
+            "Référent technique",
+            "Génération d'un plug-in Visual Studio",
+            "Développement de différentes règles de mise en conformité",
+            "Déploiement d'une intégration continue sur la plate-forme TFS Azure"
+          ]
+        },
+        "en": {
+          "period": "09/2013 - 09/2013",
+          "sector": "IT services company",
+          "role": "Software engineer - 1 month",
+          "projects": "Project Customization Tool - 1 person",
+          "tasks": [
+            "Technical lead",
+            "Building a Visual Studio plug-in",
+            "Development of various compliance rules",
+            "Continuous integration rollout on the TFS Azure platform"
+          ]
+        }
       },
       {
-        "period": "10/2012 - 08/2013",
         "company": "BA Systemes",
-        "sector": "logistique industrielle",
         "location": "Mordelles (35)",
-        "role": "Intégrateur de solutions CELAD - 11 mois",
-        "projects": "MACtac Belgique - 3 pers. ; Krones JFA Allemagne (anglophone) - 2 pers. ; Système U France - 2 pers. ; Lactalis Espagne - 3 pers.",
-        "tasks": [
-          "Spécification des besoins client",
-          "Mise en place de la plate-forme d'intégration",
-          "Développements des algorithmes de stratégie (SQL)",
-          "Mise en exploitation de l'affaire chez le client",
-          "Développement d'outils d'analyse des données (.Net)"
-        ],
         "environment": [
           "SQL",
           "SQL Server 2008",
@@ -408,20 +548,37 @@
           "Linq",
           "Entity Framework",
           "Visual Studio 2010"
-        ]
+        ],
+        "fr": {
+          "period": "10/2012 - 08/2013",
+          "sector": "logistique industrielle",
+          "role": "Intégrateur de solutions CELAD - 11 mois",
+          "projects": "MACtac Belgique - 3 pers. ; Krones JFA Allemagne (anglophone) - 2 pers. ; Système U France - 2 pers. ; Lactalis Espagne - 3 pers.",
+          "tasks": [
+            "Spécification des besoins client",
+            "Mise en place de la plate-forme d'intégration",
+            "Développements des algorithmes de stratégie (SQL)",
+            "Mise en exploitation de l'affaire chez le client",
+            "Développement d'outils d'analyse des données (.Net)"
+          ]
+        },
+        "en": {
+          "period": "10/2012 - 08/2013",
+          "sector": "industrial logistics",
+          "role": "Solutions integrator, CELAD - 11 months",
+          "projects": "MACtac Belgium - 3 people; Krones JFA Germany (English-speaking) - 2 people; Système U France - 2 people; Lactalis Spain - 3 people",
+          "tasks": [
+            "Client requirements specification",
+            "Integration platform setup",
+            "Strategy algorithm development (SQL)",
+            "Project go-live at the client site",
+            "Data analysis tool development (.Net)"
+          ]
+        }
       },
       {
-        "period": "09/2011 - 06/2012",
         "company": "Ibelem",
-        "sector": "éditeur de logiciels",
         "location": "Nantes (44)",
-        "role": "Ingénieur d'études - 10 mois",
-        "projects": "PushManager - 7 pers.",
-        "tasks": [
-          "Conception et développements des fonctionnalités du serveur PushManager",
-          "Etude de faisabilité technique de nouvelles fonctionnalités de la solution PushManager",
-          "Amélioration de la plateforme TFS afin d'atteindre une véritable intégration continue et un meilleur suivi des scénarii et tâches de développement"
-        ],
         "environment": [
           ".Net 3.5",
           "C#",
@@ -433,22 +590,33 @@
           "SQL Server 2008",
           "Windows Server 2003",
           "Windows 7"
-        ]
+        ],
+        "fr": {
+          "period": "09/2011 - 06/2012",
+          "sector": "éditeur de logiciels",
+          "role": "Ingénieur d'études - 10 mois",
+          "projects": "PushManager - 7 pers.",
+          "tasks": [
+            "Conception et développements des fonctionnalités du serveur PushManager",
+            "Etude de faisabilité technique de nouvelles fonctionnalités de la solution PushManager",
+            "Amélioration de la plateforme TFS afin d'atteindre une véritable intégration continue et un meilleur suivi des scénarii et tâches de développement"
+          ]
+        },
+        "en": {
+          "period": "09/2011 - 06/2012",
+          "sector": "software publisher",
+          "role": "Software engineer - 10 months",
+          "projects": "PushManager - 7 people",
+          "tasks": [
+            "Design and development of PushManager server features",
+            "Technical feasibility studies for new PushManager features",
+            "Improving the TFS platform to reach true continuous integration and better tracking of development scenarios and tasks"
+          ]
+        }
       },
       {
-        "period": "10/2010 - 08/2011",
         "company": "SNCF",
-        "sector": "trafic ferroviaire",
         "location": "Lyon (69)",
-        "role": "Chef d'équipe / Architecte / Concepteur / Développeur SOGETI - 11 mois",
-        "projects": "SIERRA - 10 pers.",
-        "tasks": [
-          "Gestion d'une équipe de 5 développeurs et répartition des tâches",
-          "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
-          "Affectation et suivi des tâches de l'équipe de développement",
-          "Travaux de maintenance et d'évolution de l'application",
-          "Collaboration avec l'équipe sur les points techniques et fonctionnels"
-        ],
         "environment": [
           ".Net 3.0",
           "C#",
@@ -460,19 +628,37 @@
           "Windows Server 2003",
           "Windows XP",
           "Quality Center"
-        ]
+        ],
+        "fr": {
+          "period": "10/2010 - 08/2011",
+          "sector": "trafic ferroviaire",
+          "role": "Chef d'équipe / Architecte / Concepteur / Développeur SOGETI - 11 mois",
+          "projects": "SIERRA - 10 pers.",
+          "tasks": [
+            "Gestion d'une équipe de 5 développeurs et répartition des tâches",
+            "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
+            "Affectation et suivi des tâches de l'équipe de développement",
+            "Travaux de maintenance et d'évolution de l'application",
+            "Collaboration avec l'équipe sur les points techniques et fonctionnels"
+          ]
+        },
+        "en": {
+          "period": "10/2010 - 08/2011",
+          "sector": "rail traffic",
+          "role": "Team lead / Architect / Designer / Developer, SOGETI - 11 months",
+          "projects": "SIERRA - 10 people",
+          "tasks": [
+            "Managing a team of 5 developers and distributing tasks",
+            "Development of stored procedures, business services and UIs on an n-tier architecture",
+            "Assigning and tracking the development team's tasks",
+            "Application maintenance and evolution",
+            "Collaboration with the team on technical and functional topics"
+          ]
+        }
       },
       {
-        "period": "04/2010 - 09/2010",
         "company": "SNCF",
-        "sector": "trafic ferroviaire",
         "location": "Lyon (69)",
-        "role": "Concepteur / Développeur SOGETI - 6 mois",
-        "projects": "CONCERTO - 32 pers.",
-        "tasks": [
-          "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
-          "Conception et développement de l'un des flux d'entrée de l'application nécessitant des transformations algorithmiques ainsi que de la synchronisation partielle des données"
-        ],
         "environment": [
           ".Net 3.5",
           "C#",
@@ -487,22 +673,31 @@
           "Windows Server 2003",
           "Windows XP",
           "Quality Center"
-        ]
+        ],
+        "fr": {
+          "period": "04/2010 - 09/2010",
+          "sector": "trafic ferroviaire",
+          "role": "Concepteur / Développeur SOGETI - 6 mois",
+          "projects": "CONCERTO - 32 pers.",
+          "tasks": [
+            "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
+            "Conception et développement de l'un des flux d'entrée de l'application nécessitant des transformations algorithmiques ainsi que de la synchronisation partielle des données"
+          ]
+        },
+        "en": {
+          "period": "04/2010 - 09/2010",
+          "sector": "rail traffic",
+          "role": "Designer / Developer, SOGETI - 6 months",
+          "projects": "CONCERTO - 32 people",
+          "tasks": [
+            "Development of stored procedures, business services and UIs on an n-tier architecture",
+            "Design and development of one of the application's input feeds, involving algorithmic transformations and partial data synchronization"
+          ]
+        }
       },
       {
-        "period": "01/2007 - 03/2010",
         "company": "SNCF",
-        "sector": "trafic ferroviaire",
         "location": "Villeurbanne (69)",
-        "role": "Concepteur / Développeur SOGETI - ~3 ans",
-        "projects": "SIERRA - 30 pers.",
-        "tasks": [
-          "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
-          "Conception et développement de l'un des flux d'entrée de l'application nécessitant des transformations algorithmiques ainsi que de la synchronisation partielle des données",
-          "Câblage d'un outil de calcul de trajet",
-          "Travaux de maintenance et d'évolution de l'architecture logicielle",
-          "Collaboration avec l'équipe sur les points techniques et fonctionnels"
-        ],
         "environment": [
           ".Net 3.0",
           "C#",
@@ -521,18 +716,37 @@
           "Windows Server 2003",
           "Windows XP",
           "Quality Center"
-        ]
+        ],
+        "fr": {
+          "period": "01/2007 - 03/2010",
+          "sector": "trafic ferroviaire",
+          "role": "Concepteur / Développeur SOGETI - ~3 ans",
+          "projects": "SIERRA - 30 pers.",
+          "tasks": [
+            "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
+            "Conception et développement de l'un des flux d'entrée de l'application nécessitant des transformations algorithmiques ainsi que de la synchronisation partielle des données",
+            "Câblage d'un outil de calcul de trajet",
+            "Travaux de maintenance et d'évolution de l'architecture logicielle",
+            "Collaboration avec l'équipe sur les points techniques et fonctionnels"
+          ]
+        },
+        "en": {
+          "period": "01/2007 - 03/2010",
+          "sector": "rail traffic",
+          "role": "Designer / Developer, SOGETI - ~3 years",
+          "projects": "SIERRA - 30 people",
+          "tasks": [
+            "Development of stored procedures, business services and UIs on an n-tier architecture",
+            "Design and development of one of the application's input feeds, involving algorithmic transformations and partial data synchronization",
+            "Integration of a route calculation tool",
+            "Software architecture maintenance and evolution",
+            "Collaboration with the team on technical and functional topics"
+          ]
+        }
       },
       {
-        "period": "11/2006 – 12/2006",
         "company": "Sogeti",
-        "sector": "travail interne",
         "location": "Villeurbanne (69)",
-        "role": "Concepteur / Développeur - 2 mois",
-        "projects": "Gestion commerciale et annuaire des collaborateurs - 1 pers.",
-        "tasks": [
-          "Développement du site intranet de gestion des collaborateurs"
-        ],
         "environment": [
           "C#",
           "ASP.Net",
@@ -540,31 +754,68 @@
           "SQL Server 2005",
           "Visual Studio 2005",
           "Windows XP"
-        ]
+        ],
+        "fr": {
+          "period": "11/2006 – 12/2006",
+          "sector": "travail interne",
+          "role": "Concepteur / Développeur - 2 mois",
+          "projects": "Gestion commerciale et annuaire des collaborateurs - 1 pers.",
+          "tasks": [
+            "Développement du site intranet de gestion des collaborateurs"
+          ]
+        },
+        "en": {
+          "period": "11/2006 – 12/2006",
+          "sector": "internal project",
+          "role": "Designer / Developer - 2 months",
+          "projects": "Sales management and staff directory - 1 person",
+          "tasks": ["Development of the staff management intranet site"]
+        }
       },
       {
-        "period": "10/2006 – 10/2006",
         "company": "i-BP",
-        "sector": "solutions bancaires",
         "location": "Lyon (69)",
-        "role": "Testeur SOGETI - 1 mois",
-        "projects": "TNR pour la maintenance d'Equinoxe - 3 pers.",
-        "tasks": [
-          "Mise en œuvre des TNR sur le périmètre « Entrée en relation »"
-        ],
-        "environment": ["Test Director 8.2", "Quick Test Pro 8", "Windows XP"]
+        "environment": ["Test Director 8.2", "Quick Test Pro 8", "Windows XP"],
+        "fr": {
+          "period": "10/2006 – 10/2006",
+          "sector": "solutions bancaires",
+          "role": "Testeur SOGETI - 1 mois",
+          "projects": "TNR pour la maintenance d'Equinoxe - 3 pers.",
+          "tasks": [
+            "Mise en œuvre des TNR sur le périmètre « Entrée en relation »"
+          ]
+        },
+        "en": {
+          "period": "10/2006 – 10/2006",
+          "sector": "banking solutions",
+          "role": "Tester, SOGETI - 1 month",
+          "projects": "Regression testing for Equinoxe maintenance - 3 people",
+          "tasks": ["Running regression tests on the customer onboarding scope"]
+        }
       },
       {
-        "period": "05/2005 – 06/2006",
         "company": "France Telecom",
-        "sector": "opérateur téléphonique",
         "location": "Lyon (69)",
-        "role": "Analyste SOGETI - 14 mois",
-        "projects": "Task Force Convergence - Gestion du Réseau de Transmission (GRT) - 16 pers.",
-        "tasks": [
-          "Fiabilisation des données du SI dans le cadre de la convergence de BD"
-        ],
-        "environment": ["application interne IRONMAN"]
+        "fr": {
+          "period": "05/2005 – 06/2006",
+          "sector": "opérateur téléphonique",
+          "role": "Analyste SOGETI - 14 mois",
+          "projects": "Task Force Convergence - Gestion du Réseau de Transmission (GRT) - 16 pers.",
+          "tasks": [
+            "Fiabilisation des données du SI dans le cadre de la convergence de BD"
+          ],
+          "environment": ["application interne IRONMAN"]
+        },
+        "en": {
+          "period": "05/2005 – 06/2006",
+          "sector": "telecom operator",
+          "role": "Analyst, SOGETI - 14 months",
+          "projects": "Task Force Convergence - Transmission Network Management (GRT) - 16 people",
+          "tasks": [
+            "Making IS data reliable as part of a database convergence"
+          ],
+          "environment": ["IRONMAN internal application"]
+        }
       }
     ]
   }

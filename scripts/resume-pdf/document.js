@@ -24,6 +24,43 @@ const TEXT = '#161b2e'
 const MUTED = '#4a5578'
 const RULE = '#c7cde0' // --border (#2a3563) lightened for a white page
 
+// Fixed labels of the layout, per language. French typography puts a space
+// before a colon, English doesn't.
+const LABELS = {
+  fr: {
+    document: 'CV',
+    profile: 'Profil professionnel',
+    technicalSkills: 'Compétences techniques',
+    softSkills: 'Soft skills',
+    notableExperience: 'Expériences notables',
+    education: 'Formation',
+    languages: 'Langues',
+    careerHistory: 'Résumé de carrière',
+    results: 'Résultats',
+    environment: 'Environnement',
+    project: 'Projet',
+    tasks: 'Tâches accomplies',
+    colon: ' : '
+  },
+  en: {
+    document: 'Resume',
+    profile: 'Profile',
+    technicalSkills: 'Technical skills',
+    softSkills: 'Soft skills',
+    notableExperience: 'Notable experience',
+    education: 'Education',
+    languages: 'Languages',
+    careerHistory: 'Career history',
+    results: 'Results',
+    environment: 'Environment',
+    project: 'Project',
+    tasks: 'Tasks',
+    colon: ': '
+  }
+}
+
+export const RESUME_LANGUAGES = Object.keys(LABELS)
+
 const PAGE_PADDING_TOP = 40
 const PAGE_PADDING_X = 44
 
@@ -127,7 +164,7 @@ function BulletList(items) {
   )
 }
 
-function NotableExperience(items) {
+function NotableExperience(items, lang, labels) {
   return e(
     View,
     null,
@@ -138,26 +175,26 @@ function NotableExperience(items) {
         e(
           View,
           { style: styles.notableHeaderRow },
-          e(Text, { style: styles.notableDate }, item.fr.period),
+          e(Text, { style: styles.notableDate }, item[lang].period),
           e(
             Text,
             { style: styles.notableCompany },
-            `${item.company} (${item.fr.sector}) – ${item.location}`
+            `${item.company} (${item[lang].sector}) – ${item.location}`
           )
         ),
         e(
           View,
           { style: styles.notableBody },
-          e(Text, { style: styles.paragraph }, item.fr.description),
+          e(Text, { style: styles.paragraph }, item[lang].description),
           e(
             Text,
             { style: [styles.paragraph, styles.muted] },
-            `Résultats : ${item.fr.results.join(', ')}.`
+            `${labels.results}${labels.colon}${item[lang].results.join(', ')}.`
           ),
           e(
             Text,
             { style: styles.muted },
-            `Environnement : ${item.environment.join(', ')}`
+            `${labels.environment}${labels.colon}${item.environment.join(', ')}`
           )
         )
       )
@@ -165,12 +202,15 @@ function NotableExperience(items) {
   )
 }
 
-function CareerHistory(items) {
+function CareerHistory(items, lang, labels) {
   return e(
     View,
     null,
-    items.map((item, index) =>
-      e(
+    items.map((entry, index) => {
+      // Language-neutral fields, then the language's own (a block may override
+      // `environment` when it isn't just proper nouns).
+      const item = { ...entry, ...entry[lang] }
+      return e(
         View,
         { key: index, style: styles.careerItem, wrap: false },
         e(Text, { style: styles.careerDate }, item.period),
@@ -181,39 +221,57 @@ function CareerHistory(items) {
             Text,
             { style: styles.careerHeaderLine },
             e(Text, { style: styles.bold }, item.company),
-            ` : ${item.sector} - ${item.location}`
+            `${labels.colon}${item.sector} - ${item.location}`
           ),
           e(Text, { style: styles.careerRole }, item.role),
           item.projects
-            ? e(Text, { style: styles.careerLine }, `Projet : ${item.projects}`)
+            ? e(
+                Text,
+                { style: styles.careerLine },
+                `${labels.project}${labels.colon}${item.projects}`
+              )
             : null,
           item.tasks && item.tasks.length > 0
             ? e(
                 View,
                 { style: { marginTop: 2, marginBottom: 2 } },
-                e(Text, { style: styles.careerLine }, 'Tâches accomplies :'),
+                e(
+                  Text,
+                  { style: styles.careerLine },
+                  `${labels.tasks}${labels.colon.trimEnd()}`
+                ),
                 BulletList(item.tasks)
               )
             : null,
           e(
             Text,
             { style: [styles.careerLine, styles.muted] },
-            `Environnement : ${item.environment.join(', ')}`
+            `${labels.environment}${labels.colon}${item.environment.join(', ')}`
           )
         )
       )
-    )
+    })
   )
 }
 
-export function buildResumeDocument(data) {
+export function buildResumeDocument(data, lang) {
+  const labels = LABELS[lang]
+  if (!labels) {
+    throw new Error(
+      `Unknown résumé language "${lang}" (expected ${RESUME_LANGUAGES.join(', ')})`
+    )
+  }
   const skillLines = Object.values(data.skills.categories).map((category) =>
     category.items.join(', ')
   )
 
   return e(
     Document,
-    { title: `${data.name} - CV`, author: data.name, language: 'fr' },
+    {
+      title: `${data.name} - ${labels.document}`,
+      author: data.name,
+      language: lang
+    },
     e(
       Page,
       { size: 'A4', style: styles.page },
@@ -249,8 +307,8 @@ export function buildResumeDocument(data) {
         )
       ),
 
-      SectionTitle('Profil professionnel'),
-      e(Text, { style: styles.paragraph }, data.profile.fr),
+      SectionTitle(labels.profile),
+      e(Text, { style: styles.paragraph }, data.profile[lang]),
 
       e(
         View,
@@ -258,20 +316,20 @@ export function buildResumeDocument(data) {
         e(
           View,
           { style: styles.column },
-          SectionTitle('Compétences techniques'),
+          SectionTitle(labels.technicalSkills),
           BulletList(skillLines)
         ),
         e(View, { style: styles.columnGap }),
         e(
           View,
           { style: styles.column },
-          SectionTitle('Soft skills'),
-          BulletList(data.additional.softSkills)
+          SectionTitle(labels.softSkills),
+          BulletList(data.additional.softSkills[lang])
         )
       ),
 
-      SectionTitle('Expériences notables'),
-      NotableExperience(data.experience),
+      SectionTitle(labels.notableExperience),
+      NotableExperience(data.experience, lang, labels),
 
       e(
         View,
@@ -279,10 +337,11 @@ export function buildResumeDocument(data) {
         e(
           View,
           { style: styles.column },
-          SectionTitle('Formation'),
+          SectionTitle(labels.education),
           BulletList(
             data.additional.education.map(
-              (item) => `${item.year} : ${item.title} – ${item.institution}`
+              (item) =>
+                `${item.year}${labels.colon}${item[lang].title} – ${item.institution}`
             )
           )
         ),
@@ -290,9 +349,11 @@ export function buildResumeDocument(data) {
         e(
           View,
           { style: styles.column },
-          SectionTitle('Langues'),
+          SectionTitle(labels.languages),
           BulletList(
-            data.languages.map((lang) => `${lang.fr.name} : ${lang.fr.level}`)
+            data.languages.map(
+              (item) => `${item[lang].name}${labels.colon}${item[lang].level}`
+            )
           )
         )
       ),
@@ -300,15 +361,15 @@ export function buildResumeDocument(data) {
       e(
         View,
         { break: true },
-        SectionTitle('Résumé de carrière'),
-        CareerHistory(data.additional.careerHistory)
+        SectionTitle(labels.careerHistory),
+        CareerHistory(data.additional.careerHistory, lang, labels)
       ),
 
       e(Text, {
         style: styles.footer,
         fixed: true,
         render: ({ pageNumber, totalPages }) =>
-          `${data.name} — CV — ${pageNumber} / ${totalPages}`
+          `${data.name} — ${labels.document} — ${pageNumber} / ${totalPages}`
       })
     )
   )
