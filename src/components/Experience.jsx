@@ -8,7 +8,7 @@ const experienceMeta = [
     project: 'MyClauger3E',
     tech: [
       '.Net Core 10',
-      'Angular 16',
+      'Angular 19',
       'Kubernetes',
       'Azure DevOps',
       'OWASP',
