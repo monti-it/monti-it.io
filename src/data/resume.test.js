@@ -81,3 +81,22 @@ describe('resume.json contact', () => {
     expect(resume.contact.phone).toMatch(/^\+33 \d( \d{2}){4}$/)
   })
 })
+
+describe('resume.json career history', () => {
+  const companies = resume.additional.careerHistory.map(
+    ({ company }) => company
+  )
+  // Same letters, any case or separator: catches "Acme-Corp" for "ACME CORP".
+  const letters = (name) => name.toUpperCase().replace(/[^A-Z]/g, '')
+
+  it.each(['OBJET DIRECT', 'DEEPLINK MEDICAL'])(
+    'spells "%s" as the company does',
+    (spelling) => {
+      const variants = companies.filter(
+        (company) => letters(company) === letters(spelling)
+      )
+      expect(variants).not.toHaveLength(0)
+      for (const variant of variants) expect(variant).toBe(spelling)
+    }
+  )
+})
