@@ -24,7 +24,7 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Développeur .Net FullStack senior · IA · AppSec',
+      eyebrow: 'Développeur .Net senior · IA · AppSec',
       title: "Du logiciel .Net solide et sûr, construit avec l'IA",
       lead: 'Votre application .Net modernisée plus vite, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .Net me permettent de le juger avec un œil de sécurité.',
       ctaMore: 'En savoir plus',
@@ -483,7 +483,7 @@ export const translations = {
       eyebrow: 'Informations légales',
       title: 'Mentions légales',
       bindingNote: '',
-      bannerAlt: 'Monti IT, développeur .Net FullStack senior freelance',
+      bannerAlt: 'Monti IT, développeur .Net senior freelance',
       sections: {
         publisher: {
           title: 'Éditeur du site',
@@ -634,7 +634,7 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Développeur .Net FullStack senior freelance · IA & AppSec',
+        title: 'Développeur .Net senior freelance · IA & AppSec',
         description:
           '21 ans de .Net : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait.'
       },
@@ -680,7 +680,7 @@ export const translations = {
       resume: {
         title: 'Résumé de carrière',
         description:
-          "Christophe Monti, développeur .Net FullStack senior : modernisation d'applications .Net critiques avec l'IA, sans céder sur la qualité ni la sécurité applicative. Parcours et expériences."
+          "Christophe Monti, développeur .Net senior : modernisation d'applications .Net critiques avec l'IA, sans céder sur la qualité ni la sécurité applicative. Parcours et expériences."
       },
       notFound: {
         title: 'Page introuvable',
@@ -767,7 +767,7 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Senior .Net FullStack developer · AI · AppSec',
+      eyebrow: 'Senior .Net developer · AI · AppSec',
       title: 'Solid, secure .Net software, built with AI',
       lead: 'Your .Net application modernized faster, with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .Net let me judge it with a security mindset.',
       ctaMore: 'Learn more',
@@ -1220,7 +1220,7 @@ export const translations = {
       title: 'Legal notice',
       bindingNote:
         'This English version is provided for convenience. The French version (mentions légales) is the legally binding one.',
-      bannerAlt: 'Monti IT, senior freelance .Net FullStack developer',
+      bannerAlt: 'Monti IT, senior freelance .Net developer',
       sections: {
         publisher: {
           title: 'Publisher',
@@ -1373,7 +1373,7 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Senior .Net FullStack freelance developer · AI & AppSec',
+        title: 'Senior .Net freelance developer · AI & AppSec',
         description:
           '21 years of .Net: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price.'
       },
@@ -1419,7 +1419,7 @@ export const translations = {
       resume: {
         title: 'Career résumé',
         description:
-          'Christophe Monti, senior .Net FullStack developer: modernizing critical .Net applications with AI, with no compromise on quality or application security. Background and experience.'
+          'Christophe Monti, senior .Net developer: modernizing critical .Net applications with AI, with no compromise on quality or application security. Background and experience.'
       },
       notFound: {
         title: 'Page not found',

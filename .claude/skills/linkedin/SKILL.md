@@ -49,7 +49,7 @@ Check at least:
 - **Identity line**: `resume.json` `title` vs `header.eyebrow` (`en`, since `title` is English;
   then make sure the `fr` eyebrow says the same thing). Ignore title case ("Developer" vs "developer")
   and a trailing `| Freelance` status; anything else that differs (a missing or extra role keyword) is
-  drift, and so is a missing "FullStack" or an all-caps ".NET" outside "ASP.NET" in either source.
+  drift, and so is "FullStack" in either title or an all-caps ".NET" outside "ASP.NET" in either source.
 - **Shared roles** (same `key` in `resume.json` `experience[]` and `experienceMeta`): `period`, `sector`,
   `company`, `location`. Hyphen vs en dash isn't drift. Wording of descriptions differs on purpose, so
   only flag a contradiction of fact (a different number, technology or scope).
@@ -64,8 +64,10 @@ Check at least:
 
 ### Wording rules (positioning, decided in #70)
 
-- Keep **"Développeur .Net FullStack senior"** (EN: "Senior .Net FullStack developer") visible, in the
-  Headline and early in About, so recruiter searches on .Net find the profile.
+- Keep **"Développeur .Net senior"** (EN: "Senior .Net developer") visible, in the Headline and early in
+  About, so recruiter searches on .Net find the profile.
+- Say **"FullStack"** once in About, as a search keyword ("Développeur .Net FullStack senior" / "Senior
+  .Net FullStack developer"), and nowhere else: not in the Headline, Experience or Top skills.
 - Write **".Net"**, never ".NET", except in the product name "ASP.NET" ("ASP.NET Core", "ASP.NET MVC").
 - Imply that **AI agents write the code and Christophe frames, reviews and owns it**. Say it plainly
   ("des agents IA écrivent le code sous ma direction : je cadre, je relis et je réponds du résultat"),

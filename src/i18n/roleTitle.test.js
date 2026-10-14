@@ -19,28 +19,16 @@ const collectStrings = (value, path = []) => {
 
 describe('role title', () => {
   it.each([
-    ['fr', 'header.eyebrow', 'Développeur .Net FullStack senior · IA · AppSec'],
-    ['en', 'header.eyebrow', 'Senior .Net FullStack developer · AI · AppSec'],
-    [
-      'fr',
-      'seo.home.title',
-      'Développeur .Net FullStack senior freelance · IA & AppSec'
-    ],
-    [
-      'en',
-      'seo.home.title',
-      'Senior .Net FullStack freelance developer · AI & AppSec'
-    ],
+    ['fr', 'header.eyebrow', 'Développeur .Net senior · IA · AppSec'],
+    ['en', 'header.eyebrow', 'Senior .Net developer · AI · AppSec'],
+    ['fr', 'seo.home.title', 'Développeur .Net senior freelance · IA & AppSec'],
+    ['en', 'seo.home.title', 'Senior .Net freelance developer · AI & AppSec'],
     [
       'fr',
       'legalNotice.bannerAlt',
-      'Monti IT, développeur .Net FullStack senior freelance'
+      'Monti IT, développeur .Net senior freelance'
     ],
-    [
-      'en',
-      'legalNotice.bannerAlt',
-      'Monti IT, senior freelance .Net FullStack developer'
-    ]
+    ['en', 'legalNotice.bannerAlt', 'Monti IT, senior freelance .Net developer']
   ])('%s %s reads the role title', (lang, key, expected) => {
     const value = key
       .split('.')
@@ -49,8 +37,8 @@ describe('role title', () => {
   })
 
   it.each([
-    ['fr', 'Christophe Monti, développeur .Net FullStack senior : '],
-    ['en', 'Christophe Monti, senior .Net FullStack developer: ']
+    ['fr', 'Christophe Monti, développeur .Net senior : '],
+    ['en', 'Christophe Monti, senior .Net developer: ']
   ])('%s seo.resume.description starts with the role title', (lang, start) => {
     expect(translations[lang].seo.resume.description.startsWith(start)).toBe(
       true
@@ -58,9 +46,7 @@ describe('role title', () => {
   })
 
   it('résumé title reads the role title', () => {
-    expect(resume.title).toBe(
-      'Senior .Net FullStack Developer · AI · AppSec | Freelance'
-    )
+    expect(resume.title).toBe('Senior .Net Developer · AI · AppSec | Freelance')
   })
 
   it('index.html static titles read the French home title', () => {
@@ -69,7 +55,7 @@ describe('role title', () => {
       'utf8'
     )
     const expected =
-      'Développeur .Net FullStack senior freelance · IA &amp; AppSec | Monti IT'
+      'Développeur .Net senior freelance · IA &amp; AppSec | Monti IT'
     expect(html.match(/<title>\s*([^<]*?)\s*<\/title>/)[1]).toBe(expected)
     for (const property of ['og:title', 'twitter:title']) {
       const meta = html.match(
