@@ -2,7 +2,7 @@ import { useLanguage } from '../i18n/useLanguage'
 import { CONTACT_EMAIL } from '../data/contact'
 
 const stack = [
-  '.NET',
+  '.Net',
   'Angular',
   'React',
   'SQL',

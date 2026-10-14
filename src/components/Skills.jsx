@@ -37,7 +37,7 @@ const skillCategories = [
         url: 'https://docs.microsoft.com/en-us/dotnet/csharp/'
       },
       {
-        name: '.NET Core',
+        name: '.Net Core',
         logo: dotnetcoreLogo,
         url: 'https://dotnet.microsoft.com/'
       },
