@@ -565,6 +565,7 @@ export const translations = {
           achievements: [
             'Augmentation du volet DataViz',
             'Déploiements automatisés',
+            'Démarche DevSecOps : quality gates SonarQube, OWASP, auth OIDC/JWT',
             'Réduction de la dette technique'
           ]
         },
@@ -576,6 +577,7 @@ export const translations = {
             "Maintenance évolutive des applications et amélioration de l'architecture. Référent technique avec intégration de 5 modules de la suite Easily.",
           achievements: [
             "Mise en place de l'intégration continue",
+            'Démarche DevSecOps : contrôles de sécurité CI/CD, conformité HDS',
             'Harmonisation des process',
             'Architecture évolutive (log, cache, IOC)'
           ]
@@ -588,6 +590,7 @@ export const translations = {
             'Développement de fonctionnalités dans un environnement HDS autour du métier de la téléradiologie urgentiste de nuit, sur des applications critiques à fortes contraintes de performance et de réactivité.',
           achievements: [
             "Mise en place d'outils transverses (DMS, Audit trail, i18n)",
+            'Démarche DevSecOps : contrôles de sécurité CI/CD, OWASP, conformité HDS',
             'Optimisation des performances',
             'Meilleure réponse médicale apportée'
           ]
@@ -1301,6 +1304,7 @@ export const translations = {
           achievements: [
             'Expanded the DataViz capabilities',
             'Automated deployments',
+            'DevSecOps approach: SonarQube quality gates, OWASP, OIDC/JWT auth hardening',
             'Reduced technical debt'
           ]
         },
@@ -1312,6 +1316,7 @@ export const translations = {
             'Evolutive maintenance of applications and architecture improvements. Technical reference point, integrating 5 modules of the Easily suite.',
           achievements: [
             'Set up continuous integration',
+            'DevSecOps approach: CI/CD security gates, HDS compliance',
             'Harmonized processes',
             'Evolutive architecture (logging, caching, IOC)'
           ]
@@ -1324,6 +1329,7 @@ export const translations = {
             'Feature development in an HDS (health data hosting) environment for overnight emergency teleradiology, on critical applications with strong performance and responsiveness constraints.',
           achievements: [
             'Set up cross-cutting tools (DMS, audit trail, i18n)',
+            'DevSecOps approach: CI/CD security gates, OWASP, HDS compliance',
             'Performance optimization',
             'Improved medical response times'
           ]
