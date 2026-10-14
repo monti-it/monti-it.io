@@ -598,7 +598,7 @@ export const translations = {
         acsXerox: {
           period: '2013 - 2016',
           sector: 'Transport public',
-          role: "Chef d'équipe / Ingénieur d'études - OBJECT DIRECT",
+          role: "Chef d'équipe / Ingénieur d'études - OBJET DIRECT",
           description:
             "Gestion d'une équipe de 4 développeurs en méthode Agile pour un site web de vente à distance en télébilletique.",
           achievements: [
@@ -1337,7 +1337,7 @@ export const translations = {
         acsXerox: {
           period: '2013 - 2016',
           sector: 'Public transport',
-          role: 'Team Lead / Software Engineer - OBJECT DIRECT',
+          role: 'Team Lead / Software Engineer - OBJET DIRECT',
           description:
             'Managed a team of 4 developers using Agile methodology for a remote ticketing e-commerce website.',
           achievements: [
