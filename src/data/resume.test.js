@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { describe, it, expect } from 'vitest'
 // Only this test may import resume.json: a production import would bundle the
 // whole file (phone number included) into the public JS.
@@ -97,6 +98,24 @@ describe('resume.json career history', () => {
       )
       expect(variants).not.toHaveLength(0)
       for (const variant of variants) expect(variant).toBe(spelling)
+    }
+  )
+})
+
+describe('résumé page PDF', () => {
+  it.each([
+    ['fr', '/resume-fr.pdf', 'MONTI Christophe CV.pdf'],
+    ['en', '/resume-en.pdf', 'MONTI Christophe resume.pdf']
+  ])(
+    '%s: shows the generated %s and downloads it as "%s"',
+    (lang, pdfPath, fileName) => {
+      const { resume: page } = translations[lang]
+      expect(page.pdfPath).toBe(pdfPath)
+      expect(page.pdfFileName).toBe(fileName)
+      expect(
+        existsSync(new URL(`../../public${pdfPath}`, import.meta.url)),
+        `public${pdfPath} (npm run resume:pdf)`
+      ).toBe(true)
     }
   )
 })
