@@ -62,6 +62,21 @@ Check at least:
 
 ## 4. Draft each section
 
+### Start from the current text, when the user gives it
+
+If the user pastes (or points to) their current LinkedIn text for a section, read it before drafting
+that section. Keep what is still true and on-positioning (its strong points, structure and phrasing),
+rewrite the rest from the sources, and list what you dropped or changed as outdated, under an
+**Outdated in the current text** heading before the drift report (step 6). Outdated means, for example:
+
+- a years count other than the current year minus 2005;
+- ".NET" in capitals outside "ASP.NET";
+- "FullStack" anywhere but once in About;
+- no mention of AI agents or of application security;
+- anything breaking a wording rule below, or a fact no source file backs.
+
+The pasted text is input only: this still prints, never writes.
+
 ### Wording rules (positioning, decided in #70)
 
 - Keep **"Développeur .Net senior"** (EN: "Senior .Net developer") visible, in the Headline and early in
@@ -200,4 +215,5 @@ Description — 612 / 2 000
 
 Section titles follow the output language (e.g. "Experience 1/5" in English). Always end with the
 **Drift report**, even for a single section: either the disagreements found in step 3, or "No drift
-found" followed by the checks you ran. Then stop: no file changes, no follow-up edits unless the user asks.
+found" followed by the checks you ran. When the user gave their current text, put **Outdated in the
+current text** just before it, one bullet per item, quoting it. Then stop: no file changes, no follow-up edits unless the user asks.
