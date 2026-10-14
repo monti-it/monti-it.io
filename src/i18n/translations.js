@@ -24,7 +24,7 @@ export const translations = {
       rights: 'Tous droits réservés.'
     },
     header: {
-      eyebrow: 'Développeur .NET senior · IA · Sécurité applicative',
+      eyebrow: 'Développeur .NET senior · IA · AppSec',
       title: "Du logiciel .NET solide et sûr, construit avec l'IA",
       lead: 'Votre application .NET modernisée plus vite, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .NET me permettent de le juger avec un œil de sécurité.',
       ctaMore: 'En savoir plus',
@@ -50,7 +50,7 @@ export const translations = {
             '.NET, Angular, React, bases de données, cloud et outils DevOps'
         },
         securite: {
-          title: 'Sécurité applicative & IA',
+          title: 'AppSec & IA',
           description:
             'Contrôles de sécurité intégrés au CI/CD, revue de code orientée sécurité, sécurisation des fonctionnalités IA'
         },
@@ -319,7 +319,7 @@ export const translations = {
         devops: 'DevOps & Cloud',
         tools: 'Outils & IDE',
         architecture: 'Architecture',
-        securite: 'Sécurité applicative'
+        securite: 'AppSec'
       }
     },
     reseau: {
@@ -631,7 +631,7 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Développeur .NET senior freelance · IA & sécurité applicative',
+        title: 'Développeur .NET senior freelance · IA & AppSec',
         description:
           '21 ans de .NET : des agents IA écrivent le code sous ma direction, je le relis avec un œil de sécurité. Missions ou forfait.'
       },
@@ -764,7 +764,7 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     header: {
-      eyebrow: 'Senior .NET developer · AI · Application security',
+      eyebrow: 'Senior .NET developer · AI · AppSec',
       title: 'Solid, secure .NET software, built with AI',
       lead: 'Your .NET application modernized faster, with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .NET let me judge it with a security mindset.',
       ctaMore: 'Learn more',
@@ -790,7 +790,7 @@ export const translations = {
             '.NET, Angular, React, databases, cloud and DevOps tooling'
         },
         securite: {
-          title: 'Application security & AI',
+          title: 'AppSec & AI',
           description:
             'Security gates built into CI/CD, security-focused code review, securing AI features'
         },
@@ -1056,7 +1056,7 @@ export const translations = {
         devops: 'DevOps & Cloud',
         tools: 'Tools & IDE',
         architecture: 'Architecture',
-        securite: 'Application Security'
+        securite: 'AppSec'
       }
     },
     reseau: {
@@ -1367,7 +1367,7 @@ export const translations = {
     },
     seo: {
       home: {
-        title: 'Senior .NET freelance developer · AI & application security',
+        title: 'Senior .NET freelance developer · AI & AppSec',
         description:
           '21 years of .NET: AI agents write the code under my direction, and I review it with a security mindset. Engagements or fixed-price.'
       },
