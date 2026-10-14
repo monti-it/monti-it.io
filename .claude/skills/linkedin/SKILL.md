@@ -116,16 +116,20 @@ Check at least:
 
 ## 5. Count characters with a script
 
-Count each block's characters with a script, not by eye, on the exact text inside the code block:
+Count each block's characters with a script, not by eye, on the exact text inside the code block. Use
+Node, which the repo already needs (Python isn't always installed: on Windows, `python3` can resolve to
+the Microsoft Store alias and fail):
 
 ```bash
-python3 -c 'import sys; print(len(sys.stdin.read().rstrip("\n")))' <<'EOF'
+node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log([...s.replace(/\r/g,"").replace(/\n+$/,"")].length))' <<'EOF'
 <the block's text>
 EOF
 ```
 
-`len` counts Unicode characters, as LinkedIn does (an accented letter or `·` is one). If a block is over
-its limit, shorten it and count again. Then check no block contains the phone number: search the drafted
+It drops `\r` and trailing newlines, then `[...s]` counts Unicode code points, as LinkedIn does: an
+accented letter, `·` or `•` is one, but "✔️" is two (✔ plus the variation selector U+FE0F), while "📌" is
+one. Don't use `s.length`, which counts UTF-16 units. If a block is over its limit, shorten it and
+count again. Then check no block contains the phone number: search the drafted
 text for the digits of `contact.phone` with spaces, dots and the leading `+33`/`0` stripped.
 
 ## 6. Print
