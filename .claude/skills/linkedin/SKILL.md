@@ -98,10 +98,29 @@ Check at least:
 - **Headline**: start from `header.eyebrow`, add the freelance status and the value in `header.title` /
   `header.lead`. Aim for 120 to 220 characters; LinkedIn truncates around 120 in search results, so the
   first 120 must stand alone.
-- **About**: built from `resume.json` `profile` and `header.lead`: what the user does for clients, how
-  (AI agents + review + application security), 21-ish years and sectors (compute from 2005), then a short
-  call to action with the email and `monti-it.io`. Short paragraphs, plain text (LinkedIn renders no
-  Markdown; line breaks are kept). Aim for 1,000 to 2,000 characters.
+- **About**: plain text (LinkedIn renders no Markdown; line breaks are kept), short paragraphs and
+  lists, in this order. Aim for 1,500 to 2,200 characters.
+  1. **Opening**, from `resume.json` `profile` and `header.lead`: "Développeur .Net FullStack senior"
+     (the one FullStack), what the user does for clients, and how (AI agents + review + application
+     security).
+  2. **Years and sectors**: the years count (current year minus 2005), the sectors from `profile` and
+     `experience.items.<key>.sector`, including logistique / logistics (backed by the BA Systemes entry
+     in `additional.careerHistory`), and "en environnement Agile" / "in Agile environments".
+  3. **"Mon positionnement freelance :"** (EN: "How I work as a freelancer:"), one `•` bullet per
+     point: taking over complex projects and modernizing existing systems; joining a team on hard
+     technical topics; cutting technical debt and making applications reliable; clean, maintainable
+     architectures; industrializing the development cycle (CI/CD, quality, application security);
+     technical leadership and mentoring. Word them from the Expertise page copy in
+     `translations.js`: `expertise.pillars` and `expertise.items` (`modernisation`, `analyse`,
+     `craftsmanship`, `cicd`, `devsecops`, `leadership`, `coaching`), and the matching detail
+     namespaces (`modernisation.*`, `craftsmanship.*`, `coaching.*`, ...).
+  4. **"Expertises clés :"** (EN: "Key expertise:"), one `✔️` line per group, not a one-line "Stack :":
+     .Net Core / ASP.NET Core / Web API; Angular / React / TypeScript; architecture, Clean Code, SOLID,
+     REST; CI/CD and DevSecOps; coaching and technical leadership. Take the names from `Skills.jsx`
+     and `resume.json` `skills`, and drop a group no source backs.
+  5. **Availability**: "📌 Disponible pour des missions freelance (court, moyen ou long terme) ou des
+     projets au forfait." (EN: "📌 Available for freelance assignments (short, medium or long term) or
+     fixed-price projects."), then the email and `monti-it.io`, one per line.
 - **Experience**: one entry per item of `experienceMeta`, in that order (5 today). For each, print a
   reference line outside the code block with the fields the user fills by hand (company, location,
   period, sector), then two code blocks:
