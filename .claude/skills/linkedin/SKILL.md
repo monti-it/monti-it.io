@@ -68,10 +68,12 @@ Check at least:
 - Imply that **AI agents write the code and Christophe frames, reviews and owns it**. Say it plainly
   ("des agents IA écrivent le code sous ma direction : je cadre, je relis et je réponds du résultat"),
   never as "I no longer code".
-- Say **"sécurité applicative"** (EN: "application security"), never "cybersécurité" / "cybersecurity".
+- Say **"AppSec"** in short labels and headlines (both languages), and spell it out as **"sécurité
+  applicative"** (EN: "application security") in prose. Never "cybersécurité" / "cybersecurity".
 - Claim **no security specialist title** (no "expert sécurité", "AppSec engineer", "consultant
   cybersécurité", "security architect") unless a security certification (CSSLP, Security+) appears in
-  `resume.json`. Without one, security is an approach and a direction, not a title.
+  `resume.json`. Without one, security is an approach and a direction, not a title: "AppSec" names a
+  field, never a role.
 - Never use the words **"retraite"** / "retired" or **"maker"**.
 - Don't project AI onto past roles: only the current role and the About may mention AI agents. Every fact
   (company, dates, team size, technology, result) must come from a source file; invent none.
