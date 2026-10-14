@@ -62,6 +62,21 @@ Check at least:
 
 ## 4. Draft each section
 
+### Start from the current text, when the user gives it
+
+If the user pastes (or points to) their current LinkedIn text for a section, read it before drafting
+that section. Keep what is still true and on-positioning (its strong points, structure and phrasing),
+rewrite the rest from the sources, and list what you dropped or changed as outdated, under an
+**Outdated in the current text** heading before the drift report (step 6). Outdated means, for example:
+
+- a years count other than the current year minus 2005;
+- ".NET" in capitals outside "ASP.NET";
+- "FullStack" anywhere but once in About;
+- no mention of AI agents or of application security;
+- anything breaking a wording rule below, or a fact no source file backs.
+
+The pasted text is input only: this still prints, never writes.
+
 ### Wording rules (positioning, decided in #70)
 
 - Keep **"Développeur .Net senior"** (EN: "Senior .Net developer") visible, in the Headline and early in
@@ -98,10 +113,29 @@ Check at least:
 - **Headline**: start from `header.eyebrow`, add the freelance status and the value in `header.title` /
   `header.lead`. Aim for 120 to 220 characters; LinkedIn truncates around 120 in search results, so the
   first 120 must stand alone.
-- **About**: built from `resume.json` `profile` and `header.lead`: what the user does for clients, how
-  (AI agents + review + application security), 21-ish years and sectors (compute from 2005), then a short
-  call to action with the email and `monti-it.io`. Short paragraphs, plain text (LinkedIn renders no
-  Markdown; line breaks are kept). Aim for 1,000 to 2,000 characters.
+- **About**: plain text (LinkedIn renders no Markdown; line breaks are kept), short paragraphs and
+  lists, in this order. Aim for 1,500 to 2,200 characters.
+  1. **Opening**, from `resume.json` `profile` and `header.lead`: "Développeur .Net FullStack senior"
+     (the one FullStack), what the user does for clients, and how (AI agents + review + application
+     security).
+  2. **Years and sectors**: the years count (current year minus 2005), the sectors from `profile` and
+     `experience.items.<key>.sector`, including logistique / logistics (backed by the BA Systemes entry
+     in `additional.careerHistory`), and "en environnement Agile" / "in Agile environments".
+  3. **"Mon positionnement freelance :"** (EN: "How I work as a freelancer:"), one `•` bullet per
+     point: taking over complex projects and modernizing existing systems; joining a team on hard
+     technical topics; cutting technical debt and making applications reliable; clean, maintainable
+     architectures; industrializing the development cycle (CI/CD, quality, application security);
+     technical leadership and mentoring. Word them from the Expertise page copy in
+     `translations.js`: `expertise.pillars` and `expertise.items` (`modernisation`, `analyse`,
+     `craftsmanship`, `cicd`, `devsecops`, `leadership`, `coaching`), and the matching detail
+     namespaces (`modernisation.*`, `craftsmanship.*`, `coaching.*`, ...).
+  4. **"Expertises clés :"** (EN: "Key expertise:"), one `✔️` line per group, not a one-line "Stack :":
+     .Net Core / ASP.NET Core / Web API; Angular / React / TypeScript; architecture, Clean Code, SOLID,
+     REST; CI/CD and DevSecOps; coaching and technical leadership. Take the names from `Skills.jsx`
+     and `resume.json` `skills`, and drop a group no source backs.
+  5. **Availability**: "📌 Disponible pour des missions freelance (court, moyen ou long terme) ou des
+     projets au forfait." (EN: "📌 Available for freelance assignments (short, medium or long term) or
+     fixed-price projects."), then the email and `monti-it.io`, one per line.
 - **Experience**: one entry per item of `experienceMeta`, in that order (5 today). For each, print a
   reference line outside the code block with the fields the user fills by hand (company, location,
   period, sector), then two code blocks:
@@ -116,16 +150,20 @@ Check at least:
 
 ## 5. Count characters with a script
 
-Count each block's characters with a script, not by eye, on the exact text inside the code block:
+Count each block's characters with a script, not by eye, on the exact text inside the code block. Use
+Node, which the repo already needs (Python isn't always installed: on Windows, `python3` can resolve to
+the Microsoft Store alias and fail):
 
 ```bash
-python3 -c 'import sys; print(len(sys.stdin.read().rstrip("\n")))' <<'EOF'
+node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log([...s.replace(/\r/g,"").replace(/\n+$/,"")].length))' <<'EOF'
 <the block's text>
 EOF
 ```
 
-`len` counts Unicode characters, as LinkedIn does (an accented letter or `·` is one). If a block is over
-its limit, shorten it and count again. Then check no block contains the phone number: search the drafted
+It drops `\r` and trailing newlines, then `[...s]` counts Unicode code points, as LinkedIn does: an
+accented letter, `·` or `•` is one, but "✔️" is two (✔ plus the variation selector U+FE0F), while "📌" is
+one. Don't use `s.length`, which counts UTF-16 units. If a block is over its limit, shorten it and
+count again. Then check no block contains the phone number: search the drafted
 text for the digits of `contact.phone` with spaces, dots and the leading `+33`/`0` stripped.
 
 ## 6. Print
@@ -177,4 +215,5 @@ Description — 612 / 2 000
 
 Section titles follow the output language (e.g. "Experience 1/5" in English). Always end with the
 **Drift report**, even for a single section: either the disagreements found in step 3, or "No drift
-found" followed by the checks you ran. Then stop: no file changes, no follow-up edits unless the user asks.
+found" followed by the checks you ran. When the user gave their current text, put **Outdated in the
+current text** just before it, one bullet per item, quoting it. Then stop: no file changes, no follow-up edits unless the user asks.
