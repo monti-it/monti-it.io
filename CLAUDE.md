@@ -16,7 +16,7 @@ npm run lint      # ESLint (flat config, eslint.config.js) + prettier --check
 npm run test      # Vitest, single run (src/**/*.test.js)
 npm run format    # prettier --write . (fixes what lint's format check flags)
 npm run format:check  # prettier --check . only
-npm run resume:pdf    # regenerate public/resume.pdf from src/data/resume.json
+npm run resume:pdf    # regenerate public/resume-{fr,en}.pdf from src/data/resume.json
 npm run banners       # regenerate branding/*.png (GitHub social preview, LinkedIn banner) from the hero copy
 ```
 
@@ -52,7 +52,7 @@ CI is GitHub Actions, Node 20:
 
 ## Résumé pipeline
 
-- [src/data/resume.json](src/data/resume.json) is the source of truth for the résumé PDF (profile, 3 curated roles, languages, skills, `fr`/`en` blocks per entry). `npm run resume:pdf` runs [scripts/generate-resume-pdf.js](scripts/generate-resume-pdf.js), which renders it with `@react-pdf/renderer` (layout in [scripts/resume-pdf/document.js](scripts/resume-pdf/document.js)) to `public/resume.pdf`. The generated PDF is committed; `pages/Resume.jsx` just embeds it.
+- [src/data/resume.json](src/data/resume.json) is the source of truth for the résumé PDF (profile, 3 curated roles, languages, skills, `fr`/`en` blocks per entry). `npm run resume:pdf` runs [scripts/generate-resume-pdf.js](scripts/generate-resume-pdf.js), which renders it with `@react-pdf/renderer` (layout and per-language labels in [scripts/resume-pdf/document.js](scripts/resume-pdf/document.js)) to `public/resume-fr.pdf` and `public/resume-en.pdf`. Both PDFs are committed; `pages/Resume.jsx` embeds the one of the page's language, path and download name from `resume.pdfPath`/`resume.pdfFileName` in `translations.js`. The old `/resume.pdf` URL 301-redirects to the French PDF (`public/.htaccess` and `nginx.conf`).
 - The site does **not** read `resume.json`: its Experience/Languages/Skills/contact content lives separately in components + `translations.js`, and the two stores overlap without being generated from one another. Keep it that way — only the PDF script and `resume.test.js` may import `resume.json`, since a site import would bundle it (phone number included) into the public JS. Shared site-side facts that need a constant go in [src/data/contact.js](src/data/contact.js) (e.g. `CONTACT_EMAIL`).
 - [src/data/resume.test.js](src/data/resume.test.js) catches drift on the facts both sides carry (contact email, shared roles' period/sector, languages' name/level, in both languages). Everything else is synced by hand.
 
@@ -64,5 +64,5 @@ CI is GitHub Actions, Node 20:
 
 ## Claude Code skills
 
-- [.claude/skills/resume/](.claude/skills/resume/SKILL.md): turns a conversational résumé change ("add this certification", "tighten the Clauger description") into edits to `resume.json` (both languages), the matching site components/translations where the same fact lives there too (its sync table maps each `resume.json` section to its site counterpart), and a regenerated `public/resume.pdf`. Leaves changes unstaged for review.
+- [.claude/skills/resume/](.claude/skills/resume/SKILL.md): turns a conversational résumé change ("add this certification", "tighten the Clauger description") into edits to `resume.json` (both languages), the matching site components/translations where the same fact lives there too (its sync table maps each `resume.json` section to its site counterpart), and regenerated `public/resume-{fr,en}.pdf`. Leaves changes unstaged for review.
 - [.claude/skills/linkedin/](.claude/skills/linkedin/SKILL.md): the read-only counterpart, "update my LinkedIn" → prints Headline, About, one entry per `Experience.jsx` role and 5 Top skills (FR default, EN on request) with `n / limit` counts and a drift report between `resume.json` and the site. Writes nothing.

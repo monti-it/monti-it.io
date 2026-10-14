@@ -543,7 +543,9 @@ export const translations = {
     },
     resume: {
       eyebrow: 'Parcours professionnel',
-      title: 'Résumé de carrière'
+      title: 'Résumé de carrière',
+      pdfPath: '/resume-fr.pdf',
+      pdfFileName: 'MONTI Christophe CV.pdf'
     },
     notFound: {
       eyebrow: 'Erreur 404',
@@ -1282,7 +1284,9 @@ export const translations = {
     },
     resume: {
       eyebrow: 'Professional background',
-      title: 'Career résumé'
+      title: 'Career résumé',
+      pdfPath: '/resume-en.pdf',
+      pdfFileName: 'MONTI Christophe resume.pdf'
     },
     notFound: {
       eyebrow: 'Error 404',

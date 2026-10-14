@@ -20,7 +20,7 @@ function Resume() {
 
         <div className="pdf-container">
           <iframe
-            src="/resume.pdf"
+            src={t('resume.pdfPath')}
             title={t('resume.title')}
             width="100%"
             height="800px"
@@ -30,8 +30,8 @@ function Resume() {
         <div className="hero-actions">
           <a
             className="btn primary"
-            href="/resume.pdf"
-            download
+            href={t('resume.pdfPath')}
+            download={t('resume.pdfFileName')}
             target="_blank"
             rel="noreferrer"
           >

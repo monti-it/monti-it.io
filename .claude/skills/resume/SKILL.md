@@ -1,16 +1,17 @@
 ---
 name: resume
-description: Update the résumé/CV from a conversational request (e.g. "I got a new certification, add it", "tighten the Clauger description", "bump my years of experience"). Edits src/data/resume.json (both languages where relevant), updates any site component/translation that mirrors the same fact, and regenerates public/resume.pdf. Leaves everything unstaged for review — never commits. Use when asked to "update/add to my résumé", "add a certification/role/skill to my CV", "regenerate the resume PDF", or "sync a résumé change to the site".
+description: Update the résumé/CV from a conversational request (e.g. "I got a new certification, add it", "tighten the Clauger description", "bump my years of experience"). Edits src/data/resume.json (both languages where relevant), updates any site component/translation that mirrors the same fact, and regenerates public/resume-fr.pdf and public/resume-en.pdf. Leaves everything unstaged for review — never commits. Use when asked to "update/add to my résumé", "add a certification/role/skill to my CV", "regenerate the resume PDF", or "sync a résumé change to the site".
 ---
 
 # Résumé (CV) update
 
 `src/data/resume.json` is the source of truth for the generated PDF
-(`npm run resume:pdf` → [scripts/generate-resume-pdf.js](../../../scripts/generate-resume-pdf.js) → `public/resume.pdf`,
+(`npm run resume:pdf` → [scripts/generate-resume-pdf.js](../../../scripts/generate-resume-pdf.js) → `public/resume-fr.pdf` and `public/resume-en.pdf`, one per language,
 via [scripts/resume-pdf/document.js](../../../scripts/resume-pdf/document.js) and `@react-pdf/renderer`).
 
 **The site does not read `resume.json`.** [src/pages/Resume.jsx](../../../src/pages/Resume.jsx) embeds
-the generated PDF directly, but the surrounding site content (the live "Experience" timeline, "Languages"
+the generated PDF of the page's language directly (path and download name in `translations.js` →
+`resume.pdfPath`/`resume.pdfFileName`), but the surrounding site content (the live "Experience" timeline, "Languages"
 cards, "Skills" grid, footer contact links, hero tagline) is separately hard-coded in components and
 `translations.js`, following the i18n conventions in [CLAUDE.md](../../../CLAUDE.md). These two stores
 overlap in subject matter but are **not** kept in sync automatically (a test only flags drift on a few shared facts, see step 3) — this skill's job is to make the
@@ -34,8 +35,16 @@ Structure (see the file for full examples):
   relevant roles are curated here for the one-page PDF.
 - `languages[]` — keyed by `key`, per-language `name`/`level`.
 - `skills.categories.<key>` — language-neutral `items` array, per-language `title`.
-- `additional.*` (`softSkills`, `education`, `careerHistory`) — **French only, PDF-only**, per the
-  file's own `additional.note`. Nothing here has a site counterpart — never touch site files for these.
+- `additional.*` — **PDF-only**, per the file's own `additional.note`: `softSkills.fr`/`en` (two
+  lists), `education[]` (neutral `year`/`institution`, per-language `title`) and `careerHistory[]`
+  (neutral `company`/`location`/`environment`, per-language `period`, `sector`, `role`, `projects`,
+  `tasks`; a language block may also carry its own `environment` when the entry's isn't just proper
+  nouns). Translate both languages. Nothing here has a site counterpart — never touch site files for
+  these.
+
+Every `fr` block needs an `en` block with the same keys and list lengths: `npm run test` fails
+otherwise (`scripts/resume-pdf/document.test.js`), and it also fails if the English PDF would render a
+French-only string.
 
 Keep the language-neutral/per-language split exactly as-is (this was deliberately deduped in #43 — don't
 reintroduce duplicated proper nouns into both `fr` and `en`).
@@ -63,17 +72,20 @@ When editing translations, update **both** `fr` and `en` entries in `translation
 existing conventions: proper nouns (company, tech, project names) stay local to the component, translated
 prose (descriptions, achievements, titles) goes in `translations.js`.
 
-## 4. Regenerate the PDF
+## 4. Regenerate the PDFs
 
 ```bash
 npm run resume:pdf
 ```
 
-Regenerates `public/resume.pdf` from the updated `resume.json`. If the edit added a non-trivial amount of
-text (a new role, a long achievement), spot-check the result stays one page and nothing overflows:
+Regenerates both `public/resume-fr.pdf` and `public/resume-en.pdf` from the updated `resume.json`
+(always both, even for a one-language wording fix). If the edit added a non-trivial amount of text (a new
+role, a long achievement), spot-check that, in **both** PDFs, the first page still holds everything up
+to the career history and nothing overflows (English often runs longer):
 
 ```bash
-pdftoppm -jpeg -r 100 public/resume.pdf /tmp/resume-check
+pdftoppm -jpeg -r 100 public/resume-fr.pdf /tmp/resume-check-fr
+pdftoppm -jpeg -r 100 public/resume-en.pdf /tmp/resume-check-en
 ```
 
 Read the resulting `/tmp/resume-check-*.jpg` with the Read tool. Skip this check for small wording tweaks.

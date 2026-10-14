@@ -1,6 +1,10 @@
 # SPA fallback: serve real files/directories as-is, route everything else to
 # index.html so React Router can handle deep links (/reseau, /en/domotique...).
 RewriteEngine On
+
+# The résumé PDF used to be French-only at /resume.pdf: keep old links working.
+RewriteRule ^resume\.pdf$ /resume-fr.pdf [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
