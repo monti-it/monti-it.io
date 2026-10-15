@@ -1,0 +1,26 @@
+name: Dependency scan
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - package.json
+      - package-lock.json
+      - .github/workflows/dependency-scan.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - package.json
+      - package-lock.json
+      - .github/workflows/dependency-scan.yml
+  schedule:
+    - cron: '0 6 * * 1' # weekly, catches new CVEs published against the locked dependencies
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    name: Scan dependencies
+    uses: monti-it/.github/.github/workflows/dependency-scan.yml@v1
