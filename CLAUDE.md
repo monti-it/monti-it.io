@@ -25,7 +25,8 @@ Tests are Vitest with no config file (Vite's defaults): pure-logic tests next to
 CI is GitHub Actions, Node 20:
 
 - [.github/workflows/deploy.yml](.github/workflows/deploy.yml) — job `Build`, on PRs and pushes to `main`: `npm ci` → `npm audit --audit-level=high` → `npm run lint` → `npm run test` → `npm run build`. Job `Deploy to OVH` (needs `Build`, push to `main` only) then uploads `dist/` to OVH hosting over SFTP.
-- [.github/workflows/docker-scan.yml](.github/workflows/docker-scan.yml) — builds the `prod` target of the multi-stage `Dockerfile` (nginx) and scans it with Trivy (fails on fixable CRITICAL/HIGH). Runs when `Dockerfile`/`package*.json` change, weekly, and on demand. The image isn't pushed or deployed anywhere.
+- [.github/workflows/docker-scan.yml](.github/workflows/docker-scan.yml) — calls the org reusable `monti-it/.github` `container-scan.yml@v1` on the `prod` target of the multi-stage `Dockerfile` (nginx): builds it and scans it with Trivy (fails on fixable CRITICAL/HIGH). Runs when `Dockerfile`/`package*.json` change, weekly, and on demand. The image isn't pushed or deployed anywhere.
+- [.github/workflows/dependency-scan.yml](.github/workflows/dependency-scan.yml) — calls the org reusable `dependency-scan.yml@v1` when `package*.json` change, weekly, and on demand.
 
 `main` only changes through a squash-merged PR: the ruleset `main: PR + green Build` blocks direct pushes, force pushes and deletion of `main`, and requires the `Build` check to pass before merging (0 approvals — the maintainer's merge click is the acceptance step). A merge deploys to OVH immediately, with no further approval. No bypass actors: in an emergency the maintainer disables that ruleset in Settings → Rules, then re-enables it. Never push to `main`; open a PR.
 
