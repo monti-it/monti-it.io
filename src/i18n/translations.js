@@ -25,12 +25,12 @@ export const translations = {
     },
     header: {
       eyebrow: 'Développeur .Net senior · IA · AppSec',
-      title: "Du logiciel .Net solide et sûr, construit avec l'IA",
-      lead: 'Votre application .Net modernisée plus vite, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .Net me permettent de le juger avec un œil de sécurité.',
+      title: 'Du logiciel .Net solide et sûr, fait pour durer',
+      lead: 'Votre application .Net modernisée, sans rien céder sur la qualité : architecture robuste, code testé, failles fermées avant la prod. Des agents IA écrivent le code sous ma direction, et 21 ans de .Net me permettent de le juger avec un œil de sécurité.',
       ctaMore: 'En savoir plus',
       panelTitle: 'Expertise & impact',
       panelQuote:
-        "Diagnostic rapide, livraison fiable, code maintenable et sécurisé. J'aide les équipes à profiter de l'IA sans sacrifier la qualité.",
+        "Diagnostic rapide, livraison fiable, code maintenable et sécurisé. J'aide les équipes à moderniser leurs applications sans sacrifier la qualité.",
       panelAuthor: 'Missions courtes ou longues, ou projets au forfait'
     },
     themes: {
@@ -50,7 +50,7 @@ export const translations = {
             '.Net, Angular, React, bases de données, cloud et outils DevOps'
         },
         securite: {
-          title: 'AppSec & IA',
+          title: 'AppSec',
           description:
             'Contrôles de sécurité intégrés au CI/CD, revue de code orientée sécurité, sécurisation des fonctionnalités IA'
         },
@@ -83,7 +83,7 @@ export const translations = {
         'Du code .Net solide et sûr, une équipe qui progresse, un besoin clairement posé.',
       pillars: {
         ai: {
-          title: "Construire avec l'IA",
+          title: 'Construire',
           pitch:
             "Les agents IA écrivent, je cadre, je relis et je garde la main sur l'architecture."
         },
@@ -770,12 +770,12 @@ export const translations = {
     },
     header: {
       eyebrow: 'Senior .Net developer · AI · AppSec',
-      title: 'Solid, secure .Net software, built with AI',
-      lead: 'Your .Net application modernized faster, with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .Net let me judge it with a security mindset.',
+      title: 'Solid, secure .Net software, built to last',
+      lead: 'Your .Net application modernized with no compromise on quality: robust architecture, tested code, vulnerabilities closed before production. AI agents write the code under my direction, and 21 years of .Net let me judge it with a security mindset.',
       ctaMore: 'Learn more',
       panelTitle: 'Expertise & impact',
       panelQuote:
-        'Fast diagnosis, reliable delivery, maintainable and secure code. I help teams benefit from AI without sacrificing quality.',
+        'Fast diagnosis, reliable delivery, maintainable and secure code. I help teams modernize their applications without sacrificing quality.',
       panelAuthor: 'Short or long-term engagements, or fixed-price projects'
     },
     themes: {
@@ -795,7 +795,7 @@ export const translations = {
             '.Net, Angular, React, databases, cloud and DevOps tooling'
         },
         securite: {
-          title: 'AppSec & AI',
+          title: 'AppSec',
           description:
             'Security gates built into CI/CD, security-focused code review, securing AI features'
         },
@@ -828,7 +828,7 @@ export const translations = {
         'Solid, secure .Net code, a team that keeps growing, and requirements that are clearly defined.',
       pillars: {
         ai: {
-          title: 'Building with AI',
+          title: 'Build',
           pitch:
             'AI agents write the code; I frame it, review it and keep control of the architecture.'
         },
