@@ -28,7 +28,7 @@ function Footer() {
   const socialLinks = [
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/christophe-monti-22b97736/',
+      href: 'https://www.linkedin.com/in/christophe-monti/',
       icon: FaLinkedin
     },
     {
