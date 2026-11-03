@@ -136,12 +136,12 @@ accented letter, `·` or `•` is one, but "✔️" is two (✔ plus the variati
 one. Don't use `s.length`, which counts UTF-16 units. If a block is over its limit, shorten it and
 count again. A limit marked `unknown — copy from the platform's form` has no number to check against:
 count anyway, and print the count alone (step 6). For a skills list, count the skills, not the
-characters. Then check no block contains the phone number, with a script that prints only a verdict, never the
+characters. Then check each block on its own (joined blocks could run digits together) for the phone number, with a script that prints only a verdict, never the
 number:
 
 ```bash
 node -e 'const p=require("./src/data/resume.json").contact.phone.replace(/\D/g,"").replace(/^(33|0)/,"");let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(s.replace(/\D/g,"").includes(p)?"PHONE FOUND":"no phone"))' <<'__PROFILE_BLOCK_END__'
-<all the drafted blocks>
+<the block's text>
 __PROFILE_BLOCK_END__
 ```
 
