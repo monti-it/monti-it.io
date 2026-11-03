@@ -126,9 +126,9 @@ Node, which the repo already needs (Python isn't always installed: on Windows, `
 the Microsoft Store alias and fail):
 
 ```bash
-node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log([...s.replace(/\r/g,"").replace(/\n+$/,"")].length))' <<'EOF'
+node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log([...s.replace(/\r/g,"").replace(/\n+$/,"")].length))' <<'__PROFILE_BLOCK_END__'
 <the block's text>
-EOF
+__PROFILE_BLOCK_END__
 ```
 
 It drops `\r` and trailing newlines, then `[...s]` counts Unicode code points, as LinkedIn does: an
@@ -136,8 +136,17 @@ accented letter, `·` or `•` is one, but "✔️" is two (✔ plus the variati
 one. Don't use `s.length`, which counts UTF-16 units. If a block is over its limit, shorten it and
 count again. A limit marked `unknown — copy from the platform's form` has no number to check against:
 count anyway, and print the count alone (step 6). For a skills list, count the skills, not the
-characters. Then check no block contains the phone number: search the drafted
-text for the digits of `contact.phone` with spaces, dots and the leading `+33`/`0` stripped.
+characters. Then check no block contains the phone number, with a script that prints only a verdict, never the
+number:
+
+```bash
+node -e 'const p=require("./src/data/resume.json").contact.phone.replace(/\D/g,"").replace(/^(33|0)/,"");let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(s.replace(/\D/g,"").includes(p)?"PHONE FOUND":"no phone"))' <<'__PROFILE_BLOCK_END__'
+<all the drafted blocks>
+__PROFILE_BLOCK_END__
+```
+
+It compares digits only, so spaces, dots and a `+33` or leading `0` don't hide the number. On
+`PHONE FOUND`, remove it and check again.
 
 ## 6. Print
 

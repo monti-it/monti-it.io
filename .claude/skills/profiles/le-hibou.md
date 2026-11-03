@@ -10,7 +10,7 @@ with the client and the user invoices Le Hibou.
   them) right after "Développeur .Net senior", plus the critical sectors from
   `experience.items.<key>.sector`. Security stays an approach, not a title (see the wording rules).
 - **Language**: French by default. English when asked.
-- **Sections**: Title, Skills and Summary by default, then the CV reminder. Only the named section(s)
+- **Sections**: Title, Summary and Skills by default, then the CV reminder. Only the named section(s)
   when the user asks for one. No Experience entries: the CV carries them.
 - **Headline field**: Title. **Long-form field**: Summary (the one place "FullStack" goes).
 - **Contact details**: none. Leave the email and `monti-it.io` out of these fields: the profile holds

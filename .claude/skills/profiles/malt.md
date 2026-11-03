@@ -52,7 +52,7 @@ it here.
      contact details.
 - **Skills**: a longer keyword list than LinkedIn's 5, one per line, most important first: .Net, C#,
   ASP.NET Core and the other back-end names, then AppSec / application security, DevSecOps, CI/CD,
-  the cloud (e.g. Azure) and front-end names. Only names `Skills.jsx` or `resume.json` `skills` back;
+  Azure DevOps and front-end names. Only names `Skills.jsx` or `resume.json` `skills` back;
   use the names Malt's skill picker recognises. Print every backed skill and let the user trim to the
   form's limit.
 - **Experience**: one entry per item of `experienceMeta`, in that order. For each, print a reference

@@ -8,7 +8,7 @@ database.
 - **Emphasize**: the keywords a recruiter types for a senior .Net mission (title, skills), with the
   AppSec direction among them. Keep the summary short: the CV holds the detail.
 - **Language**: French by default. English when asked.
-- **Sections**: Title, Skills and Summary by default, then the CV reminder. Only the named section(s)
+- **Sections**: Title, Summary and Skills by default, then the CV reminder. Only the named section(s)
   when the user asks for one. No Experience entries: the CV carries them.
 - **Headline field**: Title. **Long-form field**: Summary (the one place "FullStack" goes).
 - **Contact details**: none. Leave the email and `monti-it.io` out of these fields: the profile holds
