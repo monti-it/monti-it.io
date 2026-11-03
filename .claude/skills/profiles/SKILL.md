@@ -1,6 +1,6 @@
 ---
 name: profiles
-description: Generate paste-ready freelance profile copy (LinkedIn Headline, About, Experience entries and Top skills) from the site and résumé sources, in French by default, English on request, or both, and print it in the session for copy-paste. Reads the sources fresh, applies the positioning wording rules, flags any drift between them, never prints the phone number, and writes nothing to the repo. Use when asked to "update my LinkedIn", for a "LinkedIn headline", "LinkedIn About" or "LinkedIn summary", or to "mettre à jour mon profil LinkedIn".
+description: Generate paste-ready freelance profile copy for LinkedIn (Headline, About, Experience entries, Top skills), Malt (profile title, description, skills, experiences), Free-Work and Le Hibou (title, skills, short summary, CV upload reminder) from the site and résumé sources, in French by default, English on request, or both, and print it in the session for copy-paste. Reads the sources fresh, applies the positioning wording rules, flags any drift between them, never prints the phone number or a day rate, and writes nothing to the repo. Use when asked to "update my LinkedIn", "update my Malt profile", "update my Free-Work profile", "update my Le Hibou profile" or "update all my profiles", for a "LinkedIn headline", "LinkedIn About", "LinkedIn summary" or "Malt description", or to "mettre à jour mon profil LinkedIn / Malt / Free-Work / Le Hibou" or "mettre à jour tous mes profils".
 ---
 
 # Freelance profile copy
@@ -13,9 +13,12 @@ This file holds what every platform shares: the sources, the drift check, the wo
 character count, the phone-number guard and the output format. Each platform's fields, limits,
 audience and emphasis live in its own file, next to this one:
 
-| Platform | File                       | Audience   | Asked for as                  |
-| -------- | -------------------------- | ---------- | ----------------------------- |
-| LinkedIn | [linkedin.md](linkedin.md) | Recruiters | "LinkedIn", "profil LinkedIn" |
+| Platform  | File                         | Audience                          | Asked for as                              |
+| --------- | ---------------------------- | --------------------------------- | ----------------------------------------- |
+| LinkedIn  | [linkedin.md](linkedin.md)   | Recruiters                        | "LinkedIn", "profil LinkedIn"             |
+| Malt      | [malt.md](malt.md)           | Clients searching the marketplace | "Malt", "profil Malt"                     |
+| Free-Work | [free-work.md](free-work.md) | ESNs searching a CV database      | "Free-Work", "Freework", "Freelance-info" |
+| Le Hibou  | [le-hibou.md](le-hibou.md)   | Large companies and public bodies | "Le Hibou", "Hibou", "profil Le Hibou"    |
 
 **Print, never write.** The output goes in the session. Don't create, edit or format any file, don't
 run `npm run format` or the `resume` skill, and don't `git add` or commit. `git status` must be the same
@@ -24,10 +27,14 @@ skill or an issue, not part of this run.
 
 ## 1. Read the request
 
-- **Platform**: the one the user names. Read its file now: it gives the platform's default language,
-  its sections and how to narrow them ("just the headline", one company), its limits and its content
+- **Platform**: the one the user names. "All my profiles" / "tous mes profils" means every platform,
+  in the table's order. With no platform named ("update my profile"), ask which one, listing the four
+  and "all". Read each requested platform's file now: it gives the platform's default language, its
+  sections and how to narrow them ("just the headline", one company), its limits and its content
   rules.
 - **Sections and language**: as the platform file says. By default, the whole profile in French.
+- **Day rate**: never propose, compute or print one, on any platform. It's the user's call and no
+  source file holds it.
 
 ## 2. Read the sources, every run
 
@@ -127,14 +134,18 @@ EOF
 It drops `\r` and trailing newlines, then `[...s]` counts Unicode code points, as LinkedIn does: an
 accented letter, `·` or `•` is one, but "✔️" is two (✔ plus the variation selector U+FE0F), while "📌" is
 one. Don't use `s.length`, which counts UTF-16 units. If a block is over its limit, shorten it and
-count again. Then check no block contains the phone number: search the drafted
+count again. A limit marked `unknown — copy from the platform's form` has no number to check against:
+count anyway, and print the count alone (step 6). For a skills list, count the skills, not the
+characters. Then check no block contains the phone number: search the drafted
 text for the digits of `contact.phone` with spaces, dots and the leading `+33`/`0` stripped.
 
 ## 6. Print
 
 For each section, in the platform file's print order, print the field name and the count as
-`n / limit`, then the text in its own fenced code block (`text`), so each one copies on its own. This
-is LinkedIn's output:
+`n / limit` (or `n chars`, `n skills` where the limit is unknown), then the text in its own fenced
+code block (`text`), so each one copies on its own. Then the platform file's closing reminder, if it
+has one. For several platforms, print each one in turn under its own `## Profil <Platform> (FR)`
+heading, and a single drift report at the very end. This is LinkedIn's output:
 
 ````markdown
 ## Profil LinkedIn (FR)
