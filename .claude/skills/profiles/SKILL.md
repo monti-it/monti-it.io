@@ -1,13 +1,21 @@
 ---
-name: linkedin
-description: Generate LinkedIn-ready profile copy (Headline, About, Experience entries, Top skills) from the site and résumé sources, in French by default, English on request, or both, and print it in the session for copy-paste. Reads the sources fresh, flags any drift between them, and writes nothing to the repo. Use when asked to "update my LinkedIn", for a "LinkedIn headline", "LinkedIn About" or "LinkedIn summary", or to "mettre à jour mon profil LinkedIn".
+name: profiles
+description: Generate paste-ready freelance profile copy (LinkedIn Headline, About, Experience entries and Top skills) from the site and résumé sources, in French by default, English on request, or both, and print it in the session for copy-paste. Reads the sources fresh, applies the positioning wording rules, flags any drift between them, never prints the phone number, and writes nothing to the repo. Use when asked to "update my LinkedIn", for a "LinkedIn headline", "LinkedIn About" or "LinkedIn summary", or to "mettre à jour mon profil LinkedIn".
 ---
 
-# LinkedIn profile copy
+# Freelance profile copy
 
-The LinkedIn profile (linked from the footer) is updated by hand, field by field. This skill turns the
-repo's content into text the user pastes into each field. It goes the other way from the
-[`resume`](../resume/SKILL.md) skill: it only reads.
+The user's public profiles are updated by hand, field by field. This skill turns the repo's content
+into text the user pastes into each field. It goes the other way from the [`resume`](../resume/SKILL.md)
+skill: it only reads.
+
+This file holds what every platform shares: the sources, the drift check, the wording rules, the
+character count, the phone-number guard and the output format. Each platform's fields, limits,
+audience and emphasis live in its own file, next to this one:
+
+| Platform | File                       | Audience   | Asked for as                  |
+| -------- | -------------------------- | ---------- | ----------------------------- |
+| LinkedIn | [linkedin.md](linkedin.md) | Recruiters | "LinkedIn", "profil LinkedIn" |
 
 **Print, never write.** The output goes in the session. Don't create, edit or format any file, don't
 run `npm run format` or the `resume` skill, and don't `git add` or commit. `git status` must be the same
@@ -16,12 +24,10 @@ skill or an issue, not part of this run.
 
 ## 1. Read the request
 
-- **Sections**: the whole profile by default (Headline, About, every Experience entry, Top skills). Only
-  the named section(s) when the user asks for one ("just the headline", "my About"); a single Experience
-  entry when they name a company.
-- **Language**: French by default (LinkedIn's primary profile). English when asked (LinkedIn's
-  secondary-language profile). Both when asked for both: print all French sections, then all English ones.
-  "My LinkedIn headline in English" means the English Headline only, nothing else.
+- **Platform**: the one the user names. Read its file now: it gives the platform's default language,
+  its sections and how to narrow them ("just the headline", one company), its limits and its content
+  rules.
+- **Sections and language**: as the platform file says. By default, the whole profile in French.
 
 ## 2. Read the sources, every run
 
@@ -34,10 +40,11 @@ the copy changes whenever the positioning does, and this skill only describes wh
 | [src/components/Experience.jsx](../../../src/components/Experience.jsx)    | `experienceMeta`: the roles shown on the site, **in display order**, with `company`, `location`, `project`, `tech`. This list decides which Experience entries you print.                                                                                                    |
 | [src/data/resume.json](../../../src/data/resume.json)                      | `title` (one language-neutral string), `profile.fr`/`en` (the CV summary), the 3 curated `experience[]` roles, `languages[]`, `skills.categories`, and `additional.careerHistory` (the detailed timeline with tasks and full tech environments, `fr`/`en` blocks per entry). |
 | [src/components/Footer.jsx](../../../src/components/Footer.jsx)            | The LinkedIn profile URL and the other public links. The contact email comes from `src/data/contact.js`.                                                                                                                                                                     |
-| [src/components/Skills.jsx](../../../src/components/Skills.jsx) (optional) | `skillCategories`: the full skill list, including the `securite` category, for picking Top skills.                                                                                                                                                                           |
+| [src/components/Skills.jsx](../../../src/components/Skills.jsx) (optional) | `skillCategories`: the full skill list, including the `securite` category, for picking skills.                                                                                                                                                                               |
 
-`resume.json` holds a phone number in `contact.phone`. **It never goes in any LinkedIn section**, in any
-format (with or without `+33`, spaces or dots). The email and `monti-it.io` may appear in About.
+`resume.json` holds a phone number in `contact.phone`. **It never goes in any section of any
+platform**, in any format (with or without `+33`, spaces or dots). The email and `monti-it.io` may
+appear only where the platform file allows them.
 
 ## 3. Check for drift before drafting
 
@@ -62,27 +69,31 @@ Check at least:
 
 ## 4. Draft each section
 
+Each platform file names its **headline field** (the short title under the name) and its **long-form
+field** (the About, description or summary). The rules below use those two terms.
+
 ### Start from the current text, when the user gives it
 
-If the user pastes (or points to) their current LinkedIn text for a section, read it before drafting
-that section. Keep what is still true and on-positioning (its strong points, structure and phrasing),
+If the user pastes (or points to) their current text for a section, read it before drafting that
+section. Keep what is still true and on-positioning (its strong points, structure and phrasing),
 rewrite the rest from the sources, and list what you dropped or changed as outdated, under an
 **Outdated in the current text** heading before the drift report (step 6). Outdated means, for example:
 
 - a years count other than the current year minus 2005;
 - ".NET" in capitals outside "ASP.NET";
-- "FullStack" anywhere but once in About;
+- "FullStack" anywhere but once in the long-form field;
 - no mention of AI agents or of application security;
 - anything breaking a wording rule below, or a fact no source file backs.
 
 The pasted text is input only: this still prints, never writes.
 
-### Wording rules (positioning, decided in #70)
+### Wording rules (positioning, decided in #70), for every platform
 
-- Keep **"Développeur .Net senior"** (EN: "Senior .Net developer") visible, in the Headline and early in
-  About, so recruiter searches on .Net find the profile.
-- Say **"FullStack"** once in About, as a search keyword ("Développeur .Net FullStack senior" / "Senior
-  .Net FullStack developer"), and nowhere else: not in the Headline, Experience or Top skills.
+- Keep **"Développeur .Net senior"** (EN: "Senior .Net developer") visible, in the headline field and
+  early in the long-form field, so recruiter and client searches on .Net find the profile.
+- Say **"FullStack"** once in the long-form field, as a search keyword ("Développeur .Net FullStack
+  senior" / "Senior .Net FullStack developer"), and nowhere else: not in the headline field,
+  Experience entries or skill lists.
 - Write **".Net"**, never ".NET", except in the product name "ASP.NET" ("ASP.NET Core", "ASP.NET MVC").
 - Imply that **AI agents write the code and Christophe frames, reviews and owns it**. Say it plainly
   ("des agents IA écrivent le code sous ma direction : je cadre, je relis et je réponds du résultat"),
@@ -94,59 +105,12 @@ The pasted text is input only: this still prints, never writes.
   `resume.json`. Without one, security is an approach and a direction, not a title: "AppSec" names a
   field, never a role.
 - Never use the words **"retraite"** / "retired" or **"maker"**.
-- Don't project AI onto past roles: only the current role and the About may mention AI agents. Every fact
-  (company, dates, team size, technology, result) must come from a source file; invent none.
-- First person in About and Experience descriptions; same tone as the site copy.
+- Don't project AI onto past roles: only the current role and the long-form field may mention AI
+  agents. Every fact (company, dates, team size, technology, result) must come from a source file;
+  invent none.
+- First person in the long-form field and Experience descriptions; same tone as the site copy.
 
-### Field limits (LinkedIn's, in characters)
-
-| Section              | LinkedIn field         | Limit    |
-| -------------------- | ---------------------- | -------- |
-| Headline             | Headline               | 220      |
-| About                | About                  | 2,600    |
-| Experience, per role | Title (position title) | 100      |
-| Experience, per role | Description            | 2,000    |
-| Top skills           | Top skills             | 5 skills |
-
-### Content
-
-- **Headline**: start from `header.eyebrow`, add the freelance status and the value in `header.title` /
-  `header.lead`. Aim for 120 to 220 characters; LinkedIn truncates around 120 in search results, so the
-  first 120 must stand alone.
-- **About**: plain text (LinkedIn renders no Markdown; line breaks are kept), short paragraphs and
-  lists, in this order. Aim for 1,500 to 2,200 characters.
-  1. **Opening**, from `resume.json` `profile` and `header.lead`: "Développeur .Net FullStack senior"
-     (the one FullStack), what the user does for clients, and how (AI agents + review + application
-     security).
-  2. **Years and sectors**: the years count (current year minus 2005), the sectors from `profile` and
-     `experience.items.<key>.sector`, including logistique / logistics (backed by the BA Systemes entry
-     in `additional.careerHistory`), and "en environnement Agile" / "in Agile environments".
-  3. **"Mon positionnement freelance :"** (EN: "How I work as a freelancer:"), one `•` bullet per
-     point: taking over complex projects and modernizing existing systems; joining a team on hard
-     technical topics; cutting technical debt and making applications reliable; clean, maintainable
-     architectures; industrializing the development cycle (CI/CD, quality, application security);
-     technical leadership and mentoring. Word them from the Expertise page copy in
-     `translations.js`: `expertise.pillars` and `expertise.items` (`modernisation`, `analyse`,
-     `craftsmanship`, `cicd`, `devsecops`, `leadership`, `coaching`), and the matching detail
-     namespaces (`modernisation.*`, `craftsmanship.*`, `coaching.*`, ...).
-  4. **"Expertises clés :"** (EN: "Key expertise:"), one `✔️` line per group, not a one-line "Stack :":
-     .Net Core / ASP.NET Core / Web API; Angular / React / TypeScript; architecture, Clean Code, SOLID,
-     REST; CI/CD and DevSecOps; coaching and technical leadership. Take the names from `Skills.jsx`
-     and `resume.json` `skills`, and drop a group no source backs.
-  5. **Availability**: "📌 Disponible pour des missions freelance (court, moyen ou long terme) ou des
-     projets au forfait." (EN: "📌 Available for freelance assignments (short, medium or long term) or
-     fixed-price projects."), then the email and `monti-it.io`, one per line.
-- **Experience**: one entry per item of `experienceMeta`, in that order (5 today). For each, print a
-  reference line outside the code block with the fields the user fills by hand (company, location,
-  period, sector), then two code blocks:
-  - **Title**: `experience.items.<key>.role`, unchanged unless it exceeds 100 characters.
-  - **Description**: the role's `description`, then its `achievements` as `•` bullets, then the
-    project (`experienceMeta.project`) and its `tech` on one line. You may add tasks from the matching
-    `additional.careerHistory` entry, in the language of the profile (its `fr` or `en` block).
-- **Top skills**: exactly 5 LinkedIn skills, one per line, taken from `Skills.jsx` / `resume.json`
-  `skills`. Include .Net (or C#) and ASP.NET Core, one application-security skill (e.g. "Sécurité
-  applicative" / "Application Security", or "OWASP Top 10"), and the rest from DevOps/architecture.
-  Use names LinkedIn's skill picker recognises.
+Then draft each of the platform's sections from its file's **Content** rules.
 
 ## 5. Count characters with a script
 
@@ -168,9 +132,9 @@ text for the digits of `contact.phone` with spaces, dots and the leading `+33`/`
 
 ## 6. Print
 
-For each section, in this order (Headline, About, Experience, Top skills), print the LinkedIn field name
-and the count as `n / limit`, then the text in its own fenced code block (`text`), so each one copies on
-its own:
+For each section, in the platform file's print order, print the field name and the count as
+`n / limit`, then the text in its own fenced code block (`text`), so each one copies on its own. This
+is LinkedIn's output:
 
 ````markdown
 ## Profil LinkedIn (FR)
