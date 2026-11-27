@@ -39,7 +39,7 @@ const LABELS = {
     results: 'Résultats',
     environment: 'Environnement',
     project: 'Projet',
-    mission: 'Mission',
+    objectives: 'Objectifs',
     tasks: 'Tâches accomplies',
     colon: ' : '
   },
@@ -55,7 +55,7 @@ const LABELS = {
     results: 'Results',
     environment: 'Environment',
     project: 'Project',
-    mission: 'Mission',
+    objectives: 'Objectives',
     tasks: 'Tasks',
     colon: ': '
   }
@@ -233,15 +233,15 @@ function CareerHistory(items, lang, labels) {
                 `${labels.project}${labels.colon}${item.projects}`
               )
             : null,
-          // A `mission` paragraph (what the client expected) takes the place of
+          // An `objectives` paragraph (what the client expected) takes the place of
           // the task list.
-          item.mission
+          item.objectives
             ? e(
                 Text,
                 {
                   style: [styles.careerLine, { marginTop: 2, marginBottom: 2 }]
                 },
-                `${labels.mission}${labels.colon}${item.mission}`
+                `${labels.objectives}${labels.colon}${item.objectives}`
               )
             : item.tasks && item.tasks.length > 0
               ? e(

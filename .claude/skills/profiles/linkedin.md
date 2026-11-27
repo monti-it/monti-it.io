@@ -57,7 +57,7 @@ The LinkedIn profile, linked from the footer.
   period, sector), then two code blocks:
   - **Title**: `experience.items.<key>.role`, unchanged unless it exceeds 100 characters.
   - **Description**: the role's `description`, then its `achievements` as `•` bullets, then the
-    project (`experienceMeta.project`) and its `tech` on one line. You may add tasks (or its `mission`, where it has one) from the matching
+    project (`experienceMeta.project`) and its `tech` on one line. You may add tasks (or its `objectives`, where it has some) from the matching
     `additional.careerHistory` entry, in the language of the profile (its `fr` or `en` block).
 - **Top skills**: exactly 5 LinkedIn skills, one per line, taken from `Skills.jsx` / `resume.json`
   `skills`. Include .Net (or C#) and ASP.NET Core, one application-security skill (e.g. "Sécurité

@@ -1,8 +1,8 @@
 # From a repo: turn an application repo into résumé facts
 
-Used when the request is `from <repo>`. The output is a **brief**: a short _mission_ paragraph (what
-was expected of the work) and a list of claims about the user's work on that repo, each with its
-evidence. Once the user confirms the brief, its mission and rows are the request for step 2 of
+Used when the request is `from <repo>`. The output is a **brief**: a short _objectives_ paragraph
+(what was expected of the work) and a list of claims about the user's work on that repo, each with its
+evidence. Once the user confirms the brief, its objectives and rows are the request for step 2 of
 [SKILL.md](SKILL.md), and the rest of the skill runs as usual.
 
 `<repo>` is either:
@@ -11,7 +11,7 @@ evidence. Once the user confirms the brief, its mission and rows are the request
   (`/resume from monti-it/io.m3i.ledgy`), read through `gh` without cloning. This is the preferred
   form: it reaches the issues, which hold what was expected.
 - **a local checkout** (`/resume from ~/repos/io.m3i.ledgy`). If its `origin` is on GitHub and `gh`
-  reaches it, read the issues and PRs from there too. Otherwise the only mission evidence is the
+  reaches it, read the issues and PRs from there too. Otherwise the only objectives evidence is the
   README and docs: say so in the brief.
 
 If `gh` can't reach the repo and there's no checkout, ask the user to clone it, or to give a brief
@@ -32,15 +32,18 @@ file instead (see _Input: a brief file_).
   and PRs did. Find the user's identities with `git -C <path> shortlog -sne --all` (checkout) or
   `gh api repos/<owner>/<name>/contributors --jq '.[] | [.login, .contributions]'` (GitHub), matched
   against `git config user.name` and `gh api user --jq .login` here. If several identities could be
-  theirs, ask which. The mission is the exception: it describes what was asked, so it may draw on
-  issues anyone wrote.
-- **Confidential by default.** A repo is _public_ only if its GitHub visibility is public
-  (`gh repo view <owner>/<name> --json visibility,owner`) or the user says so. For any other repo,
-  the mission and every claim are _confidential_ until the user marks them public. Confidential text
-  can be generic ("multi-tenant SaaS API on Kubernetes") but never names the client, the product,
-  internal hosts, IPs, people, data or anything security-sensitive. The client's name may appear only
-  if `resume.json` already names it. Issues are where these slip in most (hostnames in bug reports,
-  people in assignments and mentions), and the mission follows the same rule.
+  theirs, ask which. The objectives are the exception: they describe what was asked, so they may
+  draw on issues anyone wrote.
+- **Displayed by default, with a warning.** The user wants a private repo's work on the résumé too,
+  so a private repo is no reason to hide it: the objectives and claims may name the product and its
+  repo. Check its visibility (`gh repo view <owner>/<name> --json visibility,owner`) and, when it
+  isn't public, open the brief with a one-line warning that the PDF is public and that the content
+  comes from a private repo. Even then, never write internal hosts, IPs, credentials, people other
+  than the user, real data or anything security-sensitive (an unfixed weakness, a network layout),
+  and name a client only if `resume.json` already names it. Issues are where these slip in most
+  (hostnames in bug reports, people in assignments and mentions), and the objectives follow the
+  same rule. The user can still mark a row or the objectives _confidential_: they are then written
+  generically ("multi-tenant SaaS API on Kubernetes").
 
 ## 1. Gather
 
@@ -55,7 +58,7 @@ GitHub repo, the commands are in _Reading through gh_ below.
    (TDD, DDD, architecture tests, security scanning, CI/CD, IaC).
 4. History, limited to the user's identities: first and last commit dates, commit count, and merged
    PR count.
-5. Issues, for the mission: list them all (open and closed) by title, labels and milestone, then read
+5. Issues, for the objectives: list them all (open and closed) by title, labels and milestone, then read
    the bodies of the ones that set the goal: the earliest ones, epics or parent issues, milestones,
    and any _Context_/_Goal_/_Proposal_ section. You want what was expected and why (the problem, the
    users, the constraints), not the list of what got done: that's what the claims are for.
@@ -80,9 +83,9 @@ The period comes from the user's first and last merged PR, or from their commits
 (`gh api "repos/$R/commits?author=<login>&per_page=100" --paginate --jq '.[].commit.author.date'`).
 Read manifests and docs one file at a time with `contents`. Don't download the whole tree.
 
-## 2. Write the mission
+## 2. Write the objectives
 
-From the issues and the README, write the mission in 2 or 3 sentences, in French and English: the
+From the issues and the README, write the objectives in 2 or 3 sentences, in French and English: the
 goal of the work, for whom, and the constraints that shaped it. Phrase it as what was expected
 ("Fournir à un indépendant un outil unique pour suivre son temps, ses frais et ses déplacements,
 hébergé et sécurisé par ses soins"), not as a task list, and keep its evidence: the issue numbers
@@ -90,10 +93,10 @@ and files it rests on. Numbers and wording follow the same rules as the claims.
 
 Where it goes depends on the target of the work (see _Place each claim_):
 
-- **An `additional.careerHistory` entry:** its `fr.mission`/`en.mission`. The PDF renders it as a
-  _Mission_ paragraph **in place of** the _Tâches accomplies_ list, so the entry's `tasks` are no
+- **An `additional.careerHistory` entry:** its `fr.objectives`/`en.objectives`. The PDF renders it as
+  an _Objectifs_ paragraph **in place of** the _Tâches accomplies_ list, so the entry's `tasks` are no
   longer shown. Leave them in the file unless the user asks to remove them.
-- **A curated `experience` role:** no new field. The mission can rework the opening of that role's
+- **A curated `experience` role:** no new field. The objectives can rework the opening of that role's
   `description`, but only if the user asks.
 
 ## 3. Place each claim (on the existing structure only)
@@ -108,7 +111,7 @@ step 3 table already lists:
   `Skills.jsx` only if the user asks for it on both sides).
 - **No role fits** (the user's own product, or a client not on the résumé): don't create an entry
   yourself. Mark the target `?` and ask whether to put it under skills only, add it to
-  `additional.careerHistory` (with the mission), or make it one of the 3 curated `experience` roles
+  `additional.careerHistory` (with the objectives), or make it one of the 3 curated `experience` roles
   (which replaces one or makes the PDF longer).
 
 ## 4. Show the brief
@@ -116,11 +119,13 @@ step 3 table already lists:
 Print it in the session; write nothing yet.
 
 ```markdown
-## Brief: <repo name> (<public | confidential>)
+## Brief: <repo name> (<public | private>)
+
+<for a private repo: ⚠️ one-line warning that this private repo's work will appear in the public PDF>
 
 <one sentence: what the app does, for whom, the user's role, period from git>
 
-**Mission** (target: `careerHistory` entry | `experience.<key>.description` | `?`; evidence: #1, #12, `README.md`)
+**Objectives** (target: `careerHistory` entry | `experience.<key>.description` | `?`; evidence: #1, #12, `README.md`)
 
 - fr: <2–3 sentences>
 - en: <2–3 sentences>
@@ -133,14 +138,14 @@ Print it in the session; write nothing yet.
 **Left out:** <claims considered and dropped, with the reason>
 ```
 
-The user can drop, reword, re-target or change the visibility of the mission or of any row. Apply
+The user can drop, reword, re-target or change the visibility of the objectives or of any row. Apply
 only what they confirm, then go to step 2 of SKILL.md with it. In the step 6 hand-off, name the
-brief's repo, the rows applied, and whether the mission was.
+brief's repo, the rows applied, and whether the objectives were.
 
 ## Input: a brief file
 
 `/resume from <file.md>`, where the file follows the format above (written by hand, or by a session
-that could reach a repo this machine can't). Skip _Gather_ and _Write the mission_. Check that the
-mission and each row have evidence, a visibility and a target, ask about the ones that don't, then go
+that could reach a repo this machine can't). Skip _Gather_ and _Write the objectives_. Check that the
+objectives and each row have evidence, a visibility and a target, ask about the ones that don't, then go
 to _Show the brief_. The rules on confidentiality still apply: a client name not already in
 `resume.json` is removed or asked about.
