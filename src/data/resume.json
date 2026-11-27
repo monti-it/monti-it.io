@@ -238,36 +238,12 @@
       {
         "company": "Monti IT",
         "location": "Lyon (69)",
-        "environment": [
-          ".Net 10",
-          "C#",
-          "ASP.Net Core",
-          "Web API",
-          "Entity Framework Core",
-          "PostgreSQL 18",
-          "React 19",
-          "TypeScript",
-          "Vite",
-          "TanStack Query",
-          "xUnit",
-          "NetArchTest",
-          "Testcontainers",
-          "OpenTelemetry",
-          "Docker",
-          "k3s",
-          "Kubernetes",
-          "Terraform",
-          "GitHub Actions",
-          "Trivy",
-          "kube-score",
-          "Claude Code"
-        ],
         "fr": {
           "period": "Depuis 08/2026",
           "sector": "outil de gestion pour indépendants",
           "role": "Indépendant",
           "projects": "Ledgy - 1 pers.",
-          "objectives": "Fournir à un consultant indépendant au forfait jour un outil unique pour piloter son activité : jours travaillés par bon de commande, notes de frais kilométriques au barème officiel, exports Excel pour le client et tableau de bord du chiffre d'affaires. Auto-hébergé, multi-utilisateur derrière SSO, avec une exigence DevSecOps : scans dans le CI, moindre privilège et sauvegardes testées. Réalisé avec des agents IA sous ma direction : API .Net 10 modulaire (DDD, TDD, tests d'architecture), déploiement durci sur k3s, CI/CD DevSecOps et sauvegardes chiffrées avec test de restauration automatisé.",
+          "objectives": "Fournir à un consultant indépendant au forfait jour un outil unique pour piloter son activité : jours travaillés par bon de commande, notes de frais kilométriques au barème officiel, exports Excel pour le client et tableau de bord du chiffre d'affaires. Auto-hébergé, multi-utilisateur derrière SSO, avec une exigence DevSecOps : scans dans le CI, moindre privilège et sauvegardes testées.",
           "tasks": [
             "API .Net 10 modulaire (DDD, 7 modules) et front React/TypeScript, codés par des agents IA sous ma direction",
             "Tests d'architecture (NetArchTest), TDD, CQRS-lite, tests d'intégration (Testcontainers)",
@@ -277,6 +253,27 @@
             "Garde-fous sur les risques IA posés avant toute fonctionnalité IA",
             "Règles de l'organisation GitHub en code (Terraform)",
             "Observabilité avec OpenTelemetry"
+          ],
+          "environment": [
+            ".Net 10 (API modulaire, DDD, TDD, CQRS-lite)",
+            "C#",
+            "ASP.Net Core",
+            "Entity Framework Core",
+            "PostgreSQL 18",
+            "React 19",
+            "TypeScript",
+            "Vite",
+            "TanStack Query",
+            "xUnit",
+            "NetArchTest (tests d'architecture)",
+            "Testcontainers",
+            "OpenTelemetry",
+            "Docker",
+            "k3s durci (NetworkPolicies, journal d'audit)",
+            "Terraform",
+            "CI/CD DevSecOps (GitHub Actions, Trivy, kube-score)",
+            "sauvegardes chiffrées avec test de restauration automatisé",
+            "agents IA (Claude Code)"
           ]
         },
         "en": {
@@ -284,7 +281,7 @@
           "sector": "business tool for freelancers",
           "role": "Freelance",
           "projects": "Ledgy - 1 person",
-          "objectives": "Give a day-rate independent consultant a single tool to run their business: days worked per purchase order, mileage expense claims at the official rate, Excel exports for the client and a revenue dashboard. Self-hosted and multi-user behind SSO, with a DevSecOps bar: scans in CI, least privilege and tested backups. Built with AI agents under my direction: a modular .Net 10 API (DDD, TDD, architecture tests), a hardened k3s deployment, DevSecOps CI/CD and encrypted backups with an automated restore test.",
+          "objectives": "Give a day-rate independent consultant a single tool to run their business: days worked per purchase order, mileage expense claims at the official rate, Excel exports for the client and a revenue dashboard. Self-hosted and multi-user behind SSO, with a DevSecOps bar: scans in CI, least privilege and tested backups.",
           "tasks": [
             "Modular .Net 10 API (DDD, 7 modules) and React/TypeScript front end, coded by AI agents under my direction",
             "Architecture tests (NetArchTest), TDD, CQRS-lite, integration tests (Testcontainers)",
@@ -294,6 +291,27 @@
             "AI risk guardrails set before any AI feature",
             "GitHub organization rules as code (Terraform)",
             "Observability with OpenTelemetry"
+          ],
+          "environment": [
+            ".Net 10 (modular API, DDD, TDD, CQRS-lite)",
+            "C#",
+            "ASP.Net Core",
+            "Entity Framework Core",
+            "PostgreSQL 18",
+            "React 19",
+            "TypeScript",
+            "Vite",
+            "TanStack Query",
+            "xUnit",
+            "NetArchTest (architecture tests)",
+            "Testcontainers",
+            "OpenTelemetry",
+            "Docker",
+            "hardened k3s (NetworkPolicies, audit log)",
+            "Terraform",
+            "DevSecOps CI/CD (GitHub Actions, Trivy, kube-score)",
+            "encrypted backups with an automated restore test",
+            "AI agents (Claude Code)"
           ]
         }
       },
