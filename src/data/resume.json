@@ -267,7 +267,7 @@
           "sector": "outil de gestion pour indépendants",
           "role": "Indépendant",
           "projects": "Ledgy - 1 pers.",
-          "objectives": "Fournir à un consultant indépendant au forfait jour un outil unique pour piloter son activité : jours travaillés par bon de commande, notes de frais kilométriques au barème officiel, exports Excel pour le client et tableau de bord du chiffre d'affaires. Auto-hébergé, multi-utilisateur derrière SSO, avec une exigence DevSecOps : scans dans le CI, moindre privilège et sauvegardes testées.",
+          "objectives": "Fournir à un consultant indépendant au forfait jour un outil unique pour piloter son activité : jours travaillés par bon de commande, notes de frais kilométriques au barème officiel, exports Excel pour le client et tableau de bord du chiffre d'affaires. Auto-hébergé, multi-utilisateur derrière SSO, avec une exigence DevSecOps : scans dans le CI, moindre privilège et sauvegardes testées. Réalisé avec des agents IA sous ma direction : API .Net 10 modulaire (DDD, TDD, tests d'architecture), déploiement durci sur k3s, CI/CD DevSecOps et sauvegardes chiffrées avec test de restauration automatisé.",
           "tasks": [
             "API .Net 10 modulaire (DDD, 7 modules) et front React/TypeScript, codés par des agents IA sous ma direction",
             "Tests d'architecture (NetArchTest), TDD, CQRS-lite, tests d'intégration (Testcontainers)",
@@ -284,7 +284,7 @@
           "sector": "business tool for freelancers",
           "role": "Freelance",
           "projects": "Ledgy - 1 person",
-          "objectives": "Give a day-rate independent consultant a single tool to run their business: days worked per purchase order, mileage expense claims at the official rate, Excel exports for the client and a revenue dashboard. Self-hosted and multi-user behind SSO, with a DevSecOps bar: scans in CI, least privilege and tested backups.",
+          "objectives": "Give a day-rate independent consultant a single tool to run their business: days worked per purchase order, mileage expense claims at the official rate, Excel exports for the client and a revenue dashboard. Self-hosted and multi-user behind SSO, with a DevSecOps bar: scans in CI, least privilege and tested backups. Built with AI agents under my direction: a modular .Net 10 API (DDD, TDD, architecture tests), a hardened k3s deployment, DevSecOps CI/CD and encrypted backups with an automated restore test.",
           "tasks": [
             "Modular .Net 10 API (DDD, 7 modules) and React/TypeScript front end, coded by AI agents under my direction",
             "Architecture tests (NetArchTest), TDD, CQRS-lite, integration tests (Testcontainers)",
