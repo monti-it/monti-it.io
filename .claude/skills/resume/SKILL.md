@@ -1,6 +1,6 @@
 ---
 name: resume
-description: Update the résumé/CV from a conversational request (e.g. "I got a new certification, add it", "tighten the Clauger description", "bump my years of experience"). Edits src/data/resume.json (both languages where relevant), updates any site component/translation that mirrors the same fact, and regenerates public/resume-fr.pdf and public/resume-en.pdf. Leaves everything unstaged for review — never commits. Use when asked to "update/add to my résumé", "add a certification/role/skill to my CV", "regenerate the resume PDF", or "sync a résumé change to the site".
+description: Update the résumé/CV from a conversational request (e.g. "I got a new certification, add it", "tighten the Clauger description", "bump my years of experience"). Edits src/data/resume.json (both languages where relevant), updates any site component/translation that mirrors the same fact, and regenerates public/resume-fr.pdf and public/resume-en.pdf. Leaves everything unstaged for review — never commits. With `from <path>` it first reads an application repo (read-only) and proposes résumé facts from it, each with its evidence and a public/confidential mark, applied only once confirmed. Use when asked to "update my résumé from this repo", "add Ledgy to my CV", or when asked to "update/add to my résumé", "add a certification/role/skill to my CV", "regenerate the resume PDF", or "sync a résumé change to the site".
 ---
 
 # Résumé (CV) update
@@ -23,6 +23,9 @@ the site and needs the same edit there.
 Read the request as a diff on real-world facts (new cert, new role, tightened wording, corrected date,
 new skill), not as an instruction to touch a specific file. One conversational request can span zero, one,
 or several of the areas below.
+
+When the request is `from <path>` (an application repo) or `from <file.md>` (a brief), follow
+[from-repo.md](from-repo.md) first. The rows of the brief the user confirms are the request.
 
 ## 2. Edit `src/data/resume.json`
 
