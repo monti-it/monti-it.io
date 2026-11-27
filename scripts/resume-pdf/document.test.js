@@ -89,6 +89,47 @@ describe('résumé PDF contact line', () => {
   })
 })
 
+describe('résumé PDF career history', () => {
+  const withEntry = (entry) => ({
+    ...resume,
+    additional: { ...resume.additional, careerHistory: [entry] }
+  })
+  const entry = {
+    company: 'Acme',
+    location: 'Lyon (69)',
+    environment: ['C#'],
+    fr: {
+      period: '2026',
+      sector: 'logiciel',
+      role: 'Indépendant',
+      tasks: ['Une tâche']
+    }
+  }
+
+  it('lists the tasks when the entry has no mission', () => {
+    const text = renderedText(buildResumeDocument(withEntry(entry), 'fr')).join(
+      '\n'
+    )
+
+    expect(text).toContain('Tâches accomplies')
+    expect(text).toContain('Une tâche')
+  })
+
+  it('renders the mission paragraph in place of the tasks', () => {
+    const mission = 'Livrer une API pour suivre le temps passé.'
+    const text = renderedText(
+      buildResumeDocument(
+        withEntry({ ...entry, fr: { ...entry.fr, mission } }),
+        'fr'
+      )
+    ).join('\n')
+
+    expect(text).toContain(`Mission : ${mission}`)
+    expect(text).not.toContain('Tâches accomplies')
+    expect(text).not.toContain('Une tâche')
+  })
+})
+
 describe('resume.json translations', () => {
   it('has English content for the additional block', () => {
     expect(frBlockOwners(resume.additional, 'additional')).not.toEqual([])

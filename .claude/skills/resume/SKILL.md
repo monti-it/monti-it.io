@@ -1,6 +1,6 @@
 ---
 name: resume
-description: Update the résumé/CV from a conversational request (e.g. "I got a new certification, add it", "tighten the Clauger description", "bump my years of experience"). Edits src/data/resume.json (both languages where relevant), updates any site component/translation that mirrors the same fact, and regenerates public/resume-fr.pdf and public/resume-en.pdf. Leaves everything unstaged for review — never commits. With `from <path>` it first reads an application repo (read-only) and proposes résumé facts from it, each with its evidence and a public/confidential mark, applied only once confirmed. Use when asked to "update my résumé from this repo", "add Ledgy to my CV", or when asked to "update/add to my résumé", "add a certification/role/skill to my CV", "regenerate the resume PDF", or "sync a résumé change to the site".
+description: Update the résumé/CV from a conversational request (e.g. "I got a new certification, add it", "tighten the Clauger description", "bump my years of experience"). Edits src/data/resume.json (both languages where relevant), updates any site component/translation that mirrors the same fact, and regenerates public/resume-fr.pdf and public/resume-en.pdf. Leaves everything unstaged for review — never commits. With `from <owner/repo>` (read through gh, issues included) or `from <path>` it first reads an application repo (read-only) and proposes a mission paragraph (what was expected, deduced from the issues) and résumé facts, each with its evidence and a public/confidential mark, applied only once confirmed. Use when asked to "update my résumé from this repo", "add Ledgy to my CV", or when asked to "update/add to my résumé", "add a certification/role/skill to my CV", "regenerate the resume PDF", or "sync a résumé change to the site".
 ---
 
 # Résumé (CV) update
@@ -24,8 +24,8 @@ Read the request as a diff on real-world facts (new cert, new role, tightened wo
 new skill), not as an instruction to touch a specific file. One conversational request can span zero, one,
 or several of the areas below.
 
-When the request is `from <path>` (an application repo) or `from <file.md>` (a brief), follow
-[from-repo.md](from-repo.md) first. The rows of the brief the user confirms are the request.
+When the request is `from <owner/repo>` or `from <path>` (an application repo) or `from <file.md>` (a brief), follow
+[from-repo.md](from-repo.md) first. The mission and rows of the brief the user confirms are the request.
 
 ## 2. Edit `src/data/resume.json`
 
@@ -42,7 +42,8 @@ Structure (see the file for full examples):
   lists), `education[]` (neutral `year`/`institution`, per-language `title`) and `careerHistory[]`
   (neutral `company`/`location`/`environment`, per-language `period`, `sector`, `role`, `projects`,
   `tasks`; a language block may also carry its own `environment` when the entry's isn't just proper
-  nouns). Translate both languages. Nothing here has a site counterpart — never touch site files for
+  nouns, and an optional `mission`: a 2–3 sentence paragraph of what was expected, which the PDF
+  renders in place of the `tasks` list). Translate both languages. Nothing here has a site counterpart — never touch site files for
   these.
 
 Every `fr` block needs an `en` block with the same keys and list lengths: `npm run test` fails

@@ -39,6 +39,7 @@ const LABELS = {
     results: 'Résultats',
     environment: 'Environnement',
     project: 'Projet',
+    mission: 'Mission',
     tasks: 'Tâches accomplies',
     colon: ' : '
   },
@@ -54,6 +55,7 @@ const LABELS = {
     results: 'Results',
     environment: 'Environment',
     project: 'Project',
+    mission: 'Mission',
     tasks: 'Tasks',
     colon: ': '
   }
@@ -231,18 +233,28 @@ function CareerHistory(items, lang, labels) {
                 `${labels.project}${labels.colon}${item.projects}`
               )
             : null,
-          item.tasks && item.tasks.length > 0
+          // A `mission` paragraph (what the client expected) takes the place of
+          // the task list.
+          item.mission
             ? e(
-                View,
-                { style: { marginTop: 2, marginBottom: 2 } },
-                e(
-                  Text,
-                  { style: styles.careerLine },
-                  `${labels.tasks}${labels.colon.trimEnd()}`
-                ),
-                BulletList(item.tasks)
+                Text,
+                {
+                  style: [styles.careerLine, { marginTop: 2, marginBottom: 2 }]
+                },
+                `${labels.mission}${labels.colon}${item.mission}`
               )
-            : null,
+            : item.tasks && item.tasks.length > 0
+              ? e(
+                  View,
+                  { style: { marginTop: 2, marginBottom: 2 } },
+                  e(
+                    Text,
+                    { style: styles.careerLine },
+                    `${labels.tasks}${labels.colon.trimEnd()}`
+                  ),
+                  BulletList(item.tasks)
+                )
+              : null,
           e(
             Text,
             { style: [styles.careerLine, styles.muted] },
