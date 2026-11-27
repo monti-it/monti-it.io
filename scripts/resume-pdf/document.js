@@ -223,7 +223,7 @@ function CareerHistory(items, lang, labels) {
             Text,
             { style: styles.careerHeaderLine },
             e(Text, { style: styles.bold }, item.company),
-            `${labels.colon}${item.sector} - ${item.location}`
+            `${labels.colon}${item.sector}${item.location ? ` - ${item.location}` : ''}`
           ),
           e(Text, { style: styles.careerRole }, item.role),
           item.projects
