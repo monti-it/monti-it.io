@@ -559,7 +559,7 @@ export const translations = {
       projectLabel: 'Projet:',
       items: {
         clauger: {
-          period: 'Depuis 2022',
+          period: '2022 - 2026',
           sector: 'Froid industriel',
           role: "Ingénieur d'études - Indépendant",
           description:
@@ -1300,7 +1300,7 @@ export const translations = {
       projectLabel: 'Project:',
       items: {
         clauger: {
-          period: 'Since 2022',
+          period: '2022 - 2026',
           sector: 'Industrial refrigeration',
           role: 'Software Engineer - Freelance',
           description:

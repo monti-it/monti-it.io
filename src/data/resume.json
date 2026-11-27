@@ -24,7 +24,7 @@
         "Kubernetes"
       ],
       "fr": {
-        "period": "Depuis 2022",
+        "period": "2022 – 2026",
         "sector": "Froid industriel",
         "description": "Modernisation d'une plateforme industrielle de valorisation de données capteurs, mise en place CI/CD sous Azure DevOps, amélioration de la qualité logicielle et de la sécurité (auth, logs, cache, DMS, i18n, audit trail…). Démarche DevSecOps : quality gates SonarQube dans le CI/CD Azure DevOps, développement sécurisé selon l'OWASP et durcissement de l'authentification (OpenID Connect, JWT).",
         "results": [
@@ -34,7 +34,7 @@
         ]
       },
       "en": {
-        "period": "Since 2022",
+        "period": "2022 – 2026",
         "sector": "Industrial refrigeration",
         "description": "Modernization of an industrial platform that turns sensor data into value, CI/CD setup on Azure DevOps, improved software quality and security (auth, logs, cache, DMS, i18n, audit trail…). DevSecOps approach: SonarQube quality gates in the Azure DevOps CI/CD, OWASP-driven secure coding and authentication hardening (OpenID Connect, JWT).",
         "results": [
@@ -348,7 +348,7 @@
           "Microsoft Copilot"
         ],
         "fr": {
-          "period": "Depuis 03/2022",
+          "period": "03/2022 - 12/2026",
           "sector": "froid industriel",
           "role": "Indépendant",
           "projects": "MyClauger3E - 20 pers.",
@@ -363,7 +363,7 @@
           ]
         },
         "en": {
-          "period": "Since 03/2022",
+          "period": "03/2022 - 12/2026",
           "sector": "industrial refrigeration",
           "role": "Freelance",
           "projects": "MyClauger3E - 20 people",
