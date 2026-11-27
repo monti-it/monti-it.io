@@ -239,8 +239,7 @@
         "company": "Monti IT",
         "fr": {
           "period": "2026",
-          "sector": "produit propre (SaaS)",
-          "location": "Télétravail",
+          "sector": "édition de logiciel (SaaS)",
           "role": "Indépendant",
           "projects": "Ledgy, outil de gestion pour indépendants",
           "objectives": "Fournir à un consultant indépendant au forfait jour un outil unique pour piloter son activité : jours travaillés par bon de commande, notes de frais kilométriques au barème officiel, exports Excel pour le client et tableau de bord du chiffre d'affaires. Auto-hébergé, multi-utilisateur derrière SSO, avec une exigence DevSecOps : scans dans le CI, moindre privilège et sauvegardes testées.",
@@ -278,8 +277,7 @@
         },
         "en": {
           "period": "2026",
-          "sector": "own product (SaaS)",
-          "location": "Remote",
+          "sector": "software publishing (SaaS)",
           "role": "Freelance",
           "projects": "Ledgy, a business tool for freelancers",
           "objectives": "Give a day-rate independent consultant a single tool to run their business: days worked per purchase order, mileage expense claims at the official rate, Excel exports for the client and a revenue dashboard. Self-hosted and multi-user behind SSO, with a DevSecOps bar: scans in CI, least privilege and tested backups.",
