@@ -106,7 +106,7 @@ describe('résumé PDF career history', () => {
     }
   }
 
-  it('lists the tasks when the entry has no mission', () => {
+  it('lists the tasks when the entry has no objectives', () => {
     const text = renderedText(buildResumeDocument(withEntry(entry), 'fr')).join(
       '\n'
     )
@@ -115,16 +115,16 @@ describe('résumé PDF career history', () => {
     expect(text).toContain('Une tâche')
   })
 
-  it('renders the mission paragraph in place of the tasks', () => {
-    const mission = 'Livrer une API pour suivre le temps passé.'
+  it('renders the objectives paragraph in place of the tasks', () => {
+    const objectives = 'Livrer une API pour suivre le temps passé.'
     const text = renderedText(
       buildResumeDocument(
-        withEntry({ ...entry, fr: { ...entry.fr, mission } }),
+        withEntry({ ...entry, fr: { ...entry.fr, objectives } }),
         'fr'
       )
     ).join('\n')
 
-    expect(text).toContain(`Mission : ${mission}`)
+    expect(text).toContain(`Objectifs : ${objectives}`)
     expect(text).not.toContain('Tâches accomplies')
     expect(text).not.toContain('Une tâche')
   })
@@ -171,7 +171,8 @@ describe('résumé PDF language', () => {
       'Résultats',
       'Environnement',
       'Projet',
-      'Tâches'
+      'Tâches',
+      'Objectifs'
     ]
 
     for (const french of [...frenchOnly, ...frenchLabels]) {
