@@ -271,6 +271,7 @@
           "sector": "froid industriel",
           "role": "Indépendant",
           "projects": "MyClauger3E - 20 pers.",
+          "mission": "Faire évoluer MyClauger3E et son architecture (logs, cache, IoC, OpenID Connect) tout en industrialisant sa livraison par l'intégration et le déploiement continus. Porter une démarche DevSecOps (quality gates SonarQube, OWASP, durcissement de l'authentification) et harmoniser les process d'une équipe de 20 personnes, dont une partie à piloter.",
           "tasks": [
             "Conception/développement des besoins",
             "Travaux de maintenance et d'évolution de l'architecture (log, cache, IOC, OpenID Connect,…)",
@@ -285,6 +286,7 @@
           "sector": "industrial refrigeration",
           "role": "Freelance",
           "projects": "MyClauger3E - 20 people",
+          "mission": "Evolve MyClauger3E and its architecture (logging, cache, IoC, OpenID Connect) while industrializing its delivery through continuous integration and deployment. Drive a DevSecOps approach (SonarQube quality gates, OWASP, authentication hardening) and harmonize the processes of a 20-person team, part of which to lead.",
           "tasks": [
             "Requirements design and development",
             "Architecture maintenance and evolution (logging, cache, IoC, OpenID Connect,…)",
@@ -327,6 +329,7 @@
           "sector": "solution de télémédecine",
           "role": "Ingénieur d'études ECONOCOM - 2 ans",
           "projects": "ViaPatient / Mocas - 14 pers.",
+          "mission": "Livrer la solution de télémédecine ViaPatient/Mocas, en AT puis en CDS, intégrée à 5 autres modules de la suite Easily, en tant que référent technique. Faire évoluer son architecture, industrialiser sa livraison (CI/CD) et y intégrer des contrôles de sécurité et de conformité HDS.",
           "tasks": [
             "Gestion en AT puis en CDS avec intégration de 5 autres modules de la suite Easily",
             "Référent technique",
@@ -342,6 +345,7 @@
           "sector": "telemedicine solution",
           "role": "Software engineer, ECONOCOM - 2 years",
           "projects": "ViaPatient / Mocas - 14 people",
+          "mission": "Deliver the ViaPatient/Mocas telemedicine solution, first as time-and-materials then as a service center, integrated with 5 other modules of the Easily suite, as technical lead. Evolve its architecture, industrialize its delivery (CI/CD) and build security and HDS compliance controls into it.",
           "tasks": [
             "Time-and-materials then service-center delivery, integrating 5 other modules of the Easily suite",
             "Technical lead",
@@ -420,6 +424,7 @@
           "sector": "solution de télémédecine",
           "role": "Ingénieur d'études - ~3 ans",
           "projects": "ITIS/MIRIO - 37 pers.",
+          "mission": "Faire évoluer la solution de télémédecine ITIS/MIRIO pour ses différents clients et la doter d'outils transverses (DMS, audit trail, i18n). Garantir un développement sécurisé (OWASP, contrôles dans le CI/CD, conformité HDS) et faire évoluer le PMSI en structurant les données médicales pour l'outil de BI.",
           "tasks": [
             "Conception/développement des besoins pour les différents clients",
             "Travaux de maintenance et d'évolution de l'architecture",
@@ -434,6 +439,7 @@
           "sector": "telemedicine solution",
           "role": "Software engineer - ~3 years",
           "projects": "ITIS/MIRIO - 37 people",
+          "mission": "Evolve the ITIS/MIRIO telemedicine solution for its various clients and give it cross-cutting tools (DMS, audit trail, i18n). Ensure secure development (OWASP, CI/CD security gates, HDS compliance) and evolve the PMSI by structuring medical data for the BI tool.",
           "tasks": [
             "Requirements design and development for the various clients",
             "Architecture maintenance and evolution",
@@ -475,6 +481,7 @@
           "sector": "télébilletique en tsprt. pub.",
           "role": "Chef d'équipe / Ingénieur d'études OBJET DIRECT - ~3 ans",
           "projects": "Site web de vente à distance ATLAS - 14 pers.",
+          "mission": "Développer le site de vente à distance ATLAS pour un client belge et faire évoluer son architecture pour tous les clients, à la tête d'une équipe de 4 développeurs en Agile.",
           "tasks": [
             "Gestion d'une équipe de 4 développeurs en méthode Agile",
             "Conception/développement des besoins pour un client belge",
@@ -487,6 +494,7 @@
           "sector": "public transport e-ticketing",
           "role": "Team lead / Software engineer, OBJET DIRECT - ~3 years",
           "projects": "ATLAS remote sales website - 14 people",
+          "mission": "Develop the ATLAS remote sales website for a Belgian client and evolve its architecture for all clients, leading a team of 4 developers using Agile methods.",
           "tasks": [
             "Managing a team of 4 developers using Agile methods",
             "Requirements design and development for a Belgian client",
@@ -514,6 +522,7 @@
           "sector": "SSII",
           "role": "Ingénieur d'études - 1 mois",
           "projects": "Project Customization Tool - 1 pers.",
+          "mission": "Outiller la mise en conformité des projets avec un plug-in Visual Studio portant différentes règles, livré par une intégration continue sur TFS Azure, en tant que référent technique.",
           "tasks": [
             "Référent technique",
             "Génération d'un plug-in Visual Studio",
@@ -526,6 +535,7 @@
           "sector": "IT services company",
           "role": "Software engineer - 1 month",
           "projects": "Project Customization Tool - 1 person",
+          "mission": "Tool up project compliance with a Visual Studio plug-in carrying various rules, delivered through continuous integration on TFS Azure, as technical lead.",
           "tasks": [
             "Technical lead",
             "Building a Visual Studio plug-in",
@@ -556,6 +566,7 @@
           "sector": "logistique industrielle",
           "role": "Intégrateur de solutions CELAD - 11 mois",
           "projects": "MACtac Belgique - 3 pers. ; Krones JFA Allemagne (anglophone) - 2 pers. ; Système U France - 2 pers. ; Lactalis Espagne - 3 pers.",
+          "mission": "Mettre en service des projets de logistique industrielle chez des clients en Belgique, Allemagne, France et Espagne : spécifier leurs besoins, monter la plate-forme d'intégration, développer les algorithmes de stratégie (SQL) et les outils d'analyse des données (.Net), jusqu'à la mise en exploitation sur site.",
           "tasks": [
             "Spécification des besoins client",
             "Mise en place de la plate-forme d'intégration",
@@ -569,6 +580,7 @@
           "sector": "industrial logistics",
           "role": "Solutions integrator, CELAD - 11 months",
           "projects": "MACtac Belgium - 3 people; Krones JFA Germany (English-speaking) - 2 people; Système U France - 2 people; Lactalis Spain - 3 people",
+          "mission": "Bring industrial logistics projects into service for clients in Belgium, Germany, France and Spain: specify their requirements, set up the integration platform, develop the strategy algorithms (SQL) and data analysis tools (.Net), through to go-live on site.",
           "tasks": [
             "Client requirements specification",
             "Integration platform setup",
@@ -598,6 +610,7 @@
           "sector": "éditeur de logiciels",
           "role": "Ingénieur d'études - 10 mois",
           "projects": "PushManager - 7 pers.",
+          "mission": "Concevoir et développer les fonctionnalités du serveur PushManager, en étudiant la faisabilité technique des nouvelles, et faire évoluer la plateforme TFS vers une véritable intégration continue et un meilleur suivi des développements.",
           "tasks": [
             "Conception et développements des fonctionnalités du serveur PushManager",
             "Etude de faisabilité technique de nouvelles fonctionnalités de la solution PushManager",
@@ -609,6 +622,7 @@
           "sector": "software publisher",
           "role": "Software engineer - 10 months",
           "projects": "PushManager - 7 people",
+          "mission": "Design and develop PushManager server features, studying the technical feasibility of new ones, and move the TFS platform to true continuous integration and better tracking of development work.",
           "tasks": [
             "Design and development of PushManager server features",
             "Technical feasibility studies for new PushManager features",
@@ -636,6 +650,7 @@
           "sector": "trafic ferroviaire",
           "role": "Chef d'équipe / Architecte / Concepteur / Développeur SOGETI - 11 mois",
           "projects": "SIERRA - 10 pers.",
+          "mission": "Encadrer une équipe de 5 développeurs, en répartissant et suivant leurs tâches, sur la maintenance et l'évolution de l'application SIERRA en architecture n-tiers (procédures stockées, services métier, IHM).",
           "tasks": [
             "Gestion d'une équipe de 5 développeurs et répartition des tâches",
             "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
@@ -649,6 +664,7 @@
           "sector": "rail traffic",
           "role": "Team lead / Architect / Designer / Developer, SOGETI - 11 months",
           "projects": "SIERRA - 10 people",
+          "mission": "Lead a team of 5 developers, distributing and tracking their tasks, on the maintenance and evolution of the SIERRA application on an n-tier architecture (stored procedures, business services, UIs).",
           "tasks": [
             "Managing a team of 5 developers and distributing tasks",
             "Development of stored procedures, business services and UIs on an n-tier architecture",
@@ -681,6 +697,7 @@
           "sector": "trafic ferroviaire",
           "role": "Concepteur / Développeur SOGETI - 6 mois",
           "projects": "CONCERTO - 32 pers.",
+          "mission": "Développer l'application CONCERTO sur une architecture n-tiers (procédures stockées, services métier, IHM) et concevoir l'un de ses flux d'entrée, avec transformations algorithmiques et synchronisation partielle des données.",
           "tasks": [
             "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
             "Conception et développement de l'un des flux d'entrée de l'application nécessitant des transformations algorithmiques ainsi que de la synchronisation partielle des données"
@@ -691,6 +708,7 @@
           "sector": "rail traffic",
           "role": "Designer / Developer, SOGETI - 6 months",
           "projects": "CONCERTO - 32 people",
+          "mission": "Develop the CONCERTO application on an n-tier architecture (stored procedures, business services, UIs) and design one of its input feeds, involving algorithmic transformations and partial data synchronization.",
           "tasks": [
             "Development of stored procedures, business services and UIs on an n-tier architecture",
             "Design and development of one of the application's input feeds, involving algorithmic transformations and partial data synchronization"
@@ -724,6 +742,7 @@
           "sector": "trafic ferroviaire",
           "role": "Concepteur / Développeur SOGETI - ~3 ans",
           "projects": "SIERRA - 30 pers.",
+          "mission": "Développer et faire évoluer l'application SIERRA sur une architecture n-tiers, dont l'un de ses flux d'entrée (transformations algorithmiques, synchronisation partielle des données) et le câblage d'un outil de calcul de trajet.",
           "tasks": [
             "Développement de PS, de services métier et d'IHM sur une architecture n-tiers",
             "Conception et développement de l'un des flux d'entrée de l'application nécessitant des transformations algorithmiques ainsi que de la synchronisation partielle des données",
@@ -737,6 +756,7 @@
           "sector": "rail traffic",
           "role": "Designer / Developer, SOGETI - ~3 years",
           "projects": "SIERRA - 30 people",
+          "mission": "Develop and evolve the SIERRA application on an n-tier architecture, including one of its input feeds (algorithmic transformations, partial data synchronization) and the integration of a route calculation tool.",
           "tasks": [
             "Development of stored procedures, business services and UIs on an n-tier architecture",
             "Design and development of one of the application's input feeds, involving algorithmic transformations and partial data synchronization",
@@ -762,6 +782,7 @@
           "sector": "travail interne",
           "role": "Concepteur / Développeur - 2 mois",
           "projects": "Gestion commerciale et annuaire des collaborateurs - 1 pers.",
+          "mission": "Développer le site intranet de gestion commerciale et d'annuaire des collaborateurs.",
           "tasks": [
             "Développement du site intranet de gestion des collaborateurs"
           ]
@@ -771,6 +792,7 @@
           "sector": "internal project",
           "role": "Designer / Developer - 2 months",
           "projects": "Sales management and staff directory - 1 person",
+          "mission": "Develop the sales management and staff directory intranet site.",
           "tasks": ["Development of the staff management intranet site"]
         }
       },
@@ -783,6 +805,7 @@
           "sector": "solutions bancaires",
           "role": "Testeur SOGETI - 1 mois",
           "projects": "TNR pour la maintenance d'Equinoxe - 3 pers.",
+          "mission": "Sécuriser la maintenance d'Equinoxe par des tests de non-régression sur le périmètre « Entrée en relation ».",
           "tasks": [
             "Mise en œuvre des TNR sur le périmètre « Entrée en relation »"
           ]
@@ -792,6 +815,7 @@
           "sector": "banking solutions",
           "role": "Tester, SOGETI - 1 month",
           "projects": "Regression testing for Equinoxe maintenance - 3 people",
+          "mission": "Safeguard Equinoxe maintenance with regression tests on the customer onboarding scope.",
           "tasks": ["Running regression tests on the customer onboarding scope"]
         }
       },
@@ -803,6 +827,7 @@
           "sector": "opérateur téléphonique",
           "role": "Analyste SOGETI - 14 mois",
           "projects": "Task Force Convergence - Gestion du Réseau de Transmission (GRT) - 16 pers.",
+          "mission": "Fiabiliser les données du SI de gestion du réseau de transmission dans le cadre de la convergence des bases de données.",
           "tasks": [
             "Fiabilisation des données du SI dans le cadre de la convergence de BD"
           ],
@@ -813,6 +838,7 @@
           "sector": "telecom operator",
           "role": "Analyst, SOGETI - 14 months",
           "projects": "Task Force Convergence - Transmission Network Management (GRT) - 16 people",
+          "mission": "Make the transmission network management IS data reliable as part of a database convergence.",
           "tasks": [
             "Making IS data reliable as part of a database convergence"
           ],
